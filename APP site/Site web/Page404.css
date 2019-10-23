@@ -1,0 +1,57 @@
+.nav_bar {
+    display:flex;
+    justify-content: right;
+ }
+ .title_bar {
+    background-color: white;
+    padding: 0px 0px 5px 0px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 5px solid white;
+ }
+ .btn_header {
+    color: black;
+    border: 1px solid white;
+    padding: 15px 1px 0px 1px;
+    margin: 5px;
+    width: 150px;
+    text-align: center;
+ }
+ .musipsum{
+    text-decoration: none;
+    width: 75px;
+    margin-right: 560px;
+    color: #194E6E;
+    font-size: 1.2em;
+ }
+ .a_propos_header{
+    width: 80px;
+    text-decoration: none;
+ }
+ .sucess_stories{
+    width: 110px;
+    text-decoration: none;
+ }
+ .nous_contacter{
+    width: 110px;
+ }
+ .start_test{
+    width: 120px;
+ }
+ .connexion{
+    width: 100px;
+ }
+ 
+.flou {
+   position:absolute;
+   position:center;
+   width: 100%;
+}
+
+.caption {
+   position: absolute;
+   color: white;
+   left: 30%;
+   top: 50%;
+   font-size: 4em;
+}
