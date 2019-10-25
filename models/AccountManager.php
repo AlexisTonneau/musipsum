@@ -3,10 +3,10 @@
 
 class AccountManager extends Model
 {
-    public function getAllAccounts()            //RETOURNE
+    public function getAllAccounts()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
     {
         $this->getBdd();
-        return $this->getAll('user','Account');
+        return $this->getAll('users','Account');
     }
 
     public function getAnAccountById($id)
@@ -19,4 +19,7 @@ class AccountManager extends Model
             }
         }
     }
+
+
+
 }
