@@ -3,26 +3,29 @@
 
 class User extends Model
 {
-    private $id;            //ALL PARAMETERS IN DATABASE
+    public $id_user;            //ALL PARAMETERS IN DATABASE
     private $name;
-    private $surname;
+    private $first_name;
     private $account_type;
     private $height;
     private $weight;
-    private $mail_adress;
+    private $mail_address;
     private $gender;
     private $naissance_jour;
     private $naissance_mois;
     private $naissance_annee;
-    private $urlphoto;
+    private $password;
+    private $driving_school;
 
 
-    public function __construct(array $data)
+
+
+   /* public function __construct(array $data)
     {
         $this->hydrate($data);
 
 
-    }
+    }*/
     public function hydrate(array $data)
     {
         foreach ($data as $key => $value){
@@ -35,10 +38,25 @@ class User extends Model
 
 
 
+    public function manuallyConstruct($familyname,$surname,$mailAddress,$gender,$yearBirth,$monthBirth,$dayBirth,$height,$weight){
+        $this->height=$height;
+        $this->naissance_jour=$dayBirth;
+        $this->gender = $gender;
+        $this->naissance_annee = $yearBirth;
+        $this->naissance_mois = $monthBirth;
+        $this->weight = $weight;
+        $this->mail_adress = $mailAddress;
+        $this->surname = $surname;
+        $this->name = $familyname;
+        $this->account_type = self::REGULAR_USER;
+    }
+
+
+
 
     public function getId()
     {
-        return $this->id;
+        return $this->id_user;
     }
 
     public function getAccountType()
@@ -73,9 +91,9 @@ class User extends Model
     /**
      * @return mixed
      */
-    public function getMailAdress()
+    public function getMailAddress()
     {
-        return $this->mail_adress;
+        return $this->mail_address;
     }
 
     /**
@@ -113,9 +131,9 @@ class User extends Model
     /**
      * @return mixed
      */
-    public function getSurname()
+    public function getFirstName()
     {
-        return $this->surname;
+        return $this->first_name;
     }
 
     /**
@@ -139,7 +157,11 @@ class User extends Model
      */
     public function setId($id)
     {
-        $this->id = $id;
+        $this->id_user = $id;
+    }
+
+    public function getNom(){
+        return $this->nom;
     }
 
     /**
@@ -153,9 +175,9 @@ class User extends Model
     /**
      * @param mixed $surname
      */
-    public function setSurname($surname)
+    public function setFirstName($surname)
     {
-        $this->surname = $surname;
+        $this->first_name = $surname;
     }
 
     /**
@@ -177,9 +199,9 @@ class User extends Model
     /**
      * @param mixed $mail_adress
      */
-    public function setMailAdress($mail_adress)
+    public function setMailAddress($mail_adress)
     {
-        $this->mail_adress = $mail_adress;
+        $this->mail_address = $mail_adress;
     }
 
     /**
@@ -217,10 +239,36 @@ class User extends Model
     /**
      * @return mixed
      */
-    public function getUrlphoto()
+    public function getPassword()
     {
-        return $this->urlphoto;
+        return $this->password;
     }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDrivingSchool()
+    {
+        return $this->driving_school;
+    }
+
+    /**
+     * @param mixed $driving_school
+     */
+    public function setDrivingSchool($driving_school)
+    {
+        $this->driving_school = $driving_school;
+    }
+
+
 
 
 

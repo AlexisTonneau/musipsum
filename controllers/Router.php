@@ -6,6 +6,8 @@ class Router
     private $_ctrl;
     private $_view;
 
+    public $errorMessage="";
+
     public function routeReq(){
         try{
             //CHARGEMENT AUTO DES CLASSES

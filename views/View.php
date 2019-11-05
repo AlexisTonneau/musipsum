@@ -1,4 +1,4 @@
-<?php
+<?php       //Pas trop sur de bien savoir comment l'utiliser celle là mdr
 
 
 class View

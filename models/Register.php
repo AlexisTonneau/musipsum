@@ -5,21 +5,16 @@ class Register extends Model
 {
 
 
-    private $bdd;
 
 
-    /**
-     * Register constructor.
-     */
-    public function __construct()
-    {
-        $this->bdd = self::getBdd();
-    }
 
-    public function register(User $user){
+    public static function registration(User $user){
+        $bdd = self::getBdd();
+
         $birthDate = $user->getNaissanceAnnee().'-'.$user->getNaissanceMois().'-'.$user->getNaissanceJour();
+        $password = password_hash($user->getPassword(),PASSWORD_BCRYPT);
 
-        $request =$this->bdd->PDO::prepare( 'INSERT INTO users (family_name, surname, mail_address, gender, birth_date, height, weight) VALUES (:familyname, :surname, :mailadress, :gender, :birth_date,:height,:weight)');
+        $request =$bdd->PDO::prepare( 'INSERT INTO users (family_name, surname, mail_address, gender, birth_date, height, weight, password) VALUES (:familyname, :surname, :mailadress, :gender, :birth_date,:height,:weight,:password)');
         $request->PDO::bindParam(':family_name',$user->getName());
         $request->PDO::bindParam(':surname',$user->getSurname());
         $request->PDO::bindParam(':mail_address',$user->getMailAdress());
@@ -27,10 +22,10 @@ class Register extends Model
         $request->PDO::bindParam(':birth_date',$birthDate);
         $request->PDO::bindParam(':height',$user->getHeight());
         $request->PDO::bindParam(':weight',$user->getWeight());
+        $request->PDO::bindParam(':password',$password);
 
+        $request->PDO::execute();
     }
 
-    public function createUser($familyname,$surname,$mailAddress,$gender,$birthDate,$height,$weight){
 
-    }
 }

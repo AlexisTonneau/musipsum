@@ -1,4 +1,5 @@
 <?php
+require_once ("views/views_accueil/viewAccueil.php");
 
 
 class ControllerAccueil
@@ -15,13 +16,27 @@ class ControllerAccueil
             throw new Exception('Page introuvable');
         }
         else{
-            $accountType = $this->_accountManager->getAccount()->getAccountType();
-            if($accountType == '0') {   // J AI MIS PROVISOIREMENT ZERO EN VALEUR USER LAMBDA, 1 EN ADMIN
+
+            if(isset($_SESSION['account_type'])AND !is_null($_SESSION['account_type'])){
+                if ($_SESSION['account_type']==1){
+                    //TODO Differences btw reg and admin, admin here
+                    //Peut-être à virer
+
+                }
+                else {
+                    //TODO Same, here regular
+
+                }
 
 
             }
+            else{
+
+            }
+
         }
     }
+
 
 
 
