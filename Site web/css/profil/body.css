@@ -1,0 +1,59 @@
+
+
+.titre_id {
+	display: inline-block;
+}
+
+#icone_utilisateur {
+	display: inline-block;
+}
+
+#nom_prenom	{
+	display: inline-block;
+	font-size: 30px;
+	font-family: 'Comic sans ms';
+	color: #66AFFD;
+	margin-bottom: 10px;
+}
+
+.id_utilisateur {
+	width: 60%;
+	display: inline-block;
+	position: absolute;
+	top: 5%;
+}
+
+.stats_utilisateur {
+	display: inline-block;
+	width: 39%;
+	position: relative;
+	left: 61%;
+}
+
+.txt_id {
+	border: 2px solid #66AFFD;
+	padding: 1%;
+}
+
+.txt_id_php {
+	display: inline-block;
+	color: #66AFFD;
+	font-family: 'Comic sans ms';
+	font-size: 20px;
+}
+
+.txt_id_spe {
+	color: #66AFFD;
+	font-size: 20px;
+	font-family: 'Comic sans ms';
+}
+
+.div_txt_id_1 {
+	display: inline-block;
+	width: 25%;
+}
+
+.div_txt_id_2 {
+	display: inline-block;
+	width: 74%;
+}
