@@ -16,6 +16,9 @@ abstract class Model
 
     private static $_bdd;
 
+
+
+
     /**
      * @param mixed $bdd
      */
@@ -59,7 +62,9 @@ abstract class Model
         $bdd= $this->getBdd();
         $i=0;
         $req = $bdd->prepare('SELECT * FROM user ');
-        $req->execute();
+        if(!$req->execute()){
+            throw new Exception("Connexion impossible");
+        }
         while ($account = $req->fetch(PDO::FETCH_ASSOC)){
             $var[$i] = new User;
             $var[$i]->setName($account['name']) ;

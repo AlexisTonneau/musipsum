@@ -3,7 +3,7 @@
 
 class User extends Model
 {
-    public $id_user;            //ALL PARAMETERS IN DATABASE
+    private $id_user;            //ALL PARAMETERS IN DATABASE
     private $name;
     private $first_name;
     private $account_type;
@@ -25,7 +25,7 @@ class User extends Model
         $this->hydrate($data);
 
 
-    }*/
+    }
     public function hydrate(array $data)
     {
         foreach ($data as $key => $value){
@@ -34,7 +34,7 @@ class User extends Model
                 $this->$method($value);
 
         }
-    }
+    }*/
 
 
 

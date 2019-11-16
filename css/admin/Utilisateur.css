@@ -1,0 +1,157 @@
+/* Header */
+
+.nav_barre {
+    display:flex;
+    justify-content: right;
+}
+
+
+.title_barre {
+    background-color: white;
+    padding: 0px 0px 2px 0px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.5px solid grey;
+}
+
+
+.btnheader {
+    color: black;
+    border: 1px solid white;
+    padding: 12px 1px 0px 1px;
+    margin: 4px;
+    text-align: center;
+}
+
+
+.musipsum{
+    text-decoration: none;
+    width: 9%;
+    margin-right: 48%;
+    color: #194E6E;
+    font-size: 1.4em;
+
+}
+
+
+.a_propos_header{
+    width: 150px;
+    text-decoration: none;
+    overflow: visible;
+}
+
+
+.sucess_stories{
+    width: 225px;
+    text-decoration: none;
+}
+
+
+.start_test{
+    width: 265px;
+}
+
+
+.connexion{
+    text-decoration: none;
+    width: 180px;
+}
+
+
+/* Body */
+
+.middle_page {
+    display: flex;
+}
+
+
+.img_portrait {
+    width: 9%;
+    left: 35%;
+    top: 20%;
+    position: absolute;
+}
+
+
+.autoecole {
+    position: absolute;
+    color: cornflowerblue;
+    font-size: 2.5em;
+    left: 45%;
+    top: 25%;
+}
+
+.centrer{
+    position: relative;
+    text-align: center;
+    bottom: 40%;
+}
+
+
+.centrer_capteur, .centrer_compte {
+    text-decoration: none;
+    color: white;
+    bottom: 40%;
+}
+
+.centrer_deconnexion {
+    text-decoration: none;
+    color: cornflowerblue;
+    bottom: 40%;
+}
+
+
+.btn_compte, .btn_capteurs {
+    position: absolute;
+    background-color:dodgerblue;
+    border: 1px solid lightgrey;
+    width : 38%;
+    height: 8%;
+    font-size: 1.7em;
+    opacity: 0.6;
+    color: white;
+    text-decoration: none;
+}
+
+.btn_deconnexion {
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightblue;
+    width: 15%;
+    height: 6%;
+    font-size: 1.2em;
+    left: 80%;
+    top: 90%;
+}
+
+.btn_compte {
+    left: 6%;
+    top: 63%;
+}
+
+.btn_capteurs {
+    right: 6%;
+    top: 63%;
+}
+
+.img_loupe, .id_user {
+    position: absolute;
+}
+
+.img_loupe {
+    width: 2%;
+    left: 71%;
+    top: 48.5%;
+}
+
+.id_user {
+    left: 24%;
+    top: 47%;
+    width: 50%;
+    height: 7%;
+    font-size: 1.3em;
+    border: 2px solid darkgrey;
+    border-radius: 25px;
+    text-decoration-color: cornflowerblue;
+    margin-left: 10%;
+}
