@@ -1,4 +1,4 @@
-<?php           //TODO Back-end de cette page normalement terminé, à tester et reprendre le css
+<?php           //TODO Input Admin account or reg account; if admin, list of driving schools from database
 
 
 
@@ -6,9 +6,10 @@
 
 $msg = Register::check();
 if($msg == "checked"){
-    header('Location : index.php?/account');
+    header('Location: '.URL.'account');
     exit();
 }
+
 
 ?>
 
@@ -26,55 +27,52 @@ if($msg == "checked"){
 <?php
 require_once 'views/views_accueil/viewHeader.php';
 ?>
-
+<form action="" method="post">
+    <fieldset>
 <div class="milieupage">
     <p class="titre">Ouvrir un compte</p>
     <div class="info_personnelles">
+
+
         <block class="bloc_1">
             <div class="info">
-                <form action="" method="post">
                 <p class="a mail">Adresse mail *  <br/>
                     <input type="email" name="mail_address" class="id iden id_mail" style="height: 30px" required> </p>
                 <p class="a motdepasse">Mot de passe *  <br/>
                     <input type="password" name="password" class="id iden id_password" style="height: 30px" required> </p>
                 <p class="a confirm">Confirmer le mot de passe *  <br/>
                     <input type="password" name="confirmation" class="id iden id_confirmation" style="height: 30px" required> </p>
-                </form>
+
             </div>
 
             <div class="pre_nom">
-                <form method="post" action="">
+
                 <p class="a nom">Nom *  <br/>
                     <input type="text" name="name" class="id identif id_name" required> </p>
                 <p class="b prénom">Prénom *  <br/>
                     <input type="text" name="first_name" class="id identif id_firstname" required> </p>
-                </form>
             </div>
         </block>
 
         <block class="bloc_2">
-            <form method="post" action="">
             <p class="naissance">Date de naissance *
                 <div class="c">
             <p class="day">
                 JJ
-                <input type="number" name="jour" class="id date id_jour" min="1" max="31" required>
+                <input type="number" name="jour" class="id date id_jour" min="1" max="31">
                 MM
-                <input type="number" name="mois" class="id date id_mois" min="1" max="12" required>
+                <input type="number" name="mois" class="id date id_mois" min="1" max="12">
                 AAAA
-                <input type="number" name="annee" class="id date id_annee" min="1970" max="2002" required>
+                <input type="number" name="annee" class="id date id_annee" min="1970" max="2002">
             </p>
-            </form>
     </div>
     </p>
 
     <div class="IMC">
-        <form action="" method="post">
         <p class="poids">Poids (kg)   <br/>
             <input type="number" name="weight" class="id taille_masse id_kilo" step="0.1" min="40"> </p>
         <p class="taille">Taille (cm)   <br/>
             <input type="number" name="height" class="id taille_masse id_metre" min="120"> </p>
-        </form>
     </div>
 
     <div class="genre">
@@ -95,13 +93,18 @@ require_once 'views/views_accueil/viewHeader.php';
 
 <footer>
     <div>
-        <form method="post" action="">
         <btn class="save">
             <input class="btn_save"  type="submit" value = "Enregistrer" >
         </btn>
-        </form>
+
+        <br/><br/>
+        <?php
+        echo $msg;
+        ?>
     </div>
 </footer>
+    </fieldset>
+</form>
 
 </body>
 </html>

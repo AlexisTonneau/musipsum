@@ -20,7 +20,7 @@ class AccountManager extends Model
         }
     }
 
-    public function getCurrentAccount() {           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
+    public static function getCurrentAccount() {           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
         if(isset($_SESSION['account'])AND !is_null($_SESSION['account'])){
             $account = $_SESSION['account'];
             return $account;

@@ -4,15 +4,23 @@
 class Router
 {
     private $_ctrl;
-    private $_view;
 
     public $errorMessage = "";
 
     public function routeReq()
     {
+
         try {
             session_start();
-            //CHARGEMENT AUTO DES CLASSES
+
+            //Allows logout if inactive during 30min
+            $_SESSION['timeout']=time();
+            $inactive = 1800;
+            if(isset($_SESSION['timeout']) && time()-$_SESSION['timeout']>$inactive){
+                session_destroy();
+            }
+
+            //ALL CLASSES AUTO-LOAD
             spl_autoload_register(function ($class) {
                 require_once('models/' . $class . '.php');
             }
@@ -39,8 +47,7 @@ class Router
             }
 
         } catch (Exception $exception) {
-            //echo $url[0].'</br>';
-            //echo $_SERVER[PHP_SELF];
+
 
             $errorMessage = $exception->getMessage();
             require_once('views/viewError.php');

@@ -71,6 +71,9 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD;">
+            <?php
+            //TODO Envoyer un mail (peut-étre rajouter un champ pour rentrer son email)
+            ?>
         </div>
 
 
