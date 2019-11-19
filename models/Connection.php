@@ -10,14 +10,14 @@ class Connection extends AccountManager
     public static $array_accounts;
 
 
-
     /**
      * Connection constructor.
+     * @throws Exception
      */
     public function __construct()
     {
         //self::setAllAccounts();
-        self::$array_accounts = Model::getAllAccounts();
+        self::$array_accounts = $this->getAllAccounts();
 
 
     }
@@ -37,19 +37,20 @@ class Connection extends AccountManager
 
         $accountsStart = new Connection();
         $accounts = $accountsStart->getArray();
-        if (isset($_POST['mail']) && isset($_POST['mdp']) && !is_null($_POST['mail']) && !is_null($_POST['mdp'])) {
+        if (isset($_POST['mail']) && isset($_POST['mdp']) && $_POST['mail'] !== null && $_POST['mdp'] !== null) {
             if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) && strlen($_POST['mdp']) > 0) {
-                if (!is_null($accounts)) {
-                    for ($i = 0; $i < sizeof($accounts); $i++) {
-                        if ($accounts[$i]->getMailAddress() == $_POST['mail'] && $accounts[$i]->getPassword() == $_POST['mdp']) {
+                if ($accounts !== null) {
+                    foreach ($accounts as $iValue) {
+                        if ($iValue->getMailAddress() == $_POST['mail'] && $iValue->getPassword() == $_POST['mdp']) {
                             $boole = true;
 
-                            $_SESSION['user'] = serialize($accounts[$i]);
-                            if($accounts[$i]->getAccountType()==Model::REGULAR_USER){
+                            $_SESSION['user'] = serialize($iValue);
+                            if($iValue->getAccountType()==Model::REGULAR_USER){
                                 $msg = "Connected";
                             }
-                            elseif ($accounts[$i]->getAccountType()==Model::ADMIN_USER){
+                            elseif ($iValue->getAccountType()==Model::ADMIN_USER){
                                 $msg = "Connected as admin";
+
 
                             }
                             else{
@@ -73,6 +74,8 @@ class Connection extends AccountManager
         }
         return $msg;
     }
+
+
 
 
 

@@ -1,4 +1,4 @@
-<?php
+<?php   //TODO Add 'Modify driving school' button which needs to be redirected to '<URL>adminaccount/modify-drivingschool'
 if(isset($_POST['déconnexion'])){
     session_destroy();
     header('Location: '.URL.'/accueil');

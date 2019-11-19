@@ -77,6 +77,7 @@ abstract class Model
             $var[$i]->setAccountType($account['account_type']);
             $var[$i]->setMailAddress($account['mail_address']);
 
+
             $i++;
         }
         return $var;
@@ -84,7 +85,7 @@ abstract class Model
     }
 
     public static function getCurrentAccount(){           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
-        if(isset($_SESSION['user'])AND !is_null($_SESSION['user'])){
+        if(isset($_SESSION['user'])AND $_SESSION['user'] !== null){
             $account = unserialize($_SESSION['user']);
             return $account;
 
