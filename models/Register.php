@@ -113,7 +113,7 @@ class Register extends Model
 
     }
 
-    private function createInstructor(User $user){
+    private static function createInstructor(User $user){
         $bdd = self::getBdd();
         $name = $user->getName();
         $first_name = $user->getFirstName();
