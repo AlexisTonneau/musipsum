@@ -70,10 +70,13 @@ require_once 'viewHeader.php';
             <img src="images/.png" alt="">-->
         </div>
         <div class="box_mail">
+            <form action="" method="post">
             <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD;" id="contact">
             <?php
-            //TODO Envoyer un mail (peut-étre rajouter un champ pour rentrer son email)
+           // Connection::sendMail();
             ?>
+            </form>
+
         </div>
 
 

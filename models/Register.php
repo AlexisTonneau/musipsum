@@ -136,12 +136,12 @@ class Register extends Model
             $bdd = self::getBdd();
             $id_instructor = self::getCurrentAccount()->getId();
             $id_new_user = $user->getId();
-            $bdd->prepare('INSERT INTO moniteur_user (id_user,id_moniteur) VALUES (:id1,:id2)');
+            /*$bdd->prepare('INSERT INTO moniteur_user (id_user,id_moniteur) VALUES (:id1,:id2)');
 
             $bdd->bindParam(':id1',$id_new_user);
             $bdd->bindParam(':id2',$id_instructor);
 
-            $bdd->execute();
+            $bdd->execute();*/
         }
     }
 
