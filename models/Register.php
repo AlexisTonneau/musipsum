@@ -15,7 +15,6 @@ class Register extends Model
         $bdd = self::getBdd();
 
         $birthDate = $user->getNaissanceAnnee().'-'.$user->getNaissanceMois().'-'.$user->getNaissanceJour();
-        //$password = password_hash($user->getPassword(),PASSWORD_BCRYPT);
         $password = $user->getPassword();
         $family_name = $user->getName();
         $first_name = $user->getFirstName();
@@ -24,9 +23,10 @@ class Register extends Model
         $height=$user->getHeight();
         $weight=$user->getWeight();
         $account_type = $user->getAccountType();
+        $id_driving_school = $user->getDrivingSchoolId();
 
 
-        $request =$bdd->prepare( 'INSERT INTO user (family_name, surname, mail_address, gender, birth_date, height, weight, password,account_type) VALUES (:family_name, :surname, :mail_address, :gender, :birth_date,:height,:weight,:password,:account_type)');
+        $request =$bdd->prepare( 'INSERT INTO user (family_name, surname, mail_address, gender, birth_date, height, weight, password,account_type,id_autoecole) VALUES (:family_name, :surname, :mail_address, :gender, :birth_date,:height,:weight,:password,:account_type,:id_autoecole)');
         $request->bindParam(':family_name',$family_name);
         $request->bindParam(':surname',$first_name);
         $request->bindParam(':mail_address',$mail_address);
@@ -36,6 +36,7 @@ class Register extends Model
         $request->bindParam(':weight',$weight);
         $request->bindParam(':password',$password);
         $request->bindParam(':account_type',$account_type);
+        $request->bindParam(':id_autoecole',$id_driving_school);
         $request->execute();
 
         //Cette requête avait fonctionné mais l'autre a pas été testée
@@ -52,20 +53,20 @@ class Register extends Model
     }
 
     public static function check(){
-        if(!isset($_POST['mail_address']) || !isset($_POST['name']) || !isset($_POST['password']) /*|| !isset($_POST['confirmation'])*/){
+        if(!isset($_POST['mail_address'], $_POST['name'], $_POST['password']) ){
             $errormsg = "Veuillez remplir tous les champs";
         }
 
-        elseif(isset($_POST['mail_address']) && is_null($_POST['mail_address'])){
+        elseif(isset($_POST['mail_address']) && $_POST['mail_address'] === null){
             $errormsg = "Adresse mail non rentrée";
         }
 
-        elseif (isset($_POST['name']) && is_null($_POST['name'])){
+        elseif (isset($_POST['name']) && $_POST['name'] === null){
             $errormsg = "Nom non rentré";
         }
 
 
-        elseif (isset($_POST['password']) && is_null($_POST['password'])){
+        elseif (isset($_POST['password']) && $_POST['password'] === null){
             $errormsg = "Mot de passe non rentré";
         }
 
@@ -84,6 +85,7 @@ class Register extends Model
         $account_register->setName($_POST['name']);
         $account_register->setMailAddress($_POST['mail_address']);
         $account_register->setPassword($_POST['password']);
+        $account_register->setDrivingSchoolId(self::getCurrentAccount()->getDrivingSchoolId());
         if (isset($_POST['jour']) AND isset($_POST['mois']) AND isset($_POST['annee'])){
             $account_register->setNaissanceAnnee($_POST['annee']);
             $account_register->setNaissanceJour($_POST['jour']);
@@ -104,15 +106,46 @@ class Register extends Model
 
         if (isset($_POST['account_type']) && $_POST['account_type']==1){
             $account_register->setAccountType(1);
-            self::createInstructor();
+            self::createInstructor($account_register);
         }
+        self::linkUserInstructor($account_register);
         new Register($account_register);
 
     }
 
-    private static function createInstructor(){
-        //TODO Set a new instructor in database
+    private static function createInstructor(User $user){
+        $bdd = self::getBdd();
+        $name = $user->getName();
+        $first_name = $user->getFirstName();
+        $mail_address = $user->getMailAddress();
+        $driving_school_id = $user->getDrivingSchoolId();
+
+        $request = $bdd->prepare('INSERT INTO moniteur (nom,prenom,adresse_mail,id_autoecole) VALUES (:name ,:first_name,:mail_adress,:id_drivingschool)');
+
+        $request->bindParam(':family_name',$name);
+        $request->bindParam(':first_name',$first_name);
+        $request->bindParam(':mail_address',$mail_address);
+        $request->bindParam(':id_drivingschool',$driving_school_id);
+        $request->execute();
+
+
     }
+
+    private static function linkUserInstructor(User $user){
+        if ($user->getAccountType()==Model::REGULAR_USER){
+            $bdd = self::getBdd();
+            $id_instructor = self::getCurrentAccount()->getId();
+            $id_new_user = $user->getId();
+            $bdd->prepare('INSERT INTO moniteur_user (id_user,id_moniteur) VALUES (:id1,:id2)');
+
+            $bdd->bindParam(':id1',$id_new_user);
+            $bdd->bindParam(':id2',$id_instructor);
+
+            $bdd->execute();
+        }
+    }
+
+
 
 
 }

@@ -12,7 +12,7 @@ class ControllerTest
         if (isset($_SESSION['user'])){
             switch (unserialize($_SESSION['user'])->getAccountType()){
                 case 0:
-                    //TODO view default user launching test
+                    require_once 'views/views_admin/viewLaunchTest.php';
                     break;
                 case 1:
                    require_once 'views/views_admin/viewLaunchTest.php';
@@ -20,7 +20,8 @@ class ControllerTest
             }
         }
         else{
-            //TODO Make a view for non-connected launching test
+            require_once 'views/views_admin/viewLaunchTest.php';
+
         }
     }
 }

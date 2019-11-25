@@ -1,8 +1,8 @@
-<?php           //TODO Input Admin account or reg account; if admin, list of driving schools from database
+<?php           //TODO Input Admin account, Instructor account or reg account; if admin, list of driving schools from database
 
 
 $msg = Register::check();
-if($msg == "checked"){
+if($msg === "checked"){
     header('Location: '.URL.'account');
     exit();
 }
