@@ -58,9 +58,9 @@ abstract class Model
 
         return $var;
     }
-    public function getAllAccounts()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
+    public static function getAllAccounts()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
     {
-        $bdd= $this->getBdd();
+        $bdd= self::getBdd();
         $i=0;
         $req = $bdd->prepare('SELECT * FROM user ');
         if(!$req->execute()){
