@@ -245,7 +245,7 @@ class User extends Model
      */
     public function setDrivingSchoolId($driving_school_id)
     {
-        //TODO get from Instructor object
+        $this->driving_school_id = $driving_school_id;
     }
 
 

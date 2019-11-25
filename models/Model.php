@@ -25,7 +25,7 @@ abstract class Model
     private static function setBdd($bdd)
     {
         try {
-            self::$_bdd = new PDO('mysql:host=127.0.0.1;dbname=musipsum;charset=utf8', 'root', '');
+            self::$_bdd = new PDO('mysql:host=127.0.0.1;dbname=musipsum;charset=utf8', 'root', 'ALEXIS');
             self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         }catch (Exception $e){
             echo 'Connexion échouée';
@@ -43,10 +43,11 @@ abstract class Model
         return self::$_bdd;
     }
 
-    public static function getAll($table,$id, $obj){
+    public static function getAll($table,$id, $obj): array
+    {
         $var = [];
         $i = 0;
-        $req = self::getBdd()->prepare('SELECT * FROM '.$table.' ORDER BY '.$id.' DESC');   //TODO Attention au nom de l'id
+        $req = self::getBdd()->prepare('SELECT * FROM '.$table.' ORDER BY '.$id.' DESC');
         $req->execute();
         while ($data=$req->fetch(PDO::FETCH_ASSOC)){
 
@@ -76,6 +77,7 @@ abstract class Model
             $var[$i]->setGender($account['gender']);
             $var[$i]->setAccountType($account['account_type']);
             $var[$i]->setMailAddress($account['mail_address']);
+            $var[$i]->setDrivingSchoolId($account['id_autoecole']);
 
 
             $i++;

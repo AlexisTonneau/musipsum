@@ -45,6 +45,7 @@ class Connection extends AccountManager
                             $boole = true;
 
                             $_SESSION['user'] = serialize($iValue);
+                            $_SESSION['driving_school'] = serialize(DrivingSchoolManager::getCurrentDrivingSchool());
                             if($iValue->getAccountType()==Model::REGULAR_USER){
                                 $msg = "Connected";
                             }

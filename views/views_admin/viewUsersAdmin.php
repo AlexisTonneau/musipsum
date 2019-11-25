@@ -28,7 +28,9 @@ require_once 'views/views_accueil/viewHeader.php';
     </div>
 
     <div class="autoecole">
-        Autoécole de Paris  <?php //TODO Back-end of driving school?>
+          <?php
+            echo unserialize($_SESSION['driving_school'])->getName();
+          ?>
     </div>
 
     <div>

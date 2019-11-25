@@ -4,12 +4,12 @@
 $msg = Connection::connect();
 $_SESSION['flash'] = $msg;
 
-if ($msg == "Connected") {
+if ($msg === "Connected") {
     //echo $msg;
 
     header('Location: '.URL.'account');
     exit();
-} elseif ($msg == "Connected as admin") {
+} elseif ($msg === "Connected as admin") {
 
     header('Location: '.URL.'adminaccount');
     exit();
@@ -24,6 +24,10 @@ $_SESSION['flash']="";
 
     <meta charset="utf-8"
     <link rel="stylesheet" href="<?= URL ?>/css/account/connect.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/validation.js"></script>
+
+
 
 
 
