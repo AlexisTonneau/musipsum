@@ -32,8 +32,13 @@ require_once 'views/views_accueil/viewHeader.php';
     </div>
 
     <div>
-        <input type="search" name="user" placeholder="         Rechercher un utilisateur" class="id_user">
-        <img class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe">
+        <form  action="<?=URL?>/views/views_admin/viewUsersResearch.php" method="get" >
+        
+        <input type="text" name="user" placeholder="         Rechercher un utilisateur" class="id_user">
+        <input type="submit" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe"> 
+
+    
+        </form>
     </div>
 
     <div>

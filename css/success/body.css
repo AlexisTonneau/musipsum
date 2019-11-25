@@ -5,28 +5,55 @@
 
 .su_st_p {
 	display: inline-block;
+	
+	
 }
 
 .su_st_1 {
-	width: 16.4%;
+	width: 16%;
+	
 }
 
 .su_st_2 {
-	width: 16.4%;
+	width: 16%;
 }
 
 .su_st_3 {
-	width: 16.4%;
+	width: 16%;
 }
 
 .su_st_4 {
-	width: 16.4%;
+	width: 16%;
 }
 
 .su_st_5 {
-	width: 16.4%;
+	width: 16%;
 }
 
 .su_st_6 {
-	width: 16.4%;
+	width: 16%;
+}
+@media (max-width : 600px)  {
+    .su_st_body {
+		white-space : pre-wrap;
+    
+	}
+	.su_st_1{
+		width: 100%;
+	}
+	.su_st_2{
+		width: 100%;
+	}
+	.su_st_3{
+		width: 100%;
+	}
+	.su_st_4{
+		width: 100%;
+	}
+	.su_st_5{
+		width: 100%;
+	}
+	.su_st_6{
+		width: 100%;
+	}
 }
