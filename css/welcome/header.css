@@ -25,6 +25,7 @@
   top: 0%
 }
 .btn_header {
+  text-decoration: none;
   color: black;
   border: 1px solid white;
   padding: 12px 40px 0px 0px;

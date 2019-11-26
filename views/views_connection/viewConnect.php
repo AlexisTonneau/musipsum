@@ -22,11 +22,9 @@ $_SESSION['flash']="";
 <html lang="en" dir="ltr">
 <head>
 
-    <meta charset="utf-8"
-    <link rel="stylesheet" href="<?= URL ?>/css/account/connect.css">
+    <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/validation.js"></script>
-
 
 
 
@@ -47,7 +45,7 @@ require_once ('views/views_accueil/viewHeader.php');
     </div>
 
     <div aligne="center">
-        <!--<p>--><img class="bonhomme" src="images/utilisateur.png" alt="portrait"><!--<p>-->
+        <!--<p>--><img class="bonhomme" src="images/icone_utilisateur.png" alt="portrait"><!--<p>-->
 
     </div>
 
@@ -68,11 +66,12 @@ require_once ('views/views_accueil/viewHeader.php');
         <div>
             <input type="password" name="mdp" placeholder="Mot de passe" class="id_mdp">
         </div>
-        <div>
-            <!--<p>--><input class="flèche" src="<?=URL?>/images/flèchebleu.png" type="submit" alt="flèche"><!--<p>-->
 
-        </div>
     </form>
+
+    <div>
+        <button type="submit" class="fleche"> <img src="images/flèchebleu.png" alt="flèche" width="40px"></button>
+    </div>
 
 
 </div>
@@ -81,3 +80,93 @@ require_once ('views/views_accueil/viewHeader.php');
 </body>
 </html>
 
+
+<style>
+/* Body */
+
+
+.middlepage{
+display: flex;
+}
+
+
+.image_flottante{
+width: 85%;
+height: 85%;
+position:absolute;
+position: center;
+left: 5%;
+right: 10%;
+}
+
+
+.bonhomme{
+position: absolute;
+left: 44%;
+top: 30%;
+height: 80px;
+}
+
+
+.fleche{
+position: absolute;
+border: none;
+background-color: transparent;
+left: 76%;
+top: 64%;
+height: 20px;
+}
+
+
+.Connexion{
+position:absolute;
+left: 42%;
+top: 45%;
+
+color: white;
+font-size: 30px;
+font-style: revert;
+}
+
+
+.mdp_oubli{
+position: absolute;
+color: white;
+font-style: revert;
+left: 63.45%;
+top: 71%;
+}
+
+
+.id_mail {
+position: absolute;
+left: 25%;
+top: 59%;
+width: 49%;
+height: 4%;
+}
+
+
+.id_mdp {
+position: absolute;
+left: 25%;
+top: 65%;
+width: 49%;
+height: 4%;
+}
+
+
+
+/*.connection_status {
+visibility: hidden<?php   if(is_null($_SESSION['flash'])){echo 'hidden';}  else{echo 'visible';}            ?>
+position: absolute;
+left: 25%;
+top: 83%;
+width: 49%;
+height : 7%;
+background-color: <?php  if($_SESSION['flash']=="Mail ou mot de passe incorrect"){echo '#ff0000';}
+else {echo '#00ff00';}
+?>;
+}*/
+
+</style>
