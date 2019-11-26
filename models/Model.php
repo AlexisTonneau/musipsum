@@ -25,7 +25,7 @@ abstract class Model
     private static function setBdd($bdd)
     {
         try {
-            self::$_bdd = new PDO('mysql:host=127.0.0.1;dbname=musipsum;charset=utf8', 'root', 'ALEXIS');
+            self::$_bdd = new PDO('mysql:host=127.0.0.1;dbname=musipsum;charset=utf8', 'root', '');
             self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         }catch (Exception $e){
             echo 'Connexion échouée';
