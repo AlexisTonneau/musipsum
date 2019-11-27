@@ -37,6 +37,7 @@ class Connection extends AccountManager
 
         $accountsStart = new Connection();
         $accounts = $accountsStart->getArray();
+
         if (isset($_POST['mail']) && isset($_POST['mdp']) && !is_null($_POST['mail']) && !is_null($_POST['mdp'])) {
             if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) && strlen($_POST['mdp']) > 0) {
                 if (!is_null($accounts)) {

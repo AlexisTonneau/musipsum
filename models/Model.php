@@ -73,6 +73,7 @@ abstract class Model
             $var[$i]->setHeight($account['height']);
             $var[$i]->setWeight($account['weight']);
             $var[$i]->setPassword($account['password_account']);
+          //  $var[$i]->setPassword(password_verify($account['password_account'],PASSWORD_BCRYPT));
             $var[$i]->setGender($account['gender']);
             $var[$i]->setAccountType($account['account_type']);
             $var[$i]->setMailAddress($account['mail_address']);

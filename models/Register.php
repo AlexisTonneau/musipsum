@@ -15,8 +15,8 @@ class Register extends Model
         $bdd = self::getBdd();
 
         $birthDate = $user->getNaissanceAnnee().'-'.$user->getNaissanceMois().'-'.$user->getNaissanceJour();
-        //$password = password_hash($user->getPassword(),PASSWORD_BCRYPT);
-        $password = $user->getPassword();
+
+        $password = password_hash($user->getPassword(),PASSWORD_BCRYPT);
         $family_name = $user->getName();
         $first_name = $user->getFirstName();
         $mail_address=$user->getMailAddress();
