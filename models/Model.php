@@ -89,8 +89,7 @@ abstract class Model
 
     public static function getCurrentAccount(){           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
         if(isset($_SESSION['user'])AND $_SESSION['user'] !== null){
-            $account = unserialize($_SESSION['user']);
-            return $account;
+            return unserialize($_SESSION['user']);
 
         }
         else{

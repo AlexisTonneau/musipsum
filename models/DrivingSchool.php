@@ -116,6 +116,9 @@ class DrivingSchool extends Model
      */
     public function getAddress()
     {
+        if ($this->address===null){
+            return '28 rue Notre-Dame des Champs';
+        }
         return $this->address;
     }
 

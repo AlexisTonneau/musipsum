@@ -16,7 +16,7 @@ class ControllerAccount
         else{*/
             if(isset($_SESSION['user'])) {
                 $account = unserialize($_SESSION['user']);
-                if($account->getAccountType()==Model::REGULAR_USER) {
+                if($account->getAccountType()===Model::REGULAR_USER) {
                     require('views/views_connection/viewUser.php');
                 }
                 elseif ($account->getAccountType()==Model::ADMIN_USER){

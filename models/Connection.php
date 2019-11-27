@@ -47,12 +47,12 @@ class Connection extends AccountManager
 
                             $boole = true;
 
-                            $_SESSION['user'] = serialize($iValue);
+                            $_SESSION['user'] = serialize($accounts[$i]);
                             $_SESSION['driving_school'] = serialize(DrivingSchoolManager::getCurrentDrivingSchool());
-                            if($iValue->getAccountType()==Model::REGULAR_USER){
+                            if($accounts[$i]->getAccountType()==Model::REGULAR_USER){
                                 $msg = "Connected";
                             }
-                            elseif ($iValue->getAccountType()==Model::ADMIN_USER){
+                            elseif ($accounts[$i]->getAccountType()==Model::ADMIN_USER){
                                 $msg = "Connected as admin";
 
 

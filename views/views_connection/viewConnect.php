@@ -58,7 +58,7 @@ require_once ('views/views_accueil/viewHeader.php');
         Mot de passe oublié ?
     </div>
 
-    <form class="mail" action="" method="post">
+    <form class="mail" action="" method="post" id="form_mail">
 
         <div>
             <input type="text" name="mail" placeholder="Adresse mail" class="id_mail">
@@ -70,7 +70,7 @@ require_once ('views/views_accueil/viewHeader.php');
     </form>
 
     <div>
-        <button type="submit" class="fleche"> <img src="images/flèchebleu.png" alt="flèche" width="40px"></button>
+        <button type="submit" form="form_mail" class="fleche"> <img src="images/flèchebleu.png" alt="flèche" width="40px"></button>
     </div>
 
 
