@@ -95,11 +95,11 @@ class DrivingSchoolManager extends Model
             $descri=$_POST['mention_legal'];
             $sql .= 'mention_legal ='."'".$descri."',";
         }
-        if ($sql === 'UPDATE auto_ecole SET '){
+        if ($sql === "'"."UPDATE auto_ecole SET "){
             return false;
         }
         else{
-            $sql .= 'WHERE id ='.self::getCurrentDrivingSchool()->getId()."''";
+            $sql .= 'WHERE id ='."'".self::getCurrentDrivingSchool()->getId()."''";
             $req =$bdd->prepare($sql);
             $req->execute();
 
