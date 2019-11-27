@@ -21,7 +21,7 @@ class DrivingSchool extends Model
     {
         $this->name= '';
         $this->mail_address= '';
-        $this->phone_number=0;
+        $this->phone_number='';
         $this->id=0;
         $this->address= '';
         $this->cgu= '';
@@ -158,6 +158,8 @@ class DrivingSchool extends Model
     {
         $this->mention_legal = $mention_legal;
     }
+
+
 
 
 
