@@ -25,7 +25,7 @@ abstract class Model
     private static function setBdd($bdd)
     {
         try {
-            self::$_bdd = new PDO('mysql:host=127.0.0.1;dbname=musipsum;charset=utf8', 'root', '');
+            self::$_bdd = new PDO('mysql:host=127.0.0.1;dbname=musipsum;charset=utf8', 'root', 'ALEXIS');
             self::$_bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         }catch (Exception $e){
             echo 'Connexion échouée';
@@ -74,6 +74,7 @@ abstract class Model
             $var[$i]->setHeight($account['height']);
             $var[$i]->setWeight($account['weight']);
             $var[$i]->setPassword($account['password_account']);
+            //$var[$i]->setPassword(password_verify($account['password_account'],PASSWORD_BCRYPT));
             $var[$i]->setGender($account['gender']);
             $var[$i]->setAccountType($account['account_type']);
             $var[$i]->setMailAddress($account['mail_address']);

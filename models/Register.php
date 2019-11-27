@@ -9,24 +9,37 @@ class Register extends Model
 
 
 
-
+    private $status;
 
     public function __construct(User $user){
         $bdd = self::getBdd();
 
         $birthDate = $user->getNaissanceAnnee().'-'.$user->getNaissanceMois().'-'.$user->getNaissanceJour();
-        $password = $user->getPassword();
+
+
+        $password = password_hash($user->getPassword(),PASSWORD_BCRYPT);
+
         $family_name = $user->getName();
         $first_name = $user->getFirstName();
         $mail_address=$user->getMailAddress();
         $gender = $user->getGender();
-        $height=$user->getHeight();
-        $weight=$user->getWeight();
+        if($user->getHeight()!==''){
+        $height=$user->getHeight();}
+        else{
+            $height = 0;
+        }
+        if($user->getWeight()!==''){
+        $weight=$user->getWeight();}
+        else{
+            $weight = 0;
+        }
         $account_type = $user->getAccountType();
         $id_driving_school = $user->getDrivingSchoolId();
 
 
-        $request =$bdd->prepare( 'INSERT INTO user (family_name, surname, mail_address, gender, birth_date, height, weight, password,account_type,id_autoecole) VALUES (:family_name, :surname, :mail_address, :gender, :birth_date,:height,:weight,:password,:account_type,:id_autoecole)');
+
+        $request =$bdd->prepare( 'INSERT INTO user (name, first_name, mail_address, gender, birth_date, height, weight, password_account,account_type) VALUES (:family_name, :surname, :mail_address, :gender, :birth_date,:height,:weight,:password,:account_type)');
+
         $request->bindParam(':family_name',$family_name);
         $request->bindParam(':surname',$first_name);
         $request->bindParam(':mail_address',$mail_address);
@@ -36,8 +49,15 @@ class Register extends Model
         $request->bindParam(':weight',$weight);
         $request->bindParam(':password',$password);
         $request->bindParam(':account_type',$account_type);
-        $request->bindParam(':id_autoecole',$id_driving_school);
-        $request->execute();
+
+        if($request->execute()){
+            $this->status=true;
+        }
+        else{
+            $this->status=false;
+        }
+
+
 
         //Cette requête avait fonctionné mais l'autre a pas été testée
         /*$request =$bdd->prepare( 'INSERT INTO user (name, first_name, mail_address, password_account) VALUES (:family_name, :surname, :mail_address, :password)');
@@ -75,8 +95,13 @@ class Register extends Model
         }
 
         else{
-            self::register();
-            $errormsg = "checked";
+            if(self::register()){
+                $errormsg = "checked";
+            }
+            else{
+                $errormsg = "Error";
+            }
+
         }
         return $errormsg;
     }
@@ -90,6 +115,11 @@ class Register extends Model
             $account_register->setNaissanceAnnee($_POST['annee']);
             $account_register->setNaissanceJour($_POST['jour']);
             $account_register->setNaissanceMois($_POST['mois']);
+        }
+        else{
+            $account_register->setNaissanceJour("01");
+            $account_register->setNaissanceAnnee("1970");
+            $account_register->setNaissanceMois("01");
         }
         if (isset($_POST['first_name'])){
             $account_register->setFirstName($_POST['first_name']);
@@ -108,8 +138,10 @@ class Register extends Model
             $account_register->setAccountType(1);
             self::createInstructor($account_register);
         }
-        self::linkUserInstructor($account_register);
-        new Register($account_register);
+
+        $reg =new Register($account_register);
+        return $reg->isStatus();
+
 
     }
 
@@ -131,6 +163,16 @@ class Register extends Model
 
     }
 
+    /**
+     * @return bool
+     */
+    public function isStatus(): bool
+    {
+        return $this->status;
+    }
+
+
+
     private static function linkUserInstructor(User $user){
         if ($user->getAccountType()==Model::REGULAR_USER){
             $bdd = self::getBdd();
@@ -144,6 +186,7 @@ class Register extends Model
             $bdd->execute();*/
         }
     }
+
 
 
 
