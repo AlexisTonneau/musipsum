@@ -99,7 +99,8 @@ require_once 'viewHeader.php';
 
         <p class="adresse_img">
             <img src="<?=URL?>images/icone_batiment.png" alt="adresse">
-            <!--<p class="text contact_txt adresse_txt">-->28 rue Notre dame des champs 75006 Paris<!--</p>-->
+            <!--<p class="text contact_txt adresse_txt">-->
+            <?php echo DrivingSchoolManager::getAddressFromUser(); ?><!--</p>-->
         </p>
 
         <p class="horaires_img">
@@ -111,10 +112,10 @@ require_once 'viewHeader.php';
 
         <p class="telephone_img">
             <img src="<?=URL?>/images/icone_telephone.png" alt="telephone">
-            <!--</p>-->
+            <?php
+            echo DrivingSchoolManager::getPhoneFromUser();
+            ?>
 
-            <!--<p class="text contact_txt n_tel">-->
-            +33 8 85 47 12 65
         </p>
 
 

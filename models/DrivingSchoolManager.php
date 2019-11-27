@@ -49,4 +49,66 @@ class DrivingSchoolManager extends Model
 
 
     }
+    public static function getAddressFromUser():string {
+        if (isset($_SESSION['driving_school']) && $_SESSION['driving_school'] !== null){
+            $ds = unserialize($_SESSION['driving_school']);
+            return $ds->getAddress();
+        }
+
+        return '28 rue Notre dame des champs 75006 Paris';
+    }
+
+    public static function getPhoneFromUser():string {
+        if (isset($_SESSION['driving_school']) && $_SESSION['driving_school'] !== null){
+            $ds = unserialize($_SESSION['driving_school']);
+            return $ds->getPhoneNumber();
+        }
+
+        return '+33 8 85 47 12 65';
+    }
+
+    public static function modifyDrivingSchool():bool {
+        $bdd = self::getBdd();
+        $sql = "''";
+        $sql .= 'UPDATE auto_ecole SET ';
+        if (isset($_POST['name']) AND $_POST['name']!==null){
+            $name=$_POST['name'];
+            $sql .= 'name ='."''".$name."''";
+        }
+        if (isset($_POST['phone']) AND $_POST['phone']!==null){
+            $phone=$_POST['phone'];
+            $sql .= 'phone_number ='."''".$phone."''";
+        }
+        if (isset($_POST['adress']) AND $_POST['adress']!==null){
+            $adress=$_POST['adress'];
+            $sql .= 'adress ='."'".$adress."',";
+        }
+        if (isset($_POST['description']) AND $_POST['description']!==null){
+            $descri=$_POST['description'];
+            $sql .= 'description ='."'".$descri."',";
+        }
+        if (isset($_POST['cgu']) AND $_POST['cgu']!==null){
+            $cgu=$_POST['cgu'];
+            $sql .= 'cgu ='."'".$cgu."',";
+        }
+        if (isset($_POST['mention_legal']) AND $_POST['mention_legal']!==null){
+            $descri=$_POST['mention_legal'];
+            $sql .= 'mention_legal ='."'".$descri."',";
+        }
+        if ($sql === "'"."UPDATE auto_ecole SET "){
+            return false;
+        }
+        else{
+            $sql .= 'WHERE id ='."'".self::getCurrentDrivingSchool()->getId()."''";
+            $req =$bdd->prepare($sql);
+            $req->execute();
+
+        }
+
+
+
+
+
+
+    }
 }
