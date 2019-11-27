@@ -1,9 +1,17 @@
+<?php
+if(!isset($_SESSION['user'])||(unserialize($_SESSION['user'])->getAccountType()!=Connection::ADMIN_USER)){
+    throw new Exception("Vous devez être connectés en tant qu'administrateur ou moniteur d'auto école pour accéder à cette page !");
+
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/start/body.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-    <script type="text/javascript" src="/js/search.js" >
+
 
 </head>
 <style type="text/css">

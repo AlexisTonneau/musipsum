@@ -1,7 +1,4 @@
-<?php           //TODO Input Admin account or reg account; if admin, list of driving schools from database
-
-
-
+<?php           //TODO Input Admin account, Instructor account or reg account; if admin, list of driving schools from database
 
 
 $msg = Register::check();

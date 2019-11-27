@@ -9,10 +9,10 @@
             <div class="choix">
                 <a class="btn btn_header a_propos_header" href="<?=URL?>accueil/about" >À propos</a>
                 <a class="btn btn_header sucess_stories" href="<?=URL?>accueil/successstories" >Success Story</a>
-                <a class="btn btn_header nous_contacter" href="">Nous contacter</a>
+                <a class="btn btn_header nous_contacter" href="<?=URL?>accueil#contact">Nous contacter</a>
                 <a class="btn btn_header start_test" href="<?=URL?>test">Démarrer </a>
                 <a class="btn btn_header connexion" href="<?=URL?>account"><?php
-                    if(isset($_SESSION['user']) && !is_null($_SESSION['user'])){
+                    if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
                         echo 'Mon compte';
                     }
                     else{

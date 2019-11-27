@@ -1,4 +1,4 @@
-<?php
+<?php   //TODO Add 'Modify driving school' button which needs to be redirected to '<URL>adminaccount/modify-drivingschool'
 if(isset($_POST['déconnexion'])){
     session_destroy();
     header('Location: '.URL.'/accueil');
@@ -28,12 +28,19 @@ require_once 'views/views_accueil/viewHeader.php';
     </div>
 
     <div class="autoecole">
-        Autoécole de Paris  <?php //TODO Back-end of driving school?>
+          <?php
+            echo unserialize($_SESSION['driving_school'])->getName();
+          ?>
     </div>
 
     <div>
-        <input type="search" name="user" placeholder="         Rechercher un utilisateur" class="id_user">
-        <img class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe">
+        <form  action="<?=URL?>/views/views_admin/viewUsersResearch.php" method="get" >
+        
+        <input type="text" name="user" placeholder="         Rechercher un utilisateur" class="id_user">
+        <input type="submit" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe"> 
+
+    
+        </form>
     </div>
 
     <div>

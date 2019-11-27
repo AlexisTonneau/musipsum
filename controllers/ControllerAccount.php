@@ -20,15 +20,11 @@ class ControllerAccount
                     require('views/views_connection/viewUser.php');
                 }
                 elseif ($account->getAccountType()==Model::ADMIN_USER){
-                    if(isset($_GET['register'])&&$_GET['register']==true){
-                        require ('views/views_admin/viewCreateUser.php');
 
-                    }
-                    else{
                         require ('views/views_admin/viewUsersAdmin.php');
                     }
                 }
-            }
+
 
             else {
                 require('views/views_connection/viewConnect.php');

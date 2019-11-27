@@ -1,5 +1,6 @@
-<?php
-session_destroy();
+
+<?php       //TODO Add info about driving schools
+
 $account = Model::getCurrentAccount();
 
 if (isset($_POST['disconnect'])){

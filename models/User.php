@@ -15,27 +15,7 @@ class User extends Model
     private $naissance_mois="01";
     private $naissance_annee="1970";
     private $password;
-    private $driving_school;
-
-
-
-
-   /* public function __construct(array $data)
-    {
-        $this->hydrate($data);
-
-
-    }
-    public function hydrate(array $data)
-    {
-        foreach ($data as $key => $value){
-            $method = 'set'.ucfirst($key);
-            if(method_exists($this, $method))
-                $this->$method($value);
-
-        }
-    }*/
-
+    private $driving_school_id;
 
 
     public function manuallyConstruct($familyname,$surname,$mailAddress,$gender,$yearBirth,$monthBirth,$dayBirth,$height,$weight){
@@ -251,18 +231,20 @@ class User extends Model
     /**
      * @return mixed
      */
-    public function getDrivingSchool()
+    public function getDrivingSchoolId()
     {
-        return $this->driving_school;
+        return $this->driving_school_id;
     }
 
     /**
-     * @param mixed $driving_school
+     * @param mixed $driving_school_id
      */
-    public function setDrivingSchool($driving_school)
+    public function setDrivingSchoolId($driving_school_id)
     {
-        $this->driving_school = $driving_school;
+        $this->driving_school_id = $driving_school_id;
     }
+
+
 
 
 

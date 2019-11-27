@@ -1,5 +1,4 @@
 
-
 /* Body */
 
 
@@ -27,12 +26,11 @@
 
 
 .flèche{
+    background-image: url(/views/views_connection/images/flèchebleu.png);
     position: absolute;
-    border: none;
-    background-color: transparent;
     left: 76%;
     top: 64%;
-    height: 20px;
+    height: 35px;
 }
 
 
@@ -71,21 +69,6 @@
     top: 65%;
     width: 49%;
     height: 4%;
-}
-
-
-@media screen and (max-width: 400px) {
-    .middlepage {
-        display: flex;
-        width: 100%;
-        object-fit: fill;
-    }
-
-    .bonhomme {
-        left: 57%;
-        top: 41%;
-        height: 8%;
-    }
 }
 
 /*.connection_status {

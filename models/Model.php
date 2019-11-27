@@ -43,10 +43,11 @@ abstract class Model
         return self::$_bdd;
     }
 
-    public static function getAll($table,$id, $obj){
+    public static function getAll($table,$id, $obj): array
+    {
         $var = [];
         $i = 0;
-        $req = self::getBdd()->prepare('SELECT * FROM '.$table.' ORDER BY '.$id.' DESC');   //TODO Attention au nom de l'id
+        $req = self::getBdd()->prepare('SELECT * FROM '.$table.' ORDER BY '.$id.' DESC');
         $req->execute();
         while ($data=$req->fetch(PDO::FETCH_ASSOC)){
 
@@ -57,9 +58,9 @@ abstract class Model
 
         return $var;
     }
-    public function getAllAccounts()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
+    public static function getAllAccounts()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
     {
-        $bdd= $this->getBdd();
+        $bdd= self::getBdd();
         $i=0;
         $req = $bdd->prepare('SELECT * FROM user ');
         if(!$req->execute()){
@@ -77,6 +78,8 @@ abstract class Model
             $var[$i]->setGender($account['gender']);
             $var[$i]->setAccountType($account['account_type']);
             $var[$i]->setMailAddress($account['mail_address']);
+            $var[$i]->setDrivingSchoolId($account['id_autoecole']);
+
 
             $i++;
         }
@@ -85,7 +88,7 @@ abstract class Model
     }
 
     public static function getCurrentAccount(){           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
-        if(isset($_SESSION['user'])AND !is_null($_SESSION['user'])){
+        if(isset($_SESSION['user'])AND $_SESSION['user'] !== null){
             $account = unserialize($_SESSION['user']);
             return $account;
 

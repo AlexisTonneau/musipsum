@@ -70,10 +70,13 @@ require_once 'viewHeader.php';
             <img src="images/.png" alt="">-->
         </div>
         <div class="box_mail">
-            <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD;">
+            <form action="" method="post">
+            <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD;" id="contact">
             <?php
-            //TODO Envoyer un mail (peut-étre rajouter un champ pour rentrer son email)
+           // Connection::sendMail();
             ?>
+            </form>
+
         </div>
 
 
@@ -91,11 +94,11 @@ require_once 'viewHeader.php';
 
 
 
-    <div class="contact">
+    <div class="contact" >
 
 
         <p class="adresse_img">
-            <img src="images/icone_batiment.png" alt="adresse">
+            <img src="<?=URL?>images/icone_batiment.png" alt="adresse">
             <!--<p class="text contact_txt adresse_txt">-->28 rue Notre dame des champs 75006 Paris<!--</p>-->
         </p>
 
