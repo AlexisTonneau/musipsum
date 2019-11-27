@@ -11,9 +11,9 @@ class User extends Model
     private $weight;
     private $mail_address;
     private $gender;
-    private $naissance_jour;
-    private $naissance_mois;
-    private $naissance_annee;
+    private $naissance_jour="01";
+    private $naissance_mois="01";
+    private $naissance_annee="1970";
     private $password;
     private $driving_school_id;
 
@@ -138,10 +138,6 @@ class User extends Model
     public function setId($id)
     {
         $this->id_user = $id;
-    }
-
-    public function getNom(){
-        return $this->nom;
     }
 
     /**

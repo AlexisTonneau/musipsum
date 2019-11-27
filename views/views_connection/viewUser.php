@@ -1,4 +1,6 @@
+
 <?php       //TODO Add info about driving schools
+
 $account = Model::getCurrentAccount();
 
 if (isset($_POST['disconnect'])){
@@ -74,6 +76,3 @@ require_once 'views/views_accueil/viewHeader.php';
 
 </body>
 </html>
-
-
-
