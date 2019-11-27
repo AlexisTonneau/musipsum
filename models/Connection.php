@@ -10,14 +10,14 @@ class Connection extends AccountManager
     public static $array_accounts;
 
 
-
     /**
      * Connection constructor.
+     * @throws Exception
      */
     public function __construct()
     {
         //self::setAllAccounts();
-        self::$array_accounts = Model::getAllAccounts();
+        self::$array_accounts = $this->getAllAccounts();
 
 
     }
@@ -40,9 +40,9 @@ class Connection extends AccountManager
 
         if (isset($_POST['mail']) && isset($_POST['mdp']) && !is_null($_POST['mail']) && !is_null($_POST['mdp'])) {
             if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) && strlen($_POST['mdp']) > 0) {
-                if (!is_null($accounts)) {
+                if ($accounts !== null) {
                     for ($i = 0; $i < sizeof($accounts); $i++) {
-                        if ($accounts[$i]->getMailAddress() == $_POST['mail'] && $accounts[$i]->getPassword() == $_POST['mdp']) {
+                        if ($accounts[$i]->getMailAddress() == $_POST['mail'] && password_verify($_POST['mdp'],$accounts[$i]->getPassword())) {
                             $boole = true;
 
                             $_SESSION['user'] = serialize($accounts[$i]);

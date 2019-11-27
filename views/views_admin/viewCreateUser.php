@@ -5,7 +5,7 @@
 
 
 $msg = Register::check();
-if($msg == "checked"){
+if($msg === "checked"){
     header('Location: '.URL.'account');
     exit();
 }

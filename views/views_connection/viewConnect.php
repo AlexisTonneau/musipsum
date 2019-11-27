@@ -4,12 +4,12 @@
 $msg = Connection::connect();
 $_SESSION['flash'] = $msg;
 
-if ($msg == "Connected") {
+if ($msg === "Connected") {
     //echo $msg;
 
     header('Location: '.URL.'account');
     exit();
-} elseif ($msg == "Connected as admin") {
+} elseif ($msg === "Connected as admin") {
 
     header('Location: '.URL.'adminaccount');
     exit();
