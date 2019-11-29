@@ -22,7 +22,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: red;
+  color: #66AFFD;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -39,6 +39,7 @@
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #66AFFD;
+  color:white;
 }
 
 /* Caption text */
@@ -93,8 +94,11 @@
   top: 70%;
 }
 
+
 .div_points {
-  position: absolute;
-  top: 95%;
-  left: 48%;
+  /*width: fit-content;*/
+  position: sticky;
+  bottom: 0;
+  align-items: center;
+  margin-right: 0%;
 }

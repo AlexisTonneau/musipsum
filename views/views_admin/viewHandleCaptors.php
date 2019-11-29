@@ -25,6 +25,7 @@ require_once 'views/views_accueil/viewHeader.php';
                 <div class="custom-select">
                     <select id="type_test" name="type_test">
                         <option value="t_1">Test 1</option>
+                        <option value="t_1_bis">Test 1</option>
                         <option value="t_2">Test 2</option>
                         <option value="t_3">Test 3</option>
                     </select>
@@ -53,6 +54,7 @@ require_once 'views/views_accueil/viewHeader.php';
                 <div class="custom-select">
                     <select id="modif_capteur" name="modification_capteur" class="choix_modif">
                         <option value="c_1">Capteur 1</option>
+                        <option value="c_1_bis">Capteur 1</option>
                         <option value="c_2">Capteur 2</option>
                         <option value="c_3">Capteur 3</option>
                     </select>

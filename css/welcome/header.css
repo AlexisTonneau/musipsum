@@ -1,45 +1,158 @@
+/*DEFINITION POLICES*/
 
-#title_bar {
-
+@font-face {
+  font-family: 'etna';
+  src:url('etna-free-font.otf');
 }
 
-.nav_bar {
-  display:flex;
-  justify-content: right;
+@font-face {
+  font-family: 'gotham_book';
+  src:url('Gotham-Book.otf');
 }
-.choix
-{
- display:flex;
- justify-content: right;
- position: absolute;
- right: 0%
+@font-face {
+  font-family: 'poly';
+  src:url('POLYA.otf');
 }
-.title_bar {
-  background-color: white;
-  padding: 0px 0px 2px 0px;
-  display: flex;
-  flex-direction: row;
-  border-bottom: 0.5px solid grey;
-  white-space:nowrap;
+@font-face {
+  font-family: 'aileron';
+  src:url('Aileron-Regular.otf');
+}
+
+
+header {
+  width: 100%;
+}
+
+/*TEXTE TITRE ONGLETS*/
+
+.choix {
+  height: 20%;
   position: relative;
-  top: 0%
+  width: fit-content;
+  bottom: 15px;
+  word-spacing:;
+  align-items: center;
+  align-content: center; 
+  left: 32%;
 }
-.btn_header {
-  color: black;
-  border: 1px solid white;
-  padding: 12px 40px 0px 0px;
-  margin: 4px;
-  width: 20%;
-  list-style-type:none;
-}
-.musipsum{
+
+#titre_musipsum {
+  color: #FFC0CB;
+  font-family: 'etna';
+  font-size: 40px;
   text-decoration: none;
-  width: 9%;
-  margin-right: 48%;
-  color: #194E6E;
-  font-size: 1.4em;
+  position: relative;
+  bottom: 50px;
+  left: 43.5%
 }
-.a_propos_header{
-  width: 13%;
+
+.txt_header {
+  font-family: 'gotham_book';
   text-decoration: none;
+  color: #FFC0CB;
+  margin: 0px 7px 0px;
+}
+
+/*BORDURES*/
+
+.titlebar {
+  height: fit-content;
+  border-top: solid 2px #FFC0CB ;
+  border-bottom: solid 2px #FFC0CB ;
+}
+
+/*
+.nav_bar {
+  border-bottom: solid 2px #FFC0CB ;  
+}*/
+
+
+/*LIENS ACTIFS*/
+
+.txt_header:hover {
+  color: #ff4d6a;
+}
+
+.txt_header:visited {
+  color:#FFC0CB: 
+}
+
+#titre_musipsum:hover {
+  color: #ff4d6a;
+}
+
+/*LOGO MUSIPSUM*/
+
+.logo_mus {
+  position: relative;
+  left: 15%;
+  top: 35px;
+  width: 37px;
+  height: auto;
+}
+
+/*ICONES*/
+
+.icone_header {
+  height: 22px;
+  width: auto;
+  margin: 0px 7px 0px
+}
+
+#icones_header {
+  width: fit-content;
+  align-items: end;
+  position: relative;
+  left: 85%;
+  bottom: 73px
+}
+
+
+
+/*RESPONSIVE*/
+
+
+@media screen and (max-width: 900px) {
+  .choix {
+    left: 25%;
+  }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 2499px) {
+  .choix {
+    left: 34.5%;
+  }
+  .txt_header {
+    font-size: 20px;
+  }
+  #titre_musipsum {
+    left: 48%;
+  }
+  .logo_mus {
+    top: 40px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .choix {
+    left: 38%;
+  }
+  .txt_header {
+    font-size: 30px;
+  }
+  .logo_mus {
+    top: 50px;
+  }
+  #titre_musipsum {
+    left: 51%;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1300px) {
+  #titre_musipsum {
+    left: 42%;
+  }
+  .choix {
+    left: 25%;
+  }
 }

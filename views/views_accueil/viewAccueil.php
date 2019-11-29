@@ -30,17 +30,17 @@ require_once 'viewHeader.php';
 
 <div class="carrousel_accueil">
     <div class="slide passage">
-        <img src="<?=URL?>/images/slide_1.png" class="img img_carrousel_1" style="width: 100%" alt="">
+        <img src="<?=URL?>/images/slide_1a.png" class="img img_carrousel_1" style="width: 100%" alt="">
         <div class="carrousel_text carrousel_text_1">Texte pour la premiere slide</div>
     </div>
 
     <div class="slide passage">
-        <img src="<?=URL?>/images/slide_2.jpg" class="img img_carrousel_2" style="width: 100%" alt="">
+        <img src="<?=URL?>/images/slide_2a.jpg" class="img img_carrousel_2" style="width: 100%" alt="">
         <div class="carrousel_text carrousel_text_2">Texte pour la deuxieme slide</div>
     </div>
 
     <div class="slide passage">
-        <img src="<?=URL?>/images/slide_3.png" class="img img_carrousel_3" style="width: 100%" alt="">
+        <img src="<?=URL?>/images/slide_3b.png" class="img img_carrousel_3" style="width: 100%" alt="">
         <div class="carrousel_text carrousel_text_3">Texte pour la troisieme slide</div>
     </div>
 
@@ -70,7 +70,7 @@ require_once 'viewHeader.php';
             <img src="images/.png" alt="">-->
         </div>
         <div class="box_mail">
-            <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD;" id="contact">
+            <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1.333px solid #66AFFD; color: #66AFFD; border-radius: 4%" id="contact">
             <?php
             //TODO Envoyer un mail (peut-étre rajouter un champ pour rentrer son email)
             ?>
