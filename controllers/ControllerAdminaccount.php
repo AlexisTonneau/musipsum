@@ -21,11 +21,14 @@ class ControllerAdminaccount
                         break;
                     case 'disconnect':
                         session_destroy();
-                        header("index.php");
+                        header('Location: ' .URL);
                         exit();
                         break;
                     case 'modify-drivingschool':
                         require_once ('views/views_admin/viewModifyDrivingSchool.php');
+                        break;
+                    case 'search':
+                        require_once ('views/views_admin/viewUsersResearch.php');
                         break;
                     default:
                         header('Location: '.URL.'adminaccount');

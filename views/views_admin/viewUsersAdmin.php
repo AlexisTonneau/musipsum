@@ -1,9 +1,5 @@
 <?php   //TODO Add 'Modify driving school' button which needs to be redirected to '<URL>adminaccount/modify-drivingschool'
-if(isset($_POST['déconnexion'])){
-    session_destroy();
-    header('Location: '.URL.'/accueil');
-    exit();
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -34,10 +30,10 @@ require_once 'views/views_accueil/viewHeader.php';
     </div>
 
     <div>
-        <form  action="<?=URL?>/views/views_admin/viewUsersResearch.php" method="get" >
+        <form  action="<?=URL?>adminaccount/search" method="post" >
         
-        <input type="text" name="user" placeholder="         Rechercher un utilisateur" class="id_user">
-        <input type="submit" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe"> 
+        <input type="text" name="search" placeholder="         Rechercher un utilisateur" class="id_user">
+        <input type="submit" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe">
 
     
         </form>
@@ -53,10 +49,8 @@ require_once 'views/views_accueil/viewHeader.php';
             <p class="centrer"><a class="centrer_capteur" href="<?=URL?>adminaccount/handlecaptor">Gérer</a></p>
         </btn>
     </div>
-    <div>
-        <form class="btn btn_deconnexion" method="post" action="">
-            <p class="centrer"><input type="submit" value="Déconnexion" name="déconnexion"></p>
-        </form>
+    <div class="btn_deconnexion">
+            <a class="centrer" href="<?=URL?>adminaccount/disconnect">Se déconnecter</a>
     </div>
 </div>
 

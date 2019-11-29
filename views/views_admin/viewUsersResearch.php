@@ -1,21 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="<?=URL?>/css/admin/Recherche.css">
+
+    <title>Recherche</title>
+
+</head>
+
+<body class="body">
+
 <?php
-
-require_once 'C:\wamp64\www\musipsum\models\Model.php';
-require_once 'C:\wamp64\www\musipsum\models\User.php';
+require_once 'views/views_accueil/viewHeader.php';
 
 
-    $first_namePost= $_GET['user'];
-    $allAccounts = Model::getAllAccounts();
- //print_r ($allAccounts);
- 
-foreach ( $allAccounts as $account)
+foreach ( Search::initializeSearch() as $account)
 { 
-    if ($account->getFirstName()==$first_namePost)
-    {
-        ?><form  method='post'action=  >
-        <input type"submit" name="envoyer" value="envoyer" onclick="afficher();">
-        </form> <?php
+
         echo '<br/>'.$account->getFirstName();
-        echo ' '.$account->getName();
-    }
+        echo ' '.$account->getName()."\t\t\t";
+    ?> <a class="link" href="#">Démarrer</a>
+
+<?php
 }

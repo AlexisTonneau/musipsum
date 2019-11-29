@@ -15,7 +15,7 @@ class ControllerTest
                     require_once 'views/views_admin/viewLaunchTest.php';
                     break;
                 case 1:
-                   require_once 'views/views_admin/viewLaunchTest.php';
+                   require_once 'views/views_admin/viewLaunchTest.php';     //TODO switch pages when they will be made
                     break;
             }
         }

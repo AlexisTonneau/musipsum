@@ -62,7 +62,36 @@ abstract class Model
     {
         $bdd= self::getBdd();
         $i=0;
-        $req = $bdd->prepare('SELECT * FROM user ');
+        $req = $bdd->prepare('SELECT * FROM user');
+        if(!$req->execute()){
+            throw new Exception("Connexion impossible");
+        }
+        while ($account = $req->fetch(PDO::FETCH_ASSOC)){
+            $var[$i] = new User;
+            $var[$i]->setName($account['name']) ;
+            $var[$i]->setId($account['id_user']);
+            $var[$i]->setFirstName($account['first_name']);
+            $var[$i]->setHeight($account['height']);
+            $var[$i]->setWeight($account['weight']);
+            $var[$i]->setPassword($account['password_account']);
+            //$var[$i]->setPassword(password_verify($account['password_account'],PASSWORD_BCRYPT));
+            $var[$i]->setGender($account['gender']);
+            $var[$i]->setAccountType($account['account_type']);
+            $var[$i]->setMailAddress($account['mail_address']);
+            $var[$i]->setDrivingSchoolId($account['id_autoecole']);
+
+
+            $i++;
+        }
+        return $var;
+
+    }
+
+    public static function getAllAccountsDS()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
+    {
+        $bdd= self::getBdd();
+        $i=0;
+        $req = $bdd->prepare('SELECT * FROM user WHERE id_autoecole='.self::getCurrentAccount()->getDrivingSchoolId()); //Requête avec uniquement l'auto école actuelle
         if(!$req->execute()){
             throw new Exception("Connexion impossible");
         }
