@@ -1,0 +1,51 @@
+
+/*
+.gerer_capteurs .gerer_cgu {
+	display: inline-block;
+	width: 50%;
+}*/
+.gerer_body {
+	width: 100%;
+	top: 5%;
+}
+
+.gerer_capteurs {
+	width: 50%;
+	display: inline-block;
+	position: absolute;
+}
+
+.gerer_cgu {
+	width: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 55%;
+	top: 8%;
+	height: 60%;
+}
+
+.input_range_range {
+	display: inline-block;
+	border: 0px solid;
+}
+
+.range_value {
+	width: 15%;
+	display: inline-block;
+}
+
+
+.titre_gerer {
+	position: relative;
+	left: 35%;
+	width: 30%;
+	height: 10%;
+	background-color: #66AFFD;
+	text-align: center;
+	color: white;
+	margin: 0px;
+}
+
+.titre_modif_cgu {
+	color: #66AFFD;
+}
