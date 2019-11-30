@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="773f9f9a-1900-46e2-a4a7-9fca1ff39d42" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/admin/Recherche.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerAdminaccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerAdminaccount.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/views_admin/viewUsersAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/views_admin/viewUsersAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/views_admin/viewUsersResearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/views_admin/viewUsersResearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/views_connection/connection.css" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\wamp64\www\musipsum\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="127.0.0.1" id="29dcad8f-d13d-4d72-b22f-8203cfed039c" name="Wamp" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP_7.0">
+    <include_path>
+      <path value="C:/php/pear" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1Sb3aq6P0i9LzFqnO5hfiX0hmC2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\musipsum\views\views_accueil\css" />
+      <recent name="C:\wamp64\www\musipsum\views\views_accueil\js" />
+      <recent name="C:\wamp64\www\musipsum\views\views_admin\css" />
+      <recent name="C:\wamp64\www\musipsum\views\views_admin\images" />
+      <recent name="C:\wamp64\www\musipsum\views\views_connection\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\musipsum\css\welcome" />
+      <recent name="C:\wamp64\www\musipsum\css\account" />
+      <recent name="C:\wamp64\www\musipsum\css\admin" />
+      <recent name="C:\wamp64\www\musipsum\css" />
+      <recent name="C:\wamp64\www\musipsum\views\views_connection\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Musipsum" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Wamp" start_url="/musipsum/">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7a43cae0" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f42cb6a0" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="773f9f9a-1900-46e2-a4a7-9fca1ff39d42" name="Default Changelist" comment="" />
+      <created>1571818533699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571818533699</updated>
+      <workItem from="1571818535130" duration="3371000" />
+      <workItem from="1572002079127" duration="6168000" />
+      <workItem from="1572008662536" duration="2423000" />
+      <workItem from="1572012739170" duration="9023000" />
+      <workItem from="1572025350464" duration="5618000" />
+      <workItem from="1572794599588" duration="6032000" />
+      <workItem from="1572801321580" duration="12062000" />
+      <workItem from="1572873216349" duration="9697000" />
+      <workItem from="1572908452014" duration="9166000" />
+      <workItem from="1572953217866" duration="1917000" />
+      <workItem from="1572969636011" duration="5072000" />
+      <workItem from="1573027825451" duration="7048000" />
+      <workItem from="1573046412439" duration="7826000" />
+      <workItem from="1573157312432" duration="607000" />
+      <workItem from="1573215170731" duration="8283000" />
+      <workItem from="1573479280608" duration="490000" />
+      <workItem from="1573547865354" duration="12411000" />
+      <workItem from="1573565542445" duration="4788000" />
+      <workItem from="1573574012855" duration="5697000" />
+      <workItem from="1573651910033" duration="1344000" />
+      <workItem from="1573822009920" duration="4274000" />
+      <workItem from="1573831619382" duration="855000" />
+      <workItem from="1573913928703" duration="6416000" />
+      <workItem from="1573935993334" duration="13476000" />
+      <workItem from="1573988559457" duration="2999000" />
+      <workItem from="1573997354915" duration="759000" />
+      <workItem from="1574000719325" duration="123000" />
+      <workItem from="1574000859196" duration="221000" />
+      <workItem from="1574001098029" duration="386000" />
+      <workItem from="1574064648281" duration="117000" />
+      <workItem from="1574085507697" duration="3539000" />
+      <workItem from="1574178637174" duration="89000" />
+      <workItem from="1574178744774" duration="5645000" />
+      <workItem from="1574238170776" duration="6856000" />
+      <workItem from="1574279888679" duration="35000" />
+      <workItem from="1574279963898" duration="3675000" />
+      <workItem from="1574426187045" duration="7941000" />
+      <workItem from="1574503285283" duration="5187000" />
+      <workItem from="1574509041158" duration="599000" />
+      <workItem from="1574688401003" duration="10528000" />
+      <workItem from="1574703147674" duration="216000" />
+      <workItem from="1574784815210" duration="3991000" />
+      <workItem from="1574811944352" duration="710000" />
+      <workItem from="1574843410610" duration="8516000" />
+      <workItem from="1574879328376" duration="776000" />
+      <workItem from="1574927025502" duration="2875000" />
+      <workItem from="1575035531227" duration="7179000" />
+    </task>
+    <task id="LOCAL-00001" summary="Premier ébauche du site en MVC (Model View Controller)">
+      <created>1572013273091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572013273091</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Premier ébauche du site en MVC (Model View Controller)">
+      <created>1572028816563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572028816563</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&#10;css">
+      <created>1572915720337</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572915720337</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updates sur l'inscription de comptes (maintenant quasiment fonctionnel, plus qu'à voir pour les différents types de compte)">
+      <created>1573952067775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573952067775</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implémentation des auto-écoles depuis la bdd">
+      <created>1574184142677</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574184142677</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implémentation des auto-écoles depuis la bdd v2">
+      <created>1574240282638</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574240282638</updated>
+    </task>
+    <task id="LOCAL-00007" summary="-Test redirect vers erreur 404 si non admin &#10;-CSS d'Hortense sur la page success stories">
+      <created>1574692115030</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574692115030</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Bug fixed : Page lancer le test">
+      <created>1574699368708</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574699368708</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Password hash fonctionnel - Register fonctionnel">
+      <created>1574847190170</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574847190170</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Premier ébauche du site en MVC (Model View Controller)" />
+    <MESSAGE value="&#10;css" />
+    <MESSAGE value="Updates sur l'inscription de comptes (maintenant quasiment fonctionnel, plus qu'à voir pour les différents types de compte)" />
+    <MESSAGE value="Implémentation des auto-écoles depuis la bdd" />
+    <MESSAGE value="Implémentation des auto-écoles depuis la bdd v2" />
+    <MESSAGE value="-Test redirect vers erreur 404 si non admin &#10;-CSS d'Hortense sur la page success stories" />
+    <MESSAGE value="Bug fixed : Page lancer le test" />
+    <MESSAGE value="Password hash fonctionnel - Register fonctionnel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Password hash fonctionnel - Register fonctionnel" />
+  </component>
+  <component name="regexState">
+    <option name="map">
+      <map>
+        <entry key="flags" value="0" />
+        <entry key="mode" value="1" />
+        <entry key="regex" value="^/?([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z])?|d&#10;" />
+        <entry key="text" value="abc/2e/cb&#10;" />
+      </map>
+    </option>
+  </component>
+</project>
