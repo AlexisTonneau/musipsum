@@ -4,7 +4,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/success/body.css">
-    <link rel="stylesheet" type="text/css" href="<?=URL?>/css/welcome/header.css">
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/css/welcome/header.php">
     <style type="text/css">
     </style>
 </head>

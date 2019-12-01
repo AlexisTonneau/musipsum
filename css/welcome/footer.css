@@ -16,7 +16,8 @@
 	height: 304px;
 	position: absolute;
 	padding: 10px;
-	border: 1px solid #66AFFD;
+	border: 3px solid #66AFFD;
+	border-radius: 3%;
 }
 
 .contact {
@@ -78,7 +79,7 @@ input {
 }
 
 .txt_about {
-	color: #66AFFD;
+	color: black;
 
 }
 
