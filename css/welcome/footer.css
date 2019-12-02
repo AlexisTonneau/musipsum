@@ -1,7 +1,12 @@
 /*Footer page d'accueil*/
 
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
 
 .footer_welcome {
+
 	padding-top: 15px;
 	width: 100%;
 	padding-left: 0.5px;
@@ -21,14 +26,17 @@
 }
 
 .contact {
+	font-family: 'gotham_book', serif;
 	width:33%;
 	height: 304px;
 	display: inline-block;
 	position: absolute;
-	right: 28%;
+	right: 30%;
+
 }
 
 .about_footer {
+	font-family: 'gotham_book', serif;
 	width: 33%;
 	height: 304px;
 	display: inline-block;
@@ -63,10 +71,12 @@ input {
 */
 
 .horaires_img .adresse_img .telephone_img {
+	font-family: 'gotham_book', serif;
 	color: #66AFFD
 }
 
 .txt_about_title {
+	font-family: 'gotham_book', serif;
 	position: relative;
 	background-color: #66AFFD;
 	width: 100%;

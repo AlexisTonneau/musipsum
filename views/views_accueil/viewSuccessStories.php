@@ -9,7 +9,7 @@
     </style>
 </head>
 
-<body>
+<body class="body_success_story">
 <?php
 require_once 'viewHeader.php';
 ?>

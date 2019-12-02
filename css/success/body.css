@@ -1,17 +1,19 @@
-
-.su_st_body {
-	
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
 }
+
+.body_success_story{
+		font-family: 'gotham_book', serif;
+}
+
 
 .su_st_p {
 	display: inline-block;
-	
-	
 }
 
 .su_st_1 {
 	width: 16%;
-
 }
 
 .su_st_2 {
@@ -36,7 +38,7 @@
 @media (max-width : 600px)  {
     .su_st_body {
 		white-space : pre-wrap;
-    
+
 	}
 	.su_st_1{
 		width: 100%;

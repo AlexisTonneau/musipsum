@@ -31,17 +31,17 @@ require_once 'viewHeader.php';
 <div class="carrousel_accueil">
     <div class="slide passage">
         <img src="<?=URL?>/images/slide_1.png" class="img img_carrousel_1" style="width: 100%" alt="">
-        <div class="carrousel_text carrousel_text_1">Texte pour la premiere slide</div>
+        <div class="carrousel_text carrousel_text_1"></div>
     </div>
 
     <div class="slide passage">
         <img src="<?=URL?>/images/slide_2.jpg" class="img img_carrousel_2" style="width: 100%" alt="">
-        <div class="carrousel_text carrousel_text_2">Texte pour la deuxieme slide</div>
+        <div class="carrousel_text carrousel_text_2"></div>
     </div>
 
     <div class="slide passage">
         <img src="<?=URL?>/images/slide_3.png" class="img img_carrousel_3" style="width: 100%" alt="">
-        <div class="carrousel_text carrousel_text_3">Texte pour la troisieme slide</div>
+        <div class="carrousel_text carrousel_text_3"></div>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
