@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
 
+.body{
+  	font-family: 'gotham_book', serif;
+}
 .titre_principal_a_propos
 {
  padding-left: 43%;
@@ -10,7 +17,7 @@
  flex-wrap:wrap;
  padding-left: 4%;
 
- 
+
 }
 .deuxieme_ligne_body
 {
@@ -68,9 +75,9 @@
   .premiere_ligne_body{
     display: block;
   }
-  
+
   .deuxieme_ligne_body{
-    display: block; 
+    display: block;
   }
   .bordure_like_body{
     width: 100%;
