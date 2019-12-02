@@ -48,7 +48,7 @@ header {
 }
 
 .txt_header {
-  font-family: 'gotham_book';
+  font-family: 'gotham_book', serif;
   text-decoration: none;
   color: #FFC0CB;
   margin: 0 7px 0;
