@@ -74,13 +74,15 @@ input {
 }
 
 .txt_about_title {
-
-	font-family: 'gotham_book', serif;
-	position: relative;
-	background-color: #66AFFD;
-	width: 100%;
-	text-align: center;
-}
+    position: relative;
+    /*
+    background-color: #66AFFD;*/
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #66AFFD;
+    border-bottom: 2px solid #66AFFD;
+    margin-top: 0em !important;
+    margin-bottom: 2em !important;}
 
 
 .footer_about_title {
