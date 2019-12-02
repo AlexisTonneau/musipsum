@@ -53,7 +53,10 @@ header {
   color: #FFC0CB;
   margin: 0 7px 0;
 }
-
+/* REMOVE MARGIN OF ALL PAGES*/
+body{
+  margin: 0 !important;
+}
 /*BORDURES*/
 
 .titlebar {
