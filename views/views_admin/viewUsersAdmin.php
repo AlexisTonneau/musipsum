@@ -33,10 +33,11 @@ require_once 'views/views_accueil/viewHeader.php';
         <form  action="<?=URL?>adminaccount/search" method="post" >
 
         <input type="text" name="search" placeholder="         Rechercher un utilisateur" class="id_user">
-        <input type="submit" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="loupe">
+        <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
 
         </form>
+
     </div>
 
     <div>

@@ -19,7 +19,6 @@
 	width: 33%;
 	display: inline-block;
 	height: 304px;
-	position: absolute;
 	padding: 10px;
 	border: 3px solid #66AFFD;
 	border-radius: 3%;
@@ -30,6 +29,7 @@
 	width:33%;
 	height: 304px;
 	display: inline-block;
+
 	position: absolute;
 	right: 30%;
 
@@ -40,8 +40,6 @@
 	width: 33%;
 	height: 304px;
 	display: inline-block;
-	position: absolute;
-	left: 66.6%;
 	text-decoration-color: #66AFFD;
 	border-top: 1px solid #66AFFD;
 }
@@ -76,12 +74,14 @@ input {
 }
 
 .txt_about_title {
+
 	font-family: 'gotham_book', serif;
 	position: relative;
 	background-color: #66AFFD;
 	width: 100%;
 	text-align: center;
 }
+
 
 .footer_about_title {
 	height: 21.6px;
@@ -95,4 +95,37 @@ input {
 
 .img_contact {
 
+}
+
+@media screen and (min-width: 1001px) {
+	.nous_contacter {
+		position: absolute;
+		padding-right: 0 !important;
+	}
+	.contact {
+		position: absolute;
+		left: 36.3%;
+	}
+	.about_footer {
+		position: absolute;
+		left: 66.6%;
+	}
+	.footer_welcome {
+		padding-left: 0 !important;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.nous_contacter {
+		width: 100% !important;
+		padding-right: 0 !important;
+	}
+	.contact {
+		width: 100% !important;
+	}
+	.about_footer {
+		width: 100% !important;
+	}
+	.footer_welcome {
+		padding-left: 0 !important;
+	}
 }
