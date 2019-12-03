@@ -1,4 +1,13 @@
 /* Header */
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
+
+*{
+  	font-family: 'gotham_book', serif;
+}
+
 
 .nav_barre {
     display:flex;

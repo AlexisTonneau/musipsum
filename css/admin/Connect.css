@@ -1,5 +1,18 @@
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
 
-
+.body{
+  	font-family: 'gotham_book', serif;
+}
+/*
+*{
+	background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+*/
 .middlepage{
     position: relative;
 }

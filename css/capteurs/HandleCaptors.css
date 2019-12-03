@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
 
+.body{
+  	font-family: 'gotham_book', serif;
+}
 
 .checkbox {
   display: inline-block;
@@ -134,5 +141,3 @@
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
-

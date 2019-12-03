@@ -16,7 +16,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
 
 foreach ( Search::initializeSearch() as $account)
-{ 
+{
 
         echo '<br/>'.$account->getFirstName();
         echo ' '.$account->getName()."\t\t\t";
