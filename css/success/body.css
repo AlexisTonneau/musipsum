@@ -2,15 +2,51 @@
   font-family: 'gotham_book';
   src:url('fonts/Gotham-Book.otf');
 }
+/*
+*{
+	background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
 
 .body_success_story{
 		font-family: 'gotham_book', serif;
 }
 
-.photo_alexandre,.photo_marie,.photo_thomas,.photo_alexis,.photo_hortense,.photo_vincent
-{
-  width:50%;
-  height:50%;
+body {
+	width: 100%;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.paragraphe {
+	border-right: 2px solid gray;
+	padding-right: 2px;
+}
+
+#paragraphe_thomas {	
+	border-right: 0px solid gray !important;
+}
+
+.su_st_body {
+	position: relative;
+}
+
+.photo_success {
+	width:50%;
+	height:50%;
+	position: relative;
+	left: 25%;/*
+	top: 15px;*/
+}
+
+#photo_vincent {
+	top: 4px;
+}
+
+#photo_marie {
+	height: 45% !important;
+	top: 4px;
 }
 
 h3{
