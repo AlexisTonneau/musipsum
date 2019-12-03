@@ -7,6 +7,14 @@
   	font-family: 'gotham_book', serif;
 }
 
+.gerer_capteurs{
+  margin-top: 4%;
+}
+
+.gerer_cgu
+{
+  margin-top: 10%;
+}
 .checkbox {
   display: inline-block;
   position: relative;

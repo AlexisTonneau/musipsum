@@ -27,7 +27,7 @@ require_once 'views/views_accueil/viewHeader.php';
 <form action="" method="post">
     <fieldset class="fieldset">
 <div class="milieupage">
-    <p class="titre">Ouvrir un compte</p>
+    
     <div class="info_personnelles">
 
 
