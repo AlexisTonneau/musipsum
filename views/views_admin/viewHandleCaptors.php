@@ -17,7 +17,7 @@
 <?php
 require_once 'views/views_accueil/viewHeader.php';
 ?>
-<h2 class="titre_gerer">Gérer</h2>
+
 <div class="gerer_body">
     <div class="gerer gerer_capteurs">
         <div class="type_test">

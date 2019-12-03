@@ -9,7 +9,7 @@
 <?php
 require_once 'viewHeader.php';
 ?>
-<h1 class="titre_principal_a_propos">A PROPOS</h1>
+
 <div class="premiere_ligne_body">
     <div class="bordure_souris_body">
         <div class="a_propos_image_souris" align="center">
