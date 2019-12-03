@@ -3,9 +3,21 @@
   src:url('fonts/Gotham-Book.otf');
 }
 
-.body{
+body{
   	font-family: 'gotham_book', serif;
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
+    min-height: 100%;
+
 }
+/*
+*{
+    background: #000000 !important;
+    color: #0f0 !important;
+    outline: solid #ff3355 1px !important;
+}*/
+
 .titre_principal_a_propos
 {
  padding-left: 43%;
