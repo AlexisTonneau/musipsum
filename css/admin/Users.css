@@ -8,6 +8,12 @@
   	font-family: 'gotham_book', serif;
 }
 
+.autoecole,.img_portrait{
+  margin-top: 2%;
+}
+
+
+
 
 .nav_barre {
     display:flex;
@@ -149,14 +155,14 @@
 
 .img_loupe {
     width: 2%;
-    left: 71%;
+    left: 65%;
     top: 48.5%;
 }
 
 .id_user {
     left: 24%;
     top: 47%;
-    width: 50%;
+    width: 35%;
     height: 7%;
     font-size: 1.3em;
     border: 2px solid darkgrey;
