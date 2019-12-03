@@ -13,6 +13,7 @@ class Router
         try {
             session_start();
             //$uri = $_SERVER['REQUEST_URI'];
+            $_SESSION['url'][0] = '';
 
 
             //Allows logout if inactive during 30min
@@ -53,6 +54,8 @@ class Router
             } else {       //Redirection de base si mauvaise URL
                 require_once('controllers/ControllerAccueil.php');
                 $this->_ctrl = new ControllerAccueil();
+                $_SESSION['url'][0] = 'accueil';
+                $_SESSION['url'][1] = 'none';
 
             }
 
