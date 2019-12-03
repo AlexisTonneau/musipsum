@@ -62,7 +62,7 @@ color: <?=$successstories?>;
 
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/welcome/header.css">
     <div class="title_bar" id="title_bar">
-        <img class="img logo_mus" src="<?=URL?>images/logo_musipsum_noir.png" alt="logo">
+        <a  href="<?=URL?>"> <img src="<?=URL?>images/logo_musipsum_noir.png" alt="logo" class="img logo_mus"></a>
         <div class="nav_bar" >
             <div class="titre_header">
                 <a id="titre_musipsum" href="<?=URL?>">MUSIPSUM</a>
