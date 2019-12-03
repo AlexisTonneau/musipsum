@@ -25,7 +25,7 @@ if($msg === "checked"){
 require_once 'views/views_accueil/viewHeader.php';
 ?>
 <form action="" method="post">
-    <fieldset>
+    <fieldset class="fieldset">
 <div class="milieupage">
     <p class="titre">Ouvrir un compte</p>
     <div class="info_personnelles">
@@ -88,16 +88,18 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 </div>
 
-<footer>
+<footer class="footer_open">
     <div>
         <btn class="save">
             <input class="btn_save"  type="submit" value = "Enregistrer" >
         </btn>
 
         <br/><br/>
+        <div class="check_message">
         <?php
         echo $msg;
         ?>
+        </div>
     </div>
 </footer>
     </fieldset>

@@ -12,6 +12,8 @@ class Router
 
         try {
             session_start();
+            //$uri = $_SERVER['REQUEST_URI'];
+
 
             //Allows logout if inactive during 30min
             $_SESSION['timeout']=time();
@@ -28,6 +30,14 @@ class Router
             if (isset($_GET['link'])&&!is_null($_GET['link'])) {
                 //Ici l'URL est bien trouvée et définie
                 $url = explode('/',filter_var($_GET['link'],FILTER_SANITIZE_URL));
+
+                if (isset($_GET['ref'])){
+                    $url[1] = $_GET['ref'];
+                }
+                else{
+                    $url[1]='none';
+                }
+                $_SESSION['url'] = $url;
 
 
                 $controller = ucfirst(strtolower($url[0])); //Première lettre en majuscule et le reste en minuscule

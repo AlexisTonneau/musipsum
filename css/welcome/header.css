@@ -3,112 +3,128 @@
 /*DEFINITION POLICES*/
 
 @font-face {
-  font-family: 'etna';
-  src:url('fonts/etna-free-font.otf');
+font-family: 'etna';
+src:url('fonts/etna-free-font.otf');
 }
 @font-face {
-  font-family: 'gotham_book';
-  src:url('fonts/Gotham-Book.otf');
+font-family: 'gotham_book';
+src:url('fonts/Gotham-Book.otf');
 }
 @font-face {
-  font-family: 'poly';
-  src:url('fonts/polya-regular.regular.otf');
+font-family: 'poly';
+src:url('fonts/polya-regular.regular.otf');
 }
 @font-face {
-  font-family: 'aileron';
-  src:url('fonts/aileron.regular.otf');
+font-family: 'aileron';
+src:url('fonts/aileron.regular.otf');
 }
 
 
 header {
-  width: 100%;
+width: 100%;
 }
 
 /*TEXTE TITRE ONGLETS*/
 
 .choix {
-  height: 20%;
-  position: relative;
-  width: fit-content;
-  bottom: 15px;
-  word-spacing: normal;
-  align-items: center;
-  align-content: center;
-  left: 32%;
+height: 20%;
+position: relative;
+width: fit-content;
+bottom: 15px;
+word-spacing: normal;
+align-items: center;
+align-content: center;
+left: 32%;
 }
 
 #titre_musipsum {
-  color: #FFC0CB;
-  font-family: 'etna', serif;
-  font-size: 40px;
-  text-decoration: none;
-  position: relative;
-  bottom: 50px;
-  left: 43.5%
+color: #FFC0CB;
+font-family: 'etna', serif;
+font-size: 40px;
+text-decoration: none;
+position: relative;
+bottom: 50px;
+left: 43.5%
 }
 
 .txt_header {
-  font-family: 'gotham_book', serif;
-  text-decoration: none;
-  color: #FFC0CB;
-  margin: 0 7px 0;
+font-family: 'gotham_book', serif;
+text-decoration: none;
+/*color: #FFC0CB;*/
+margin: 0 7px 0;
+
 }
 /* REMOVE MARGIN OF ALL PAGES*/
 body{
-  margin: 0 !important;
+margin: 0 !important;
 }
+
+
+
+
 /*BORDURES*/
 
 .titlebar {
-  height: fit-content;
-  border-top: solid 2px #FFC0CB ;
-  border-bottom: solid 2px #FFC0CB ;
+height: fit-content;
+border-top: solid 2px #FFC0CB ;
+border-bottom: solid 2px #FFC0CB ;
 }
 
 /*
 .nav_bar {
-  border-bottom: solid 2px #FFC0CB ;  
+border-bottom: solid 2px #FFC0CB ;
 }*/
 
 
 /*LIENS ACTIFS*/
 
-.txt_header:hover {
-  color: #ff4d6a;
+#a_propos:hover {
+color: #cc1a37;
+}
+#connexion:hover {
+    color: #cc1a37;
+}
+#start_test:hover {
+     color: #cc1a37;
+ }
+#sucess_stories:hover {
+      color: #cc1a37;
+  }
+#nous_contacter:hover {
+    color: #cc1a37;
 }
 
-.txt_header:visited {
-  color:#FFC0CB;
-}
+
+
 
 #titre_musipsum:hover {
-  color: #ff4d6a;
+color: #ff4d6a;
 }
 
 /*LOGO MUSIPSUM*/
 
 .logo_mus {
-  position: relative;
-  left: 5%;
-  top: 35px;
-  width: 37px;
-  height: auto;
+position: relative;
+left: 5%;
+top: 35px;
+width: 37px;
+height: auto;
 }
 
 /*ICONES*/
 
 .icone_header {
-  height: 22px;
-  width: auto;
-  margin: 0px 7px 0px
+height: 22px;
+width: auto;
+margin: 0px 7px 0px
 }
 
 #icones_header {
-  width: fit-content;
-  align-items: end;
-  position: relative;
-  left: 85%;
-  bottom: 73px
+width: fit-content;
+align-items: end;
+position: relative;
+left: 85%;
+bottom: 73px
 }
 
 
@@ -117,46 +133,46 @@ body{
 
 
 @media screen and (max-width: 900px) {
-  .choix {
-    left: 25%;
-  }
+.choix {
+left: 25%;
+}
 }
 
 @media screen and (min-width: 1800px) and (max-width: 2499px) {
-  .choix {
-    left: 34.5%;
-  }
-  .txt_header {
-    font-size: 20px;
-  }
-  #titre_musipsum {
-    left: 48%;
-  }
-  .logo_mus {
-    top: 40px;
-  }
+.choix {
+left: 34.5%;
+}
+.txt_header {
+font-size: 20px;
+}
+#titre_musipsum {
+left: 48%;
+}
+.logo_mus {
+top: 40px;
+}
 }
 
 @media screen and (min-width: 2500px) {
-  .choix {
-    left: 38%;
-  }
-  .txt_header {
-    font-size: 30px;
-  }
-  .logo_mus {
-    top: 50px;
-  }
-  #titre_musipsum {
-    left: 51%;
-  }
+.choix {
+left: 38%;
+}
+.txt_header {
+font-size: 30px;
+}
+.logo_mus {
+top: 50px;
+}
+#titre_musipsum {
+left: 51%;
+}
 }
 
 @media screen and (min-width: 901px) and (max-width: 1300px) {
-  #titre_musipsum {
-    left: 42%;
-  }
-  .choix {
-    left: 25%;
-  }
+#titre_musipsum {
+left: 42%;
+}
+.choix {
+left: 25%;
+}
 }
