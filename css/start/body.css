@@ -1,5 +1,5 @@
 body {
-	margin: 0px;
+	margin: 10px;
 }
 
 .bouton_play_img {
@@ -9,9 +9,15 @@ body {
 	top: 5%;
 	left: 30%;
 }
+.bouton_play{
+	margin-top: 2%;
+}
+.bouton_search{
+	margin-left: 20%;
+}
 
 .recherche {
-	position: absolute;
+	margin-left: 30%;
 	top: 94%; /*94%*/
 	height: 3%;
 	width:80%; /*99%*/
@@ -26,7 +32,6 @@ input[type=text] {
 
 
 .icone_loupe {
-	position: absolute;
 	top: 8%;
 	width: 2%;
 	height: auto;

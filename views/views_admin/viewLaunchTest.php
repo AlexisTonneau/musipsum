@@ -49,23 +49,3 @@ require_once 'views/views_accueil/viewHeader.php';
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

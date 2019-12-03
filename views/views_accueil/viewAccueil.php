@@ -125,13 +125,13 @@ require_once 'viewHeader.php';
         <div class="footer_about_title">
             <h3 class="txt_about_title">A propos</h3>
         </div>
-        <p class="txt_about" >Que faire sur ce site ?<br>
+        <p class="txt_about" ><strong>Que faire sur ce site ?</strong><br>
             Vous n’arrivez pas à décrocher votre permis de conduire et n’en connaissez pas la cause ?<br> Ce site est fait pour vous !
             Nous vous proposons d’effectuer des tests en ligne permettant de mettre en avant les raisons de votre échec !<br>
-            Pourquoi ?<br>
+            <strong>Pourquoi ?</strong><br>
             Vous pouvez enfin trouver des solutions adaptées pour obtenir votre permis de conduire.
             Les auto-écoles peuvent adapter des séances de conduite en tenant compte des difficultés techniques de l’apprenti.<br>
-            Comment faire ?<br>
+            <strong>Comment faire ?</strong><br>
             Il vous suffit de vous présenter dans une auto-école et de demander des identifiants pour accéder aux tests.</p>
     </div>
 
