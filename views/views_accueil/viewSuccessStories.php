@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<title> Musipsum </title>
 
 <head>
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/success/body.css">

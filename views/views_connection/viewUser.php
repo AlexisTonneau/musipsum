@@ -18,6 +18,7 @@ if (isset($_POST['disconnect'])){
     <link rel="stylesheet" type="text/css" href="<?= URL ?>/css/welcome/header.css">
     <style type="text/css">
     </style>
+    <title>Mon compte</title>
 </head>
 <body>
 <?php

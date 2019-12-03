@@ -36,6 +36,7 @@ else if($url[0]==='accueil'){
 
 ?>
 <head>
+    <title>Musipsum</title>
     <style>
 
         #start_test{

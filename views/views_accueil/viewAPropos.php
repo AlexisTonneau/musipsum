@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="<?=URL?>/css/propos/body.css">
-    <title>Connexion</title>
 </head>
 <body class="body">
 <?php
@@ -21,7 +20,7 @@ require_once 'viewHeader.php';
     <div class="bordure_stat_body" align="center">
         <div class="a_propos_image_stat">
             <img class="image_stat" src="<?=URL?>/images/stat.png" alt="Image de statistiques"/>
-            <p class="titre_texte_a_propos">statistiques</p>
+            <p class="titre_texte_a_propos">Statistiques</p>
             <p>En savoir plus sur les statistiques que j'ai obtenu lors de mes tests</p>
         </div>
     </div>

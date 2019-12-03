@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=URL?>/css/admin/Users.css">
 
-    <title>Gestion Utilisateur</title>
+    <title>Mon compte</title>
 
 </head>
 
