@@ -11,7 +11,9 @@ class Router
     {
 
         try {
+            
             session_start();
+            
             //$uri = $_SERVER['REQUEST_URI'];
             $_SESSION['url'][0] = '';
 
