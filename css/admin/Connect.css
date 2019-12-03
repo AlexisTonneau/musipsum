@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
+
+.body{
+  	font-family: 'gotham_book', serif;
+}
+/*
+*{
+	background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+*/
+.middlepage{
+    position: relative;
+}
+
+
+.titre{
+    position: absolute;
+    color: dodgerblue;
+    font-size: 1.7em;
+    left: 42%;
+    top: 13%;
+}
+
+
+.info_personnelles {
+    position: absolute;
+    display: flex;
+    color: dodgerblue;
+    font-size: 1.2em;
+    border: 1px solid darkgrey;
+    width: 90%;
+    height: 63%;
+    margin-left : 4%;
+    margin-right: 4%;
+    top: 27%;
+}
+
+/* Block 1 */
+
+.bloc_1{
+    margin-right: 30%;
+}
+
+.info {
+    position: relative;
+    display: block;
+    justify-content: left;
+}
+.id {
+    border: 1px solid darkgrey;
+}
+
+.iden {
+    width: 170%;
+    style: 170% 30%;
+}
+
+
+.identif {
+    width: 250%;
+    height: 60%;
+
+}
+
+.pre_nom {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    top: -5%;
+}
+
+.a {
+    margin-left: 3%;
+}
+
+.b {
+    margin-left: 50%;
+}
+
+.prenom {
+    margin-left: 40%;
+}
+
+.genre {
+    display: flex;
+    justify-content: left;
+}
+
+.female, .no_binare {
+    margin-left: 6%;
+}
+.gen, .id_ent {
+    cursor: pointer;
+}
+
+
+
+/* Block 2 */
+
+
+.block_2 {
+    position: relative;
+}
+
+
+.c {
+    position: relative;
+    display: flex;
+    margin-right: 1%;
+    top: -10%;
+}
+
+.date {
+    width: 15%;
+    height: 100%;
+    margin-right: 4%;
+    text-align: center;
+    top: 10%;
+    bottom: 10%;
+}
+
+.IMC {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    top: -20%;
+}
+
+.poids {
+    margin-left: 1%;
+    margin-bottom: 5%;
+}
+
+.taille {
+    margin-left: -1%;
+}
+
+.taille_masse {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.identite {
+    position: relative;
+    top: -20%;
+}
+
+.btn_photo {
+    border: 1px solid darkgrey;
+    width: 20%;
+    margin-right: 4%;
+}
+
+.btn_picture {
+    background-color: dodgerblue;
+    opacity: 0.5;
+    color: black;
+}
+
+.id_picture {
+    position: relative;
+    left: 15%;
+    width: 45%;
+}
+
+
+/* Footer */
+
+.save {
+    position: absolute;
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    opacity: 0.8;
+    color: white;
+    font-size: 1.1em;
+    width: 10%;
+    height: 3%;
+    text-align: center;
+    padding-bottom: 0.5%;
+    box-shadow: 2px 2px 5px black;
+    left: 47%;
+    top: 93%;
+}
+
+.save a:hover {
+    font-weight: bold;
+}
+
+.btn_save {
+    text-decoration:none;
+    color: white;
+}

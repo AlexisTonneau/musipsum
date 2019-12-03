@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/capteurs/input_checkbox.css">
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/capteurs/body.css">
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/capteurs/input_range.css">
+    <link rel="stylesheet" type="text/css" href="<?=URL?>/css/capteurs/HandleCaptors.css">
     <link rel="stylesheet" type="text/css" href="<?=URL?>/css/welcome/header.css">
     <!--<link rel="stylesheet" type="text/css" href="css/capteurs/input_range_value.css">-->
     <style type="text/css">
@@ -12,7 +13,7 @@
     <title>Gérer les capteurs</title>
 </head>
 
-<body>
+<body class="body">
 <?php
 require_once 'views/views_accueil/viewHeader.php';
 ?>

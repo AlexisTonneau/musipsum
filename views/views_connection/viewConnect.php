@@ -84,6 +84,16 @@ require_once ('views/views_accueil/viewHeader.php');
 <style>
 /* Body */
 
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
+
+.body
+{
+  font-family: 'gotham_book', serif;
+
+}
 
 .middlepage{
 display: flex;

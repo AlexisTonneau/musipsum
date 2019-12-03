@@ -15,7 +15,7 @@ if($msg === "checked"){
 <head>
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?= URL?>/css/admin/creation_compte.css">
+    <link rel="stylesheet" href="<?= URL?>/css/admin/Connect.css">
     <title>Ouverture Compte</title>
 
 </head>
