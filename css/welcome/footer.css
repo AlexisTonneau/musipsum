@@ -75,6 +75,7 @@ input {
 
 .txt_about_title {
     position: relative;
+    font-family: 'gotham_book', serif;
     /*
     background-color: #66AFFD;*/
     width: 100%;
