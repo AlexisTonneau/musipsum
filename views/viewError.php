@@ -21,5 +21,8 @@
 </h2>
 
 </body>
+<?php
+require_once ('views/views_accueil/viewFooter.php');
+?>
 
 

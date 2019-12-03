@@ -48,6 +48,9 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 
 </body>
+<?php
+require_once ('views/views_accueil/viewFooter.php');
+?>
 </html>
 
 

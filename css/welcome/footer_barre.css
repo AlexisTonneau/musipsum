@@ -1,0 +1,22 @@
+/*Police*/
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
+/*CSS pour le texte*/
+.footer_text{
+  margin-right: 30px;
+  margin-left: 30px;
+  font-family: 'gotham_book', serif;
+  color: #ff3355;
+  font-size: 20px;
+  text-decoration: none;
+}
+/*CSS pour la barre du footer*/
+#footer_base {
+  display: flex;
+  justify-content: center;
+  background-color: #FFE6EA;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}

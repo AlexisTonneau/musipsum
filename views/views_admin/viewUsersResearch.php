@@ -24,3 +24,6 @@ foreach ( Search::initializeSearch() as $account)
 
 <?php
 }
+
+require_once('views/views_accueil/viewFooter.php');
+
