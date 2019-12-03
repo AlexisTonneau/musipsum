@@ -89,5 +89,7 @@ require_once 'views/views_accueil/viewHeader.php';
 <script type="text/javascript" src="<?=URL?>/js/range_input.js"></script>
 
 </body>
-
+<?php
+require_once ('views/views_accueil/viewFooter.php');
+?>
 </html>

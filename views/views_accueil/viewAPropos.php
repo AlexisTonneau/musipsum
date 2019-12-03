@@ -54,5 +54,8 @@ require_once 'viewHeader.php';
             <p>N'hésitez pas à laisser un avis sur les différents réseaux sociaux...</p>
         </div>
     </div>
+</div>
 </body>
 </html>
+<?php
+//require_once ('viewFooter.php');

@@ -154,3 +154,5 @@ require_once 'viewHeader.php';
 
 </body>
 </html>
+<?php
+require_once ('viewFooter.php');
