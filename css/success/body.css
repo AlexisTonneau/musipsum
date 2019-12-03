@@ -7,7 +7,18 @@
 		font-family: 'gotham_book', serif;
 }
 
+.photo_alexandre,.photo_marie,.photo_thomas,.photo_alexis,.photo_hortense,.photo_vincent
+{
+  width:50%;
+  height:50%;
+}
 
+h3{
+  text-align: center;
+}
+p{
+  text-align : justify;
+}
 .su_st_p {
 	display: inline-block;
 }
