@@ -1,4 +1,65 @@
+<?php
+$about = "#FFC0CB";
+$url = $_SESSION['url'];
+
+$successstories = "#FFC0CB";
+$connexion = "#FFC0CB";
+$test = "#FFC0CB";
+
+if ($url[0]==='test'){
+    $test = "#ff4d6a";
+    $about = "#FFC0CB";
+    $successstories = "#FFC0CB";
+    $connexion = "#FFC0CB";
+}
+else if ($url[0]==='account'||$url[0]==='adminaccount'){
+    $connexion = "#ff4d6a";
+    $about = "#FFC0CB";
+    $successstories = "#FFC0CB";
+    $test = "#FFC0CB";
+
+}
+
+else if($url[0]==='accueil'){
+    switch ($url[1]) {
+        case 'about':
+            $about = "#FF4D6A";
+            break;
+        case 'successstories':
+            $successstories = "#ff4d6a";
+            break;
+
+    }
+    //$about = "#FF4D6A";
+
+}
+
+?>
+<head>
+    <style>
+
+        #start_test{
+color: <?=$test?>;
+        }
+        #a_propos{
+color: <?=$about?>;
+        }
+        #connexion{
+color: <?=$connexion?>;
+        }
+        #sucess_stories{
+color: <?=$successstories?>;
+        }
+        #nous_contacter{
+            color: #FFC0CB
+        }
+
+
+    </style>
+</head>
+
 <header class="titlebar">
+
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/welcome/header.css">
     <div class="title_bar" id="title_bar">
         <img class="img logo_mus" src="<?=URL?>images/logo_musipsum_noir.png" alt="logo">

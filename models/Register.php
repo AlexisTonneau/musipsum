@@ -74,7 +74,7 @@ class Register extends Model
 
     public static function check(){
         if(!isset($_POST['mail_address'], $_POST['name'], $_POST['password']) ){
-            $errormsg = "Veuillez remplir tous les champs";
+           $errormsg = "Veuillez remplir tous les champs";
         }
 
         elseif(isset($_POST['mail_address']) && $_POST['mail_address'] === null){

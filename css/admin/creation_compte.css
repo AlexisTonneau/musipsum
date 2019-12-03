@@ -4,13 +4,17 @@
     position: relative;
 }
 
+.fieldset {
+    border: none;
+}
+
 
 .titre{
     position: absolute;
     color: dodgerblue;
     font-size: 1.7em;
     left: 42%;
-    top: 13%;
+    top: 15%;
 }
 
 
@@ -183,3 +187,8 @@
     text-decoration:none;
     color: white;
 }
+
+.check_message {
+    display: none;
+}
+
