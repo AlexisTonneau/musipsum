@@ -100,6 +100,8 @@
     position: relative;
     text-align: center;
     bottom: 40%;
+  text-decoration: none;
+    color : cornflowerblue;
 }
 
 
@@ -131,7 +133,6 @@
 .btn_deconnexion {
     position: absolute;
     background-color: white;
-    border: 1px solid lightblue;
     width: 15%;
     height: 6%;
     font-size: 1.2em;
