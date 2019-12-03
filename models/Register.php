@@ -33,7 +33,7 @@ class Register extends Model
         else{
             $weight = 0;
         }
-        $account_type = $user->getAccountType();
+        $account_type = 0;
         $id_driving_school = $user->getDrivingSchoolId();
 
 
