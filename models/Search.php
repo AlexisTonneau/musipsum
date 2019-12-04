@@ -36,7 +36,7 @@ class Search extends Model
         }
         return $var;
     }
-    public static function initializeSearch(){
+    public static function initializeSearch() :User{
         if (!isset($_GET['search'])){
             if (isset($_POST['search'])) {
                 header('Location: '.URL.'instructor/search/'.htmlspecialchars($_POST['search']));
