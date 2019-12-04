@@ -16,6 +16,7 @@ class Search extends Model
         if(!$req->execute()){
             throw new Exception("Cannot connect to database");
         }
+        $var = null;
         while ($account = $req->fetch(PDO::FETCH_ASSOC)) {
             $var[$i] = new User;
             $var[$i]->setName($account['name']);

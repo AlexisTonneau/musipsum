@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?=URL?>/css/admin/Recherche.css">
+    <link rel="stylesheet" href="<?= URL ?>/css/admin/Recherche.css">
 
     <title>Recherche</title>
 
@@ -14,12 +14,20 @@
 <?php
 require_once 'views/views_accueil/viewHeader.php';
 
-
-foreach ( Search::initializeSearch() as $account)
+if (Search::initializeSearch() !== null){
+foreach (Search::initializeSearch() as $account)
 {
 
-        echo '<br/>'.$account->getFirstName();
-        echo ' '.$account->getName()."\t\t\t";
-    ?> <a class="link" href="#">Démarrer</a> <?php
+echo '<br/>' . $account->getFirstName();
+echo ' ' . $account->getName() . "\t\t\t";
+?> <a class="link" href="#">Démarrer</a> <?php
+}
+}
+else{
+    ?>
+<h3>
+    Aucun utilisateur trouvé
+</h3>
+<?php
 }
 
