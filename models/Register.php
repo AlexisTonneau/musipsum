@@ -107,6 +107,7 @@ class Register extends Model
         return $errormsg;
     }
     private static function register(){
+        $bool = 0;
         $account_register =new User();
         $account_register->setName($_POST['name']);
         $account_register->setMailAddress($_POST['mail_address']);
@@ -141,23 +142,29 @@ class Register extends Model
 
                     break;
                 case 'monitor':
-                    $bool=true;
+                    $bool=1;
                     $account_register->setAccountType(1);
 
                     break;
                 case 'user':
                     $account_register->setAccountType(0);
+                    $bool = 2;
 
                     break;
                 default:
                     $account_register->setAccountType(0);
+                    $bool = 2;
             }
         }
 
         $reg =new Register($account_register);
-        if($bool){
+        if($bool == 1){
             self::createInstructor($account_register);
         }
+        if ($bool == 2){
+            self::linkUserInstructor($account_register);
+        }
+
         return $reg->isStatus();
 
 
@@ -196,13 +203,25 @@ class Register extends Model
         if ($user->getAccountType()==Model::REGULAR_USER){
             $bdd = self::getBdd();
             $id_instructor = self::getCurrentAccount()->getId();
-            $id_new_user = $user->getId();
-            /*$bdd->prepare('INSERT INTO moniteur_user (id_user,id_moniteur) VALUES (:id1,:id2)');
+           $id_new_user =null;
 
-            $bdd->bindParam(':id1',$id_new_user);
-            $bdd->bindParam(':id2',$id_instructor);
+            $req_id = $bdd->prepare('SELECT * FROM user ORDER BY id_user DESC LIMIT 1');
+            $req_id->execute();
+            while ($account = $req_id->fetch()){
+                $id_new_user = $account['id_user'];
+            }
 
-            $bdd->execute();*/
+
+
+
+            $req = $bdd->prepare('INSERT INTO moniteur_user (id_user,id_moniteur) VALUES (:id1,:id2)');
+
+            $req->bindParam(':id1',$id_new_user);
+            $req->bindParam(':id2',$id_instructor);
+
+           if(! $req->execute()){
+               throw new Exception('Connection error');
+           }
         }
     }
 
