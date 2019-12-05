@@ -20,10 +20,12 @@ class AccountManager extends Model
         return null;
     }
 
-    public static function getCurrentAccount() :User{           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
-        if(isset($_SESSION['user'])AND $_SESSION['user'] !== null){
-            $account = $_SESSION['user'];
-            return unserialize($account);
+
+    public static function getCurrentAccount2() {           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
+        if(isset($_SESSION['account'])AND !is_null($_SESSION['account'])){
+            $account = $_SESSION['account'];
+            return $account;
+
 
         }
 

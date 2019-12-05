@@ -13,6 +13,9 @@ class ControllerAccueil
      */
     public function __construct()
     {
+        if(isset($_SESSION['url'])){    //Seul moyen que j'ai trouvé pour l'instant pour supprimer l'url de la vidéo.
+            $_SESSION['url']=null;
+        }
         if(isset($_GET['ref'])){
             switch ($_GET['ref']){
                 case "about":
