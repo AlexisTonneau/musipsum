@@ -80,19 +80,29 @@ class TestManager extends Model
         }
 
 
+        if(!$req->execute()){
+            throw new Exception('Connexion échouée');
+        }
 
 
+
+        $reqid = $bdd->prepare('SELECT id FROM test ORDER BY id DESC LIMIT (1) ');
+        $reqid->execute();
+        $id = null;
+        foreach ($reqid->fetch() as $item){
+            $id = $item['id'];
+        }
 
         $req2 = $bdd->prepare('
         UPDATE user SET token_test = :id_test WHERE id_user= :id_user
         '); //Création d'un token de lancement de test
 
 
+
         $id_user = $test->getIdUser();
 
         $req2->bindParam(':id_user',$id_user);
         $req2->bindParam(':id_test',$modele_test);
-
 
         if(!$req2->execute() ){
             throw new Exception('Connexion échouée');
@@ -101,12 +111,12 @@ class TestManager extends Model
         return true;
 
 
-
     }
 
     public static function checkToken() :int{
         $bdd = self::getBdd();
         $token=1;
+
         $account = self::getCurrentAccount();
         $req = $bdd->prepare('SELECT * FROM user WHERE id_user = :id_user');
         $id_account = $account->getId();
@@ -270,4 +280,3 @@ if (isset($_GET['search']) && !isset($_GET['quatre']) && is_numeric($_GET['searc
     <?php  echo (json_encode($captors));?>
 </div> <?php
 }
-

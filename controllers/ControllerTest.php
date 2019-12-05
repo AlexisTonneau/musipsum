@@ -1,5 +1,5 @@
 <?php
-
+//TODO Delete session variables anywhere
 
 class ControllerTest
 {
@@ -13,23 +13,24 @@ class ControllerTest
         if (isset($_SESSION['user'])){
             switch (unserialize($_SESSION['user'])->getAccountType()){
 
-                case 1:
-                    if(!isset($_GET['ref'])){   //TODO Make a page for choosing tests
-                    require_once 'views/views_admin/viewLaunchTest.php';}
-                    elseif ($_GET['ref']==='choose'){
-                        require_once 'views/views_test/viewChooseTest.php';
-                    }
-                    elseif(is_int($_GET['ref'])){
-                        if (isset($_GET['search'])) {
-                            $id = $_GET['ref'];
-                            $test = new Test($id, unserialize($_SESSION['user'])->getId(),TestModel::searchById($_GET['search'])->getId(),true); //TODO Récap de l'url : musipsum/UserId/ModelTestId
+        if (isset($_SESSION['user']) && $_SESSION['user']!==null){
+            switch (unserialize($_SESSION['user'])->getAccountType()) {
 
-                            require_once ('views/views_test/viewAdminStarted.php');
+                case 1:
+                    if (!isset($_GET['ref'])) {   //TODO Make a page for choosing tests
+                        if (!isset($_SESSION['id_user']) || $_SESSION['id_user']===null){
+                            require_once 'views/views_admin/viewLaunchTest.php';
                         }
                         else{
-                            require_once 'views/views_test/viewChooseTest.php';
+                            if (!isset($_SESSION['id_test']) || $_SESSION['id_test']===null){
+                                require_once ('views/views_test/viewChooseTest.php');
+                            }
+                            else{
+                                $test = new Test($_SESSION['id_user'], unserialize($_SESSION['user'])->getId(),TestModel::searchById($_SESSION['id_test'])->getId(),true); //TODO Récap de l'url : musipsum/test, mais variables sessions non nulles
+                                TestManager::setTestInDB($test);
+                                require_once ('views/views_test/viewAdminStarted.php');
+                            }
                         }
-
 
                     }
                     else{
@@ -57,7 +58,6 @@ class ControllerTest
             require_once 'views/views_test/viewNotConnected.php';
 
         }
-
 
     }
 

@@ -20,6 +20,6 @@ foreach ( Search::initializeSearch() as $account)
 
         echo '<br/>'.$account->getFirstName();
         echo ' '.$account->getName()."\t\t\t";
-    ?> <a class="link" href="<?=URL.'test/'.$account->getId()?>">Démarrer</a> <?php
+    ?> <a class="link" href="<?=URL.'test'?>">Démarrer</a> <?php
 }
 
