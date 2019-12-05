@@ -44,9 +44,9 @@ require_once 'views/views_accueil/viewHeader.php';
 
             <div class="pre_nom">
 
-                <p class="a nom">Nom *  <br/>
+                <p class="a nom">Nom*  <br/>
                     <input type="text" name="name" class="id identif id_name" required> </p>
-                <p class="b prénom">Prénom *  <br/>
+                <p class="b prénom">Prénom*  <br/>
                     <input type="text" name="first_name" class="id identif id_firstname" required> </p>
             </div>
         </block>

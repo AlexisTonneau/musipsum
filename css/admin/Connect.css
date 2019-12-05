@@ -151,24 +151,6 @@
     top: -20%;
 }
 
-.btn_photo {
-    border: 1px solid darkgrey;
-    width: 20%;
-    margin-right: 4%;
-}
-
-.btn_picture {
-    background-color: dodgerblue;
-    opacity: 0.5;
-    color: black;
-}
-
-.id_picture {
-    position: relative;
-    left: 15%;
-    width: 45%;
-}
-
 
 /* Footer */
 
