@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['user'])||(unserialize($_SESSION['user'])->getAccountType()!=Connection::ADMIN_USER)){
+if(!isset($_SESSION['user'])||(unserialize($_SESSION['user'])->getAccountType()!=Connection::INSTRUCTOR_USER)){
     throw new Exception("Vous devez être connectés en tant qu'administrateur ou moniteur d'auto école pour accéder à cette page !");
 
 }

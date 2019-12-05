@@ -3,11 +3,6 @@
 
 $account = Model::getCurrentAccount();
 
-if (isset($_POST['disconnect'])){
-    session_destroy();
-    header('Location: '.URL.'accueil');
-}
-
 ?>
 
 

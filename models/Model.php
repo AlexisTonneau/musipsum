@@ -11,7 +11,9 @@ abstract class Model
 {
     const REGULAR_USER= 0;
 
-    const ADMIN_USER = 1;
+    const INSTRUCTOR_USER = 1;
+
+    const ADMINISTRATOR_USER = 2;
 
 
     private static $_bdd;

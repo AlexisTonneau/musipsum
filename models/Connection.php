@@ -49,16 +49,16 @@ class Connection extends AccountManager
 
                             $_SESSION['user'] = serialize($accounts[$i]);
                             $_SESSION['driving_school'] = serialize(DrivingSchoolManager::getCurrentDrivingSchool());
-                            if($accounts[$i]->getAccountType()==Model::REGULAR_USER){
-                                $msg = "Connected";
+                            if($accounts[$i]->getAccountType()===Model::REGULAR_USER){
+                                $msg = 'Connected';
                             }
-                            elseif ($accounts[$i]->getAccountType()==Model::ADMIN_USER){
-                                $msg = "Connected as admin";
+                            elseif ($accounts[$i]->getAccountType()===Model::INSTRUCTOR_USER){
+                                $msg = 'Connected as admin';
 
 
                             }
                             else{
-                                throw new Exception("Global variables error");
+                                throw new Exception('Global variables error');
                             }
 
                         }
@@ -68,7 +68,7 @@ class Connection extends AccountManager
                     }
                 }
             } else {
-                $msg = "Mail ou mot de passe incorrect";
+                $msg = 'Mail ou mot de passe incorrect';
 
             }
 
