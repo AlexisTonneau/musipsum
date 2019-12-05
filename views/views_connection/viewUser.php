@@ -65,7 +65,7 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 
 <div>
-    <form method="post" action="">
+    <form method="post" action="<?=URL?>account/disconnect">
         <input type="submit" name="disconnect" value="Se déconnecter">
     </form>
 </div>

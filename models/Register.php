@@ -33,8 +33,9 @@ class Register extends Model
         else{
             $weight = 0;
         }
-        $account_type = 0;
+        $account_type = $user->getAccountType();
         $id_driving_school = $user->getDrivingSchoolId();
+
 
 
 
@@ -133,13 +134,30 @@ class Register extends Model
         if(isset($_POST['gender'])){
             $account_register->setGender($_POST['gender']);
         }
+        if (isset($_POST['account_type'])){
+            switch ($_POST['account_type']){
+                case 'admin':
+                    $account_register->setAccountType(2);
 
-        if (isset($_POST['account_type']) && $_POST['account_type']==1){
-            $account_register->setAccountType(1);
-            self::createInstructor($account_register);
+                    break;
+                case 'monitor':
+                    $bool=true;
+                    $account_register->setAccountType(1);
+
+                    break;
+                case 'user':
+                    $account_register->setAccountType(0);
+
+                    break;
+                default:
+                    $account_register->setAccountType(0);
+            }
         }
 
         $reg =new Register($account_register);
+        if($bool){
+            self::createInstructor($account_register);
+        }
         return $reg->isStatus();
 
 
@@ -152,13 +170,14 @@ class Register extends Model
         $mail_address = $user->getMailAddress();
         $driving_school_id = $user->getDrivingSchoolId();
 
-        $request = $bdd->prepare('INSERT INTO moniteur (nom,prenom,adresse_mail,id_autoecole) VALUES (:name ,:first_name,:mail_adress,:id_drivingschool)');
+        $request = $bdd->prepare('INSERT INTO moniteur (nom,prenom,adresse_mail,id_autoecole) VALUES (:family_name ,:first_name,:mail_address,:id_drivingschool)');
 
         $request->bindParam(':family_name',$name);
         $request->bindParam(':first_name',$first_name);
         $request->bindParam(':mail_address',$mail_address);
         $request->bindParam(':id_drivingschool',$driving_school_id);
         $request->execute();
+        //TODO Fill moniteur_user
 
 
     }
