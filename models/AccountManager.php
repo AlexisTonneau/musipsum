@@ -21,7 +21,7 @@ class AccountManager extends Model
     }
 
     public static function getCurrentAccount() {           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
-        if(isset($_SESSION['account'])AND !is_null($_SESSION['account'])){
+        if(isset($_SESSION['account'])AND $_SESSION['account'] !== null){
             $account = $_SESSION['account'];
             return $account;
 
@@ -32,9 +32,16 @@ class AccountManager extends Model
             return serialize($newUser);
         }
     }
-
-
-
+    public static function deleteAccount()
+    {
+        if(isset($_POST['delete'])) {
+           $id = $_POST['delete'];
+            $bdd = self::getBdd();
+            $req = $bdd->prepare('DELETE FROM user WHERE id_user =:id');
+            $req->bindParam(':id', $id);
+            $req->execute();
+        }
+    }
 
 
 }

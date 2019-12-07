@@ -8,7 +8,12 @@
     <title>Recherche</title>
 
 </head>
+<script>
+    function checkForm() {
+        return  window.confirm('Cette opération est irréversible...')
 
+    }
+</script>
 <body class="body">
 
 <?php
@@ -20,7 +25,15 @@ foreach (Search::initializeSearch() as $account)
 
 echo '<br/>' . $account->getFirstName();
 echo ' ' . $account->getName() . "\t\t\t";
-?> <a class="link" href="#">Démarrer</a> <?php
+?> <a class="link" href="#">Démarrer</a>
+    <form method="post" action="<?=URL?>adminaccount/search" onsubmit="return checkForm()">
+        <input type="hidden" name="delete" value="<?=$account->getId()?>">
+        <button type="submit" name="submit_param" value="<?=$account->getId()?>">
+                Delete
+        </button>
+    </form>
+
+    <?php
 }
 }
 else{

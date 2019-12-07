@@ -38,11 +38,16 @@ class Search extends Model
     }
     public static function initializeSearch(){
         if (!isset($_GET['search'])){
-            if(isset($_POST['search'])){
+            if (isset($_POST['search'])) {
                 header('Location: '.URL.'adminaccount/search/'.$_POST['search']);
                 return null;
             }
-            else {
+
+            if(isset($_POST['delete'])) {
+                AccountManager::deleteAccount();
+                header('Location: '.URL.'account');
+
+            } else {
                 throw new Exception("You're lost...");
             }
         }
