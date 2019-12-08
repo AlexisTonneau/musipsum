@@ -14,11 +14,15 @@ class ControllerAccount
             session_destroy();
             header('Location: '.URL.'account');
         }
+
         if(isset($_SESSION['user'])) {
 
                 $account = unserialize($_SESSION['user']);
+                if (isset($_GET['ref']) && $_GET['ref'] === 'modify'){
+                    require_once ('views/views_connection/viewModifyAccount.php');
+                }
 
-                if($account->getAccountType()===Model::ADMINISTRATOR_USER) {
+                elseif($account->getAccountType()===Model::ADMINISTRATOR_USER) {
                     //TODO Make a page for admin user
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){

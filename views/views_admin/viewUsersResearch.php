@@ -14,7 +14,7 @@
 
     }
 </script>
-<body class="body">
+<p class="body">
 
 <?php
 require_once 'views/views_accueil/viewHeader.php';
@@ -22,17 +22,30 @@ require_once 'views/views_accueil/viewHeader.php';
 if (Search::initializeSearch() !== null){
 foreach (Search::initializeSearch() as $account)
 {
-
+?><div class="account">
+    <?php
 echo '<br/>' . $account->getFirstName();
-echo ' ' . $account->getName() . "\t\t\t";
-?> <a class="link" href="#">Démarrer</a>
-    <form method="post" action="<?=URL?>adminaccount/search" onsubmit="return checkForm()">
+echo ' ' . $account->getName() . "\t\t\t\t";
+?>
+
+
+
+    <form method="post" action="<?=URL?>adminaccount/search" onsubmit="return checkForm()" class="form">
         <input type="hidden" name="delete" value="<?=$account->getId()?>">
-        <button type="submit" name="submit_param" value="<?=$account->getId()?>">
-                Delete
+        <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
+                Supprimer
         </button>
     </form>
+    <form method="post" action="<?=URL?>adminaccount/search" class="modify">
+    <input type="hidden" name="modify" value="<?=$account->getId()?>">
+    <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
+        Modifier
+    </button>
+</form>
 
+    <button class="link" href="#">Démarrer</button>
+
+    </div>
     <?php
 }
 }

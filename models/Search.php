@@ -47,7 +47,12 @@ class Search extends Model
                 AccountManager::deleteAccount();
                 header('Location: '.URL.'account');
 
-            } else {
+            }
+            elseif (isset($_POST['modify']) || isset($_POST['id'])){
+                require_once ('views/views_connection/viewModifyAccount.php');
+                return null;
+            }
+            else {
                 throw new Exception("You're lost...");
             }
         }

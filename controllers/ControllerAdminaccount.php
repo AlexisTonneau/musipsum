@@ -28,7 +28,12 @@ class ControllerAdminaccount
                         require_once ('views/views_admin/viewModifyDrivingSchool.php');
                         break;
                     case 'search':
-                        require_once ('views/views_admin/viewUsersResearch.php');
+                        if(!isset($_POST['modify'])) {
+                            require_once('views/views_admin/viewUsersResearch.php');
+                        }
+                        else{
+                            require_once ('views/views_connection/viewModifyAccount.php');
+                        }
                         break;
                     default:
                         header('Location: '.URL.'adminaccount');

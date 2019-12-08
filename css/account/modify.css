@@ -1,0 +1,51 @@
+.btn_save {
+    position: absolute;
+    text-decoration:none;
+    color: white;
+    background-color: dodgerblue;
+    opacity: 0.8;
+    border: dodgerblue;
+    width: 10%;
+    left: 47%;
+    bottom: 20%;
+    box-shadow: 2px 2px 5px black;
+    font-size: 1.1em;
+}
+
+.form{
+    border: none;
+}
+
+.fieldset{
+    border: none;
+    color: dodgerblue;
+    text-decoration-color: blue;
+}
+
+.info_personnelles{
+    float: left;
+    width: 50%;
+    height: 41.4%;
+    margin-left: 5%;
+}
+.droite{
+    float: left;
+    width: 45%;
+    height: 41.4%;
+}
+
+.pre_nom{
+    margin-bottom: 10%;
+}
+
+#name{
+    margin-bottom: 3%;
+}
+
+.genre{
+    margin-top: 4%;
+}
+
+.type_account{
+    margin-top: 4%;
+}

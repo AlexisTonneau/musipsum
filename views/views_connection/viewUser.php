@@ -1,7 +1,7 @@
 
 <?php       //TODO Add info about driving schools
 
-$account = Model::getCurrentAccount();
+$account = AccountManager::getCurrentAccountRefresh();
 
 ?>
 
@@ -67,6 +67,14 @@ require_once 'views/views_accueil/viewHeader.php';
 <div>
     <form method="post" action="<?=URL?>account/disconnect">
         <input type="submit" name="disconnect" value="Se déconnecter">
+    </form>
+</div>
+<div>
+    <form method="post" action="<?=URL?>account/modify">
+        <input type="hidden" name="modify" value="<?=$account->getId()?>">
+        <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
+            Modifier
+        </button>
     </form>
 </div>
 

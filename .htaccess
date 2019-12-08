@@ -4,6 +4,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^/?([a-zA-Z]+)/?$ index.php?link=$1 [QSA]
-RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/?$ index.php?link=$1&ref=$2 [QSA]
-RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z]+)/?$ index.php?link=$1&ref=$2&search=$3 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([-a-zA-Z]+)/?$ index.php?link=$1&ref=$2 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([-a-zA-Z]+)/([a-zA-Z]+)/?$ index.php?link=$1&ref=$2&search=$3 [QSA]
 
