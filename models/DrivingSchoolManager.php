@@ -67,48 +67,83 @@ class DrivingSchoolManager extends Model
         return '+33 8 85 47 12 65';
     }
 
-    public static function modifyDrivingSchool():bool {
+    private static function modifyDrivingSchool($id) {
         $bdd = self::getBdd();
-        $sql = "''";
-        $sql .= 'UPDATE auto_ecole SET ';
         if (isset($_POST['name']) AND $_POST['name']!==null){
             $name=$_POST['name'];
-            $sql .= 'name ='."''".$name."''";
+            $req = $bdd->prepare('UPDATE auto_ecole SET name = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
+
         }
         if (isset($_POST['phone']) AND $_POST['phone']!==null){
-            $phone=$_POST['phone'];
-            $sql .= 'phone_number ='."''".$phone."''";
+            $name=$_POST['phone'];
+            $req = $bdd->prepare('UPDATE auto_ecole SET phone_number = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
         }
         if (isset($_POST['adress']) AND $_POST['adress']!==null){
-            $adress=$_POST['adress'];
-            $sql .= 'adress ='."'".$adress."',";
+            $name=$_POST['adress'];
+            $req = $bdd->prepare('UPDATE auto_ecole SET adress = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
         }
         if (isset($_POST['description']) AND $_POST['description']!==null){
-            $descri=$_POST['description'];
-            $sql .= 'description ='."'".$descri."',";
+            $name=$_POST['description'];
+            $req = $bdd->prepare('UPDATE auto_ecole SET description = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
+
         }
         if (isset($_POST['cgu']) AND $_POST['cgu']!==null){
-            $cgu=$_POST['cgu'];
-            $sql .= 'cgu ='."'".$cgu."',";
+            $name=$_POST['cgu'];
+            $req = $bdd->prepare('UPDATE auto_ecole SET cgu = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
+
         }
         if (isset($_POST['mention_legal']) AND $_POST['mention_legal']!==null){
-            $descri=$_POST['mention_legal'];
-            $sql .= 'mention_legal ='."'".$descri."',";
-        }
-        if ($sql === "'"."UPDATE auto_ecole SET "){
-            return false;
-        }
-        else{
-            $sql .= 'WHERE id ='."'".self::getCurrentDrivingSchool()->getId()."''";
-            $req =$bdd->prepare($sql);
-            $req->execute();
+            $name=$_POST['mention_legal'];
+            $req = $bdd->prepare('UPDATE auto_ecole SET mention_legal = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
 
         }
+        if (isset($_POST['mail_address']) AND $_POST['mail_address']!==null){
+            $name=$_POST['mail_address'];
+            $req = $bdd->prepare('UPDATE auto_ecole SET mail_address = :name WHERE id_auto_ecole=:id');
+            $req->bindParam(':id',$id);
+            $req->bindParam(':name',$name);
+            if(!$req->execute()){
+                throw new Exception("Connexion échouée");
+            }
 
+        }
+    }
 
-
-
-
+    public static function checkDrivingSchool(){
+        if(isset($_POST['id'])){
+            self::modifyDrivingSchool($_POST['id']);
+            header('Location: '.URL.'account');
+        }
 
     }
 }

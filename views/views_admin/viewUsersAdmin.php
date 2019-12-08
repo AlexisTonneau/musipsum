@@ -25,7 +25,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
     <div class="autoecole">
           <?php
-            echo unserialize($_SESSION['driving_school'])->getName();
+            echo DrivingSchoolManager::getCurrentDrivingSchool()->getName();
           ?>
     </div>
 
@@ -49,6 +49,9 @@ require_once 'views/views_accueil/viewHeader.php';
         <btn class="btn btn_capteurs">
             <p class="centrer"><a class="centrer_capteur" href="<?=URL?>adminaccount/handlecaptor">Gérer</a></p>
         </btn>
+    </div>
+    <div class="btn_modifier">
+        <a class="modifier" href="<?=URL?>adminaccount/modify-drivingschool">Modifier l'auto-école</a>
     </div>
     <div class="btn_deconnexion">
             <a class="centrer" href="<?=URL?>adminaccount/disconnect">Se déconnecter</a>

@@ -139,6 +139,15 @@
     left: 80%;
     top: 90%;
 }
+.btn_modifier {
+    position: absolute;
+    background-color: white;
+    width: 15%;
+    height: 6%;
+    font-size: 1.2em;
+    left: 40%;
+    top: 90%;
+}
 
 .btn_compte {
     left: 6%;
@@ -170,4 +179,9 @@
     border-radius: 25px;
     text-decoration-color: cornflowerblue;
     margin-left: 10%;
+}
+
+.modifier{
+    color: dodgerblue;
+    text-decoration: none;
 }
