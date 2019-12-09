@@ -71,7 +71,7 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
-            <input type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD;" id="contact">
+                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
             <?php
            // Connection::sendMail();
             ?>
@@ -82,7 +82,9 @@ require_once 'viewHeader.php';
 
         <div class="icones_button_contact">
             <img src="<?=URL?>/images/icone_at.png" class="icone_button_contact icone_at">
-            <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
+                <button type="submit" form="form_envoi" class="send">
+                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
+                </button>
         </div>
 
 
@@ -156,3 +158,24 @@ require_once 'viewHeader.php';
 </html>
 <?php
 require_once ('viewFooter.php');
+?>
+
+
+<style>
+    .send {
+        position: absolute;
+        left: 85%;
+        bottom: 10%;
+        background-color: transparent;
+        border: none;
+        width: 12%;
+        height: 15%;
+    }
+
+    .icone_envoi {
+        position: absolute;
+        left: -5%;
+        bottom: -8%;
+    }
+
+</style>
