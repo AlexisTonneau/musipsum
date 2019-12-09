@@ -1,5 +1,5 @@
 <?php
-//TODO Delete session variables anywhere
+
 
 class ControllerTest
 {
