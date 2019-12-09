@@ -20,6 +20,10 @@ foreach ( Search::initializeSearch() as $account)
 
         echo '<br/>'.$account->getFirstName();
         echo ' '.$account->getName()."\t\t\t";
-    ?> <a class="link" href="<?=URL.'test'?>">Démarrer</a> <?php
+    ?>  <form method="post" action="<?=URL?>adminaccount/search" class="modify">
+    <input type="hidden" name="launch" value="<?=$account->getId()?>">
+    <button type="submit" class="button-submit" id="launch" name="submit_param" value="<?=$account->getId()?>">
+        Démarrer
+    </button>
+</form> <?php
 }
-
