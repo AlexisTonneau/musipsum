@@ -66,6 +66,14 @@ class ControllerAccount
                 require_once('views/views_connection/viewConnect.php');
             }
 
+        if (isset($_SESSION['id_user'])){
+            $_SESSION['id_user'] = null;
+        }
+        if (isset($_SESSION['id_test'])){
+            $_SESSION['id_user'] = null;
+        }
+        //}
+
     }
 
 
