@@ -1,21 +1,5 @@
 <?php //TODO bugs with white pages on click
 
-
-$msg = Connection::connect();
-$_SESSION['flash'] = $msg;
-
-if ($msg === 'Connected') {
-    //echo $msg;
-
-    header('Location: '.URL.'account');
-    exit();
-} elseif ($msg === 'Connected as admin') {
-
-    header('Location: '.URL.'adminaccount');
-    exit();
-}
-$_SESSION['flash']="";
-
 ?>
 
 <!DOCTYPE html>

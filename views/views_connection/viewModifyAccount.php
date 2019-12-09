@@ -1,5 +1,5 @@
 <?php
-$account = AccountManager::checkModify();
+
 require_once ('views/views_accueil/viewHeader.php');
 ?>
 

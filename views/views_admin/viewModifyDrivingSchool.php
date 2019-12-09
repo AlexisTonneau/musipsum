@@ -1,6 +1,5 @@
 <?php
-$ds = DrivingSchoolManager::getCurrentDrivingSchool(); //A adapter pour les admins
-DrivingSchoolManager::checkDrivingSchool();
+
 require_once ('views/views_accueil/viewHeader.php');
 ?>
 

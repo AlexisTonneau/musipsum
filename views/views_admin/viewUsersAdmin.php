@@ -1,7 +1,3 @@
-<?php   //TODO Add 'Modify driving school' button which needs to be redirected to '<URL>adminaccount/modify-drivingschool'
-
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>

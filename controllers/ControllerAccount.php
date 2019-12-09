@@ -19,6 +19,7 @@ class ControllerAccount
 
                 $account = unserialize($_SESSION['user']);
                 if (isset($_GET['ref']) && $_GET['ref'] === 'modify'){
+                    $account = AccountManager::checkModify();
                     require_once ('views/views_connection/viewModifyAccount.php');
                 }
 
@@ -30,6 +31,7 @@ class ControllerAccount
                         require_once ('views/views_admin/viewUsersAdmin.php');
                     }
                 else{
+                    $account = AccountManager::getCurrentAccountRefresh();
                     require_once('views/views_connection/viewUser.php');
 
                 }
@@ -38,6 +40,20 @@ class ControllerAccount
 
 
             else {
+                $msg = Connection::connect();
+                $_SESSION['flash'] = $msg;
+
+                if ($msg === 'Connected') {
+                    //echo $msg;
+
+                    header('Location: '.URL.'account');
+                    exit();
+                } elseif ($msg === 'Connected as admin') {
+
+                    header('Location: '.URL.'adminaccount');
+                    exit();
+                }
+                $_SESSION['flash']="";
                 require_once('views/views_connection/viewConnect.php');
             }
 

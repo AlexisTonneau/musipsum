@@ -1,7 +1,7 @@
 
 <?php       //TODO Add info about driving schools
 
-$account = AccountManager::getCurrentAccountRefresh();
+
 
 ?>
 

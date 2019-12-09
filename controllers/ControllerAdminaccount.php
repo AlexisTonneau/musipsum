@@ -25,6 +25,8 @@ class ControllerAdminaccount
                         exit();
                         break;
                     case 'modify-drivingschool':
+                        $ds = DrivingSchoolManager::getCurrentDrivingSchool(); //A adapter pour les admins
+                        DrivingSchoolManager::checkDrivingSchool();
                         require_once ('views/views_admin/viewModifyDrivingSchool.php');
                         break;
                     case 'search':
