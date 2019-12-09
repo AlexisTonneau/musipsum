@@ -22,9 +22,11 @@ class ControllerAccount
         if(isset($_SESSION['user'])) {
 
                 $account = unserialize($_SESSION['user']);
+
                 if (isset($_GET['ref']) && $_GET['ref'] === 'modify'){
                     $account = AccountManager::checkModify();
                     require_once ('views/views_connection/viewModifyAccount.php');
+
                 }
 
                 elseif($account->getAccountType()==Model::ADMINISTRATOR_USER) {

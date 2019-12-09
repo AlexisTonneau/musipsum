@@ -11,9 +11,13 @@ class TestManager extends Model
         INSERT INTO test (date_mesure,id_user,id_moniteur, id_modele_test) VALUES (NOW(),:id_user,:id_moniteur,:id_modele_test)
         '); //Nouveau test dans la bdd
 
-        $req->bindParam(':id_user',$test->getIdUser());
-        $req->bindParam(':id_moniteur',$test->getIdMoniteur());
-        $req->bindParam(':id_modele_test',$test->getIdModelTest());
+        $iduser = $test->getIdUser();
+        $idmoniteur = $test->getIdMoniteur();
+        $modele_test = $test->getIdModelTest();
+
+        $req->bindParam(':id_user',$iduser);
+        $req->bindParam(':id_moniteur',$idmoniteur);
+        $req->bindParam(':id_modele_test', $modele_test);
 
         if(!$req->execute()){
             throw new Exception('Connexion échouée');
@@ -21,20 +25,17 @@ class TestManager extends Model
 
 
 
-        $reqid = $bdd->prepare('SELECT id FROM test ORDER BY id DESC LIMIT (1) ');
-        $reqid->execute();
-        $id = null;
-        foreach ($reqid->fetch() as $item){
-            $id = $item['id'];
-        }
+
 
         $req2 = $bdd->prepare('
-        UPDATE user SET token_test = :id_test WHERE id= :id_user
+        UPDATE user SET token_test = :id_test WHERE id_user= :id_user
         '); //Création d'un token de lancement de test
 
 
-        $req2->bindParam(':id_user',$test->getIdUser());
-        $req2->bindParam(':id_test',$id);
+        $id_user = $test->getIdUser();
+
+        $req2->bindParam(':id_user',$id_user);
+        $req2->bindParam(':id_test',$modele_test);
 
 
         if(!$req2->execute() ){
@@ -48,36 +49,47 @@ class TestManager extends Model
 
     public static function checkToken() :int{
         $bdd = self::getBdd();
-        $token=0;
+        $token=1;
         $account = self::getCurrentAccount();
-        $req = $bdd->prepare('SELECT token_test FROM user WHERE id = :id_user');
-        $req->bindParam(':id_user',$account->getId());
+        $req = $bdd->prepare('SELECT * FROM user WHERE id_user = :id_user');
+        $id_account = $account->getId();
+        $req->bindParam(':id_user',$id_account);
         if(!$req->execute()){
             throw new Exception('Connexion échouée');
         }
-        while ($account = $req->fetch(PDO::FETCH_ASSOC)){
-            $token = $account['token_test'];
+        while ($abc = $req->fetch(PDO::FETCH_ASSOC)){
+           // debug($abc);
+            $token = $abc['token_test'];
         }
         return $token;
     }
 
     public static function findVideo(int $test){
-        $url='';
+        $url='https://www.youtube.com/embed/M4B16pSRDvw"';
         $bdd = self::getBdd();
-        $req = $bdd->prepare('SELECT * FROM test_models WHERE id=(SELECT id_modele_test FROM test WHERE id=:id_test)');
+        $req = $bdd->prepare('SELECT * FROM tests_models WHERE id=(SELECT id_modele_test FROM test WHERE id_test=:id_test)');
         $req->bindParam(':id_test',$test);
-        foreach ($req->fetch() as $item){
+        while ($item = $req->fetch()  ){
             $url = $item['url_video'];  //Ce texte sur la bdd sera soit une direction vers un fichier ou un url de vidéo depuis un hébergeur externe (YT...)
         }
         return $url;
     }
+
     public static function deleteToken() {
         $bdd = self::getBdd();
         $account = self::getCurrentAccount();
         $req = $bdd->prepare('UPDATE user SET token_test=0 WHERE id_user = :id_user');
-        $req->bindParam(':id_user',$account->getId());
+        $id_user = $account->getId();
+        $req->bindParam(':id_user',$id_user);
         if(!$req->execute()){
             throw new Exception('Connexion échouée');
+        }
+    }
+
+    public static function sendModelId(){
+        if (isset($_POST['id_test'])){
+            $_SESSION['id_test'] = $_POST['id_test'];
+            header('Location: '.URL.'test');
         }
     }
 

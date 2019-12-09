@@ -73,6 +73,24 @@ class TestModel extends Model
         $this->id_auto_ecole = $id_auto_ecole;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getVideoLien()
+    {
+        return $this->video_lien;
+    }
+
+    /**
+     * @param mixed $video_lien
+     */
+    public function setVideoLien($video_lien)
+    {
+        $this->video_lien = $video_lien;
+    }
+
+
+
     public static function searchById($id) :TestModel{
         if(self::getAllModels()===null){
             throw new Exception('Pas de modèle de test');
@@ -93,7 +111,7 @@ class TestModel extends Model
         $i = 0;
         $var=null;
         $bdd = self::getBdd();
-        $req = $bdd->prepare('SELECT * FROM test_models WHERE id_auto_ecole='.self::getCurrentAccount()->getDrivingSchoolId().' OR id_auto_ecole IS NULL');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+        $req = $bdd->prepare('SELECT * FROM tests_models WHERE id_auto_ecole='.self::getCurrentAccount()->getDrivingSchoolId().' OR id_auto_ecole IS NULL');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
         if(!$req->execute()){
             throw new Exception("Connexion échouée");
         }

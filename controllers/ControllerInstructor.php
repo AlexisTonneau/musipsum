@@ -30,9 +30,9 @@ class ControllerInstructor
                         require_once('views/views_instructor/viewModifyDrivingSchool.php');
                         break;
                     case 'search':
-                        if(ctype_digit($_GET['search'])){
-                            $_SESSION['id_user'] = (int)$_GET['search'];
-                            header('Location:'.URL.'test');
+                        if(isset($_POST['launch']) && ctype_digit($_POST['launch'])){
+                            $_SESSION['id_user'] = (int)$_POST['launch'];
+                            header('Location: '.URL.'test');
                         }
                         elseif (isset($_POST['modify'])){
                             require_once ('views/views_connection/viewModifyAccount.php');
