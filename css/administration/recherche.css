@@ -24,6 +24,7 @@
     float: right;
 
 }
+.link:focus {outline:0;}
 
 
 .button-submit {
