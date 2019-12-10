@@ -146,4 +146,49 @@ class DrivingSchoolManager extends Model
         }
 
     }
+    public static function listDS(){
+        $bdd = self::getBdd();
+        $i = 0;
+
+
+        $req = $bdd->prepare("SELECT * FROM auto_ecole ORDER BY name");
+
+
+        if(!$req->execute()){
+            throw new Exception("Cannot connect to database");
+        }
+        $var = null;
+        while ($account = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var[$i] = new DrivingSchool();
+            $var[$i]->setName($account['name']);
+            $var[$i]->setDescription($account['description']);
+            $var[$i]->setPhoneNumber($account['phone_number']);
+            $var[$i]->setAddress($account['adress']);
+            $var[$i]->setMailAddress($account['mail_address']);
+            $var[$i]->setId($account['id_auto_ecole']);
+            $i++;
+        }
+
+        return $var;
+    }
+    public static function deleteDrivingSchool($id){
+        $bdd = self::getBdd();
+        $req = $bdd->prepare('DELETE FROM auto_ecole WHERE id_auto_ecole=:id');
+        $req->bindParam(':id',$id);
+        if(!$req->execute()){
+            throw new Exception("Connexion échouée");
+        }
+        else{
+            AccountManager::deleteAllAccountsDS($id);
+            header('Location: '.URL.'administration/list-driving-school');
+        }
+    }
+
+
+
 }
+
+
+
+
+

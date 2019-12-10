@@ -126,5 +126,17 @@ class AccountManager extends Model
 
     }
 
+    /**
+     * Supprime tous les comptes associés à une auto-école
+     */
+    public static function deleteAllAccountsDS($id_ds){
+        $bdd = self::getBdd();
+        $req = $bdd->prepare('DELETE FROM user WHERE id_autoecole = :id');
+        $req->bindParam(':id',$id_ds);
+        if(!$req->execute()){
+            throw new Exception('Erreur de connexion');
+        }
+    }
+
 
 }

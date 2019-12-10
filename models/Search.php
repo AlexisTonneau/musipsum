@@ -3,8 +3,6 @@
 
 class Search extends Model
 {
-    private $bdd;
-    private $output;
 
     public static function querySearch($text)
     {
@@ -23,6 +21,7 @@ class Search extends Model
         }
         $var = null;
         while ($account = $req->fetch(PDO::FETCH_ASSOC)) {
+
             $var[$i] = new User;
             $var[$i]->setName($account['name']);
             $var[$i]->setId($account['id_user']);
@@ -35,7 +34,6 @@ class Search extends Model
             $var[$i]->setAccountType($account['account_type']);
             $var[$i]->setMailAddress($account['mail_address']);
             $var[$i]->setDrivingSchoolId($account['id_autoecole']);
-
 
             $i++;
         }
@@ -69,6 +67,12 @@ class Search extends Model
         $post= $_GET['search'];
         return self::querySearch($post);
     }
+
+
+
+
+
+
 
 
 

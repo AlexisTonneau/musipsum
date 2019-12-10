@@ -15,9 +15,11 @@ connexionForm.addEventListener('input',function (e) {
 
     }
     
-})
+});
+
+
 
 function checkForm() {
-    return  window.confirm('Cette opération est irréversible...')
+    return  window.confirm('Cette opération est irréversible et supprimera les comptes associés');
 
 }

@@ -12,3 +12,7 @@ function myFunction() {
 		header.classList.remove("sticky");
 	}
 }
+function checkFormDS() {
+	return  window.confirm('Cette opération est irréversible et supprimera tous les comptes associés')
+
+}
