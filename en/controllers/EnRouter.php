@@ -1,7 +1,7 @@
 <?php
 
 
-class Router
+class EnRouter
 {
     private $_ctrl;
 

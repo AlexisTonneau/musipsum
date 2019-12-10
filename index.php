@@ -1,9 +1,12 @@
 <?php
 
 define('URL',str_replace("index.php","",isset($_SERVER['HTTPS']) ? "https" : "http"."://$_SERVER[HTTP_HOST]$_SERVER[PHP_SELF]"));
-require_once('controllers/Router.php');
 
+// Require les 3 routeurs
+require_once('fr/controllers/FrRouter.php');
+require_once('es/controllers/EsRouter.php');
+require_once('en/controllers/EnRouter.php');
 
-$router = new Router();
-$router ->routeReq();
+require_once('fr/models/Language.php');
 
+Language::choosePageLanguage();

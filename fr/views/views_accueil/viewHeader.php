@@ -35,6 +35,8 @@ else if($url[0]==='accueil'){
 }
 
 ?>
+
+
 <head>
     <title>Musipsum</title>
     <style>
@@ -68,17 +70,17 @@ color: <?=$successstories?>;
             <div class="titre_header">
                 <a id="titre_musipsum" href="<?=URL?>">MUSIPSUM</a>
                 <div id="icones_header">
-                    <a href="<?=URL?>account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
-                    <a href="<?=URL?>accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
+                    <a href="<?=URL?>fr/account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
+                    <a href="<?=URL?>fr/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
                     <a href="<?=URL?>"><img src="<?=URL?>images/icone_loupe_bis.png" class="icone_header"></a>
                 </div>
             </div>
             <div class="choix">
-                <a class="txt_header" id="a_propos" href="<?=URL?>accueil/about" >À propos</a>
-                <a class="txt_header" id="sucess_stories" href="<?=URL?>accueil/successstories" >Success Story</a>
-                <a class="txt_header" id="nous_contacter" href="<?=URL?>accueil#contact">Nous contacter</a>
-                <a class="txt_header" id="start_test" href="<?=URL?>test">Démarrer </a>
-                <a class="txt_header" id="connexion" href="<?=URL?>account"><?php
+                <a class="txt_header" id="a_propos" href="<?=URL?>fr/accueil/about" >À propos</a>
+                <a class="txt_header" id="sucess_stories" href="<?=URL?>fr/accueil/successstories" >Success Story</a>
+                <a class="txt_header" id="nous_contacter" href="<?=URL?>fr/accueil#contact">Nous contacter</a>
+                <a class="txt_header" id="start_test" href="<?=URL?>fr/test">Démarrer </a>
+                <a class="txt_header" id="connexion" href="<?=URL?>fr/account"><?php
                     if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
                         echo 'Mon compte';
                     }

@@ -3,7 +3,7 @@ window.onload = function () {
     console.log(id);
     var req2 = new XMLHttpRequest();
 
-    req2.open("GET", "http://127.0.0.1/musipsum/ajax/graph/"+id, false);
+    req2.open("GET", "http://127.0.0.1/musipsum/fr/ajax/graph/"+id, false);
     req2.send(null);
     console.log(req2.responseText);
     console.log('abc');
@@ -41,11 +41,10 @@ window.onload = function () {
 
 function ajaxRequest(test_id,captor_type) {
     var req = new XMLHttpRequest();
-    req.open("GET", "http://127.0.0.1/musipsum/ajax/graph/"+test_id+"/"+captor_type+"/ajax", false);
+    req.open("GET", "http://127.0.0.1/musipsum/fr/ajax/graph/"+test_id+"/"+captor_type+"/ajax", false);
     req.send(null);
     console.log(req.responseText);
     return  JSON.parse(req.responseText);
-
 }
 
 

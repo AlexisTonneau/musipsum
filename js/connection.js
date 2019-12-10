@@ -3,7 +3,7 @@ $(document).ready(function () {
         e.preventDefault();
         console.log($("#id_mail").val());
         $.post(
-            'http://127.0.0.1/musipsum/ajax/connection',
+            'http://127.0.0.1/musipsum/fr/ajax/connection',
             {
                 mail : $("#id_mail").val(),
                 mdp : $("#id_mdp").val()
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
                 }
                 else {
-                    window.location.href = ("http://127.0.0.1/musipsum/account");
+                    window.location.href = ("http://127.0.0.1/musipsum/fr/account");
                 }
 
             }
