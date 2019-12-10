@@ -1,6 +1,9 @@
 <?php
 
 
+/**
+ * Class AccountManager : Fonctions statiques pour intéragir avec les différents comptes
+ */
 class AccountManager extends Model
 {
     /*public function getAllAccounts()            //RETOURNE UN ARRAY DE TOUS LES COMPTES (POSSIBLEMENT UTILE POUR LES BARRES DE RECHERCHE)
@@ -135,6 +138,18 @@ class AccountManager extends Model
         $req->bindParam(':id',$id_ds);
         if(!$req->execute()){
             throw new Exception('Erreur de connexion');
+        }
+    }
+
+    public static function accountTypeString(User $user) :string {
+        switch ($user->getAccountType()){
+            case Model::INSTRUCTOR_USER:
+                return 'Moniteur';
+            case Model::ADMINISTRATOR_USER:
+                return 'Administrateur';
+            default:
+                return 'Utilisateur';
+
         }
     }
 

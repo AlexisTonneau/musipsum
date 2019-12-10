@@ -20,7 +20,7 @@ class ControllerAdministration
                     //TODO  actions de l'admin
                     case 'search':
                         if(!isset($_POST['modify'])) {
-                            require_once('views/views_instructor/viewUsersResearch.php');
+                            require_once('views/views_administration/viewAdminResearch.php');
                         }
                         else{
                             require_once ('views/views_connection/viewModifyAccount.php');
