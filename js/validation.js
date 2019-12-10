@@ -16,3 +16,8 @@ connexionForm.addEventListener('input',function (e) {
     }
     
 })
+
+function checkForm() {
+    return  window.confirm('Cette opération est irréversible...')
+
+}

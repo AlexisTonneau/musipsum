@@ -1,11 +1,11 @@
 <?php
 
 
-class ControllerAdminaccount
+class ControllerInstructor
 {
 
     /**
-     * ControllerAdminaccount constructor.
+     * ControllerInstructor constructor.
      */
     public function __construct()
     {
@@ -14,10 +14,10 @@ class ControllerAdminaccount
             if (isset($_GET['ref'])) {
                 switch ($_GET['ref']){   //TODO Modify buttons of the page @DEMARS
                     case 'newaccount':
-                        require ('views/views_admin/viewCreateUser.php');
+                        require('views/views_instructor/viewCreateUser.php');
                         break;
                     case 'handlecaptor':
-                        require_once ('views/views_admin/viewHandleCaptors.php');
+                        require_once('views/views_instructor/viewHandleCaptors.php');
                         break;
                     case 'disconnect':
                         session_destroy();
@@ -27,11 +27,11 @@ class ControllerAdminaccount
                     case 'modify-drivingschool':
                         $ds = DrivingSchoolManager::getCurrentDrivingSchool(); //A adapter pour les admins
                         DrivingSchoolManager::checkDrivingSchool();
-                        require_once ('views/views_admin/viewModifyDrivingSchool.php');
+                        require_once('views/views_instructor/viewModifyDrivingSchool.php');
                         break;
                     case 'search':
                         if(!isset($_POST['modify'])) {
-                            require_once('views/views_admin/viewUsersResearch.php');
+                            require_once('views/views_instructor/viewUsersResearch.php');
                         }
                         else{
                             require_once ('views/views_connection/viewModifyAccount.php');
@@ -44,7 +44,7 @@ class ControllerAdminaccount
                 }
             }
             else{
-                require ('views/views_admin/viewUsersAdmin.php');
+                require('views/views_instructor/viewInstructor.php');
             }
         }
         else{

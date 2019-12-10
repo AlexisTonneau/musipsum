@@ -44,7 +44,7 @@ class Router
 
 
                 $controller = ucfirst(strtolower($url[0])); //Première lettre en majuscule et le reste en minuscule
-                $controllerClass = 'Controller' . $controller; //ControllerAdminaccount
+                $controllerClass = 'Controller' . $controller; //ControllerInstructor
                 $controllerFile = 'controllers/' . $controllerClass . '.php';
                 if (file_exists($controllerFile)) {
                     require_once($controllerFile);

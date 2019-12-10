@@ -39,7 +39,7 @@ class Register extends Model
 
 
 
-        $request =$bdd->prepare( 'INSERT INTO user (name, first_name, mail_address, gender, birth_date, height, weight, password_account,account_type) VALUES (:family_name, :surname, :mail_address, :gender, :birth_date,:height,:weight,:password,:account_type)');
+        $request =$bdd->prepare( 'INSERT INTO user (name, first_name, mail_address, gender, birth_date, height, weight, password_account,account_type,id_autoecole) VALUES (:family_name, :surname, :mail_address, :gender, :birth_date,:height,:weight,:password,:account_type, :id_ds)');
 
         $request->bindParam(':family_name',$family_name);
         $request->bindParam(':surname',$first_name);
@@ -50,6 +50,8 @@ class Register extends Model
         $request->bindParam(':weight',$weight);
         $request->bindParam(':password',$password);
         $request->bindParam(':account_type',$account_type);
+        $request->bindParam(':id_ds',$id_driving_school);
+
 
         if($request->execute()){
             $this->status=true;
@@ -112,7 +114,7 @@ class Register extends Model
         $account_register->setName($_POST['name']);
         $account_register->setMailAddress($_POST['mail_address']);
         $account_register->setPassword($_POST['password']);
-        $account_register->setDrivingSchoolId(self::getCurrentAccount()->getDrivingSchoolId());
+
         if (isset($_POST['jour']) AND isset($_POST['mois']) AND isset($_POST['annee'])){
             $account_register->setNaissanceAnnee($_POST['annee']);
             $account_register->setNaissanceJour($_POST['jour']);
@@ -155,6 +157,13 @@ class Register extends Model
                     $account_register->setAccountType(0);
                     $bool = 2;
             }
+            if($account_register->getAccountType()!=Model::ADMINISTRATOR_USER) {
+                $account_register->setDrivingSchoolId(self::getCurrentAccount()->getDrivingSchoolId());
+            }
+            else{
+                $account_register->setDrivingSchoolId(0);
+            }
+
         }
 
         $reg =new Register($account_register);

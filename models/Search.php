@@ -10,11 +10,16 @@ class Search extends Model
     {
         $user = self::getCurrentAccount();
         $bdd = self::getBdd();
-        $i=0;
+        $i = 0;
 
+        if (Model::getCurrentAccount()->getAccountType() == Model::INSTRUCTOR_USER) {
         $req = $bdd->prepare("SELECT * FROM user WHERE (name LIKE '%$text%' OR first_name LIKE '%$text%') AND id_autoecole = " . $user->getDrivingSchoolId());
-        if(!$req->execute()){
-            throw new Exception("Cannot connect to database");
+        }
+        else{
+            $req = $bdd->prepare("SELECT * FROM user WHERE (name LIKE '%$text%' OR first_name LIKE '%$text%') ORDER BY account_type DESC");
+        }
+
+        if(!$req->execute()){            throw new Exception("Cannot connect to database");
         }
         $var = null;
         while ($account = $req->fetch(PDO::FETCH_ASSOC)) {
@@ -39,7 +44,12 @@ class Search extends Model
     public static function initializeSearch(){
         if (!isset($_GET['search'])){
             if (isset($_POST['search'])) {
-                header('Location: '.URL.'adminaccount/search/'.$_POST['search']);
+                if(Model::getCurrentAccount()->getAccountType()==Model::INSTRUCTOR_USER) {
+                    header('Location: ' . URL . 'instructor/search/' . $_POST['search']);
+                }
+                else{
+                    header('Location: ' . URL . 'administration/search/' . $_POST['search']);
+                }
                 return null;
             }
 
