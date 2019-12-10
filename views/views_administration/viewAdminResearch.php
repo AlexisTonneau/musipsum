@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?= URL ?>/css/administration/recherche.css">
-    <link rel="script" href="<?=URL?>js/validation.js">
+    <script src="<?=URL?>js/validation.js"></script>
 
     <title>Recherche</title>
 
@@ -26,13 +26,13 @@ if (Search::initializeSearch() !== null){
 
 
 
-        <form method="post" action="<?=URL?>/search" onsubmit="return checkForm()" class="form">
+        <form method="post" action="<?=URL?>administration/delete-account" onsubmit="return checkForm()" class="form">
             <input type="hidden" name="delete" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
                 Supprimer
             </button>
         </form>
-        <form method="post" action="<?=URL?>/search" class="modify">
+        <form method="post" action="<?=URL?>administration/modify-account" class="modify">
             <input type="hidden" name="modify" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
                 Modifier

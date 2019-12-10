@@ -24,7 +24,7 @@
     float: right;
 
 }
-.link:focus {outline:0;}
+button:focus {outline:0;}
 
 
 .button-submit {
@@ -42,6 +42,7 @@
 #modify{
     color: blue;
 }
+
 #delete{
     color: red;
 }

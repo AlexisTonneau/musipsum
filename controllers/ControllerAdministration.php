@@ -19,12 +19,7 @@ class ControllerAdministration
                 switch ($_GET['ref']){
                     //TODO  actions de l'admin
                     case 'search':
-                        if(!isset($_POST['modify'])) {
-                            require_once('views/views_administration/viewAdminResearch.php');
-                        }
-                        else{
-                            require_once ('views/views_connection/viewModifyAccount.php');
-                        }
+                        require_once('views/views_administration/viewAdminResearch.php');
                         break;
                     case 'list-driving-school':
                         if(!isset($_GET['search'])) {
@@ -40,6 +35,20 @@ class ControllerAdministration
                                 }
                             }
                         }
+                        break;
+                    case 'delete-account':
+                        if(isset($_POST['delete']) && $_POST['delete']!==null){
+                            AccountManager::deleteAccount();
+                            header('Location: '.URL.'account');
+                        }
+                        else{
+                            header('Location: '.URL.'account');
+                        }
+                        break;
+                    case 'modify-account':
+                        $account = AccountManager::checkModify();
+                        require_once 'views/views_connection/viewModifyAccount.php';
+
                         break;
 
                 }

@@ -45,6 +45,15 @@ class AccountManager extends Model
             $req->execute();
         }
     }
+    public static function deleteAccountId($id)
+    {
+
+            $bdd = self::getBdd();
+            $req = $bdd->prepare('DELETE FROM user WHERE id_user =:id');
+            $req->bindParam(':id', $id);
+            $req->execute();
+
+    }
 
     private static function modifyAccount($id){
         if($id === null){
