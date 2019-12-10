@@ -73,11 +73,13 @@ require_once ('views/views_accueil/viewHeader.php');
                 <label for="type_account" >Choisir le type de compte *</label>
                 <div class="type_account_container">
                     <select name="account_type" id="type_account">
+                        <option value="monitor">Compte Moniteur</option>
                         <?php  if(Model::getCurrentAccount()->getAccountType() == Model::ADMINISTRATOR_USER){     echo('                ?>
                         <option value="admin" >Compte Administrateur</option>
                         <?');}?>
-                        <option value="monitor">Compte Moniteur</option>
                         <option value="user">Compte Client</option>
+
+
                     </select>
                 </div>
             </div>

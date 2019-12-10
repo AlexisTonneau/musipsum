@@ -1,10 +1,14 @@
 @font-face {
-  font-family: 'gotham_book';
-  src:url('fonts/Gotham-Book.otf');
+    font-family: 'gotham_book';
+    src:url('fonts/Gotham-Book.otf');
 }
 
 .body{
-  	font-family: 'gotham_book', serif;
+    font-family: 'gotham_book', serif;
+}
+
+.account{
+    margin-left: 2%;
 }
 
 .link{
@@ -14,17 +18,14 @@
     border: none;
     font-family: gotham_book, serif;
     display: inline-block;
-    cursor: pointer;
     position: relative;
     margin-right: 5%;
     margin-top: 0.2%;
     float: right;
 
 }
+button:focus {outline:0;}
 
-button:focus{
-    outline: 0;
-}
 
 .button-submit {
     background: none!important;
@@ -41,6 +42,7 @@ button:focus{
 #modify{
     color: blue;
 }
+
 #delete{
     color: red;
 }
@@ -63,4 +65,9 @@ button:focus{
 
 .align{
     text-align: left;
+}
+
+.footer_welcome{
+    bottom: 0 !important;
+    position: absolute;
 }

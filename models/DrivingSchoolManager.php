@@ -18,9 +18,7 @@ class DrivingSchoolManager extends Model
             $var[$i]->setMailAddress($driving_school['mail_address']);
             $var[$i]->setPhoneNumber($driving_school['phone_number']);
             $var[$i]->setId($driving_school['id_auto_ecole']);
-            $var[$i]->setCgu($driving_school['cgu']);
             $var[$i]->setAddress($driving_school['adress']);
-            $var[$i]->setMentionLegal($driving_school['mention_legal']);
 
 
             $i++;
@@ -146,4 +144,73 @@ class DrivingSchoolManager extends Model
         }
 
     }
+    public static function listDS(){
+        $bdd = self::getBdd();
+        $i = 0;
+
+
+        $req = $bdd->prepare("SELECT * FROM auto_ecole ORDER BY name");
+
+
+        if(!$req->execute()){
+            throw new Exception("Cannot connect to database");
+        }
+        $var = null;
+        while ($account = $req->fetch(PDO::FETCH_ASSOC)) {
+            $var[$i] = new DrivingSchool();
+            $var[$i]->setName($account['name']);
+            $var[$i]->setDescription($account['description']);
+            $var[$i]->setPhoneNumber($account['phone_number']);
+            $var[$i]->setAddress($account['adress']);
+            $var[$i]->setMailAddress($account['mail_address']);
+            $var[$i]->setId($account['id_auto_ecole']);
+            $i++;
+        }
+
+        return $var;
+    }
+    public static function deleteDrivingSchool($id){
+        $bdd = self::getBdd();
+        $req = $bdd->prepare('DELETE FROM auto_ecole WHERE id_auto_ecole=:id');
+        $req->bindParam(':id',$id);
+        if(!$req->execute()){
+            throw new Exception("Connexion échouée");
+        }
+        else{
+            AccountManager::deleteAllAccountsDS($id);
+            header('Location: '.URL.'administration/list-driving-school');
+        }
+    }
+
+    public static function getDrivingSchoolById($id)
+    {
+        $bdd = self::getBdd();
+        $req = $bdd->prepare('SELECT * FROM auto_ecole WHERE id_auto_ecole=:id');
+        $req->bindParam(':id',$id);
+        if(!$req->execute()){
+            throw new Exception("Connexion échouée");
+        }
+
+        $var = null;
+        while ($driving_school=$req->fetch(PDO::FETCH_ASSOC)){
+            $var = new DrivingSchool();
+            $var->setName($driving_school['name']);
+            $var->setMailAddress($driving_school['mail_address']);
+            $var->setPhoneNumber($driving_school['phone_number']);
+            $var->setId($driving_school['id_auto_ecole']);
+            $var->setAddress($driving_school['adress']);
+
+
+        }
+        return $var;
+
+
+    }
+
+
 }
+
+
+
+
+
