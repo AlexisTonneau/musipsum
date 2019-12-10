@@ -13,7 +13,9 @@ class ControllerAdministration
         if (isset($_SESSION['user']) && unserialize($_SESSION['user'])->getAccountType()==Model::ADMINISTRATOR_USER){
             //TODO Redirection selon les actions de l'admin
             if (!isset($_GET['ref']) || $_GET['ref']==null){
+
                 require_once('views/views_administration/viewAdmin.php');
+
             }
             else{
                 switch ($_GET['ref']){
@@ -36,6 +38,7 @@ class ControllerAdministration
                             }
                         }
                         break;
+
                     case 'delete-account':
                         if(isset($_POST['delete']) && $_POST['delete']!==null){
                             AccountManager::deleteAccount();
@@ -48,6 +51,7 @@ class ControllerAdministration
                     case 'modify-account':
                         $account = AccountManager::checkModify();
                         require_once 'views/views_connection/viewModifyAccount.php';
+
 
                         break;
 
