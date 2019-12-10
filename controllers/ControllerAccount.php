@@ -23,12 +23,12 @@ class ControllerAccount
                     require_once ('views/views_connection/viewModifyAccount.php');
                 }
 
-                elseif($account->getAccountType()===Model::ADMINISTRATOR_USER) {
-                    //TODO Make a page for admin user
+                elseif($account->getAccountType()==Model::ADMINISTRATOR_USER) {
+                   header('Location: '.URL.'administration');
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
 
-                        require_once ('views/views_admin/viewUsersAdmin.php');
+                        require_once('views/views_instructor/viewUsersAdmin.php');
                     }
                 else{
                     $account = AccountManager::getCurrentAccountRefresh();
@@ -50,8 +50,11 @@ class ControllerAccount
                     exit();
                 } elseif ($msg === 'Connected as admin') {
 
-                    header('Location: '.URL.'adminaccount');
+                    header('Location: '.URL.'instructor');
                     exit();
+                }
+                elseif ($msg ==='Administration'){
+                    header('Location: '.URL.'administration');
                 }
                 $_SESSION['flash']="";
                 require_once('views/views_connection/viewConnect.php');

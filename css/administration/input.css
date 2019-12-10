@@ -1,0 +1,16 @@
+.h2{
+    position: absolute;
+    margin-left: 40%;
+}
+.cgu{
+   /* position: absolute;
+    margin: 5%;*/
+}
+.input_text{
+    margin-top: 7%;
+    margin-left: 10%;
+    width: 80%;
+    height: 65%;
+    font-family: 'gotham_book', serif;
+    resize: none;
+}

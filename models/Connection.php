@@ -57,6 +57,9 @@ class Connection extends AccountManager
 
 
                             }
+                            elseif ($accounts[$i]->getAccountType()==Model::ADMINISTRATOR_USER){
+                                $msg = 'Administration';
+                            }
 
                             else{
                                 throw new Exception('Global variables error');

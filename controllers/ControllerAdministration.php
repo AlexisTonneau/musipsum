@@ -68,6 +68,7 @@ class ControllerAdministration
                         }
                         break;
                     case 'cgu':
+                        Administration::checkCGU();
                         require_once ('views/views_administration/viewModifyCGU.php');
                         break;
                     case 'mentions-legales':
