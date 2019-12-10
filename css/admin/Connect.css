@@ -13,6 +13,11 @@ outline: solid #f00 1px !important;
 }
 */
 
+input:focus
+{
+  background-color:  #cce6ff;
+}
+
 .middlepage{
     position: relative;
 }
