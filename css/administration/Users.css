@@ -8,8 +8,8 @@
   	font-family: 'gotham_book', serif;
 }
 
-.autoecole,.img_portrait{
-    margin-top: 2%;
+.autoecole,.img_admi{
+  margin-top: 3%;
 }
 
 
@@ -77,14 +77,17 @@
 
 .middle_page {
     display: flex;
+    height: 100%;
 }
 
 
-.img_portrait {
-    width: 9%;
-    left: 35%;
+.img_admi {
+    width: 12%;
+    left: 30%;
     top: 20%;
+    margin-top: 4%;
     position: absolute;
+    border-radius: 7px/7px;
 }
 
 #ml{
@@ -125,19 +128,31 @@
 }
 
 
-.btn_compte,.btn_capteurs{
+.btn_compte,.btn_autoecole{
     position: absolute;
     background-color:dodgerblue;
     border: 1px solid lightgrey;
-    width : 38%;
-    height: 8%;
+    width : 25%;
+    height: 10%;
     font-size: 1.7em;
     opacity: 0.6;
     color: white;
     text-decoration: none;
+    border-radius: 7px/7px;
 }
 
-
+.btn_cgu,.btn_mentions_legales{
+    position: absolute;
+    background-color:dodgerblue;
+    border: 1px solid lightgrey;
+    width : 15%;
+    height: 10%;
+    font-size: 1.7em;
+    opacity: 0.6;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px/7px;
+}
 
 .btn_deconnexion {
     position: absolute;
@@ -176,8 +191,7 @@
   left: 52%;
   top: 63%;
 }
-.btn_capteurs {
-    right: 6%;
+
 .img_loupe, .id_user {
     position: absolute;
 }

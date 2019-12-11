@@ -26,7 +26,7 @@ require_once 'views/views_accueil/viewHeader.php';
     </div>
 
     <div>
-        <form  action="<?=URL?>adminaccount/search" method="post" >
+        <form  action="<?=URL?>instructor/search" method="post" >
 
         <input type="text" name="search" placeholder="         Rechercher un utilisateur" class="id_user">
         <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
@@ -38,19 +38,19 @@ require_once 'views/views_accueil/viewHeader.php';
 
     <div>
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>adminaccount/newaccount">Ouvrir un compte</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>instructor/newaccount">Ouvrir un compte</a></p>
         </btn>
     </div>
     <div>
         <btn class="btn btn_capteurs">
-            <p class="centrer"><a class="centrer_capteur" href="<?=URL?>adminaccount/handlecaptor">Gérer</a></p>
+            <p class="centrer"><a class="centrer_capteur" href="<?=URL?>instructor/handlecaptor">Gérer</a></p>
         </btn>
     </div>
     <div class="btn_modifier">
-        <a class="modifier" href="<?=URL?>adminaccount/modify-drivingschool">Modifier l'auto-école</a>
+        <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>
     <div class="btn_deconnexion">
-            <a class="centrer" href="<?=URL?>adminaccount/disconnect">Se déconnecter</a>
+            <a class="centrer" href="<?=URL?>instructor/disconnect">Se déconnecter</a>
     </div>
 </div>
 

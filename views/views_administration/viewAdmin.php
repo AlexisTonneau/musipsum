@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?=URL?>/css/admin/Users.css">
+    <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
     <title>Administration</title>
 
@@ -53,7 +53,7 @@ require_once 'views/views_accueil/viewHeader.php';
         <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>-->
     <div class="btn_deconnexion">
-        <a class="centrer" href="<?=URL?>instructor/disconnect">Se déconnecter</a>
+        <a class="centrer" href="<?=URL?>administration/disconnect">Se déconnecter</a>
     </div>
 </section>
 

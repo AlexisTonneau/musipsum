@@ -21,6 +21,10 @@ class ControllerAdministration
             else{
                 switch ($_GET['ref']){
                     //TODO  actions de l'admin
+                    case 'disconnect':
+                        session_destroy();
+                        header('Location: '.URL.'accueil');
+                        break;
                     case 'search':
                         require_once('views/views_administration/viewAdminResearch.php');
                         break;
@@ -68,10 +72,11 @@ class ControllerAdministration
                         }
                         break;
                     case 'cgu':
-                        Administration::checkCGU();
+                        Administration::checkData();
                         require_once ('views/views_administration/viewModifyCGU.php');
                         break;
                     case 'mentions-legales':
+                        Administration::checkData();
                         require_once ('views/views_administration/viewModifyML.php');
 
                 }

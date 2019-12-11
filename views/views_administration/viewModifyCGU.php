@@ -22,7 +22,7 @@ require_once ('views/views_accueil/viewHeader.php');
 <div class="formulaire">
     <form class="cgu" method="post" action="">
         <label>
-            <textarea name="cgu" class="input_text"><?=Administration::getCGU()?></textarea>
+            <textarea name="cgu" class="input_text"><?=Administration::getData('cgu')?></textarea>
         </label>
         <input type="submit">
     </form>
