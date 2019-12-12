@@ -39,7 +39,7 @@ class Search extends Model
     public static function initializeSearch(){
         if (!isset($_GET['search'])){
             if (isset($_POST['search'])) {
-                header('Location: '.URL.'adminaccount/search/'.$_POST['search']);
+                header('Location: '.URL.'instructor/search/'.$_POST['search']);
                 return null;
             }
 
