@@ -26,7 +26,7 @@ require_once 'views/views_accueil/viewHeader.php';
     <div>
         <form  action="<?=URL?>administration/search" method="post" >
 
-            <input type="text" name="search" placeholder="         Rechercher un utilisateur" class="id_user">
+            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user">
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
 
@@ -34,7 +34,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
     </div>
 
-    <div>
+    <div class="all_buttons">
         <btn class="btn btn_compte">
             <p class="centrer"><a class="centrer_compte" href="<?=URL?>administration/newaccount">Ouvrir un compte</a></p>
         </btn>

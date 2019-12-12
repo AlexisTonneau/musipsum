@@ -28,7 +28,7 @@ require_once 'views/views_accueil/viewHeader.php';
     <div>
         <form  action="<?=URL?>instructor/search" method="post" >
 
-        <input type="text" name="search" placeholder="         Rechercher un utilisateur" class="id_user">
+        <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user">
         <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
 

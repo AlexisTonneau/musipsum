@@ -123,11 +123,13 @@
     background-color:dodgerblue;
     border: 1px solid lightgrey;
     width : 38%;
-    height: 8%;
+    height: 7%;
     font-size: 1.7em;
     opacity: 0.6;
     color: white;
     text-decoration: none;
+    padding-top: 1%;
+    border-radius: 7px/7px;
 }
 
 .btn_deconnexion {
@@ -179,6 +181,11 @@
     border-radius: 25px;
     text-decoration-color: cornflowerblue;
     margin-left: 10%;
+    padding-left: 2%;
+}
+
+.id_user:focus{
+    outline-width: 0;
 }
 
 .modifier{

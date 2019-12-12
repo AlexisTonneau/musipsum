@@ -7,3 +7,7 @@
 	margin: 0px;
 	font-family: 'gotham_book', serif;
 }
+
+button:focus, select:focus, textarea:focus, button:focus{
+    outline: none;
+}

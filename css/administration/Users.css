@@ -133,7 +133,8 @@
     background-color:dodgerblue;
     border: 1px solid lightgrey;
     width : 25%;
-    height: 10%;
+    padding-top: 2%;
+    height: 8%;
     font-size: 1.7em;
     opacity: 0.6;
     color: white;
@@ -146,7 +147,9 @@
     background-color:dodgerblue;
     border: 1px solid lightgrey;
     width : 15%;
-    height: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: 8%;
     font-size: 1.7em;
     opacity: 0.6;
     color: white;
@@ -190,6 +193,7 @@
 .btn_mentions_legales{
   left: 52%;
   top: 63%;
+   font-size: 1.6em;
 }
 
 .img_loupe, .id_user {
@@ -212,9 +216,15 @@
     border-radius: 25px;
     text-decoration-color: cornflowerblue;
     margin-left: 10%;
+    padding-left: 1%;
+}
+
+.id_user:focus{
+    outline-width: 0;
 }
 
 .modifier{
     color: dodgerblue;
     text-decoration: none;
 }
+
