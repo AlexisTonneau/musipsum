@@ -25,7 +25,7 @@ require_once ('views/views_accueil/viewHeader.php');
 ?>
 <div class="middlepage">
     <div>
-        <!--<p>--><img class="image_flottante" src="images/carrésbleus.png" alt="double carré" align=center"><!--<p>-->
+        <!--<p>--><img class="image_flottante" src="images/carrésbleus.png" alt="double carré" align="center"><!--<p>-->
     </div>
 
     <div aligne="center">
@@ -38,9 +38,9 @@ require_once ('views/views_accueil/viewHeader.php');
         Connexion
     </div>
 
-    <div class="mdp_oubli">
+    <a class="mdp_oubli" href="<?=URL?>password">
         Mot de passe oublié ?
-    </div>
+    </a>
 
     <form class="mail" action="" method="post" id="form_mail">
 
@@ -129,6 +129,7 @@ color: white;
 font-style: revert;
 left: 63.45%;
 top: 71%;
+text-decoration: none;
 }
 
 

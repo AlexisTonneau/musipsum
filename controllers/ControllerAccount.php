@@ -15,6 +15,10 @@ class ControllerAccount
             header('Location: '.URL.'account');
         }
 
+        if(isset($_GET['ref']) && $_GET['ref'] === 'password_forget'){
+            require_once('views/views_connection/viewPassword.php');
+        }
+
         if(isset($_SESSION['user'])) {
 
                 $account = unserialize($_SESSION['user']);
