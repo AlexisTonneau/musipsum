@@ -1,5 +1,5 @@
 <?php //TODO bugs with white pages on click
-require_once(connect.php)
+
 ?>
 
 <!DOCTYPE html>
