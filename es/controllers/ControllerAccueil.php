@@ -16,17 +16,17 @@ class ControllerAccueil
         if(isset($_GET['ref'])){
             switch ($_GET['ref']){
                 case "about":
-                    require_once ('views/views_accueil/viewAPropos.php');
+                    require_once ('es/views/views_accueil/viewAPropos.php');
                     break;
                 case "successstories":
-                    require_once ('views/views_accueil/viewSuccessStories.php');
+                    require_once ('es/views/views_accueil/viewSuccessStories.php');
                     break;
 
             }
         }
         else {
 
-                require_once("views/views_accueil/viewAccueil.php");
+                require_once("es/views/views_accueil/viewAccueil.php");
 
             }
 

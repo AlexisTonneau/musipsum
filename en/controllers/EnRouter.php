@@ -53,7 +53,7 @@ class EnRouter
                 }
 
             } else {       //Redirection de base si mauvaise URL
-                require_once('controllers/ControllerAccueil.php');
+                require_once('en/controllers/ControllerAccueil.php');
                 $this->_ctrl = new ControllerAccueil();
                 $_SESSION['url'][0] = 'accueil';
                 $_SESSION['url'][1] = 'none';
@@ -64,7 +64,7 @@ class EnRouter
 
 
             $errorMessage = $exception->getMessage();
-            require_once('views/viewError.php');
+            require_once('en/views/viewError.php');
 
         }
     }

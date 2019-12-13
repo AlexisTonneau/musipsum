@@ -20,7 +20,7 @@ class ControllerAccount
                 $account = unserialize($_SESSION['user']);
                 if (isset($_GET['ref']) && $_GET['ref'] === 'modify'){
                     $account = AccountManager::checkModify();
-                    require_once ('views/views_connection/viewModifyAccount.php');
+                    require_once ('es/views/views_connection/viewModifyAccount.php');
                 }
 
                 elseif($account->getAccountType()===Model::ADMINISTRATOR_USER) {
@@ -28,11 +28,11 @@ class ControllerAccount
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
 
-                        require_once ('views/views_admin/viewUsersAdmin.php');
+                        require_once ('es/views/views_admin/viewUsersAdmin.php');
                     }
                 else{
                     $account = AccountManager::getCurrentAccountRefresh();
-                    require_once('views/views_connection/viewUser.php');
+                    require_once('es/views/views_connection/viewUser.php');
 
                 }
 
@@ -54,7 +54,7 @@ class ControllerAccount
                     exit();
                 }
                 $_SESSION['flash']="";
-                require_once('views/views_connection/viewConnect.php');
+                require_once('es/views/views_connection/viewConnect.php');
             }
 
     }

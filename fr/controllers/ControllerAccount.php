@@ -34,25 +34,14 @@ class ControllerAccount
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
 
-                        require_once('fr/views/views_instructor/viewUsersAdmin.php');
+                        require_once ('fr/views/views_instructor/viewUsersAdmin.php');
 
                     }
 
                 else{
                     $account = AccountManager::getCurrentAccountRefresh();
-                    if (isset($_GET['ref']) && $_GET['ref'] === 'stat' ){
-                        if(!isset($_GET['search'])){
-                            $tests_account = TestManager::getAllTestsUser();
-                            require_once ('fr/views/views_user/viewChooseTest.php');
-                        }
-                        else {
-                            $test_searched = TestManager::searchById($_GET['search']);
-                            require_once('fr/views/views_user/viewGraphs.php');
-                        }
-                    }
-                    else {
-                        require_once('fr/views/views_connection/viewUser.php');
-                    }
+                    require_once('fr/views/views_connection/viewUser.php');
+
                 }
 
             }

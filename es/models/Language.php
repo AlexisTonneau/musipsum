@@ -19,7 +19,7 @@ if(isset($HTTP_COOKIE_VARS['lang'])) {
  
 else {
     // si le cookie n'existe pas on tente de reconnaitre la langue par défaut du navigateur utilisé
-    $lang = substr($HTTP_SERVER_VARS['HTTP_ACCEPT_LANGUAGE'],0,2);
+    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
 }
 
 //Puis on créé le cookie

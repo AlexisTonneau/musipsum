@@ -17,10 +17,10 @@ class ControllerAccueil
         if(isset($_GET['ref'])){
             switch ($_GET['ref']){
                 case "about":
-                    require_once ('views/views_accueil/viewAPropos.php');
+                    require_once ('en/views/views_accueil/viewAPropos.php');
                     break;
                 case "successstories":
-                    require_once ('views/views_accueil/viewSuccessStories.php');
+                    require_once ('en/views/views_accueil/viewSuccessStories.php');
                     break;
                 case "faq":
                     require_once ('views/views_accueil/viewFAQ.php');
@@ -40,7 +40,7 @@ class ControllerAccueil
         }
         else {
 
-                require_once("views/views_accueil/viewAccueil.php");
+                require_once("en/views/views_accueil/viewAccueil.php");
 
             }
         if (isset($_SESSION['id_user'])){

@@ -25,8 +25,7 @@ class ControllerAccount
 
                 if (isset($_GET['ref']) && $_GET['ref'] === 'modify'){
                     $account = AccountManager::checkModify();
-                    require_once ('views/views_connection/viewModifyAccount.php');
-
+                    require_once ('en/views/views_connection/viewModifyAccount.php');
                 }
 
                 elseif($account->getAccountType()==Model::ADMINISTRATOR_USER) {
@@ -34,8 +33,7 @@ class ControllerAccount
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
 
-                        require_once('views/views_instructor/viewUsersAdmin.php');
-
+                        require_once ('en/views/views_admin/viewUsersAdmin.php');
                     }
 
                 else{
@@ -43,11 +41,11 @@ class ControllerAccount
                     if (isset($_GET['ref']) && $_GET['ref'] === 'stat' ){
                         if(!isset($_GET['search'])){
                             $tests_account = TestManager::getAllTestsUser();
-                            require_once ('views/views_user/viewChooseTest.php');
+                            require_once ('en/views/views_user/viewChooseTest.php');
                         }
                         else {
                             $test_searched = TestManager::searchById($_GET['search']);
-                            require_once('views/views_user/viewGraphs.php');
+                            require_once('en/views/views_user/viewGraphs.php');
                         }
                     }
                     else {
@@ -79,6 +77,9 @@ class ControllerAccount
                 else{
                     throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, revenez demain");
                 }
+
+                $_SESSION['flash']="";
+                require_once('en/views/views_connection/viewConnect.php');
             }
 
         if (isset($_SESSION['id_user'])){

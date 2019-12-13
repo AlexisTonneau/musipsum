@@ -9,18 +9,15 @@ private static function setLanguage(){
     $lang = $_POST['lang'];
     header('Location: '.URL.$lang);
     }
-    
-}//function setLanguage
+
+}
+
 
 public static function choosePageLanguage(){
-    
     self::setLanguage();
-    
     $lang=$_GET['lang'];
-
-    
-   
 switch ($lang) {
+
     case "fr":
         $router = new FrRouter();
         $router ->routeReq();

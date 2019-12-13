@@ -59,6 +59,7 @@ class ControllerTest
         else{
             require_once 'fr/views/views_test/viewNotConnected.php';
 
+
         }
 
     }
