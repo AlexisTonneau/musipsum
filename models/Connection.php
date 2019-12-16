@@ -43,7 +43,7 @@ class Connection extends AccountManager
             if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) && strlen($_POST['mdp']) > 0) {
                 if ($accounts !== null) {
                     for ($i = 0; $i < sizeof($accounts); $i++) {
-                        if ($accounts[$i]->getMailAddress() == $_POST['mail'] && password_verify($_POST['mdp'],$accounts[$i]->getPassword())) {
+                        if ($accounts[$i]->getMailAddress() == htmlspecialchars($_POST['mail']) && password_verify(htmlspecialchars($_POST['mdp']),$accounts[$i]->getPassword())) {
 
                             $boole = true;
 

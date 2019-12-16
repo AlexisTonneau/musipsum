@@ -109,14 +109,14 @@ class Register extends Model
     private static function register(){
         $bool = 0;
         $account_register =new User();
-        $account_register->setName($_POST['name']);
-        $account_register->setMailAddress($_POST['mail_address']);
-        $account_register->setPassword($_POST['password']);
+        $account_register->setName(htmlspecialchars($_POST['name']));
+        $account_register->setMailAddress(htmlspecialchars($_POST['mail_address']));
+        $account_register->setPassword(htmlspecialchars($_POST['password']));
         $account_register->setDrivingSchoolId(self::getCurrentAccount()->getDrivingSchoolId());
         if (isset($_POST['jour']) AND isset($_POST['mois']) AND isset($_POST['annee'])){
-            $account_register->setNaissanceAnnee($_POST['annee']);
-            $account_register->setNaissanceJour($_POST['jour']);
-            $account_register->setNaissanceMois($_POST['mois']);
+            $account_register->setNaissanceAnnee(htmlspecialchars($_POST['annee']));
+            $account_register->setNaissanceJour(htmlspecialchars($_POST['jour']));
+            $account_register->setNaissanceMois(htmlspecialchars($_POST['mois']));
         }
         else{
             $account_register->setNaissanceJour("01");
@@ -124,19 +124,19 @@ class Register extends Model
             $account_register->setNaissanceMois("01");
         }
         if (isset($_POST['first_name'])){
-            $account_register->setFirstName($_POST['first_name']);
+            $account_register->setFirstName(htmlspecialchars($_POST['first_name']));
         }
         if (isset($_POST['height'])){
-            $account_register->setHeight($_POST['height']);
+            $account_register->setHeight(htmlspecialchars($_POST['height']));
         }
         if (isset($_POST['weight'])){
-            $account_register->setWeight($_POST['weight']);
+            $account_register->setWeight(htmlspecialchars($_POST['weight']));
         }
         if(isset($_POST['gender'])){
-            $account_register->setGender($_POST['gender']);
+            $account_register->setGender(htmlspecialchars($_POST['gender']));
         }
         if (isset($_POST['account_type'])){
-            switch ($_POST['account_type']){
+            switch (htmlspecialchars($_POST['account_type'])){
                 case 'admin':
                     $account_register->setAccountType(2);
 

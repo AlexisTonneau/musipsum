@@ -28,14 +28,14 @@ class Administration extends Model
         if (isset($_POST['cgu']) && $_POST['cgu']!==null){
             $bdd = self::getBdd();
             $req = $bdd->prepare('UPDATE cgu SET cgu=:cgu WHERE id_cgu=1');
-            $req->bindParam(':cgu',$_POST['cgu']);
+            $req->bindParam(':cgu',htmlspecialchars($_POST['cgu']));
             $req->execute();
 
         }
         if (isset($_POST['m_l']) && $_POST['m_l']!==null){
             $bdd = self::getBdd();
             $req = $bdd->prepare('UPDATE mentions_legales SET m_l=:cgu WHERE id=1');
-            $req->bindParam(':cgu',$_POST['m_l']);
+            $req->bindParam(':cgu',htmlspecialchars($_POST['m_l']));
             $req->execute();
 
         }
