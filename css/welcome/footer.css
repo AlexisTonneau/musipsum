@@ -12,6 +12,12 @@
 	padding-left: 0.5px;
 	height: 304px;
 }
+/*
+*{
+	background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
 
 .contact_txt {}
 
@@ -27,11 +33,8 @@
 .contact {
 	font-family: 'gotham_book', serif;
 	width:33%;
-	height: 304px;
 	display: inline-block;
-
-	position: absolute;
-	right: 30%;
+	position: relative;
 
 }
 
@@ -53,6 +56,8 @@
 	width: 99%;
 	height: 95%
 }
+
+
 /*
 input {
 	font: 700 13.3333px Gotham;
@@ -108,6 +113,8 @@ input {
 	.contact {
 		position: absolute;
 		left: 36.3%;
+		height: 304px;
+		right: 30%;
 	}
 	.about_footer {
 		position: absolute;
@@ -119,16 +126,25 @@ input {
 }
 @media screen and (max-width: 1000px) {
 	.nous_contacter {
-		width: 100% !important;
+		width: 99% !important;
 		padding-right: 0 !important;
+		padding:0;
 	}
 	.contact {
 		width: 100% !important;
+		display: block !important;
+		position: relative;
+		left: 9%;
 	}
 	.about_footer {
 		width: 100% !important;
+		display: block !important;
 	}
 	.footer_welcome {
 		padding-left: 0 !important;
+	}
+	.bloc_info_contact {
+		display: inline-block;
+		margin: 20px 15px 20px;
 	}
 }
