@@ -5,7 +5,6 @@ class TestModel extends Model
 {
     private $id;
     private $name;
-    private $id_type_test;
     private $id_auto_ecole;
     private $video_lien;
 
@@ -41,21 +40,6 @@ class TestModel extends Model
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIdTypeTest()
-    {
-        return $this->id_type_test;
-    }
-
-    /**
-     * @param mixed $id_type_test
-     */
-    public function setIdTypeTest($id_type_test)
-    {
-        $this->id_type_test = $id_type_test;
-    }
 
     /**
      * @return mixed
@@ -118,7 +102,6 @@ class TestModel extends Model
         while ($model = $req->fetch(PDO::FETCH_ASSOC)){
             $var[$i] = new self;
             $var[$i]->setName($model['name']);
-            $var[$i]->setIdTypeTest($model['id_type_test']);
             $var[$i]->setId($model['id']);
             $i++;
         }

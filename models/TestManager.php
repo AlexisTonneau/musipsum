@@ -91,7 +91,12 @@ class TestManager extends Model
             $_SESSION['id_test'] = $_POST['id_test'];
             header('Location: '.URL.'test');
         }
+
     }
+
+
+
+
 
 
 }

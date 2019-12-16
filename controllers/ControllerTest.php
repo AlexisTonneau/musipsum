@@ -16,7 +16,9 @@ class ControllerTest
                 case 1:
                     if (!isset($_GET['ref'])) {   //TODO Make a page for choosing tests
                         if (!isset($_SESSION['id_user']) || $_SESSION['id_user']===null){
-                            require_once 'views/views_admin/viewLaunchTest.php';
+                            $_SESSION['id_test']=null;
+
+                            require_once 'views/views_instructor/viewLaunchTest.php';
                         }
                         else{
                             if (!isset($_SESSION['id_test']) || $_SESSION['id_test']===null){

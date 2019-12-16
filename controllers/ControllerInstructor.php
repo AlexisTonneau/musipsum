@@ -38,7 +38,7 @@ class ControllerInstructor
                             require_once ('views/views_connection/viewModifyAccount.php');
                         }
                         else {
-                            require_once('views/views_admin/viewUsersResearch.php');
+                            require_once('views/views_instructor/viewUsersResearch.php');
 
                         }
                         break;
