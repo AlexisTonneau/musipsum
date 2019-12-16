@@ -1,7 +1,7 @@
 <?php
 
 class Password {
-	private 
+/*	private
 	$sth = $bdd->prepare('SELECT EXISTS (SELECT * FROM user WHERE email= :email)');
 	$sth->execute(array(':email'=>$email));
 	$result = $sth->fetchColumn(); 
@@ -22,5 +22,5 @@ class Password {
 	else 
 	   {
 	    
-	}	
+	}	*/
 }
