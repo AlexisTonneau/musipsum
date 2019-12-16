@@ -270,4 +270,5 @@ if (isset($_GET['search']) && !isset($_GET['quatre']) && is_numeric($_GET['searc
     ?> <div hidden>
     <?php  echo (json_encode($captors));?>
 </div> <?php
+
 }
