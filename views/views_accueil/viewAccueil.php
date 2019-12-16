@@ -13,7 +13,7 @@
     <style type="text/css">
     </style>
 </head>
-<body class="body">
+<body>
 <?php
 require_once 'viewHeader.php';
 ?>
@@ -99,20 +99,20 @@ require_once 'viewHeader.php';
     <div class="contact" >
 
 
-        <p class="adresse_img">
+        <p id="adresse_img" class="bloc_info_contact">
             <img src="<?=URL?>images/icone_batiment.png" alt="adresse">
             <!--<p class="text contact_txt adresse_txt">-->
             <?php echo DrivingSchoolManager::getAddressFromUser(); ?><!--</p>-->
         </p>
 
-        <p class="horaires_img">
+        <p id="horaires_img" class="bloc_info_contact">
             <img src="<?=URL?>/images/icone_horloge.png" alt="horloge">
             <!--</p>-->
             <!--<p class="text contact_txt horaires_txt">-->
             Lun - Ven | 8:00 - 18:00
         </p>
 
-        <p class="telephone_img">
+        <p id="telephone_img" class="bloc_info_contact">
             <img src="<?=URL?>/images/icone_telephone.png" alt="telephone">
             <?php
             echo DrivingSchoolManager::getPhoneFromUser();
@@ -162,20 +162,6 @@ require_once ('viewFooter.php');
 
 
 <style>
-    .send {
-        position: absolute;
-        left: 85%;
-        bottom: 10%;
-        background-color: transparent;
-        border: none;
-        width: 12%;
-        height: 15%;
-    }
-
-    .icone_envoi {
-        position: absolute;
-        left: -5%;
-        bottom: -8%;
-    }
+    
 
 </style>
