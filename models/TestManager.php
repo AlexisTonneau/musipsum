@@ -67,7 +67,7 @@ class TestManager extends Model
     public static function findVideo(int $test){
         $url='https://www.youtube.com/embed/M4B16pSRDvw"';
         $bdd = self::getBdd();
-        $req = $bdd->prepare('SELECT * FROM tests_models WHERE id=(SELECT id_modele_test FROM test WHERE id_test=:id_test)');
+        $req = $bdd->prepare('SELECT * FROM tests_models INNER JOIN test ON tests_models.id = test.id_modele_test AND test.id_test = :id_test');
         $req->bindParam(':id_test',$test);
         while ($item = $req->fetch()  ){
             $url = $item['url_video'];  //Ce texte sur la bdd sera soit une direction vers un fichier ou un url de vidéo depuis un hébergeur externe (YT...)
@@ -92,6 +92,31 @@ class TestManager extends Model
             header('Location: '.URL.'test');
         }
 
+    }
+
+    public static function assignCaptorToTest(){
+        $bdd = self::getBdd();
+
+        $req = $bdd->prepare('SELECT id_test FROM test ORDER BY test.date_mesure  DESC LIMIT 1');
+        $rq2 = $bdd->prepare('SELECT id_capteur FROM donne_mesure_type_capteur CROSS JOIN donne_mesure ON donne_mesure_type_capteur.id_saisie = donne_mesure.id_saisie ORDER BY donne_mesure.debut_saisie DESC LIMIT 1)');
+        $req->execute();
+        $rq2->execute();
+
+        $test="";
+        $captor="";
+        while ($abc = $req->fetch(PDO::FETCH_ASSOC)){
+            // debug($abc);
+            $test = $abc['id_test'];
+        }
+        while ($abc = $rq2->fetch(PDO::FETCH_ASSOC)){
+            // debug($abc);
+            $captor= $abc['id_capteur'];
+        }
+
+        $rq3 = $bdd->prepare('INSERT INTO test_capteur (id_test, id_capteur) VALUES (:test,:capteur)');
+        $rq3->bindParam(':test',$test);
+        $rq3->bindParam(':capteur',$captor);
+        $rq3->execute();
     }
 
 
