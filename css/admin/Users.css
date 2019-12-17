@@ -99,6 +99,14 @@
 .centrer{
     position: relative;
     text-align: center;
+    bottom: 38%;
+    text-decoration: none;
+    color : cornflowerblue;
+}
+
+#bouton_deconnecter {
+    position: relative;
+    text-align: center;
     bottom: 40%;
     text-decoration: none;
     color : cornflowerblue;
@@ -191,4 +199,23 @@
 .modifier{
     color: dodgerblue;
     text-decoration: none;
+}
+
+
+@media screen and (min-width: 1515px) {
+    .centrer {
+        bottom:30%;
+    }
+}
+
+@media screen and (max-width: 1514px) and (min-width: 850px)  {
+    .centrer {
+        bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 849px) {
+    .centrer {
+        bottom: 10px;
+    }
 }

@@ -19,7 +19,7 @@ require_once 'views/views_accueil/viewHeader.php';
 ?>
 
 <div class="gerer_body">
-    <div class="gerer gerer_capteurs">
+    <div class="gerer" id="gerer_capteurs">
         <div class="type_test">
             <form>
                 <p class="titre_type_test">Type de test</p>
@@ -79,9 +79,9 @@ require_once 'views/views_accueil/viewHeader.php';
         </div>
     </div>
 
-    <div class="gerer gerer_cgu">
+    <div class="gerer" id="gerer_cgu">
         <div class="titre_modif_cgu">Modifier les CGU</div>
-        <input id="cgu_txt" type="text" name="" value="" style="width: 85%; height: 100%; border-color: #66AFFD">
+        <input id="cgu_txt" type="text" name="" value="" style="width: 90%; height: 100%; border-color: #66AFFD">
     </div>
 </div>
 

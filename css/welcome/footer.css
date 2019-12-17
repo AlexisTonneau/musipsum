@@ -19,9 +19,9 @@
   outline: solid #f00 1px !important;
 }*/
 
-.contact_txt {}
 
-.nous_contacter {
+
+#nous_contacter_footer {
 	width: 33%;
 	display: inline-block;
 	height: 304px;
@@ -30,21 +30,22 @@
 	border-radius: 3%;
 }
 
-.contact {
+#contact {
 	font-family: 'gotham_book', serif;
-	width:33%;
+	width:31%;
 	display: inline-block;
 	position: relative;
-
+	left: 6.5%;
 }
 
-.about_footer {
+#about_footer {
 	font-family: 'gotham_book', serif;
 	width: 33%;
 	height: 304px;
 	display: inline-block;
 	text-decoration-color: #66AFFD;
 	border-top: 1px solid #66AFFD;
+	position: relative;
 }
 
 .box_mail {
@@ -57,21 +58,6 @@
 	height: 95%
 }
 
-
-/*
-input {
-	font: 700 13.3333px Gotham;
-
-}
-
-
-::-webkit-input-placeholder {
-	font: 700 13.3333px Arial;
-	position: absolute;
-	top: 5px;
-	left: 5px;
-}
-*/
 
 .horaires_img .adresse_img .telephone_img {
 	font-family: 'gotham_book', serif;
@@ -101,42 +87,38 @@ input {
 
 }
 
-.img_contact {
 
-}
-
-@media screen and (min-width: 1001px) {
-	.nous_contacter {
-		position: absolute;
+@media screen and (min-width: 1187px) and (max-width: 1500px) {
+	#nous_contacter {
 		padding-right: 0 !important;
 	}
-	.contact {
-		position: absolute;
-		left: 36.3%;
+	#contact {
 		height: 304px;
-		right: 30%;
+		bottom: 30px;
 	}
-	.about_footer {
-		position: absolute;
-		left: 66.6%;
+	#about_footer {
+		top: 10px;
 	}
 	.footer_welcome {
 		padding-left: 0 !important;
 	}
+	#icone_envoi {
+		position: relative;
+	}
 }
-@media screen and (max-width: 1000px) {
-	.nous_contacter {
+@media screen and (max-width: 1186px) {
+	#nous_contacter_footer {
 		width: 99% !important;
 		padding-right: 0 !important;
 		padding:0;
 	}
-	.contact {
-		width: 100% !important;
+	#contact {
+		width: 90% !important;
 		display: block !important;
 		position: relative;
 		left: 9%;
 	}
-	.about_footer {
+	#about_footer {
 		width: 100% !important;
 		display: block !important;
 	}
@@ -146,5 +128,25 @@ input {
 	.bloc_info_contact {
 		display: inline-block;
 		margin: 20px 15px 20px;
+	}
+	#icone_envoi {
+		position: relative;
+	}
+}
+
+
+@media screen and (min-width: 1501px) {
+	#nous_contacter {
+		padding-right: 0 !important;
+	}
+	#contact {
+		right: 30%;
+		bottom: 25px;
+	}
+	#about_footer {
+		top: 15px;
+	}
+	.footer_welcome {
+		padding-left: 0 !important;
 	}
 }

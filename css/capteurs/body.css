@@ -9,19 +9,24 @@
 	top: 5%;
 }
 
-.gerer_capteurs {
+#gerer_capteurs {
 	width: 50%;
 	display: inline-block;
 	position: absolute;
 }
 
-.gerer_cgu {
-	width: 50%;
+#gerer_cgu {
+	width: 45%;
 	display: inline-block;
-	position: absolute;
+	position: relative;
 	left: 55%;
 	top: 8%;
 	height: 60%;
+}
+
+#cgu_txt {
+	height: 500px !important;
+	-webkit-writing-mode: horizontal-tb !important;
 }
 
 .input_range_range {
@@ -49,3 +54,23 @@
 .titre_modif_cgu {
 	color: #66AFFD;
 }
+
+@media screen and (max-width: 1200px) {
+	#gerer_capteurs {
+		display: block;
+		width: 100%;
+	}
+	#gerer_cgu {
+		display: block;
+		left: 15%;
+		top:430px;
+		width: 85%
+
+	}
+}
+/*
+*{
+	background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
