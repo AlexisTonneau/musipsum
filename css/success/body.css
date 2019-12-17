@@ -2,12 +2,12 @@
   font-family: 'gotham_book';
   src:url('fonts/Gotham-Book.otf');
 }
-/*
+
 *{
 	background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-}*/
+}
 
 .body_success_story{
 		font-family: 'gotham_book', serif;
@@ -28,7 +28,7 @@ body {
 	border-right: 0px solid gray !important;
 }
 
-.su_st_body {
+.all_sections {
 	position: relative;
 }
 
@@ -40,69 +40,34 @@ body {
 	top: 15px;*/
 }
 
-#photo_vincent {
-	top: 4px;
-}
-
-#photo_marie {
-	height: 45% !important;
-	top: 4px;
-}
-
 h3{
   text-align: center;
 }
+
 p{
   text-align : justify;
+  display: inline-block;
 }
-.su_st_p {
+
+.bloc_sections {
 	display: inline-block;
 }
 
-.su_st_1 {
+#section_1, #section_2, #section_3, #section_4, #section_5, #section_6 {
 	width: 16%;
+	margin-top: 5px;
 }
 
-.su_st_2 {
-	width: 16%;
+.bloc_section {
+	display: inline-block;
 }
-
-.su_st_3 {
-	width: 16%;
-}
-
-.su_st_4 {
-	width: 16%;
-}
-
-.su_st_5 {
-	width: 16%;
-}
-
-.su_st_6 {
-	width: 16%;
-}
+/*
 @media (max-width : 600px)  {
-    .su_st_body {
+    .all_sections {
 		white-space : pre-wrap;
 
 	}
-	.su_st_1{
-		width: 100%;
-	}
-	.su_st_2{
-		width: 100%;
-	}
-	.su_st_3{
-		width: 100%;
-	}
-	.su_st_4{
-		width: 100%;
-	}
-	.su_st_5{
-		width: 100%;
-	}
-	.su_st_6{
+	#section_1, #section_2, #section_3, #section_4, #section_5, #section_6{
 		width: 100%;
 	}
 }

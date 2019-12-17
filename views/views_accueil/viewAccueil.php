@@ -59,7 +59,7 @@ require_once 'viewHeader.php';
 
 <footer class="footer welcome footer_welcome">
 
-    <div class="nous_contacter">
+    <div id="nous_contacter_footer">
         <div class="social_network">
             <img src="<?=URL?>/images/logo_facebook.png" class="img_contact img_contact_fb" alt="facebook">
             <img src="<?=URL?>/images/logo_twitter.png" class="img_contact img_contact_twi" alt="twitter">
@@ -71,7 +71,7 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
-                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
+                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="text_contact_msg"></textarea>
             <?php
            // Connection::sendMail();
             ?>
@@ -81,9 +81,9 @@ require_once 'viewHeader.php';
 
 
         <div class="icones_button_contact">
-            <img src="<?=URL?>/images/icone_at.png" class="icone_button_contact icone_at">
+            <img src="<?=URL?>/images/icone_at.png" class="icone_button_contact" id="icone_at">
                 <button type="submit" form="form_envoi" class="send">
-                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
+                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact"  id="icone_envoi">
                 </button>
         </div>
 
@@ -96,7 +96,7 @@ require_once 'viewHeader.php';
 
 
 
-    <div class="contact" >
+    <div id="contact" >
 
 
         <p id="adresse_img" class="bloc_info_contact">
@@ -123,7 +123,7 @@ require_once 'viewHeader.php';
 
     </div>
 
-    <div class="about_footer" >
+    <div id="about_footer" >
         <div class="footer_about_title">
             <h3 class="txt_about_title">A propos</h3>
         </div>
