@@ -155,6 +155,7 @@ class TestManager extends Model
     /**
      * Permet d'idientifier un capteur à un objet test de la bdd, donc d'y relier ses données
      */
+
     public static function assignCaptorToTest(){
         $bdd = self::getBdd();
 
