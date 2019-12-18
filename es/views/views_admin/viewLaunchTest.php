@@ -24,7 +24,7 @@ if(!isset($_SESSION['user'])||(unserialize($_SESSION['user'])->getAccountType()!
 </style>
 <body class="body_start">
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'es/views/views_accueil/viewHeader.php';
 ?>
 <div class="bouton_search">
     <div class="bouton_play">
@@ -33,7 +33,7 @@ require_once 'views/views_accueil/viewHeader.php';
     <div class="recherche">
         <br />
         <form action="<?=URL?>adminaccount/search" method="post">
-        <input type="text" id="search" name="search" placeholder="Rechercher un utilisateur">
+        <input type="text" id="search" name="search" placeholder="Buscar un usuario">
             <input   type="image" src="<?=URL?>/images/icone_loupe.png" class="icone_loupe" alt="submit" >
 
         </form>

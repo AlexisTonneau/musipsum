@@ -15,19 +15,19 @@
 
 <body class="body">
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'es/views/views_accueil/viewHeader.php';
 ?>
 
 <div class="gerer_body">
     <div class="gerer gerer_capteurs">
         <div class="type_test">
             <form>
-                <p class="titre_type_test">Type de test</p>
+                <p class="titre_type_test">Tipo de prueba</p>
                 <div class="custom-select">
                     <select id="type_test" name="type_test">
-                        <option value="t_1">Test 1</option>
-                        <option value="t_2">Test 2</option>
-                        <option value="t_3">Test 3</option>
+                        <option value="t_1">Prueba1</option>
+                        <option value="t_2">Prueba 2</option>
+                        <option value="t_3">Prueba 3</option>
                     </select>
                 </div>
             </form>
@@ -35,7 +35,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
         <div class="quels_capteurs">
             <form action="/action_page.php" class="choix_capteur">
-                <p class="titre_choix_capteur">Quel(s) capteur(s) pour le test ?</p>
+                <p class="titre_choix_capteur">¿Qué sensor para la prueba?</p>
                 <label class="checkbox">A
                     <input type="checkbox" value="capteur_A">
                     <span class="checkmark">
@@ -50,12 +50,12 @@ require_once 'views/views_accueil/viewHeader.php';
 
         <div class="modif_capteur">
             <form>
-                <p class="titre_modif_capteur">Modifier un capteur</p>
+                <p class="titre_modif_capteur">Editar un sensor</p>
                 <div class="custom-select">
                     <select id="modif_capteur" name="modification_capteur" class="choix_modif">
-                        <option value="c_1">Capteur 1</option>
-                        <option value="c_2">Capteur 2</option>
-                        <option value="c_3">Capteur 3</option>
+                        <option value="c_1">Sensor 1</option>
+                        <option value="c_2">Sensor 2</option>
+                        <option value="c_3">Sensor 3</option>
                     </select>
                 </div>
             </form>
@@ -63,7 +63,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
         <div class="sensi">
             <form action="/action_page.php">
-                <p class="titre_sensi">Sensibilité</p>
+                <p class="titre_sensi">Sensibilidad</p>
                 <div class="input_range">
                     <input class="input_range_range" type="range" name="sensibilite" min="0" max="100" onchange="updateTextInput(this.value);">
                     <input type="text" id="range_value" class="range_value" value="" readonly>
@@ -73,14 +73,14 @@ require_once 'views/views_accueil/viewHeader.php';
 
         <div class="temps_mesure">
             <form action="/action_page.php">
-                <p class="titre_temps_mesure">Temps de mesure</p>
+                <p class="titre_temps_mesure">Tiempo de medición</p>
                 <input id="temps_mesure" type="text" name="" value=""> s
             </form>
         </div>
     </div>
 
     <div class="gerer gerer_cgu">
-        <div class="titre_modif_cgu">Modifier les CGU</div>
+        <div class="titre_modif_cgu">Modificar los términos y condiciones</div>
         <input id="cgu_txt" type="text" name="" value="" style="width: 85%; height: 100%; border-color: #66AFFD">
     </div>
 </div>

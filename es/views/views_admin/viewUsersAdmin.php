@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=URL?>/css/admin/Users.css">
 
-    <title>Mon compte</title>
+    <title>Mi cuenta</title>
 
 </head>
 
 <body class="body">
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'es/views/views_accueil/viewHeader.php';
 ?>
 
 <div class="middle_page">
@@ -28,7 +28,7 @@ require_once 'views/views_accueil/viewHeader.php';
     <div>
         <form  action="<?=URL?>adminaccount/search" method="post" >
 
-        <input type="text" name="search" placeholder="    Rechercher un utilisateur" class="id_user">
+        <input type="text" name="search" placeholder="    Encuentra un usuario" class="id_user">
         <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
 
@@ -38,19 +38,19 @@ require_once 'views/views_accueil/viewHeader.php';
 
     <div>
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>adminaccount/newaccount">Ouvrir un compte</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>adminaccount/newaccount">Abrir una cuenta</a></p>
         </btn>
     </div>
     <div>
         <btn class="btn btn_capteurs">
-            <p class="centrer"><a class="centrer_capteur" href="<?=URL?>adminaccount/handlecaptor">Gérer</a></p>
+            <p class="centrer"><a class="centrer_capteur" href="<?=URL?>adminaccount/handlecaptor">Gestionar</a></p>
         </btn>
     </div>
     <div class="btn_modifier">
-        <a class="modifier" href="<?=URL?>adminaccount/modify-drivingschool">Modifier l'auto-école</a>
+        <a class="modifier" href="<?=URL?>adminaccount/modify-drivingschool">Editar autoescuela</a>
     </div>
     <div class="btn_deconnexion">
-            <a class="centrer" href="<?=URL?>adminaccount/disconnect">Se déconnecter</a>
+            <a class="centrer" href="<?=URL?>adminaccount/disconnect">Desconectarse</a>
     </div>
 </div>
 

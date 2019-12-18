@@ -19,8 +19,6 @@ class DrivingSchoolManager extends Model
             $var[$i]->setPhoneNumber($driving_school['phone_number']);
             $var[$i]->setId($driving_school['id_auto_ecole']);
             $var[$i]->setAddress($driving_school['adress']);
-
-
             $i++;
 
         }

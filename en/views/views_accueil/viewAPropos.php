@@ -13,22 +13,22 @@ require_once 'viewHeader.php';
     <div id="bordure_souris_body">
         <div class="a_propos_image_souris" align="center">
             <img class="image_souris" src="<?=URL?>/images/souris.png" alt="Photo de souris"/>
-            <p class="titre_texte_a_propos">Souris</p>
-            <p>En savoir plus sur la consitution de la souris adaptée aux tests</p>
+            <p class="titre_texte_a_propos">Mouse</p>
+            <p>Learn more about the consitutionof the mouse adapted to the test</p>
         </div>
     </div>
     <div id="bordure_stat_body" align="center">
         <div class="a_propos_image_stat">
             <img class="image_stat" src="<?=URL?>/images/stat.png" alt="Image de statistiques"/>
-            <p class="titre_texte_a_propos">Statistiques</p>
-            <p>En savoir plus sur les statistiques que j'ai obtenu lors de mes tests</p>
+            <p class="titre_texte_a_propos">Statistics</p>
+            <p>Learn more about statistics and my results</p>
         </div>
     </div>
     <div id="bordure_profils_body" align="center">
         <div class="a_propos_image_profils">
             <img class="image_profil" src="<?=URL?>/images/profil.png" alt="Image d'un profil"/>
             <p class="titre_texte_a_propos">Profils</p>
-            <p>Vous pouvez accéder à vos données sur votre profil</p>
+            <p>You can access to your results about your profil</p>
         </div>
     </div>
 </div>
@@ -36,22 +36,22 @@ require_once 'viewHeader.php';
     <div id="bordure_voiture_body" align="center">
         <div class="a_propos_image_voiture">
             <img class="image_voiture" src="<?=URL?>/images/voiture.png" alt="Image d'une voiture"/>
-            <p class="titre_texte_a_propos">Auto-école</p>
-            <p>Je souhaite en savoir plus sur mon auto-école</p>
+            <p class="titre_texte_a_propos">Driving School</p>
+            <p>I want to know more about my driving school</p>
         </div>
     </div>
     <div id="bordure_permis_body" align="center">
         <div class="a_propos_image_permis">
             <img class="image_permis" src="<?=URL?>/images/permis.png" alt="Image d'un permis"/>
             <p class="titre_texte_a_propos">CGU</p>
-            <p>Se renseigner sur les conditions générales d'utilisation</p>
+            <p> Find out about the general conditions of use</p>
         </div>
     </div>
     <div id="bordure_like_body" align="center">
         <div class="a_propos_image_like">
             <img class="image_like" src="<?=URL?>/images/like.png" alt="Image d'une souris"/>
-            <p class="titre_texte_a_propos">Votre avis nous intéresse</p>
-            <p>N'hésitez pas à laisser un avis sur les différents réseaux sociaux...</p>
+            <p class="titre_texte_a_propos">Your opinion interests us</p>
+            <p> Feel free to leave an (good!) opinion on the different social network...</p>
         </div>
     </div>
 </div><?php

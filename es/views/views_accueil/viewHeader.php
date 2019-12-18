@@ -86,23 +86,23 @@ color: <?=$successstories?>;
                       $activeLangue .= $_SERVER['REQUEST_URI'];      //     Ajouter l'emplacement de la ressource demandée à l'URL
                    ?>
                     <form class="langues" action="$activeLangue" method="post">
-                          <input type="image" class="img_drapeau_france" src="<?=URL?>images/drapeau_france.png" alt="submit" value="fr">
-                          <input type="image" class="img_drapeau_anglais" src="<?=URL?>images/drapeau_anglais.jpg" alt="submit" value="en">
-                          <input type="image" class="img_drapeau_espagnol" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit" value="es">
+                          <input type="image" class="img_drapeau_france" src="<?=URL?>images/drapeau_france.png" alt="fr" value="fr">
+                          <input type="image" class="img_drapeau_anglais" src="<?=URL?>images/drapeau_anglais.jpg" alt="en" value="en">
+                          <input type="image" class="img_drapeau_espagnol" src="<?=URL?>images/drapeau_espagnol.jpg" alt="es" value="es">
                     </form>
                 </div>
             </div>
             <div class="choix">
-                <a class="txt_header" id="a_propos" href="<?=URL?>accueil/about" >À propos</a>
+                <a class="txt_header" id="a_propos" href="<?=URL?>accueil/about" >A proposito</a>
                 <a class="txt_header" id="sucess_stories" href="<?=URL?>accueil/successstories" >Success Story</a>
-                <a class="txt_header" id="nous_contacter" href="<?=URL?>accueil#contact">Nous contacter</a>
-                <a class="txt_header" id="start_test" href="<?=URL?>test">Démarrer </a>
+                <a class="txt_header" id="nous_contacter" href="<?=URL?>accueil#contact">Contactenos</a>
+                <a class="txt_header" id="start_test" href="<?=URL?>test">Comienzo </a>
                 <a class="txt_header" id="connexion" href="<?=URL?>account"><?php
                     if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
-                        echo 'Mon compte';
+                        echo 'Mi cuenta';
                     }
                     else{
-                        echo 'Connexion';
+                        echo 'Conexion';
                     }
                     ?></a>
                     

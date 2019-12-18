@@ -7,6 +7,6 @@ require_once('fr/controllers/FrRouter.php');
 require_once('es/controllers/EsRouter.php');
 require_once('en/controllers/EnRouter.php');
 
-require_once('fr/models/Language.php');
+require_once('es/models/Language.php');
 
 Language::choosePageLanguage();

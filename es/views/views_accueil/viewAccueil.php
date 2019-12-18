@@ -71,7 +71,7 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
-                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
+                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Tu mensaje..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
             <?php
            // Connection::sendMail();
             ?>
@@ -109,7 +109,7 @@ require_once 'viewHeader.php';
             <img src="<?=URL?>/images/icone_horloge.png" alt="horloge">
             <!--</p>-->
             <!--<p class="text contact_txt horaires_txt">-->
-            Lun - Ven | 8:00 - 18:00
+            Lun - Vie | 8:00 - 18:00
         </p>
 
         <p class="telephone_img">
@@ -125,16 +125,18 @@ require_once 'viewHeader.php';
 
     <div class="about_footer" >
         <div class="footer_about_title">
-            <h3 class="txt_about_title">A propos</h3>
+            <h3 class="txt_about_title">A proposito</h3>
         </div>
-        <p class="txt_about" ><strong>Que faire sur ce site ?</strong><br>
-            Vous n’arrivez pas à décrocher votre permis de conduire et n’en connaissez pas la cause ?<br> Ce site est fait pour vous !
-            Nous vous proposons d’effectuer des tests en ligne permettant de mettre en avant les raisons de votre échec !<br>
-            <strong>Pourquoi ?</strong><br>
-            Vous pouvez enfin trouver des solutions adaptées pour obtenir votre permis de conduire.
-            Les auto-écoles peuvent adapter des séances de conduite en tenant compte des difficultés techniques de l’apprenti.<br>
-            <strong>Comment faire ?</strong><br>
-            Il vous suffit de vous présenter dans une auto-école et de demander des identifiants pour accéder aux tests.</p>
+            <p class="txt_about" ><strong>¿Qué hacer en este sitio?</strong><br>
+            ¿Parece que no puede obtener su licencia de conducir y no conoce la causa?<br> 
+            ¡Este sitio es para usted! <br>
+            ¡Le sugerimos que realice pruebas en línea para resaltar las razones de su fracaso! <br>            
+            <strong>Por qué ?</strong><br>
+            Finalmente puede encontrar soluciones adecuadas para obtener su licencia de conducir.<br>
+            Las autoescuelas pueden adaptar las sesiones de manejo teniendo en cuenta las dificultades técnicas del aprendiz.
+            <br>
+            <strong>Como hacer ?</strong><br>
+            Simplemente vaya a una escuela de manejo y solicite credenciales para acceder a las pruebas. </p>
     </div>
 
 

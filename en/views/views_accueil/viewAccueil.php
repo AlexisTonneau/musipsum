@@ -76,6 +76,7 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
+<<<<<<< HEAD
                 <textarea type="text" class="contact_msg" name="Votre_message" placeholder="Votre message..."
                           style="border: 1px solid #66AFFD; color: #66AFFD; width: 95%; height: 75px; padding: 1%; margin-top: 2%";id="contact"></textarea>
                 <button type="submit" class="send">
@@ -83,6 +84,12 @@ require_once 'viewHeader.php';
                 </button>
 
 
+=======
+                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Your message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
+            <?php
+           // Connection::sendMail();
+            ?>
+>>>>>>>  Traduction anglais et espagnol
             </form>
 
         </div>
@@ -116,7 +123,8 @@ require_once 'viewHeader.php';
             <img src="<?=URL?>/images/icone_horloge.png" alt="horloge">
             <!--</p>-->
             <!--<p class="text contact_txt horaires_txt">-->
-            Lun - Ven | 8:00 - 18:00
+           
+            Mon - Fri | 8pm - apm
         </p>
 
         <p class="telephone_img">
@@ -132,18 +140,17 @@ require_once 'viewHeader.php';
 
     <div class="about_footer" >
         <div class="footer_about_title">
-            <h3 class="txt_about_title">A propos</h3>
+            <h3 class="txt_about_title">About</h3>
         </div>
-        <p class="txt_about" ><strong>Que faire sur ce site ?</strong><br>
-            Vous n’arrivez pas à décrocher votre permis de conduire et n’en connaissez pas la cause ?<br> Ce site est fait pour vous !
-            Nous vous proposons d’effectuer des tests en ligne permettant de mettre en avant les raisons de votre échec !<br>
-            <strong>Pourquoi ?</strong><br>
-            Vous pouvez enfin trouver des solutions adaptées pour obtenir votre permis de conduire.
-            Les auto-écoles peuvent adapter des séances de conduite en tenant compte des difficultés techniques de l’apprenti.<br>
-            <strong>Comment faire ?</strong><br>
-            Il vous suffit de vous présenter dans une auto-école et de demander des identifiants pour accéder aux tests.</p>
+        <p class="txt_about" ><strong> What can I do on this web site ?</strong><br>
+        You can't get your driver's license and you don't know the cause?
+        This site is made for you! We suggest that you perform online tests to highlight the reasons for your failure!<br>
+            <strong>Why ?</strong><br>
+            You can finally find suitable solutions to obtain your driving license. Driving schools can adapt driving sessions taking into account the technical difficulties of the apprentice.<br>
+                
+            <strong> How to do?</strong><br>
+            You just have to go to a driving school and ask for credentials to access the tests.
     </div>
-
 
 
 

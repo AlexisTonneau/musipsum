@@ -5,7 +5,7 @@ if($msg === "checked"){
     exit();
 }
 
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('en/views/views_accueil/viewHeader.php');
 ?>
 
 <!DOCTYPE html>
@@ -30,26 +30,26 @@ require_once ('views/views_accueil/viewHeader.php');
                 ​
                 <block class="bloc_1">
                     <div class="info">
-                        <p class="a mail">Adresse mail *  <br/>
+                        <p class="a mail">Mail adresse  *  <br/>
                             <input type="email" name="mail_address" class="id iden id_mail" style="height: 30px" required> </p>
-                        <p class="a motdepasse">Mot de passe *  <br/>
+                        <p class="a motdepasse">Password *  <br/>
                             <input type="password" name="password" class="id iden id_password" style="height: 30px" required> </p>
-                        <p class="a confirm">Confirmer le mot de passe *  <br/>
+                        <p class="a confirm">Confirme the password *  <br/>
                             <input type="password" name="confirmation" class="id iden id_confirmation" style="height: 30px" required> </p>
                         ​
                     </div>
                     ​
                     <div class="pre_nom">
                         ​
-                        <p class="a nom">Nom*  <br/>
+                        <p class="a nom">Familly Name*  <br/>
                             <input type="text" name="name" class="id identif id_name" required> </p>
-                        <p class="b prénom">Prénom*  <br/>
+                        <p class="b prénom">First Name*  <br/>
                             <input type="text" name="first_name" class="id identif id_firstname" required> </p>
                     </div>
                 </block>
                 ​
                 <block class="bloc_2">
-                    <p class="naissance">Date de naissance *
+                    <p class="naissance">Birthday *
                         <div class="c">
                     <p class="day">
                         JJ
@@ -63,32 +63,37 @@ require_once ('views/views_accueil/viewHeader.php');
             </p>
             ​
             <div class="IMC">
-                <p class="poids">Poids (kg)   <br/>
+                <p class="poids">Weight (kg)   <br/>
                     <input type="number" name="weight" class="id taille_masse id_kilo" step="0.1" min="40"> </p>
-                <p class="taille">Taille (cm)   <br/>
+                <p class="taille">Size (cm)   <br/>
                     <input type="number" name="height" class="id taille_masse id_metre" min="120"> </p>
             </div>
             ​
             <div class="type_account">
-                <label for="type_account" >Choisir le type de compte *</label>
+                <label for="type_account" >Choose type of account *</label>
                 <div class="type_account_container">
                     <select name="account_type" id="type_account">
                         <option value="monitor">Compte Moniteur</option>
                         <?php  if(Model::getCurrentAccount()->getAccountType() == Model::ADMINISTRATOR_USER){     echo('                ?>
                         <option value="admin" >Compte Administrateur</option>
                         <?');}?>
+<<<<<<< HEAD:views/views_instructor/viewCreateUser.php
                         <option value="user">Compte Client</option>
 
 
+=======
+                        <option value="monitor">Monitor account</option>
+                        <option value="user">Customer account</option>
+>>>>>>>  Traduction anglais et espagnol:en/views/views_admin/viewCreateUser.php
                     </select>
                 </div>
             </div>
             ​
             <div class="genre">
                <!-- <form action="" method="post">-->
-                    <label for="genre-male" name="genre" class="a gen male">Homme </label>
+                    <label for="genre-male" name="genre" class="a gen male">Men </label>
                     <input id="genre-male" type="checkbox" class="id id_ent" name="gender" value="male">
-                    <label for="genre-female" name="genre" class="gen female">Femme </label>
+                    <label for="genre-female" name="genre" class="gen female">Women </label>
                     <input id="genre-female" type="checkbox" class="id id_ent" name="gender" value="female">
                <!-- </form>-->
             </div>
@@ -100,7 +105,7 @@ require_once ('views/views_accueil/viewHeader.php');
         <footer class="footer_open">
             <div>
                 <btn class="save">
-                    <input class="btn_save"  type="submit" value = "Enregistrer" >
+                    <input class="btn_save"  type="submit" value = "Save" >
                 </btn>
                 ​
                 <br/><br/>

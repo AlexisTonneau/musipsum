@@ -74,12 +74,40 @@ color: <?=$successstories?>;
                     <a href="<?=URL?>fr/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
                     <a href="<?=URL?>"><img src="<?=URL?>images/icone_loupe_bis.png" class="icone_header"></a>
                 </div>
+<<<<<<< HEAD
             </div>
             <div class="choix">
                 <a class="txt_header" id="a_propos" href="<?=URL?>fr/accueil/about" >À propos</a>
                 <a class="txt_header" id="sucess_stories" href="<?=URL?>fr/accueil/successstories" >Success Story</a>
                 <a class="txt_header" id="nous_contacter" href="<?=URL?>fr/accueil#contact">Nous contacter</a>
                 <a class="txt_header" id="start_test" href="<?=URL?>fr/test">Démarrer </a>
+=======
+                <div class="icones_langues">
+                  <?php
+                      if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']==='on')
+                      {
+                        $activeLangue="https";
+                      }
+                      else {
+                        $activeLangue="http";
+                      }
+                      $activeLangue .="://";                      //     ajouter :// à l'URL
+                      $activeLangue .= $_SERVER['HTTP_HOST'];     //     Ajouter l'hôte à l'URL
+                      $activeLangue .= $_SERVER['REQUEST_URI'];      //     Ajouter l'emplacement de la ressource demandée à l'URL
+                   ?>
+                    <form class="langues" action="$activeLangue" method="post">
+                          <input type="image" class="img_drapeau_france" src="<?=URL?>images/drapeau_france.png" alt="fr" value="fr">
+                          <input type="image" class="img_drapeau_anglais" src="<?=URL?>images/drapeau_anglais.jpg" alt="en" value="en">
+                          <input type="image" class="img_drapeau_espagnol" src="<?=URL?>images/drapeau_espagnol.jpg" alt="es" value="es">
+                    </form>
+                </div>
+            </div>
+            <div class="choix">
+                <a class="txt_header" id="a_propos" href="<?=URL?>accueil/about" >À propos</a>
+                <a class="txt_header" id="sucess_stories" href="<?=URL?>accueil/successstories" >Success Story</a>
+                <a class="txt_header" id="nous_contacter" href="<?=URL?>accueil#contact">Nous contacter</a>
+                <a class="txt_header" id="start_test" href="<?=URL?>test">Démarrer </a>
+>>>>>>>  Traduction anglais et espagnol
                 <a class="txt_header" id="connexion" href="<?=URL?>fr/account"><?php
                     if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
                         echo 'Mon compte';

@@ -1,6 +1,6 @@
 <?php
 
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('En/views/views_accueil/viewHeader.php');
 ?>
 
 <!DOCTYPE html>
@@ -68,4 +68,4 @@ require_once ('views/views_accueil/viewHeader.php');
 </form>
 </body>
 </html>
-​<?php require_once ('views/views_accueil/viewFooter.php');?>
+​<?php require_once ('en/views/views_accueil/viewFooter.php');?>

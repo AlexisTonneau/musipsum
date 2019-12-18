@@ -23,23 +23,23 @@ else {
 }
 
 //Puis on créé le cookie
-setcookie("lang", $lang, time() + $expire,$path='/');
+setcookie("lang", $lang, time() ,$path='/');
 
 }//function setLanguage
 
 public static function choosePageLanguage(){
-    self::setLanguage();
-  
-switch ($_COOKIE['lang']) {
-    case fr:
+    //$lang=self::setLanguage();
+$lang="en";
+switch ($lang) {
+    case "fr":
         $router = new FrRouter();
         $router ->routeReq();
         break;
-    case en:
+    case "en":
         $router = new EnRouter();
         $router ->routeReq();
         break;
-    case es:
+    case "es":
         $router = new EsRouter();
         $router ->routeReq();
         break;

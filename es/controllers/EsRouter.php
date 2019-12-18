@@ -27,7 +27,7 @@ class EsRouter
 
             //ALL CLASSES AUTO-LOAD
             spl_autoload_register(function ($class) {
-                require_once('models/' . $class . '.php');
+                require_once('es/models/' . $class . '.php');
             }
             );
             if (isset($_GET['link'])&&!is_null($_GET['link'])) {
@@ -45,7 +45,7 @@ class EsRouter
 
                 $controller = ucfirst(strtolower($url[0])); //Première lettre en majuscule et le reste en minuscule
                 $controllerClass = 'Controller' . $controller; //ControllerAdminaccount
-                $controllerFile = 'controllers/' . $controllerClass . '.php';
+                $controllerFile = 'es/controllers/' . $controllerClass . '.php';
                 if (file_exists($controllerFile)) {
                     require_once($controllerFile);
                     $this->_ctrl = new $controllerClass($url);
