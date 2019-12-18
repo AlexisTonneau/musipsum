@@ -48,6 +48,7 @@ class ControllerAccount
                             require_once ('views/views_user/viewChooseTest.php');
                         }
                         else {
+                            $test = TestManager::searchById($_GET['search']);
                             require_once('views/views_user/viewGraphs.php');
                         }
                     }

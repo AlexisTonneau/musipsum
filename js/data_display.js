@@ -8,6 +8,10 @@ window.onload = function () {
         if(req2.responseText[i] === "1"){
             createChartTemp(id);
         }
+
+        if(req2.responseText[i] === "2"){
+            createChartFreq(id);
+        }
     }
 
 
@@ -32,6 +36,7 @@ function createChartTemp(test_id) {
     var rep = ajaxRequest(test_id,"1");
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainerTemp", {
+        animationEnabled: true,
         title :{
             text: "Température",
             //fontFamily: "gotham-book,serif",
@@ -52,6 +57,35 @@ function createChartTemp(test_id) {
     });
     addData(rep, chart, dps);
 }
+
+function createChartFreq(test_id) {
+    var rep = ajaxRequest(test_id,"2");
+    var dps = []; // dataPoints
+    var chart = new CanvasJS.Chart("chartContainerFreq", {
+        animationEnabled: true,
+
+        title :{
+            text: "Tension cardiaque",
+            //fontFamily: "gotham-book,serif",
+        },
+        axisY: {
+            minimum: 50,
+            title:"Valeur (en bpm)",
+            includeZero: false,
+        },
+        axisX:{
+            title: "Temps (en s)",
+            minimum: 0,
+        },
+        data: [{
+            type: "line",
+            dataPoints: dps,
+        }]
+    });
+    addData(rep, chart, dps);
+
+}
+
 function addData(data, chart, dps) {
     for (var i = 0; i < data.length; i++) {
         var date = data[i][1]-data[0][1];
