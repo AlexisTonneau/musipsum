@@ -8,6 +8,7 @@ class Test extends Model
     private $id_user;
     private $id_moniteur;
     private $bool;
+    private $date;
 
 
     /**
@@ -92,6 +93,22 @@ class Test extends Model
     public function setIdMoniteur($id_moniteur)
     {
         $this->id_moniteur = $id_moniteur;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
     }
 
 

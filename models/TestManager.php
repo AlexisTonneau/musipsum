@@ -1,6 +1,5 @@
 <?php
 
-
 class TestManager extends Model
 {
 
@@ -216,7 +215,6 @@ class TestManager extends Model
     public static function getDataFromTest($id_captor, $test){
         $bdd = self::getBdd();
         $i=0;
-
         $req = $bdd->prepare('SELECT valeur_saisie, debut_saisie, fin_saisie FROM donne_mesure JOIN donne_mesure_type_capteur dmtc on donne_mesure.id_saisie = dmtc.id_saisie WHERE id_test=:test AND id_capteur = :capteur ORDER BY fin_saisie ');
         $req->bindParam(':test',$test);
         $req->bindParam(':capteur',  $id_captor);
@@ -241,10 +239,6 @@ class TestManager extends Model
 
 
     }
-
-
-
-
 
 
 
