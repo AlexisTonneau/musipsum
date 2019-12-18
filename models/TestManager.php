@@ -247,6 +247,7 @@ class TestManager extends Model
 
 
 
+
 }
 if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) && $_GET['quatre'] !==null && isset($_GET['cinq'])){
     $captors = TestManager::getCaptorsFromTest(TestManager::searchById($_GET['search']));
