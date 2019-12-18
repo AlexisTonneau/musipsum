@@ -94,6 +94,9 @@ class TestManager extends Model
 
     }
 
+    /**
+     * Permet d'idientifier un capteur à un objet test de la bdd, donc d'y relier ses données
+     */
     public static function assignCaptorToTest(){
         $bdd = self::getBdd();
 
@@ -119,7 +122,23 @@ class TestManager extends Model
         $rq3->execute();
     }
 
+    public static function getDataFromTest(Test $test){
+        $bdd = self::getBdd();
+        $req = $bdd->prepare('        
+        SELECT * FROM donne_mesure WHERE id_saisie IN (
+        SELECT donne_mesure_type_capteur.id_saisie FROM donne_mesure_type_capteur WHERE id_capteur IN(
+        SELECT type_capteur.id_capteur FROM type_capteur WHERE id_capteur IN (
+        SELECT id_capteur FROM test_capteur WHERE id_test IN (
+        SELECT id_test FROM test WHERE id_test = :id_test
+            
+            ))))'); //
+        $req->execute();
+        while ($capteur = $req->fetch(PDO::FETCH_ASSOC)){
+            $type_captor = $capteur['id_capteur'];
+        }
 
+
+    }
 
 
 
