@@ -33,13 +33,27 @@ class ControllerAccount
                    header('Location: '.URL.'administration');
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
+                    if (isset($_GET['ref']) && $_GET['ref'] === 'stat' ) {       //TODO Delete
+                        require_once('views/views_user/viewGraphs.php');
+
+                    }else{
 
                         require_once('views/views_instructor/viewUsersAdmin.php');
                     }
+                    }
                 else{
                     $account = AccountManager::getCurrentAccountRefresh();
-                    require_once('views/views_connection/viewUser.php');
-
+                    if (isset($_GET['ref']) && $_GET['ref'] === 'stat' ){
+                        if(!isset($_GET['search'])){
+                            require_once ('views/views_user/viewChooseTest.php');
+                        }
+                        else {
+                            require_once('views/views_user/viewGraphs.php');
+                        }
+                    }
+                    else {
+                        require_once('views/views_connection/viewUser.php');
+                    }
                 }
 
             }
