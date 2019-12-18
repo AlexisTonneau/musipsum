@@ -22,6 +22,10 @@ window.onload = function () {
                 document.getElementById("freq").style.visibility = 'visible';
             }
         }
+
+        if(req2.responseText[i] === "2"){
+            createChartFreq(id);
+        }
     }
 
 
