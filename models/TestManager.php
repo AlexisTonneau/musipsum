@@ -42,7 +42,7 @@ class TestManager extends Model
         $i = 0;
         $var=null;
         $bdd = self::getBdd();
-        $req = $bdd->prepare('SELECT * FROM test WHERE id_user = :id_user');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+        $req = $bdd->prepare('SELECT * FROM test WHERE id_user = :id_user ORDER BY date_mesure DESC');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
         $idd = $account->getId();
         $req->bindParam(':id_user',$idd);
         if(!$req->execute()){
@@ -190,7 +190,7 @@ class TestManager extends Model
         $i = 0;
         $req = $bdd->prepare('        
         SELECT type_capteur.id_capteur FROM type_capteur WHERE id_capteur IN (
-        SELECT id_capteur FROM test_capteur WHERE id_test = :id_test)
+        SELECT id_capteur FROM test_capteur WHERE id_test = :id_test ORDER BY id DESC )
         '); //SELECT * FROM donne_mesure WHERE id_saisie IN (
         //SELECT donne_mesure_type_capteur.id_saisie FROM donne_mesure_type_capteur WHERE id_capteur IN(
         $test_id = $test->getId();

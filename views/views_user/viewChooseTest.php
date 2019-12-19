@@ -20,6 +20,13 @@ require_once('views/views_accueil/viewHeader.php');
 <body>
 <div class="buttons">
 <?php $i=0;
+if(count($tests_account)==0){
+    ?>
+    <h2 style="justify-content: center">
+        Vous n'avez pas encore de tests disponible !
+    </h2>
+    <?php
+}
 foreach ($tests_account as $test_en_cours) {
 
     ?>
