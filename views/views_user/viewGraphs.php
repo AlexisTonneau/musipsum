@@ -14,16 +14,15 @@
 require_once ('views/views_accueil/viewHeader.php');
 ?>
 <body>
-<h1>Test du 18/12</h1>
-<p hidden id="test_id">1<?//$_GET['search']?></p>
-<div class="charts_left">
-<div id="chartContainerTemp" class="temperature" style="height: 300px; width: 30%; margin: 1%;"></div>
-<div id="chartContainerFreq" class="freq" style="height: 300px; width: 30%; margin: 1%;"></div>
+<h1 class="titre_test">Test du <?=$test_searched->getDate()?></h1>
+<p hidden id="test_id"><?=$_GET['search']?></p>
+<div class="titles">
+    <div id="temp" >Température</div>
+    <div id="freq" >Tension cardiaque</div>
 </div>
-
-<div>
-  <!--  <br /><br /><br />-->
-
+<div class="charts_left">
+<div id="chartContainerTemp" class="temperature" style="height: 300px;  margin: 1%;"></div>
+<div id="chartContainerFreq" class="freq" style="height: 300px; margin: 1%;"></div>
 </div>
 
 </body>

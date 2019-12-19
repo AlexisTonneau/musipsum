@@ -6,11 +6,11 @@ class TestManager extends Model
 
     public static function searchById($id) :Test{
         if(self::getAllTests()===null){
-            throw new Exception('Pas de modèle de test');
+            throw new Exception('Pas de test');
         }
         $bool=true;
         foreach (self::getAllTests() as $model){
-            if ($model->getId() === $id){
+            if ($model->getId() == $id){
                 $bool = false;
                 return $model;
             }
@@ -24,6 +24,27 @@ class TestManager extends Model
         $var=null;
         $bdd = self::getBdd();
         $req = $bdd->prepare('SELECT * FROM test ');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+        if(!$req->execute()){
+            throw new Exception("Connexion échouée");
+        }
+        while ($model = $req->fetch(PDO::FETCH_ASSOC)){
+            $var[$i] = new Test($model['id_user'],$model['id_moniteur'],$model['id_modele_test']);
+            $var[$i]->setId($model['id_test']);
+            $var[$i]->setDate($model['date_mesure']);
+            $i++;
+        }
+        return $var;
+
+    }
+
+    public static function getAllTestsUser(){
+        $account = self::getCurrentAccount();
+        $i = 0;
+        $var=null;
+        $bdd = self::getBdd();
+        $req = $bdd->prepare('SELECT * FROM test WHERE id_user = :id_user');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+        $idd = $account->getId();
+        $req->bindParam(':id_user',$idd);
         if(!$req->execute()){
             throw new Exception("Connexion échouée");
         }
@@ -223,7 +244,7 @@ class TestManager extends Model
 
 
 }
-if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) && $_GET['quatre'] !==null){
+if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) && $_GET['quatre'] !==null && isset($_GET['cinq'])){
     $captors = TestManager::getCaptorsFromTest(TestManager::searchById($_GET['search']));
     $boolean = false;
     foreach ($captors as $captor){
@@ -241,7 +262,9 @@ if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) &
 
 }
 
-if (isset($_GET['search']) && !isset($_GET['quatre'])){
+if (isset($_GET['search']) && !isset($_GET['quatre']) && is_numeric($_GET['search']) ){
     $captors = TestManager::getCaptorsFromTest(TestManager::searchById($_GET['search']));
-    echo (json_encode($captors));
+    ?> <div hidden>
+    <?php  echo (json_encode($captors));?>
+</div> <?php
 }

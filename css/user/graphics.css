@@ -1,13 +1,64 @@
 .charts_left{
-    margin-top: 3%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 200%;
+    height: 50%;
 
+}
+
+.temperature{
+    width: 30%;
+}
+
+.freq{
+    width: 30%;
+}
+
+.titles{
+    display: flex;
+    justify-content: space-around;
+}
+
+#temp{
+    visibility: hidden;
+}
+#freq{
+    visibility: hidden;
 }
 
 h1{
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .charts_left{
+        flex-direction: column;
+    }
+    .titles{
+        visibility: hidden;
+    }
+    .temperature{
+         width: 80%;
+     }
+    .freq{
+        width: 80%;
+    }
+    #chartContainerTemp{
+        width: 80%;
+    }
+
+    .titre_test{
+        font-size: 1.4em;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .titre_test{
+        font-size: 1em;
+    }
+
 }
