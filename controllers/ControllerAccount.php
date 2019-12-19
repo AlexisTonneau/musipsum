@@ -33,18 +33,11 @@ class ControllerAccount
                    header('Location: '.URL.'administration');
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
-                    if (isset($_GET['ref']) && $_GET['ref'] === 'stat' ) {
-                        //TODO Delete
-                        $test_searched = TestManager::searchById(1);
-
-                        require_once('views/views_user/viewGraphs.php');
-
-                    }else{
 
                         require_once('views/views_instructor/viewUsersAdmin.php');
 
                     }
-                    }
+
                 else{
                     $account = AccountManager::getCurrentAccountRefresh();
                     if (isset($_GET['ref']) && $_GET['ref'] === 'stat' ){
