@@ -108,6 +108,9 @@ class Test extends Model
      */
     public function setDate($date)
     {
+        $date = date('d-m-y h:i',strtotime($date));
+        $date = str_replace('-','/',$date);
+        $date = str_replace(':','h',$date);
         $this->date = $date;
     }
 

@@ -4,7 +4,7 @@
  */
 
 ?>
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 ​
@@ -41,7 +41,5 @@ foreach ($tests_account as $test_en_cours) {
 ?>
 </div>
 
-</body>
-=======
 
->>>>>>> AJAX Requêtes fonctionnelles
+</body>

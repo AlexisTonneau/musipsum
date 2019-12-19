@@ -25,6 +25,10 @@ window.onload = function () {
 
         if(req2.responseText[i] === "2"){
             createChartFreq(id);
+            if(window.matchMedia("(min-width: 800px)").matches) {
+
+                document.getElementById("freq").style.visibility = 'visible';
+            }
         }
     }
 

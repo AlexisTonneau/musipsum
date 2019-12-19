@@ -42,7 +42,11 @@ class TestManager extends Model
         $i = 0;
         $var=null;
         $bdd = self::getBdd();
+<<<<<<< HEAD
         $req = $bdd->prepare('SELECT * FROM test WHERE id_user = :id_user ORDER BY date_mesure DESC');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+=======
+        $req = $bdd->prepare('SELECT * FROM test WHERE id_user = :id_user');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+>>>>>>> Media Queries
         $idd = $account->getId();
         $req->bindParam(':id_user',$idd);
         if(!$req->execute()){
@@ -266,5 +270,8 @@ if (isset($_GET['search']) && !isset($_GET['quatre']) && is_numeric($_GET['searc
     ?> <div hidden>
     <?php  echo (json_encode($captors));?>
 </div> <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> Media Queries
 }
