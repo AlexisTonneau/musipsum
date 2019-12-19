@@ -23,11 +23,11 @@ require_once('views/views_accueil/viewHeader.php');
 foreach ($tests_account as $test_en_cours) {
 
     ?>
-    <div >
+
     <form id="form<?=$i?>" action="<?=URL?>account/stat/<?=$test_en_cours->getId()?>" >
-        <button class="button" type="submit" form="form<?=$i?>" >Test du <?=$test_en_cours->getDate()?></button>
+        <button class="button" type="submit" id="button" form="form<?=$i?>" >Test du <?=$test_en_cours->getDate()?></button>
     </form>
-    </div>
+
     <?php $i++;
 }
 ?>
