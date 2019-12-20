@@ -21,6 +21,9 @@ class ControllerAccueil
                 case "successstories":
                     require_once ('views/views_accueil/viewSuccessStories.php');
                     break;
+                case "faq":
+                    require_once ('views/views_accueil/viewFAQ.php');
+                    break;
 
             }
         }
