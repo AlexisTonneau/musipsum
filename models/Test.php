@@ -17,17 +17,11 @@ class Test extends Model
      * @param $id_moniteur
      */
 
-    public function __construct($id_user, $id_moniteur, $id_model_test, $bool)
+    public function __construct($id_user, $id_moniteur, $id_model_test)
     {
         $this->id_user = $id_user;
         $this->id_moniteur = $id_moniteur;
         $this->id_model_test = $id_model_test;
-
-        if ($bool){
-            //TODO send token to database
-        }
-
-
     }
 
 
