@@ -60,7 +60,6 @@ class ControllerAccount
 
             else {
                 $msg = Connection::connect();
-                $_SESSION['flash'] = $msg;
 
                 if ($msg === 'Connected') {
                     //echo $msg;
@@ -75,7 +74,6 @@ class ControllerAccount
                 elseif ($msg ==='Administration'){
                     header('Location: '.URL.'administration');
                 }
-                $_SESSION['flash']="";
                 require_once('views/views_connection/viewConnect.php');
             }
 

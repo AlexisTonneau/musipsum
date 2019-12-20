@@ -3,7 +3,6 @@
 
 
 
-
 class Connection extends AccountManager
 {
 
@@ -68,11 +67,11 @@ class Connection extends AccountManager
                         }
                     }
                     if (!$boole) {
-                        $msg = 'Mail ou mot de passe incorrect';
+                        $msg = 0;
                     }
                 }
             } else {
-                $msg = 'Mail ou mot de passe incorrect';
+                $msg = 0;
 
             }
 
@@ -93,3 +92,10 @@ class Connection extends AccountManager
 
 
 }
+?>
+
+   <?php echo (Connection::connect());
+
+   ?>
+
+

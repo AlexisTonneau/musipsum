@@ -18,6 +18,8 @@ class ControllerAjax
                     require_once ('models/TestManager.php');
                     }
                     break;
+                case 'connection':
+                    require_once ('models/Connection.php');
             }
         }
     }
