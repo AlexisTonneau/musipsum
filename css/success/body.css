@@ -25,7 +25,7 @@ body {
 }
 
 #paragraphe_thomas {	
-	border-right: 0px solid gray !important;
+	border-right: 2px solid gray !important;
 }
 
 .all_sections {
@@ -54,7 +54,7 @@ p{
 }
 
 #section_1, #section_2, #section_3, #section_4, #section_5, #section_6 {
-	width: 16%;
+	width: 13.5%;
 	margin-top: 5px;
 }
 

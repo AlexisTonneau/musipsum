@@ -28,7 +28,7 @@ require_once ('views/views_accueil/viewHeader.php');
             <div class="info_personnelles">
                 ​
                 ​
-                <block class="bloc_1">
+                <block id="bloc_1">
                     <div class="info">
                         <p class="a mail">Adresse mail *  <br/>
                             <input type="email" name="mail_address" class="id iden id_mail" style="height: 30px" required> </p>
@@ -39,7 +39,7 @@ require_once ('views/views_accueil/viewHeader.php');
                         ​
                     </div>
                     ​
-                    <div class="pre_nom">
+                    <div id="pre_nom">
                         ​
                         <p class="a nom">Nom*  <br/>
                             <input type="text" name="name" class="id identif id_name" required> </p>
@@ -48,7 +48,7 @@ require_once ('views/views_accueil/viewHeader.php');
                     </div>
                 </block>
                 ​
-                <block class="bloc_2">
+                <block id="bloc_2">
                     <p class="naissance">Date de naissance *
                         <div class="c">
                     <p class="day">
@@ -100,7 +100,7 @@ require_once ('views/views_accueil/viewHeader.php');
         <footer class="footer_open">
             <div>
                 <btn class="save">
-                    <input class="btn_save"  type="submit" value = "Enregistrer" >
+                    <input id="btn_save"  type="submit" value = "Enregistrer" >
                 </btn>
                 ​
                 <br/><br/>

@@ -37,15 +37,16 @@ input:focus
     font-size: 1.2em;
     border: 1px solid darkgrey;
     width: 90%;
-    height: 63%;
     margin-left : 4%;
     margin-right: 4%;
+    height: 63%;
     top: 27%;
+    margin-bottom: 10px;
 }
 
 /* Block 1 */
 
-.bloc_1{
+#bloc_1{
     margin-right: 30%;
 }
 
@@ -67,7 +68,7 @@ input:focus
     height: 60%;
 
 }
-.pre_nom {
+#pre_nom {
     position: relative;
     display: flex;
     justify-content: left;
@@ -88,6 +89,7 @@ input:focus
     justify-content: left;
     bottom: 3%;
     left : -4%;
+    margin-top: -5%
 }
 .female, .no_binare {
     margin-left: 6%;
@@ -98,7 +100,7 @@ input:focus
 ​
     /* Block 2 */
 ​
-.block_2 {
+#block_2 {
     position: relative;
 }
 ​
@@ -125,7 +127,9 @@ input:focus
     display: flex;
     justify-content: right;
     top: -15%;
+    margin-bottom: 20px;
 }
+
 ​
 .poids {
     margin-left: 1%;
@@ -147,6 +151,7 @@ input:focus
 .type_account {
     position: relative;
     bottom: 9%;
+    margin-top: 60px;
 }
 .type_account_container {
     position: relative;
@@ -173,7 +178,7 @@ option {
 .save a:hover {
     font-weight: bold;
 }
-.btn_save {
+#btn_save {
     position: absolute;
     text-decoration:none;
     color: white;
@@ -182,7 +187,48 @@ option {
     border: dodgerblue;
     width: 10%;
     left: 47%;
-    bottom: 3.5%;
+    bottom: 5%;
     box-shadow: 2px 2px 5px black;
     font-size: 1.1em;
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 901px) {
+    #bloc_1 {
+        width: 50%;
+        position: relative;
+        display: block; 
+    }
+    #bloc_2 {
+        width: 50%;
+        position: relative;
+        display: block;
+        left: 33%;
+    }
+    .info_personnelles {
+        display: block;
+        top: 21%;
+        height: 79%;
+    }
+    #pre_nom {
+        position: relative;
+        left: 30%;
+    }
+    #btn_save {
+        position: relative;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .info_personelles {
+        height: 63%;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 1px) {
+    #btn_save {
+        top: 900px;
+        margin-bottom: 40px;
+    }
 }
