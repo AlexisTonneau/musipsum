@@ -1,5 +1,6 @@
 <?php
 
+
 class TestManager extends Model
 {
 
@@ -98,6 +99,7 @@ class TestManager extends Model
         }
 
         return true;
+
 
 
     }
@@ -268,3 +270,4 @@ if (isset($_GET['search']) && !isset($_GET['quatre']) && is_numeric($_GET['searc
     <?php  echo (json_encode($captors));?>
 </div> <?php
 }
+

@@ -18,3 +18,4 @@ require_once ('views/views_accueil/viewHeader.php');
 </div>
     <input type="submit" value="Envoyer">
 </form>
+

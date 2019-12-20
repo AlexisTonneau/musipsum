@@ -75,6 +75,7 @@ class TestModel extends Model
 
 
 
+
     public static function searchById($id) :TestModel{
         if(self::getAllModels()===null){
             throw new Exception('Pas de modèle de test');

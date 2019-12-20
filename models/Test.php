@@ -8,18 +8,23 @@ class Test extends Model
     private $id_user;
     private $id_moniteur;
     private $bool;
-    private $date;
+
 
     /**
      * Test constructor.
      * @param $id_user
      * @param $id_moniteur
      */
-    public function __construct($id_user, $id_moniteur, $id_model_test)
+
+    public function __construct($id_user, $id_moniteur, $id_model_test, $bool)
     {
         $this->id_user = $id_user;
         $this->id_moniteur = $id_moniteur;
         $this->id_model_test = $id_model_test;
+
+        if ($bool){
+            //TODO send token to database
+        }
 
 
     }
@@ -89,24 +94,6 @@ class Test extends Model
         $this->id_moniteur = $id_moniteur;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param mixed $date
-     */
-    public function setDate($date)
-    {
-        $date = date('d-m-y h:i',strtotime($date));
-        $date = str_replace('-','/',$date);
-        $date = str_replace(':','h',$date);
-        $this->date = $date;
-    }
 
 
 
