@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'gotham_book';
+    src:url('fonts/Gotham-Book.otf');
+}
+.center-div {
+    margin: 0 auto;
+    width: 550px;
+
+}
+.faq-section{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.faq-section p, .faq-section input{
+    display: none;
+}
+
+.faq-section label+p{
+    display: block;
+    color: #999;
+    font-size: .85em;
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -ms-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.faq-section input[type=checkbox]:checked~p{
+    display: block;
+    color: #444;
+    font-size: 1em;
+    text-overflow: clip;
+    white-space: normal;
+    overflow: visible;
+}
+
+.faq-section label{
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #FFC0CB;
+    display: block;
+    position: relative;
+    padding: 7px 10px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    border-left: 3px solid #888;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    -webkit-transition: all .15s ease-out;
+    -moz-transition: all .15s ease-out;
+    -ms-transition: all .15s ease-out;
+    -o-transition: all .15s ease-out;
+    transition: all .15s ease-out;
+}
+
+.faq-section label::-moz-selection{
+    background: none;
+}
+
+.faq-section label::selection{
+    background: none;
+}
+
+.faq-section label:hover{
+    background: #FF9ACE;
+}
+
+.faq-section input[type=checkbox]:checked~label{
+    border-color: #F5C3F2;
+    background: #B2E6F8;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#B2E6F8));
+    background-image: -webkit-linear-gradient(top, #fff, #B2E6F8);
+    background-image: -moz-linear-gradient(top, #fff, #B2E6F8);
+    background-image: -ms-linear-gradient(top, #fff, #B2E6F8);
+    background-image: -o-linear-gradient(top, #fff, #B2E6F8);
+    background-image: linear-gradient(to bottom, #fff, #B2E6F8);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,.4);
+    box-shadow: 0 0 1px rgba(0,0,0,.4);
+}
+
+.faq-section label::before{
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -6px;
+    border: 6px solid transparent;
+    border-left-color: inherit;
+}
+
+.faq-section input[type=checkbox]:checked~label::before{
+    border: 6px solid transparent;
+    border-top-color: inherit;
+    margin-top: -3px;
+    right: 10px;
+}

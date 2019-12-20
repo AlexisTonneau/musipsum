@@ -27,6 +27,14 @@ class ControllerAccueil
                 case "faq":
                     require_once ('views/views_accueil/viewFAQ.php');
                     break;
+                case "cgu":
+                    $page = "cgu";
+                    require_once('views/views_accueil/viewLegal.php');
+                    break;
+                case "mentions-legales":
+                    $page = "m-l";
+                    require_once('views/views_accueil/viewLegal.php');
+                    break;
 
             }
         }
