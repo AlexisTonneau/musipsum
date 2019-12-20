@@ -64,7 +64,7 @@ abstract class Model
     {
         $bdd= self::getBdd();
         $i=0;
-        $req = $bdd->prepare('SELECT * FROM user');
+        $req = $bdd->prepare('SELECT * FROM user ORDER BY name');
         if(!$req->execute()){
             throw new Exception("Connexion impossible");
         }

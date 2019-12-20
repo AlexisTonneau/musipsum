@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
+    <script type="text/javascript" src="/js/autocompletion.js"></script>
     <title>Administration</title>
 
 </head>
@@ -26,7 +27,8 @@ require_once 'views/views_accueil/viewHeader.php';
     <div>
         <form  action="<?=URL?>administration/search" method="post" >
 
-            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user">
+            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user" autocomplete="off" id="bar">
+            <div id="search"></div>
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
 

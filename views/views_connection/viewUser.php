@@ -20,6 +20,10 @@
 require_once 'views/views_accueil/viewHeader.php';
 ?>
 <div class="body">
+
+
+  <div class="centrer_page">
+
     <div class="id_utilisateur">
         <div class="titre_id">
             <p id="nom_prenom"><?php echo $account->getName().' '.$account->getFirstName();?></p>
@@ -53,18 +57,10 @@ require_once 'views/views_accueil/viewHeader.php';
       <button class="bouton_resultat" onclick="">Consulter mes résultats</button>
     </div>
 
-
-      <!--<div class="button2">
-        <button type="submit" class="button_submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-            Modifier
-          </button>
-        <button class="button_deconnexion" onclick="">Me déconnecter</button>
-    </div>
-*/-->
-
+  </div>
 
 <div>
-    <form method="post" action="<?=URL?>account/modify">
+    <form id="modify_profil" method="post" action="<?=URL?>account/modify">
         <input type="hidden" name="modify" value="<?=$account->getId()?>">
 
         <input type="submit" name="disconnect" value="Modifier mon profil">
