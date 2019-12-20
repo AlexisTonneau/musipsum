@@ -82,6 +82,25 @@ class Connection extends AccountManager
         return $msg;
     }
 
+    public static function checkIP(){
+        $bdd = self::getBdd();
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $recherche = $bdd->prepare('SELECT * FROM connexion WHERE ip = ?');
+        $recherche->execute(array($ip));
+        $count = $recherche->rowCount();
+
+        if($count<10){
+            if (self::connect()===0){
+                $req = $bdd->prepare('INSERT INTO connexion(ip) VALUES(:ip)');
+                $req->execute(array('ip' => $ip));
+            }
+            return true;
+        }
+
+        return false;
+
+    }
+
 
 
 

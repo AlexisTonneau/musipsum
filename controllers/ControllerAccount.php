@@ -59,22 +59,26 @@ class ControllerAccount
 
 
             else {
-                $msg = Connection::connect();
+                if (Connection::checkIP()) {
+                    $msg = Connection::connect();
 
-                if ($msg === 'Connected') {
-                    //echo $msg;
+                    if ($msg === 'Connected') {
+                        //echo $msg;
 
-                    header('Location: '.URL.'account');
-                    exit();
-                } elseif ($msg === 'Connected as admin') {
+                        header('Location: ' . URL . 'account');
+                        exit();
+                    } elseif ($msg === 'Connected as admin') {
 
-                    header('Location: '.URL.'instructor');
-                    exit();
+                        header('Location: ' . URL . 'instructor');
+                        exit();
+                    } elseif ($msg === 'Administration') {
+                        header('Location: ' . URL . 'administration');
+                    }
+                    require_once('views/views_connection/viewConnect.php');
                 }
-                elseif ($msg ==='Administration'){
-                    header('Location: '.URL.'administration');
+                else{
+                    throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, revenez demain");
                 }
-                require_once('views/views_connection/viewConnect.php');
             }
 
         if (isset($_SESSION['id_user'])){

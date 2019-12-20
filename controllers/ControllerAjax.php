@@ -19,7 +19,12 @@ class ControllerAjax
                     }
                     break;
                 case 'connection':
-                    require_once ('models/Connection.php');
+                    if (Connection::checkIP()) {
+                        require_once('models/Connection.php');
+                    }
+                    else{
+                        throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, essayez demain !");
+                    }
             }
         }
     }
