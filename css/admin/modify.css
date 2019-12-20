@@ -1,15 +1,15 @@
 .btn_save {
-    position: absolute;
+    position: relative;
     text-decoration:none;
     color: white;
     background-color: dodgerblue;
     opacity: 0.8;
     border: dodgerblue;
-    width: 10%;
-    left: 47%;
+    width: 15%;
+    left: 76%;
     bottom: 20%;
-    box-shadow: 2px 2px 5px black;
     font-size: 1.1em;
+    padding:10px;
 }
 
 .form{
@@ -29,4 +29,45 @@
     margin-bottom: 3%;
 }
 
+.contact_agence, .identif {
+    padding: 10px;
+    margin-top: 8px;
+}
 
+@media screen and (max-width: 999px) {
+    #info_personnelles {
+        position: relative;
+        left:330px
+    }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    #info_personnelles {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    }
+
+    #contact{
+        width: 50%;
+        display: inline-block;
+        position: relative;
+        bottom: 210px;
+        left: 110%;
+    } 
+    #tel_agence {
+    margin-bottom: 28px;
+    }
+    #denomination {
+        position: relative;
+        left: 20%
+    }
+}
+/*
+*{
+    background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}

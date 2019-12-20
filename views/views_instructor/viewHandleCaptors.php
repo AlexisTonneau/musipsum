@@ -81,7 +81,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
     <div class="gerer" id="gerer_cgu">
         <div class="titre_modif_cgu">Modifier les CGU</div>
-        <input id="cgu_txt" type="text" name="" value="" style="width: 90%; height: 100%; border-color: #66AFFD">
+        <textarea id="cgu_txt" type="text" name="" value="" style="width: 90%; height: 100%; border-color: #66AFFD"></textarea>
     </div>
 </div>
 

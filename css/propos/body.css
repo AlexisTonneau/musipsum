@@ -22,7 +22,7 @@ body{
 {
  padding-left: 43%;
 }
-.premiere_ligne_body
+#premiere_ligne_body
 {
  margin-top: 1%;
  display:flex;
@@ -31,14 +31,14 @@ body{
 
 
 }
-.deuxieme_ligne_body
+#deuxieme_ligne_body
 {
  margin-top: 0%;
  display:flex;
  flex-wrap:wrap;
  padding-left: 4%;
 }
-.bordure_souris_body,.bordure_stat_body,.bordure_profils_body
+#bordure_souris_body,#bordure_stat_body,#bordure_profils_body
 {
  display: flex;
  flex-direction: column;
@@ -50,7 +50,7 @@ body{
  height: 250px;
 
 }
-.bordure_voiture_body,.bordure_permis_body,.bordure_like_body
+#bordure_voiture_body,#bordure_permis_body,#bordure_like_body
 {
  display: flex;
  flex-direction: column;
@@ -82,31 +82,62 @@ body{
  font-size: 18px;
 }
 
-@media (max-width : 600px)
-{
-  .premiere_ligne_body{
+@media screen and (max-width : 700px) and (min-width: 0px) {
+  #premiere_ligne_body, #deuxieme_ligne_body{
     display: block;
   }
 
-  .deuxieme_ligne_body{
+  #bordure_like_body, #bordure_stat_body,#bordure_profils_body, #bordure_voiture_body{
+    width: 100%;
+    display: block;
+    position: relative;
+    left: 25%;
+  }
+
+  .a_propos_image_souris,.a_propos_image_stat,.a_propos_image_profils,.a_propos_image_voiture,.a_propos_image_permis,.a_propos_image_like {
+    width: 100%;
+  }
+  #bordure_souris_body {
+    position: relative;
+    left: 37%;
+    width: 100%;
     display: block;
   }
-  .bordure_like_body{
-    width: 100%;
+
+
+}
+
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+  #bordure_souris_body, #bordure_stat_body {
+    width: 50%;
+    display: inline-block;
+    border: none;
   }
-  .bordure_permis_body{
-    width: 100%;
+  #bordure_profils_body, #bordure_voiture_body {
+    width: 50%;
+    display: inline-block;
+    border:none;
   }
-  .bordure_profils_body{
-    width: 100%;
+  #bordure_permis_body, #bordure_like_body {
+    width: 50%;
+    display: inline-block;
+    border:none;
   }
-  .bordure_souris_body{
-    width: 100%;
+  #bordure_souris_body {
+    position: relative;
+    margin-right: 0px;
+    left: 12%;
   }
-  .bordure_stat_body{
-    width: 100%;
-  }
-  .bordure_voiture_body{
-    width: 100%;
+  #bordure_like_body {
+    position: relative;
+    left: 50%;
+    display: block;
+    bottom: 494px;
   }
 }
+/*
+*{
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}*/
