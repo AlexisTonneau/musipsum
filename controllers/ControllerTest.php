@@ -10,8 +10,6 @@ class ControllerTest
     public function __construct()
     {
 
-        if (isset($_SESSION['user'])){
-            switch (unserialize($_SESSION['user'])->getAccountType()){
 
         if (isset($_SESSION['user']) && $_SESSION['user']!==null){
             switch (unserialize($_SESSION['user'])->getAccountType()) {
