@@ -29,8 +29,8 @@ return $lang;
 
 public static function choosePageLanguage(){
    
-  //$lang=self::setLanguage();
-  $lang="es";
+  $lang=self::setLanguage();
+  
 switch ($lang) {
     case "fr":
         $router = new FrRouter();

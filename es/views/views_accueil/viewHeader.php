@@ -76,19 +76,27 @@ color: <?=$successstories?>;
                   <?php
                       if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']==='on')
                       {
-                        $activeLangue="https";
+                        $domain="https";
                       }
                       else {
-                        $activeLangue="http";
+                        $domain="http";
                       }
-                      $activeLangue .="://";                      //     ajouter :// à l'URL
-                      $activeLangue .= $_SERVER['HTTP_HOST'];     //     Ajouter l'hôte à l'URL
-                      $activeLangue .= $_SERVER['REQUEST_URI'];      //     Ajouter l'emplacement de la ressource demandée à l'URL
+                      $domain .="://";                      //     ajouter :// à l'URL
+                      $domain .= $_SERVER['HTTP_HOST'];     //     Ajouter l'hôte à l'URL
+                      $domain .= $_SERVER['REQUEST_URI'];      //     Ajouter l'emplacement de la ressource demandée à l'URL
+                  
                    ?>
-                    <form class="langues" action="$activeLangue" method="post">
-                          <input type="image" class="img_drapeau_france" src="<?=URL?>images/drapeau_france.png" alt="fr" value="fr">
-                          <input type="image" class="img_drapeau_anglais" src="<?=URL?>images/drapeau_anglais.jpg" alt="en" value="en">
-                          <input type="image" class="img_drapeau_espagnol" src="<?=URL?>images/drapeau_espagnol.jpg" alt="es" value="es">
+                     <form class="langues" action="<?=$domain?>" method="post">
+                          <input type="hidden" name="lang"  value="fr">
+                          <input class="img_drapeau_france" type="image" src="<?=URL?>images/drapeau_france.png" alt="submit">
+                     </form>
+                    <form class="langues" action="<?=$domain?>" method="post">
+                          <input type="hidden" name = "lang"  src="" alt="en" value="en">
+                          <input class="img_drapeau_anglais" type="image" src="<?=URL?>images/drapeau_anglais.jpg" alt="submit"> 
+                    </form>
+                    <form class="langues" action="<?=$domain?>" method="post">
+                          <input type="hidden" name="lang"  src="" alt="es" valeu="es">
+                          <input class="img_drapeau_espagnol" type="image" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit">
                     </form>
                 </div>
             </div>
