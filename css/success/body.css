@@ -2,12 +2,12 @@
   font-family: 'gotham_book';
   src:url('fonts/Gotham-Book.otf');
 }
-
+/*
 *{
 	background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-}
+}*/
 
 .body_success_story{
 		font-family: 'gotham_book', serif;
