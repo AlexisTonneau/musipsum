@@ -13,6 +13,9 @@ class ControllerAccueil
      */
     public function __construct()
     {
+        if(isset($_SESSION['url'])){    //Seul moyen que j'ai trouvé pour l'instant pour supprimer l'url de la vidéo.
+            $_SESSION['url']=null;
+        }
         if(isset($_GET['ref'])){
             switch ($_GET['ref']){
                 case "about":
@@ -32,10 +35,20 @@ class ControllerAccueil
                 require_once("views/views_accueil/viewAccueil.php");
 
             }
+        if (isset($_SESSION['id_user'])){
+            $_SESSION['id_user'] = null;
+        }
+        if (isset($_SESSION['id_test'])){
+            $_SESSION['id_user'] = null;
+        }
+
+
 
 
         //}
     }
+
+
 
 
 

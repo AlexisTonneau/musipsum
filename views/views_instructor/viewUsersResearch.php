@@ -42,9 +42,10 @@ echo ' ' . $account->getName() . "\t\t\t\t";
         Modifier
     </button>
 </form>
-
-    <button class="link" href="#">Démarrer</button>
-
+    <form method="post" action="<?=URL?>instructor/search">
+        <input type="hidden" name="launch" value="<?=$account->getId()?>">
+        <button class="link" type="submit" value="<?=$account->getId()?>">Démarrer</button>
+    </form>
     </div>
     <?php
 }
