@@ -12,8 +12,12 @@ $(document).ready(function () {
                 console.log(data);
                 if(data == 0){
                     console.log('failed');
-                    $(".status").html("Mail ou mot de passe incorrect");
-                    $(".status").show();
+                    $(".status").html("Mail ou mot de passe incorrect").show();
+                    $(".id_mail").css('border','1px solid red');
+                    $("#id_mdp").css('border','1px solid red');
+                    $(".id_mail:focus,.id_mail:hover").css('border','1px solid red');
+                    $("#id_mdp:focus").css('border','1px solid red');
+
                 }
                 else {
                     window.location.href = ("http://127.0.0.1/musipsum/account");

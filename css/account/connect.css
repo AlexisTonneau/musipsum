@@ -44,6 +44,12 @@
 }
 
 
+.fleche:hover {
+    cursor: pointer;
+    outline: none;
+}
+*:focus {outline:none}
+
 .Connexion{
     position:absolute;
     left: 42%;
@@ -69,6 +75,7 @@
     left: 63.45%;
     top: 71%;
     text-decoration: none;
+
 }
 
 
@@ -78,7 +85,10 @@
     top: 59%;
     width: 49%;
     height: 4%;
+
 }
+
+
 
 
 .id_mdp {
@@ -87,4 +97,7 @@
     top: 65%;
     width: 49%;
     height: 4%;
+
 }
+
+
