@@ -100,4 +100,28 @@
 
 }
 
+@media screen and (max-width: 850px){
+    .mdp_oubli{
+        position: absolute;
+        left: 35%;
+        top: 79%;
+        font-size: 1.2em;
+    }
+
+    .fleche{
+        position: absolute;
+        top: 72%;
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mdp_oubli{
+        position: absolute;
+        left: 25%;
+        top: 79%;
+        font-size: 1.2em;
+    }
+}
+
 
