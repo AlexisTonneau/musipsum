@@ -10,7 +10,7 @@ require_once 'viewHeader.php';
 ?>
 
 <h2>
-    Conditions générales d'utilisation
+    <?=$titre?>
 </h2>
 <br/>
 <div class="data">

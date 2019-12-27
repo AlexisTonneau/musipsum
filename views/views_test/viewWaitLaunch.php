@@ -3,6 +3,8 @@ require_once ('views/views_accueil/viewHeader.php');
 
 ?>
 
-<h1>En attente du démarrage d'un test par un moniteur...</h1>
+<link rel="stylesheet" href="<?=URL?>css/user/choose_test.css">
 
-
+<h3>En attente du démarrage d'un test par un moniteur...</h3>
+<?php
+require_once ('views/views_accueil/viewFooter.php');

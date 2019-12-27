@@ -9,6 +9,13 @@
 
 }
 
+h3{
+    height: 56%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
 #button{
 }
 

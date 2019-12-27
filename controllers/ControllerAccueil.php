@@ -1,7 +1,5 @@
 <?php
 
-//session_start();
-
 
 class ControllerAccueil
 {
@@ -29,10 +27,12 @@ class ControllerAccueil
                     break;
                 case "cgu":
                     $page = "cgu";
+                    $titre = "Conditions générales d'utilisation";
                     require_once('views/views_accueil/viewLegal.php');
                     break;
                 case "mentions-legales":
                     $page = "m-l";
+                    $titre = "Mentions légales";
                     require_once('views/views_accueil/viewLegal.php');
                     break;
 

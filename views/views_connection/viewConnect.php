@@ -20,12 +20,12 @@
 
 </head>
 
-<body class="body">
+<body class="body" >
 <?php
 require_once ('views/views_accueil/viewHeader.php');
 
 ?>
-<div class="middlepage">
+<div class="middlepage" style="height: 100%;">
     <div>
         <!--<p>--><img class="image_flottante" src="images/carrésbleus.png" alt="double carré" align="center"><!--<p>-->
     </div>
@@ -70,3 +70,6 @@ require_once ('views/views_accueil/viewHeader.php');
 </body>
 </html>
 
+<?php
+require_once ('views/views_accueil/viewFooter.php')
+?>
