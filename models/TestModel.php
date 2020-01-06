@@ -7,6 +7,10 @@ class TestModel extends Model
     private $name;
     private $id_auto_ecole;
     private $video_lien;
+    private $nameEn;
+    private $nameEs;
+    private $url_en;
+    private $url_es;
 
     /**
      * @return mixed
@@ -23,6 +27,8 @@ class TestModel extends Model
     {
         $this->id = $id;
     }
+
+
 
     /**
      * @return mixed
@@ -73,6 +79,72 @@ class TestModel extends Model
         $this->video_lien = $video_lien;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getNameEn()
+    {
+        return $this->nameEn;
+    }
+
+    /**
+     * @param mixed $nameEn
+     */
+    public function setNameEn($nameEn)
+    {
+        $this->nameEn = $nameEn;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNameEs()
+    {
+        return $this->nameEs;
+    }
+
+    /**
+     * @param mixed $nameEs
+     */
+    public function setNameEs($nameEs)
+    {
+        $this->nameEs = $nameEs;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUrlEn()
+    {
+        return $this->url_en;
+    }
+
+    /**
+     * @param mixed $url_en
+     */
+    public function setUrlEn($url_en)
+    {
+        $this->url_en = $url_en;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUrlEs()
+    {
+        return $this->url_es;
+    }
+
+    /**
+     * @param mixed $url_es
+     */
+    public function setUrlEs($url_es)
+    {
+        $this->url_es = $url_es;
+    }
+
+
+
 
 
 
@@ -96,7 +168,10 @@ class TestModel extends Model
         $i = 0;
         $var=null;
         $bdd = self::getBdd();
-        $req = $bdd->prepare('SELECT * FROM tests_models WHERE id_auto_ecole='.self::getCurrentAccount()->getDrivingSchoolId().' OR id_auto_ecole IS NULL');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+        $ds = self::getCurrentAccount()->getDrivingSchoolId();
+
+        $req = $bdd->prepare('SELECT * FROM tests_models WHERE id_auto_ecole=:ds OR id_auto_ecole IS NULL');   //Modèles de tests de l'auto école ou ou modèles généraux (null)
+        $req->bindParam(':ds',$ds);
         if(!$req->execute()){
             throw new Exception("Connexion échouée");
         }
@@ -104,6 +179,11 @@ class TestModel extends Model
             $var[$i] = new self;
             $var[$i]->setName($model['name']);
             $var[$i]->setId($model['id']);
+            $var[$i]->setNameEn($model['name_en']);
+            $var[$i]->setNameEs($model['name_es']);
+            $var[$i]->setUrlEn($model['url_en']);
+            $var[$i]->setUrlEs($model['url_es']);
+            $var[$i]->setVideoLien($model['url_fr']);
             $i++;
         }
         return $var;

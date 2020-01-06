@@ -10,4 +10,4 @@
 require_once ('views/views_accueil/viewHeader.php');
 ?>
 
-<iframe style="margin-top: 2%;margin-left: 10%" width="1009" height="568" src="<?=$url_video?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="margin-top: 2%;margin-left: 10%" width="1009" height="568" src="<?=$url_fr?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
