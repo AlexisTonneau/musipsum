@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<head>
-    <head>
-        <meta charset="utf-8" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="<?=URL?>/css/FAQ/faq.css">
-        <title>Musipsum - FAQ</title>
-        <style>
-            body{
-                margin: 80px auto;
-                background: #ffffff
-            }
-        </style>
-    </head>
-=======
+
   <head>
 <head>
 	<meta charset="utf-8" />
@@ -28,7 +14,6 @@
 		}
 	</style>	
 </head>
->>>>>>> ded3f9b8e73b4bcc7110b20a305d35c4d3a57254
 
 <body>
 
@@ -36,7 +21,6 @@
 require_once 'viewHeader.php';
 ?>
 <div class="center-div">
-<<<<<<< HEAD
     <h1>
         Bienvenue dans la FAQ de Vahmat : Musipsum
     </h1>
