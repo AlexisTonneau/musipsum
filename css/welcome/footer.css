@@ -130,6 +130,7 @@
 	}
 	#icone_envoi {
 		position: relative;
+		color: #66AFDB !important;
 	}
 }
 
