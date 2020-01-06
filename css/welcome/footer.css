@@ -113,10 +113,9 @@
 		padding:0;
 	}
 	#contact {
-		width: 90% !important;
+		width: 95% !important;
 		display: block !important;
 		position: relative;
-		left: 9%;
 	}
 	#about_footer {
 		width: 100% !important;
