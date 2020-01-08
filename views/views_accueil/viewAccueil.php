@@ -1,3 +1,7 @@
+<?php
+Mail::formToEmail();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <title>Musipsum</title>
@@ -13,9 +17,10 @@
     <style type="text/css">
     </style>
 </head>
-<body>
+<body class="body">
 <?php
 require_once 'viewHeader.php';
+
 ?>
 
 <!--<div id="carousel">
@@ -59,7 +64,7 @@ require_once 'viewHeader.php';
 
 <footer class="footer welcome footer_welcome">
 
-    <div id="nous_contacter_footer">
+    <div class="nous_contacter">
         <div class="social_network">
             <img src="<?=URL?>/images/logo_facebook.png" class="img_contact img_contact_fb" alt="facebook">
             <img src="<?=URL?>/images/logo_twitter.png" class="img_contact img_contact_twi" alt="twitter">
@@ -71,20 +76,22 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
-                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="text_contact_msg"></textarea>
-            <?php
-           // Connection::sendMail();
-            ?>
+                <textarea type="text" class="contact_msg" name="Votre_message" placeholder="Votre message..."
+                          style="border: 1px solid #66AFFD; color: #66AFFD; width: 95%; height: 75px; padding: 1%; margin-top: 2%";id="contact"></textarea>
+                <button type="submit" class="send">
+                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
+                </button>
+
+
             </form>
 
         </div>
 
 
         <div class="icones_button_contact">
-            <img src="<?=URL?>/images/icone_at.png" class="icone_button_contact" id="icone_at">
-                <button type="submit" form="form_envoi" class="send">
-                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact"  id="icone_envoi">
-                </button>
+            <img src="<?=URL?>/images/icone_at.png" class="icone_button_contact icone_at">
+
+
         </div>
 
 
@@ -96,23 +103,23 @@ require_once 'viewHeader.php';
 
 
 
-    <div id="contact" >
+    <div class="contact" >
 
 
-        <p id="adresse_img" class="bloc_info_contact">
+        <p class="adresse_img">
             <img src="<?=URL?>images/icone_batiment.png" alt="adresse">
             <!--<p class="text contact_txt adresse_txt">-->
             <?php echo DrivingSchoolManager::getAddressFromUser(); ?><!--</p>-->
         </p>
 
-        <p id="horaires_img" class="bloc_info_contact">
+        <p class="horaires_img">
             <img src="<?=URL?>/images/icone_horloge.png" alt="horloge">
             <!--</p>-->
             <!--<p class="text contact_txt horaires_txt">-->
             Lun - Ven | 8:00 - 18:00
         </p>
 
-        <p id="telephone_img" class="bloc_info_contact">
+        <p class="telephone_img">
             <img src="<?=URL?>/images/icone_telephone.png" alt="telephone">
             <?php
             echo DrivingSchoolManager::getPhoneFromUser();
@@ -123,7 +130,7 @@ require_once 'viewHeader.php';
 
     </div>
 
-    <div id="about_footer" >
+    <div class="about_footer" >
         <div class="footer_about_title">
             <h3 class="txt_about_title">A propos</h3>
         </div>
@@ -162,6 +169,22 @@ require_once ('viewFooter.php');
 
 
 <style>
-    
+    .send {
+        position: absolute;
+        left: 85%;
+        bottom: 10%;
+        background-color: transparent;
+        border: none;
+        width: 12%;
+        height: 15%;
+        cursor: pointer;
+    }
+
+    .icone_envoi {
+        position: absolute;
+        left: -5%;
+        bottom: -8%;
+        pointer: cursor;
+    }
 
 </style>
