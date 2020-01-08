@@ -12,16 +12,10 @@
 	padding-left: 0.5px;
 	height: 304px;
 }
-/*
-*{
-	background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-}*/
 
+.contact_txt {}
 
-
-#nous_contacter_footer {
+.nous_contacter {
 	width: 33%;
 	display: inline-block;
 	height: 304px;
@@ -30,22 +24,24 @@
 	border-radius: 3%;
 }
 
-#contact {
+.contact {
 	font-family: 'gotham_book', serif;
-	width:31%;
+	width:33%;
+	height: 304px;
 	display: inline-block;
-	position: relative;
-	left: 6.5%;
+
+	position: absolute;
+	right: 30%;
+
 }
 
-#about_footer {
+.about_footer {
 	font-family: 'gotham_book', serif;
 	width: 33%;
 	height: 304px;
 	display: inline-block;
 	text-decoration-color: #66AFFD;
 	border-top: 1px solid #66AFFD;
-	position: relative;
 }
 
 .box_mail {
@@ -54,10 +50,24 @@
 }
 
 .contact_msg {
-	width: 99%;
-	height: 95%
+	width: 95%;
+	height: 95%;
 }
 
+/*
+input {
+	font: 700 13.3333px Gotham;
+
+}
+
+
+::-webkit-input-placeholder {
+	font: 700 13.3333px Arial;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+*/
 
 .horaires_img .adresse_img .telephone_img {
 	font-family: 'gotham_book', serif;
@@ -87,11 +97,16 @@
 
 }
 
+.img_contact {
 
-@media screen and (min-width: 1187px) and (max-width: 1500px) {
-	#nous_contacter {
+}
+
+@media screen and (min-width: 1001px) {
+	.nous_contacter {
+		position: absolute;
 		padding-right: 0 !important;
 	}
+
 	#contact {
 		height: 304px;
 		bottom: 30px;
@@ -99,28 +114,26 @@
 	}
 	#about_footer {
 		top: 30px
+
 	}
 	.footer_welcome {
 		padding-left: 0 !important;
 	}
-	#icone_envoi {
-		position: relative;
-	}
 }
-@media screen and (max-width: 1186px) {
-	#nous_contacter_footer {
-		width: 99% !important;
+@media screen and (max-width: 1000px) {
+	.nous_contacter {
+		width: 100% !important;
 		padding-right: 0 !important;
-		padding:0;
 	}
+  
 	#contact {
 		width: 95% !important;
 		display: block !important;
 		position: relative;
+
 	}
-	#about_footer {
+	.about_footer {
 		width: 100% !important;
-		display: block !important;
 	}
 	.footer_welcome {
 		padding-left: 0 !important;

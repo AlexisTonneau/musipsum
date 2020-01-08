@@ -82,8 +82,14 @@ class TestManager extends Model
             throw new Exception('Connexion échouée');
         }
 
+        $reqTest = $bdd->prepare('SELECT * FROM test ORDER BY date_mesure DESC LIMIT 1 ');
+        $reqTest->execute();
+        while ($test_actuel = $reqTest->fetch(PDO::FETCH_ASSOC)){
+            $current = $test_actuel ['id_test'];
+        }
 
-
+        //$test_actuel = (int)$test_actuel;
+        echo $current;
 
 
         $req2 = $bdd->prepare('
@@ -92,8 +98,9 @@ class TestManager extends Model
 
         $id_user = $test->getIdUser();
 
+
         $req2->bindParam(':id_user',$id_user);
-        $req2->bindParam(':id_test',$modele_test);
+        $req2->bindParam(':id_test',$current);
 
         if(!$req2->execute() ){
             throw new Exception('Connexion échouée');
@@ -106,7 +113,6 @@ class TestManager extends Model
 
     public static function checkToken() :int{
         $bdd = self::getBdd();
-        $token=1;
         $account = self::getCurrentAccount();
         $req = $bdd->prepare('SELECT * FROM user WHERE id_user = :id_user');
         $id_account = $account->getId();
@@ -115,21 +121,20 @@ class TestManager extends Model
             throw new Exception('Connexion échouée');
         }
         while ($abc = $req->fetch(PDO::FETCH_ASSOC)){
-           // debug($abc);
             $token = $abc['token_test'];
         }
+
         return $token;
     }
 
     public static function findVideo(int $test){
-        $url='https://www.youtube.com/embed/M4B16pSRDvw"';
         $bdd = self::getBdd();
         $req = $bdd->prepare('SELECT * FROM tests_models INNER JOIN test ON tests_models.id = test.id_modele_test AND test.id_test = :id_test');
         $req->bindParam(':id_test',$test);
-        while ($item = $req->fetch()  ){
-            $url = $item['url_video'];  //Ce texte sur la bdd sera soit une direction vers un fichier ou un url de vidéo depuis un hébergeur externe (YT...)
+        $req->execute();
+        while ($item = $req->fetch(PDO::FETCH_ASSOC)){
+            return $item['url_fr'];
         }
-        return $url;
     }
 
     public static function deleteToken() {

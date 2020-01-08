@@ -1,32 +1,41 @@
+@font-face {
+  font-family: 'gotham_book';
+  src:url('fonts/Gotham-Book.otf');
+}
 
+.police{
+  	font-family: 'gotham_book', serif;
+}
 /*
 .gerer_capteurs .gerer_cgu {
 	display: inline-block;
 	width: 50%;
 }*/
+
+.id_utilisateur{
+	border: 2px solid black;
+	margin-top: 3%;
+	margin-left: 30%;
+	margin-right: 25%;
+}
 .gerer_body {
 	width: 100%;
 	top: 5%;
 }
 
-#gerer_capteurs {
+.gerer_capteurs {
 	width: 50%;
 	display: inline-block;
 	position: absolute;
 }
 
-#gerer_cgu {
-	width: 45%;
+.gerer_cgu {
+	width: 50%;
 	display: inline-block;
-	position: relative;
+	position: absolute;
 	left: 55%;
 	top: 8%;
 	height: 60%;
-}
-
-#cgu_txt {
-	height: 500px !important;
-	-webkit-writing-mode: horizontal-tb !important;
 }
 
 .input_range_range {
@@ -55,22 +64,96 @@
 	color: #66AFFD;
 }
 
-@media screen and (max-width: 1200px) {
-	#gerer_capteurs {
-		display: block;
-		width: 100%;
-	}
-	#gerer_cgu {
-		display: block;
-		left: 15%;
-		top:430px;
-		width: 85%
 
-	}
+
+.titre_id{
+	display: flex;
+	position: relative;
 }
-/*
-*{
-	background: #000 !important;
-  color: #0f0 !important;
-  outline: solid #f00 1px !important;
-}*/
+
+#nom_prenom{
+	margin-top: 8%;
+	margin-left: 25%;
+	text-align: center;
+	width: 360px;
+	font-size: 30px;
+}
+
+.txt_id{
+	display: flex;
+	margin-left: 20%;
+	flex-direction: column;
+}
+
+.div_txt_id_1{
+	display: flex;
+}
+
+.txt_id_spe{
+	font-weight: bold;
+	font-size: 15px;
+	width: 120px;
+	text-align: right;
+}
+
+.txt_id_php{
+	margin-left: 9%;
+	border: 0.09px solid grey;
+	width: 200px;
+}
+
+.img_test{
+	margin-top: 150%;
+}
+
+.bouton_resultat{
+	margin-top: 2%;
+	margin-left: 45%;
+	border:none;
+	padding:6px 0 6px 0;
+	box-shadow:3px 3px 12px #999;
+	font:bold 13px Arial;
+	color:#555;
+	background:pink;
+	border-radius: 20px/20px;
+	width: 250px;
+}
+
+.button_submit{
+	margin-top: 2%;
+	margin-left: 85%;
+	border:none;
+	padding:6px 0 6px 0;
+	box-shadow:3px 3px 12px #999;
+	background:#fff;
+	font:bold 13px Arial;
+	color:#555;
+	border-radius: 10px/10px;
+	width: 180px;
+}
+
+.button_deconnexion{
+	margin-top: 1%;
+	margin-left: 85%;
+	border:none;
+	padding:6px 0 6px 0;
+	box-shadow:3px 3px 12px #999;
+	background:#fff;
+	font:bold 13px Arial;
+	color:#555;
+	border-radius: 10px/10px;
+	width: 180px;
+}
+
+input{
+	margin-top: 1%;
+	margin-left: 85%;
+	border:none;
+	padding:6px 0 6px 0;
+	box-shadow:3px 3px 12px #999;
+	background:#fff;
+	font:bold 13px Arial;
+	color:#555;
+	border-radius: 10px/10px;
+	width: 180px;
+}

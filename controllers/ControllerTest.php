@@ -24,6 +24,7 @@ class ControllerTest
                         else{
                             if (!isset($_SESSION['id_test']) || $_SESSION['id_test']===null){
                                 TestManager::sendModelId();
+                                $tests_models = TestModel::getAllModels();
                                 require_once ('views/views_test/viewChooseTest.php');
                             }
                             else{
@@ -48,11 +49,9 @@ class ControllerTest
                     }
                     else {
 
-                        $url_video = TestManager::findVideo(TestManager::checkToken());
+                        $url_fr = TestManager::findVideo(TestManager::checkToken());
                         require_once 'views/views_test/viewTestStarted.php';
                         TestManager::deleteToken();
-
-
                     }
 
             }
