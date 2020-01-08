@@ -11,8 +11,8 @@
     </div>
 =======
 		<a class="footer_text" id="footer_copyright">Copyright © Vahmat. All rights reserved</a>
-		<a class="footer_text" id="footer_CGU" href="<?=URL?>">CGU</a>
-		<a class="footer_text" id="footer_ML" href="<?=URL?>">Legal Notice</a>
+		<a class="footer_text" id="footer_CGU" href="<?=URL?>en">CGU</a>
+		<a class="footer_text" id="footer_ML" href="<?=URL?>en">Legal Notice</a>
 	</div>
 >>>>>>>  Traduction anglais et espagnol
 </footer>
