@@ -32,12 +32,12 @@ require_once ('views/views_accueil/viewHeader.php');
                 ​
                 <block class="bloc_1">
                     <div class="info">
-                      <form id="inscription1">
+                      <form id="inscription1" onsubmit="return passwordLength()">
 
                         <p class="a mail">Adresse mail *  <br/>
                             <input type="email" name="mail_address" class="id iden id_mail" style="height: 30px" required> </p>
                         <p class="a motdepasse">Mot de passe *  <br/>
-                            <input type="password" name="password" class="id iden id_password" id="password_strength" style="height: 30px" onkeyup="checkPassword()"> </p>
+                            <input type="password" name="password" class="id iden id_password" id="password_strength" style="height: 30px" onkeyup="checkPassword()" > </p>
                             <progress value="0" max="100" id="strength" style="width:230px">0%</progress>
                         <p class="a confirm">Confirmer le mot de passe *  <br/>
                             <input type="password" name="confirmation" class="id iden id_confirmation" style="height: 30px" required> </p>

@@ -14,7 +14,7 @@ var password = document.getElementById("password_strength").value;
   if(password.match(/[!@%$&()*]+/)){
     strength+=1
   }
-  if(password.length>6){
+  if(password.length>=8){
     strength+=1
   }
 
@@ -39,6 +39,15 @@ var password = document.getElementById("password_strength").value;
   }
 }
 
-
+function passwordLength(){
+  alert("coucou");
+  if (document.getElementById("password_strength").value.length < 8 ) {
+        alert("Votre mot de passe doit contenir au minimum 8 caractères");
+        return false;
+  }
+  else {
+        return true;
+  }
+}
 
 // a la fin de l'input du password : required onkeyup="checkPassword()"

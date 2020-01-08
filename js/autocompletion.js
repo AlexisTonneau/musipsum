@@ -21,6 +21,7 @@ function getResults(keyword){//On créé l'objet xml XMLHttpRequest
     }
 
 
+//regarder pour faire en GET
     xmlhttp.open('POST','./controllers/ControllerAdministration.php');//envoie la requete au serveur
     xmlhttp.send()
 

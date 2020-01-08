@@ -167,7 +167,10 @@ option {
     border: none;
     padding: 1%;
 }
-​
+
+#strength{
+  margin-left : 4%;
+}
 ​
     /* Footer */
 .save a:hover {
