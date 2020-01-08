@@ -24,7 +24,7 @@ if(!isset($_SESSION['user'])||(unserialize($_SESSION['user'])->getAccountType()!
 </style>
 <body class="body_start">
 <?php
-require_once 'english/views/views_accueil/viewHeader.php';
+require_once 'francais/views/views_accueil/viewHeader.php';
 ?>
 <div class="bouton_search">
     <div class="bouton_play">
@@ -32,13 +32,8 @@ require_once 'english/views/views_accueil/viewHeader.php';
     </div>
     <div class="recherche">
         <br />
-<<<<<<< HEAD:views/views_instructor/viewLaunchTest.php
-        <form action="<?=URL?>instructor/search" method="post">
+        <form action="<?=URL?>francais/instructor/search" method="post">
         <input type="text" id="search" name="search" placeholder="Rechercher un utilisateur">
-=======
-        <form action="<?=URL?>adminaccount/search" method="post">
-        <input type="text" id="search" name="search" placeholder="Search user">
->>>>>>>  Traduction anglais et espagnol:en/views/views_admin/viewLaunchTest.php
             <input   type="image" src="<?=URL?>/images/icone_loupe.png" class="icone_loupe" alt="submit" >
 
         </form>
@@ -52,7 +47,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
 </div>
 <?php
-require_once ('views/views_accueil/viewFooter.php');
+require_once ('francais/views/views_accueil/viewFooter.php');
 ?>
 </body>
 

@@ -10,24 +10,24 @@
     <!--<link rel="stylesheet" type="text/css" href="css/capteurs/input_range_value.css">-->
     <style type="text/css">
     </style>
-    <title>Manage sensors</title>
+    <title>Gérer les capteurs</title>
 </head>
 
 <body class="body">
 <?php
-require_once 'english/views/views_accueil/viewHeader.php';
+require_once 'espanol/views/views_accueil/viewHeader.php';
 ?>
 
 <div class="gerer_body">
-    <div class="gerer" id="gerer_capteurs">
+    <div class="gerer gerer_capteurs">
         <div class="type_test">
             <form>
-                <p class="titre_type_test">Type of test</p>
+                <p class="titre_type_test">Tipo de prueba</p>
                 <div class="custom-select">
                     <select id="type_test" name="type_test">
-                        <option value="t_1">Test 1</option>
-                        <option value="t_2">Test 2</option>
-                        <option value="t_3">Test 3</option>
+                        <option value="t_1">Prueba1</option>
+                        <option value="t_2">Prueba 2</option>
+                        <option value="t_3">Prueba 3</option>
                     </select>
                 </div>
             </form>
@@ -35,7 +35,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
         <div class="quels_capteurs">
             <form action="/action_page.php" class="choix_capteur">
-                <p class="titre_choix_capteur"> Which sensors for the test ?</p>
+                <p class="titre_choix_capteur">¿Qué sensor para la prueba?</p>
                 <label class="checkbox">A
                     <input type="checkbox" value="capteur_A">
                     <span class="checkmark">
@@ -50,7 +50,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
         <div class="modif_capteur">
             <form>
-                <p class="titre_modif_capteur">Modifie sensors</p>
+                <p class="titre_modif_capteur">Editar un sensor</p>
                 <div class="custom-select">
                     <select id="modif_capteur" name="modification_capteur" class="choix_modif">
                         <option value="c_1">Sensor 1</option>
@@ -63,7 +63,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
         <div class="sensi">
             <form action="/action_page.php">
-                <p class="titre_sensi">Sensitivity</p>
+                <p class="titre_sensi">Sensibilidad</p>
                 <div class="input_range">
                     <input class="input_range_range" type="range" name="sensibilite" min="0" max="100" onchange="updateTextInput(this.value);">
                     <input type="text" id="range_value" class="range_value" value="" readonly>
@@ -73,21 +73,15 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
         <div class="temps_mesure">
             <form action="/action_page.php">
-                <p class="titre_temps_mesure">Measurement time</p>
+                <p class="titre_temps_mesure">Tiempo de medición</p>
                 <input id="temps_mesure" type="text" name="" value=""> s
             </form>
         </div>
     </div>
 
-<<<<<<< HEAD:views/views_instructor/viewHandleCaptors.php
-    <div class="gerer" id="gerer_cgu">
-        <div class="titre_modif_cgu">Modifier les CGU</div>
-        <textarea id="cgu_txt" type="text" name="" value="" style="width: 90%; height: 100%; border-color: #66AFFD"></textarea>
-=======
     <div class="gerer gerer_cgu">
-        <div class="titre_modif_cgu">Modifie the CGU</div>
+        <div class="titre_modif_cgu">Modificar los términos y condiciones</div>
         <input id="cgu_txt" type="text" name="" value="" style="width: 85%; height: 100%; border-color: #66AFFD">
->>>>>>>  Traduction anglais et espagnol:en/views/views_admin/viewHandleCaptors.php
     </div>
 </div>
 
