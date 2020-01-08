@@ -46,7 +46,9 @@ require_once 'views/views_accueil/viewHeader.php';
 <div id="display">
 
 </div>
-
+<?php
+require_once ('views/views_accueil/viewFooter.php');
+?>
 </body>
 
 </html>

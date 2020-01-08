@@ -54,13 +54,23 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 
   <div class="button1">
-      <button class="bouton_resultat" onclick="">Consulter mes résultats</button>
+
+      <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>account/stat'">Consulter mes résultats</button>
     </div>
 
-  </div>
+
+      <!--<div class="button2">
+        <button type="submit" class="button_submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
+            Modifier
+          </button>
+        <button class="button_deconnexion" onclick="">Me déconnecter</button>
+    </div>
+*/-->
+
 
 <div>
-    <form id="modify_profil" method="post" action="<?=URL?>account/modify">
+    <form method="post" action="<?=URL?>account/modify">
+
         <input type="hidden" name="modify" value="<?=$account->getId()?>">
 
         <input type="submit" name="disconnect" value="Modifier mon profil">

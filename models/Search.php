@@ -36,10 +36,12 @@ class Search extends Model
         }
         return $var;
     }
-    public static function initializeSearch(){
+
+    public static function initializeSearch() {
+
         if (!isset($_GET['search'])){
             if (isset($_POST['search'])) {
-                header('Location: '.URL.'instructor/search/'.$_POST['search']);
+                header('Location: '.URL.'instructor/search/'.htmlspecialchars($_POST['search']));
                 return null;
             }
 
@@ -56,7 +58,7 @@ class Search extends Model
                 throw new Exception("You're lost...");
             }
         }
-        $post= $_GET['search'];
+        $post= htmlspecialchars($_GET['search']);
         return self::querySearch($post);
     }
 

@@ -20,10 +20,12 @@ class AccountManager extends Model
         return null;
     }
 
-    public static function getCurrentAccount() :User{           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
-        if(isset($_SESSION['user'])AND $_SESSION['user'] !== null){
-            $account = $_SESSION['user'];
-            return unserialize($account);
+
+    public static function getCurrentAccount2() {           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
+        if(isset($_SESSION['account'])AND !is_null($_SESSION['account'])){
+            $account = $_SESSION['account'];
+            return $account;
+
 
         }
 
@@ -53,25 +55,25 @@ class AccountManager extends Model
         if (isset($_POST['first_name'])){
             $req = $bdd->prepare('UPDATE user SET first_name = :name WHERE id_user = :id');
             $req->bindParam(':id',$id);
-            $req->bindParam(':name',$_POST['first_name']);
+            $req->bindParam(':name',htmlspecialchars($_POST['first_name']));
             $req->execute();
         }
         if (isset($_POST['name'])){
             $req = $bdd->prepare('UPDATE user SET name = :name WHERE id_user = :id');
             $req->bindParam(':id',$id);
-            $req->bindParam(':name',$_POST['name']);
+            $req->bindParam(':name',htmlspecialchars($_POST['name']));
             $req->execute();
         }
         if (isset($_POST['weight']) && $_POST['weight']!=='0'){
             $req = $bdd->prepare('UPDATE user SET weight = :name WHERE id_user = :id');
             $req->bindParam(':id',$id);
-            $req->bindParam(':name',$_POST['weight']);
+            $req->bindParam(':name',htmlspecialchars($_POST['weight']));
             $req->execute();
         }
         if (isset($_POST['height'])&& $_POST['height']!=='0'){
             $req = $bdd->prepare('UPDATE user SET height = :name WHERE id_user = :id');
             $req->bindParam(':id',$id);
-            $req->bindParam(':name',$_POST['height']);
+            $req->bindParam(':name',htmlspecialchars($_POST['height']));
             $req->execute();
         }
         if (isset($_POST['account_type'])){
@@ -97,7 +99,7 @@ class AccountManager extends Model
         }
 
         if (isset($_POST['jour']) || isset($_POST['mois'])||isset($_POST['annee'])){
-            $birthDate = ($_POST['annee'] ?: $account->getNaissanceAnnee()).'-'.($_POST['mois'] ?: $account->getNaissanceMois()).'-'.($_POST['jour'] ?: $account->getNaissanceJour());
+            $birthDate = (htmlspecialchars($_POST['annee']) ?: $account->getNaissanceAnnee()).'-'.(htmlspecialchars($_POST['mois']) ?: $account->getNaissanceMois()).'-'.(htmlspecialchars($_POST['jour']) ?: $account->getNaissanceJour());
             $req = $bdd->prepare('UPDATE user SET birth_date = :name WHERE id_user = :id');
             $req->bindParam(':id',$id);
             $req->bindParam(':name',$birthDate);

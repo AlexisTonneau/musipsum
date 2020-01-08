@@ -1,3 +1,7 @@
+<?php
+Mail::formToEmail();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <title>Musipsum</title>
@@ -16,6 +20,7 @@
 <body class="body">
 <?php
 require_once 'viewHeader.php';
+
 ?>
 
 <!--<div id="carousel">
@@ -71,10 +76,13 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
-                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Votre message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
-            <?php
-           // Connection::sendMail();
-            ?>
+                <textarea type="text" class="contact_msg" name="Votre_message" placeholder="Votre message..."
+                          style="border: 1px solid #66AFFD; color: #66AFFD; width: 95%; height: 75px; padding: 1%; margin-top: 2%";id="contact"></textarea>
+                <button type="submit" class="send">
+                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
+                </button>
+
+
             </form>
 
         </div>
@@ -82,9 +90,8 @@ require_once 'viewHeader.php';
 
         <div class="icones_button_contact">
             <img src="<?=URL?>/images/icone_at.png" class="icone_button_contact icone_at">
-                <button type="submit" form="form_envoi" class="send">
-                    <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
-                </button>
+
+
         </div>
 
 
@@ -156,8 +163,9 @@ require_once 'viewHeader.php';
 
 </body>
 </html>
+
 <?php
-require_once ('viewFooter.php');
+/*require_once ('viewFooter.php');*/
 ?>
 
 
@@ -170,12 +178,14 @@ require_once ('viewFooter.php');
         border: none;
         width: 12%;
         height: 15%;
+        cursor: pointer;
     }
 
     .icone_envoi {
         position: absolute;
         left: -5%;
         bottom: -8%;
+        pointer: cursor;
     }
 
 </style>

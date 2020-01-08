@@ -93,6 +93,7 @@ abstract class Model
     {
         $bdd= self::getBdd();
         $i=0;
+        $var = null;
         $req = $bdd->prepare('SELECT * FROM user WHERE id_autoecole='.self::getCurrentAccount()->getDrivingSchoolId()); //Requête avec uniquement l'auto école actuelle
         if(!$req->execute()){
             throw new Exception("Connexion impossible");
@@ -118,7 +119,7 @@ abstract class Model
 
     }
 
-    public static function getCurrentAccount(){           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
+    public static function getCurrentAccount() :User{           //RETOURNE SOUS TYPE USER LE COMPTE ACTUELLEMENT CONNECTE
         if(isset($_SESSION['user'])AND $_SESSION['user'] !== null){
             return unserialize($_SESSION['user']);
 

@@ -28,8 +28,7 @@ class Router
             //ALL CLASSES AUTO-LOAD
             spl_autoload_register(function ($class) {
                 require_once('models/' . $class . '.php');
-            }
-            );
+            });
             if (isset($_GET['link'])&&!is_null($_GET['link'])) {
                 //Ici l'URL est bien trouvée et définie
                 $url = explode('/',filter_var($_GET['link'],FILTER_SANITIZE_URL));

@@ -1,10 +1,18 @@
-
-
 /* Body */
 
+@font-face {
+    font-family: 'gotham_book';
+    src:url('fonts/Gotham-Book.otf');
+}
 
-.middlepage
+.body
 {
+    font-family: 'gotham_book', serif;
+    height: 640px;
+
+}
+
+.middlepage{
     display: flex;
 }
 
@@ -27,7 +35,7 @@
 }
 
 
-.flèche{
+.fleche{
     position: absolute;
     border: none;
     background-color: transparent;
@@ -36,6 +44,12 @@
     height: 20px;
 }
 
+
+.fleche:hover {
+    cursor: pointer;
+    outline: none;
+}
+*:focus {outline:none}
 
 .Connexion{
     position:absolute;
@@ -47,6 +61,13 @@
     font-style: revert;
 }
 
+.status{
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    color: red;
+    font-size: 0.8em;
+}
 
 .mdp_oubli{
     position: absolute;
@@ -54,6 +75,8 @@
     font-style: revert;
     left: 63.45%;
     top: 71%;
+    text-decoration: none;
+
 }
 
 
@@ -63,7 +86,10 @@
     top: 59%;
     width: 49%;
     height: 4%;
+
 }
+
+
 
 
 .id_mdp {
@@ -72,31 +98,31 @@
     top: 65%;
     width: 49%;
     height: 4%;
+
+}
+
+@media screen and (max-width: 850px){
+    .mdp_oubli{
+        position: absolute;
+        left: 35%;
+        top: 79%;
+        font-size: 1.2em;
+    }
+
+    .fleche{
+        position: absolute;
+        top: 72%;
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mdp_oubli{
+        position: absolute;
+        left: 25%;
+        top: 79%;
+        font-size: 1.2em;
+    }
 }
 
 
-@media screen and (max-width: 400px) {
-    .middlepage {
-        display: flex;
-        width: 100%;
-        object-fit: fill;
-    }
-
-    .bonhomme {
-        left: 57%;
-        top: 41%;
-        height: 8%;
-    }
-}
-
-/*.connection_status {
-    visibility: hidden<?php   if(is_null($_SESSION['flash'])){echo 'hidden';}  else{echo 'visible';}            ?>
-    position: absolute;
-    left: 25%;
-    top: 83%;
-    width: 49%;
-    height : 7%;
-    background-color: <?php  if($_SESSION['flash']=="Mail ou mot de passe incorrect"){echo '#ff0000';}
-    else {echo '#00ff00';}
-    ?>;
-}*/

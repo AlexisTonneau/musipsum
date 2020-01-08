@@ -1,0 +1,14 @@
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.data{
+    padding: 3%;
+    text-align: justify;
+    text-indent: 3%;
+    height: 53.6%;
+}
+body{
+    height: 650px;
+}

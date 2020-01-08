@@ -21,26 +21,23 @@ require_once ('views/views_accueil/viewHeader.php');
     <fieldset class="fieldset">
         <div class="milieupage">
             ​
-            <div class="info_personnelles">
+            <div id="info_personnelles">
                 ​
                 ​
-                <div class="pre_nom">
+                <div id="denomination">
                     ​
-                    <p class="a nom" id="name">Nom<br/>
-                        <input type="text" value="<?=$ds->getName()?>" name="name" class="id identif id_name" > </p>
-                    <p class="b prénom">Adresse mail  <br/>
-                        <input type="text" name="mail_address" value="<?=$ds->getMailAddress()?>" class="id identif id_firstname" > </p>
+                    <p id="name">Nom<br/>
+                        <input type="text" value="<?=$ds->getName()?>" name="name" class="identif" id="name" size="30"> </p>
+                    <p id="mail_auto">Adresse mail  <br/>
+                        <input type="text" name="mail_address" value="<?=$ds->getMailAddress()?>" class="identif" id="firstname" size="30"> </p>
                 </div>
-
-                ​
-        <div class="droite">
-            ​
-            <div class="IMC">
-                <p class="poids">Téléphone   <br/>
-                    <input type="text" value="<?=$ds->getPhoneNumber()?>" name="phone" class="id taille_masse id_kilo" step="0.1" > </p>
-                <p class="taille">Adresse   <br/>
-                    <input type="text" value="<?=$ds->getAddress()?>" name="adress" class="id taille_masse id_metre" > </p>
-            </div>
+    ​
+                <div id="contact">
+                    <p id="telephone">Téléphone   <br/>
+                        <input type="text" value="<?=$ds->getPhoneNumber()?>" name="phone" class="contact_agence" id="tel_agence" step="0.1" size="30"> </p>
+                    <p id="adresse">Adresse   <br/>
+                        <input type="text" value="<?=$ds->getAddress()?>" name="adress" class="contact_agence" id="adresse_agence" size="30"> </p>
+                </div>
             ​
             ​
 

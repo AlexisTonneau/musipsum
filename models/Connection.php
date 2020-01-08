@@ -3,7 +3,6 @@
 
 
 
-
 class Connection extends AccountManager
 {
 
@@ -43,7 +42,7 @@ class Connection extends AccountManager
             if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL) && strlen($_POST['mdp']) > 0) {
                 if ($accounts !== null) {
                     for ($i = 0; $i < sizeof($accounts); $i++) {
-                        if ($accounts[$i]->getMailAddress() == $_POST['mail'] && password_verify($_POST['mdp'],$accounts[$i]->getPassword())) {
+                        if ($accounts[$i]->getMailAddress() == htmlspecialchars($_POST['mail']) && password_verify(htmlspecialchars($_POST['mdp']),$accounts[$i]->getPassword())) {
 
                             $boole = true;
 
@@ -68,11 +67,11 @@ class Connection extends AccountManager
                         }
                     }
                     if (!$boole) {
-                        $msg = 'Mail ou mot de passe incorrect';
+                        $msg = 0;
                     }
                 }
             } else {
-                $msg = 'Mail ou mot de passe incorrect';
+                $msg = 0;
 
             }
 
@@ -81,6 +80,25 @@ class Connection extends AccountManager
             $msg = "";
         }
         return $msg;
+    }
+
+    public static function checkIP(){
+        $bdd = self::getBdd();
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $recherche = $bdd->prepare('SELECT * FROM connexion WHERE ip = ?');
+        $recherche->execute(array($ip));
+        $count = $recherche->rowCount();
+
+        if($count<10){
+            if (self::connect()===0){
+                $req = $bdd->prepare('INSERT INTO connexion(ip) VALUES(:ip)');
+                $req->execute(array('ip' => $ip));
+            }
+            return true;
+        }
+
+        return false;
+
     }
 
 
@@ -93,3 +111,10 @@ class Connection extends AccountManager
 
 
 }
+?>
+
+   <?php echo (Connection::connect());
+
+   ?>
+
+

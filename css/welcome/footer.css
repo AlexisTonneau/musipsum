@@ -50,9 +50,10 @@
 }
 
 .contact_msg {
-	width: 99%;
-	height: 95%
+	width: 95%;
+	height: 95%;
 }
+
 /*
 input {
 	font: 700 13.3333px Gotham;
@@ -105,13 +106,15 @@ input {
 		position: absolute;
 		padding-right: 0 !important;
 	}
-	.contact {
-		position: absolute;
-		left: 36.3%;
+
+	#contact {
+		height: 304px;
+		bottom: 30px;
+		left: 1%;
 	}
-	.about_footer {
-		position: absolute;
-		left: 66.6%;
+	#about_footer {
+		top: 30px
+
 	}
 	.footer_welcome {
 		padding-left: 0 !important;
@@ -122,11 +125,63 @@ input {
 		width: 100% !important;
 		padding-right: 0 !important;
 	}
-	.contact {
-		width: 100% !important;
+  
+	#contact {
+		width: 95% !important;
+		display: block !important;
+		position: relative;
+
 	}
 	.about_footer {
 		width: 100% !important;
+	}
+	.footer_welcome {
+		padding-left: 0 !important;
+	}
+	.bloc_info_contact {
+		display: inline-block;
+		margin: 20px 15px 20px;
+	}
+	#icone_envoi {
+		position: relative;
+		color: #66AFDB !important;
+	}
+	.send {
+		left: 83%;
+	}
+	#icone_at {
+		position: relative;
+		left: 5%;
+	}
+}
+
+
+@media screen and (min-width: 1669px) {
+	#nous_contacter {
+		padding-right: 0 !important;
+	}
+	#contact {
+		bottom: 25px;
+		left: 3%;
+	}
+	#about_footer {
+		top: -10px;
+	}
+	.footer_welcome {
+		padding-left: 0 !important;
+	}
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1669px) {
+	#nous_contacter {
+		padding-right: 0 !important;
+	}
+	#contact {
+		bottom: 25px;
+		left: 3%;
+	}
+	#about_footer {
+		top: 20px;
 	}
 	.footer_welcome {
 		padding-left: 0 !important;

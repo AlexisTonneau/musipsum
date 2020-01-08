@@ -3,8 +3,24 @@
   src:url('fonts/Gotham-Book.otf');
 }
 
+header{
+    margin-bottom: 3%;
+}
+
 .body{
   	font-family: 'gotham_book', serif;
+}
+
+.account{
+    padding-left: 3%;
+
+}
+
+.formulaires{
+    float: right;
+    display: inline-flex;
+    margin-right: 65%;
+    height: 10%;
 }
 
 .link{
@@ -13,12 +29,11 @@
     background-color: white;
     border: none;
     font-family: gotham_book, serif;
-    display: inline-block;
     cursor: pointer;
     position: relative;
-    margin-right: 5%;
+    /*margin-right: 5%;
     margin-top: 0.2%;
-    float: right;
+    float: right;*/
 
 }
 
@@ -44,23 +59,28 @@ button:focus{
 #delete{
     color: red;
 }
-.form{
-    display: inline-block;
-    position: relative;
-    float: right;
-    margin-right: 60%;
-    color: red;
 
+.form-delete{
+    padding-left: 60%;
+}
+
+.form-modify{
+    padding-left: 30%;
 }
 
 .modify{
-    display: inline-block;
-    position: relative;
-    float: right;
-    margin-right: 5%;
+    /*display: flex;
+    position: relative;*/
     color: blue;
 }
 
 .align{
     text-align: left;
+}
+
+@media screen and (max-width: 1300px) {
+    .formulaires{
+        margin-right: 50%;
+    }
+
 }

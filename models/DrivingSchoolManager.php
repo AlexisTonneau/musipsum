@@ -68,7 +68,7 @@ class DrivingSchoolManager extends Model
     private static function modifyDrivingSchool($id) {
         $bdd = self::getBdd();
         if (isset($_POST['name']) AND $_POST['name']!==null){
-            $name=$_POST['name'];
+            $name=htmlspecialchars($_POST['name']);
             $req = $bdd->prepare('UPDATE auto_ecole SET name = :name WHERE id_auto_ecole=:id');
             $req->bindParam(':id',$id);
             $req->bindParam(':name',$name);
@@ -78,7 +78,7 @@ class DrivingSchoolManager extends Model
 
         }
         if (isset($_POST['phone']) AND $_POST['phone']!==null){
-            $name=$_POST['phone'];
+            $name=htmlspecialchars($_POST['phone']);
             $req = $bdd->prepare('UPDATE auto_ecole SET phone_number = :name WHERE id_auto_ecole=:id');
             $req->bindParam(':id',$id);
             $req->bindParam(':name',$name);
@@ -87,7 +87,7 @@ class DrivingSchoolManager extends Model
             }
         }
         if (isset($_POST['adress']) AND $_POST['adress']!==null){
-            $name=$_POST['adress'];
+            $name=htmlspecialchars($_POST['adress']);
             $req = $bdd->prepare('UPDATE auto_ecole SET adress = :name WHERE id_auto_ecole=:id');
             $req->bindParam(':id',$id);
             $req->bindParam(':name',$name);
@@ -96,7 +96,7 @@ class DrivingSchoolManager extends Model
             }
         }
         if (isset($_POST['description']) AND $_POST['description']!==null){
-            $name=$_POST['description'];
+            $name=htmlspecialchars($_POST['description']);
             $req = $bdd->prepare('UPDATE auto_ecole SET description = :name WHERE id_auto_ecole=:id');
             $req->bindParam(':id',$id);
             $req->bindParam(':name',$name);
@@ -105,26 +105,7 @@ class DrivingSchoolManager extends Model
             }
 
         }
-        if (isset($_POST['cgu']) AND $_POST['cgu']!==null){
-            $name=$_POST['cgu'];
-            $req = $bdd->prepare('UPDATE auto_ecole SET cgu = :name WHERE id_auto_ecole=:id');
-            $req->bindParam(':id',$id);
-            $req->bindParam(':name',$name);
-            if(!$req->execute()){
-                throw new Exception("Connexion échouée");
-            }
 
-        }
-        if (isset($_POST['mention_legal']) AND $_POST['mention_legal']!==null){
-            $name=$_POST['mention_legal'];
-            $req = $bdd->prepare('UPDATE auto_ecole SET mention_legal = :name WHERE id_auto_ecole=:id');
-            $req->bindParam(':id',$id);
-            $req->bindParam(':name',$name);
-            if(!$req->execute()){
-                throw new Exception("Connexion échouée");
-            }
-
-        }
         if (isset($_POST['mail_address']) AND $_POST['mail_address']!==null){
             $name=$_POST['mail_address'];
             $req = $bdd->prepare('UPDATE auto_ecole SET mail_address = :name WHERE id_auto_ecole=:id');

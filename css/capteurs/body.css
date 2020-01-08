@@ -11,19 +11,13 @@
 	display: inline-block;
 	width: 50%;
 }*/
-.centrer_page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-}
 
 .id_utilisateur{
 	border: 2px solid black;
-  width: 65%;
-  margin-top: 3%;
-
-
+	margin-top: 3%;
+	margin-left: 30%;
+	margin-right: 25%;
 }
 
 .gerer_body {
@@ -108,7 +102,9 @@
 	margin-left: 9%;
 	border: 0.09px solid grey;
 	width: 200px;
+
   padding: 1%;
+
 }
 
 .img_test{
@@ -116,8 +112,10 @@
 }
 
 .bouton_resultat{
+
 	margin-top: 1%;
 	margin-left: 40%;
+
 	border:none;
 	padding:6px 0 6px 0;
 	box-shadow:3px 3px 12px #999;
@@ -130,11 +128,13 @@
 
 
 
+
 input{
 
 	margin-left: 84%;
 	border:none;
   margin-bottom: 1%;
+
 	padding:6px 0 6px 0;
 	box-shadow:3px 3px 12px #999;
 	background:#fff;
@@ -143,6 +143,7 @@ input{
 	border-radius: 10px/10px;
 	width: 180px;
 }
+
 
 #modify_profil{
 margin-top: 2%;
