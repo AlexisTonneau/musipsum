@@ -34,7 +34,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
         </div>
 
         <div class="quels_capteurs">
-            <form action="/action_page.php" class="choix_capteur">
+            <form action="es/action_page.php" class="choix_capteur">
                 <p class="titre_choix_capteur">¿Qué sensor para la prueba?</p>
                 <label class="checkbox">A
                     <input type="checkbox" value="capteur_A">
@@ -62,7 +62,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
         </div>
 
         <div class="sensi">
-            <form action="/action_page.php">
+            <form action="es/action_page.php">
                 <p class="titre_sensi">Sensibilidad</p>
                 <div class="input_range">
                     <input class="input_range_range" type="range" name="sensibilite" min="0" max="100" onchange="updateTextInput(this.value);">
@@ -72,7 +72,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
         </div>
 
         <div class="temps_mesure">
-            <form action="/action_page.php">
+            <form action="es/action_page.php">
                 <p class="titre_temps_mesure">Tiempo de medición</p>
                 <input id="temps_mesure" type="text" name="" value=""> s
             </form>

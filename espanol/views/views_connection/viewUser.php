@@ -65,12 +65,12 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 
 <div>
-    <form method="post" action="<?=URL?>account/disconnect">
+    <form method="post" action="<?=URL?>es/account/disconnect">
         <input type="submit" name="disconnect" value="Se déconnecter">
     </form>
 </div>
 <div>
-    <form method="post" action="<?=URL?>account/modify">
+    <form method="post" action="<?=URL?>es/account/modify">
         <input type="hidden" name="modify" value="<?=$account->getId()?>">
         <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
             Modifier

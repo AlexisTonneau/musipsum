@@ -1,11 +1,3 @@
-
-<?php       //TODO Add info about driving schools
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +9,7 @@
 </head>
 <body class="police">
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'english/views/views_accueil/viewHeader.php';
 ?>
 <div class="body">
     <div class="id_utilisateur">
@@ -50,7 +42,7 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 
   <div class="button1">
-      <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>account/stat'">Consulter mes résultats</button>
+      <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>en/account/stat'">Consulter mes résultats</button>
     </div>
 
 
@@ -64,16 +56,16 @@ require_once 'views/views_accueil/viewHeader.php';
 
 
 <div>
-    <form method="post" action="<?=URL?>account/modify">
-        <input type="hidden" name="modify" value="<?=$account->getId()?>">
-
-        <input type="submit" name="disconnect" value="Modifier mon profil">
-
+    <form method="post" action="<?=URL?>en/account/disconnect">
+        <input type="submit" name="disconnect" value="Se déconnecter">
     </form>
 </div>
 <div>
-    <form method="post" action="<?=URL?>account/disconnect">
-        <input type="submit" name="disconnect" value="Me déconnecter">
+    <form method="post" action="<?=URL?>en/account/modify">
+        <input type="hidden" name="modify" value="<?=$account->getId()?>">
+        <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
+            Modifier
+        </button>
     </form>
 </div>
 

@@ -63,10 +63,10 @@ color: <?=$successstories?>;
 
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/welcome/header.css">
     <div class="title_bar" id="title_bar">
-        <a  href="<?=URL?>"> <img src="<?=URL?>images/logo_musipsum_noir.png" alt="logo" class="img logo_mus"></a>
+        <a  href="<?=URL?>en"> <img src="<?=URL?>images/logo_musipsum_noir.png" alt="logo" class="img logo_mus"></a>
         <div class="nav_bar" >
             <div class="titre_header">
-                <a id="titre_musipsum" href="<?=URL?>">MUSIPSUM</a>
+                <a id="titre_musipsum" href="<?=URL?>en">MUSIPSUM</a>
                 <div id="icones_header">
                     <a href="<?=URL?>en/account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
                     <a href="<?=URL?>en/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
