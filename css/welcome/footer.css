@@ -95,9 +95,10 @@
 	#contact {
 		height: 304px;
 		bottom: 30px;
+		left: 1%;
 	}
 	#about_footer {
-		top: 10px;
+		top: 30px
 	}
 	.footer_welcome {
 		padding-left: 0 !important;
@@ -132,19 +133,42 @@
 		position: relative;
 		color: #66AFDB !important;
 	}
+	.send {
+		left: 83%;
+	}
+	#icone_at {
+		position: relative;
+		left: 5%;
+	}
 }
 
 
-@media screen and (min-width: 1501px) {
+@media screen and (min-width: 1669px) {
 	#nous_contacter {
 		padding-right: 0 !important;
 	}
 	#contact {
-		right: 30%;
 		bottom: 25px;
+		left: 3%;
 	}
 	#about_footer {
-		top: 15px;
+		top: -10px;
+	}
+	.footer_welcome {
+		padding-left: 0 !important;
+	}
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1669px) {
+	#nous_contacter {
+		padding-right: 0 !important;
+	}
+	#contact {
+		bottom: 25px;
+		left: 3%;
+	}
+	#about_footer {
+		top: 20px;
 	}
 	.footer_welcome {
 		padding-left: 0 !important;
