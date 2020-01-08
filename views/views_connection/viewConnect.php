@@ -57,16 +57,23 @@ require_once ('views/views_accueil/viewHeader.php');
             <input type="password" name="mdp" placeholder="Mot de passe" id="id_mdp" class="id_mdp">
         </div>
 
+        <div>
+            <button type="submit" form="form_mail" class="fleche"> <img src="images/flèchebleu.png" alt="flèche" width="40px"></button>
+        </div>
     </form>
+
 
     <div>
         <button type="submit" form="form_mail" class="fleche" id="button_submit"> <img src="images/flèchebleu.png" alt="flèche" width="40px"></button>
     </div>
 
 
+
 </div>
 
 
+
+</script>
 </body>
 </html>
 

@@ -167,7 +167,10 @@ option {
     border: none;
     padding: 1%;
 }
-​
+
+#strength{
+  margin-left : 4%;
+}
 ​
     /* Footer */
 .save a:hover {
@@ -186,3 +189,16 @@ option {
     box-shadow: 2px 2px 5px black;
     font-size: 1.1em;
 }
+
+/*
+progress {
+  border: none;
+  width: 100px;
+  height: 20px;
+  background-color: grey;
+}
+
+
+progress::-webkit-progress-value {
+  background: red;
+}*/

@@ -20,6 +20,10 @@
 require_once 'views/views_accueil/viewHeader.php';
 ?>
 <div class="body">
+
+
+  <div class="centrer_page">
+
     <div class="id_utilisateur">
         <div class="titre_id">
             <p id="nom_prenom"><?php echo $account->getName().' '.$account->getFirstName();?></p>
@@ -50,6 +54,7 @@ require_once 'views/views_accueil/viewHeader.php';
 </div>
 
   <div class="button1">
+
       <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>account/stat'">Consulter mes résultats</button>
     </div>
 
@@ -65,6 +70,7 @@ require_once 'views/views_accueil/viewHeader.php';
 
 <div>
     <form method="post" action="<?=URL?>account/modify">
+
         <input type="hidden" name="modify" value="<?=$account->getId()?>">
 
         <input type="submit" name="disconnect" value="Modifier mon profil">
