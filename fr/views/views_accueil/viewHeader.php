@@ -68,7 +68,7 @@ color: <?=$successstories?>;
         <a  href="<?=URL?>"> <img src="<?=URL?>images/logo_musipsum_noir.png" alt="logo" class="img logo_mus"></a>
         <div class="nav_bar" >
             <div class="titre_header">
-                <a id="titre_musipsum" href="<?=URL?>">MUSIPSUM</a>
+                <a id="titre_musipsum" href="<?=URL?>/fr">MUSIPSUM</a>
                 <div id="icones_header">
                     <a href="<?=URL?>fr/account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
                     <a href="<?=URL?>fr/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
@@ -94,7 +94,7 @@ color: <?=$successstories?>;
                       $domain .="://";                      //     ajouter :// à l'URL
                       $domain .= $_SERVER['HTTP_HOST'];     //     Ajouter l'hôte à l'URL
                       $domain .= $_SERVER['REQUEST_URI'];      //     Ajouter l'emplacement de la ressource demandée à l'URL
-              //echo($_POST['lang']);
+                      //echo $lang;
                 ?>
                    <form class="langues" action="<?=$domain?>" method="post">
                           <input type="hidden" name="lang"  value="fr">
@@ -108,6 +108,7 @@ color: <?=$successstories?>;
                           <input type="hidden" name="lang"  src="" alt="es" valeu="es">
                           <input class="img_drapeau_espagnol" type="image" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit">
                     </form>
+                
                 </div>
             </div>
             <div class="choix">

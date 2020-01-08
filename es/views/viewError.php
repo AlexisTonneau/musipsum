@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Erreur 404</title>
+    <title>Erreur 404 Espagnol</title>
 
 </head>
 <header>

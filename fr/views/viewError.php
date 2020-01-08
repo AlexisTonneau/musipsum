@@ -14,6 +14,7 @@
 <body class="body" >
 <h1 style="margin-left: 1.5%">
     Erreur 404
+
 </h1>
 <h2  style="margin-left: 1.5%">
     <?php echo $errorMessage;?>

@@ -84,7 +84,7 @@ color: <?=$successstories?>;
                       $domain .="://";                      //     ajouter :// à l'URL
                       $domain .= $_SERVER['HTTP_HOST'];     //     Ajouter l'hôte à l'URL
                       $domain .= $_SERVER['REQUEST_URI'];      //     Ajouter l'emplacement de la ressource demandée à l'URL
-                  
+                        echo($_POST['lang']);
                    ?>
                      <form class="langues" action="<?=$domain?>" method="post">
                           <input type="hidden" name="lang"  value="fr">

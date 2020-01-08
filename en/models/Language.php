@@ -2,34 +2,23 @@
 class Language 
 {
 private static function setLanguage(){
-
+echo 'function';
 //On vérifie si le cookie existe déjà
  
     if (isset($_POST['lang'])){
           //Si oui, on change la langue dans le cookie.
     $lang = $_POST['lang'];
- 
+    echo 'redirection';
+    header('Location :'.URL.$lang);
     }
-    elseif (isset($HTTP_COOKIE_VARS['lang'])) {
-        
-        $lang=$_COOKIE['lang'];
-    }
-      
-
- 
-else {
-    // si le cookie n'existe pas on tente de reconnaitre la langue par défaut du navigateur utilisé
-    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
-}
-//Puis on créé le cookie
-setcookie("lang", $lang, time() ,$path='/');
-return $lang; ?>
-
-<?php
+    
 }//function setLanguage
 
 public static function choosePageLanguage(){
-    $lang=self::setLanguage();
+    
+    self::setLanguage();
+    
+    $lang=$_GET['lang'];
 
     
    
