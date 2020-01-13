@@ -9,6 +9,8 @@ class ControllerTest
      */
     public function __construct()
     {
+
+
         if (isset($_SESSION['user']) && $_SESSION['user']!==null){
             switch (unserialize($_SESSION['user'])->getAccountType()) {
 
@@ -17,7 +19,7 @@ class ControllerTest
                         if (!isset($_SESSION['id_user']) || $_SESSION['id_user']===null){
                             $_SESSION['id_test']=null;
 
-                            require_once 'views/views_instructor/viewLaunchTest.php';
+                            require_once 'english/views/views_instructor/viewLaunchTest.php';
                         }
                         else{
                             if (!isset($_SESSION['id_test']) || $_SESSION['id_test']===null){
@@ -36,7 +38,7 @@ class ControllerTest
 
                     }
                     else{
-                        header('Location :'.URL.'test');
+                        header('Location :'.URL.'en/test');
                     }
 
                     break;
@@ -48,14 +50,14 @@ class ControllerTest
                     else {
 
                         $url_fr = TestManager::findVideo(TestManager::checkToken());
-                        require_once 'views/views_test/viewTestStarted.php';
+                        require_once 'english/views/views_test/viewTestStarted.php';
                         TestManager::deleteToken();
                     }
 
             }
         }
         else{
-            require_once 'english/views/views_admin/viewLaunchTest.php';
+            require_once 'english/views/views_test/viewNotConnected.php';
 
         }
 

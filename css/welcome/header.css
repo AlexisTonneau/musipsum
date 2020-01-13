@@ -128,7 +128,24 @@ left: 85%;
 bottom: 73px
 }
 
+.flags{
+    position: absolute;
+    display: flex;
+    left: 85%;
+    top: 9%;
+    margin-right: 5%;
 
+}
+
+
+.img_drapeau_france,.img_drapeau_anglais,.img_drapeau_espagnol{
+    height: 20px;
+    weight: 30px;
+}
+.img_drapeau_anglais{
+    margin-right: 10px;
+    margin-left: 10px;
+}*/
 
 /*RESPONSIVE*/
 

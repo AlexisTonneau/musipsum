@@ -72,20 +72,21 @@ color: <?=$successstories?>;
                     <a href="<?=URL?>en/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
                     <a href="<?=URL?>en"><img src="<?=URL?>images/icone_loupe_bis.png" class="icone_header"></a>
                 </div>
-                <div class="icones_langues">
+                <div class="flags">
                     <form class="langues" action="<?=URL?>fr" method="post">
-                          <input type="hidden" name="lang"  value="fr">
-                          <input class="img_drapeau_france" type="image" src="<?=URL?>images/drapeau_france.png" alt="submit">
-                     </form>
+                        <input type="hidden" name="lang"  value="fr">
+                        <input class="img_drapeau_france" type="image" src="<?=URL?>images/drapeau_france.png" alt="submit">
+                    </form>
                     <form class="langues" action="<?=URL?>en" method="post">
-                          <input type="hidden" name = "lang"  src="" alt="en" value="en">
-                          <input class="img_drapeau_anglais" type="image" src="<?=URL?>images/drapeau_anglais.jpg" alt="submit"> 
+                        <input type="hidden" name = "lang"  src="" alt="en" value="en">
+                        <input class="img_drapeau_anglais" type="image" src="<?=URL?>images/drapeau_anglais.jpg" alt="submit">
                     </form>
                     <form class="langues" action="<?=URL?>es" method="post">
-                          <input type="hidden" name="lang"  src="" alt="es" value="es">
-                          <input class="img_drapeau_espagnol" type="image" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit">
+                        <input type="hidden" name="lang"  src="" alt="es" value="es">
+                        <input class="img_drapeau_espagnol" type="image" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit">
                     </form>
                 </div>
+            </div>
             </div>
             <div class="choix">
                 <a class="txt_header" id="a_propos" href="<?=URL?>en/accueil/about" >About</a>

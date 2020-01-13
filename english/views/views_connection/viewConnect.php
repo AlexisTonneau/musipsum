@@ -19,19 +19,19 @@
     <title>Connexion</title>
 
 </head>
-
-<body class="body" >
 <?php
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('francais/views/views_accueil/viewHeader.php');
 
 ?>
+
+<body class="body">
 <div class="middlepage" style="height: 100%;">
     <div>
-        <!--<p>--><img class="image_flottante" src="images/carrésbleus.png" alt="double carré" align="center"><!--<p>-->
+        <!--<p>--><img class="image_flottante" src="<?=URL?>images/carrésbleus.png" alt="double carré" align="center"><!--<p>-->
     </div>
 
-    <div aligne="center">
-        <!--<p>--><img class="bonhomme" src="images/icone_utilisateur.png" alt="portrait"><!--<p>-->
+    <div align="center">
+        <!--<p>--><img class="bonhomme" src="<?=URL?>images/icone_utilisateur.png" alt="portrait"><!--<p>-->
 
     </div>
 
@@ -44,7 +44,7 @@ require_once ('views/views_accueil/viewHeader.php');
         abc
     </div>
 
-    <a class="mdp_oubli" href="<?=URL?>password">
+    <a class="mdp_oubli" href="<?=URL?>fr/password">
         Mot de passe oublié ?
     </a>
 
@@ -57,19 +57,26 @@ require_once ('views/views_accueil/viewHeader.php');
             <input type="password" name="mdp" placeholder="Mot de passe" id="id_mdp" class="id_mdp">
         </div>
 
+        <div>
+            <button type="submit" form="form_mail" class="fleche"> <img src="<?=URL?>images/flèchebleu.png" alt="flèche" width="40px"></button>
+        </div>
     </form>
 
+
     <div>
-        <button type="submit" form="form_mail" class="fleche" id="button_submit"> <img src="images/flèchebleu.png" alt="flèche" width="40px"></button>
+        <button type="submit" form="form_mail" class="fleche" id="button_submit"> <img src="<?=URL?>images/flèchebleu.png" alt="flèche" width="40px"></button>
     </div>
+
 
 
 </div>
 
 
+
+</script>
 </body>
 </html>
 
 <?php
-require_once ('views/views_accueil/viewFooter.php')
+require_once ('fr/views/views_accueil/viewFooter.php')
 ?>

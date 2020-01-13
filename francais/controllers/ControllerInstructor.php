@@ -14,7 +14,6 @@ class ControllerInstructor
             if (isset($_GET['ref'])) {
                 switch ($_GET['ref']){   //TODO Modify buttons of the page @DEMARS
                     case 'newaccount':
-
                         require('francais/views/views_instructor/viewCreateUser.php');
                         break;
                     case 'handlecaptor':
@@ -22,7 +21,7 @@ class ControllerInstructor
                         break;
                     case 'disconnect':
                         session_destroy();
-                        header('Location: ' .URL.'francais');
+                        header('Location: ' .URL.'fr');
                         exit();
                         break;
                     case 'modify-drivingschool':
@@ -31,26 +30,30 @@ class ControllerInstructor
                         require_once('francais/views/views_instructor/viewModifyDrivingSchool.php');
                         break;
                     case 'search':
-                        if(!isset($_POST['modify'])) {
-                            require_once('francais/views/views_instructor/viewUsersResearch.php');
+                        if(isset($_POST['launch']) && ctype_digit($_POST['launch'])){
+                            $_SESSION['id_user'] = (int)$_POST['launch'];
+                            header('Location: '.URL.'fr/test');
+                        }
+                        elseif (isset($_POST['modify'])){
+                            require_once ('francais/views/views_connection/viewModifyAccount.php');
                         }
                         else {
-                            require_once('francais/views/views_connection/viewModifyAccount.php');
-                        }
+                            require_once('francais/views/views_instructor/viewUsersResearch.php');
 
+                        }
                         break;
                     default:
-                        header('Location: '.URL.'francais/instructor');
+                        header('Location: '.URL.'fr/instructor');
 
                         break;
                 }
             }
             else{
-                require('francais/views/views_admin/viewUsersAdmin.php');
+                require('francais/views/views_instructor/viewUsersAdmin.php');
             }
         }
         else{
-            header('Location: '.URL.'francais');
+            header('Location: '.URL.'fr');
         }
     }
 }

@@ -12,7 +12,7 @@ class ControllerAccount
     {
         if(isset($_GET['ref']) && $_GET['ref'] === 'disconnect'){
             session_destroy();
-            header('Location: '.URL.'espanol/account');
+            header('Location: '.URL.'es/account');
         }
 
         if(isset($_GET['ref']) && $_GET['ref'] === 'password_forget'){
@@ -25,15 +25,17 @@ class ControllerAccount
 
                 if (isset($_GET['ref']) && $_GET['ref'] === 'modify'){
                     $account = AccountManager::checkModify();
-                    require_once('espanol/views/views_connection/viewModifyAccount.php');
+                    require_once ('espanol/views/views_connection/viewModifyAccount.php');
+
                 }
 
                 elseif($account->getAccountType()==Model::ADMINISTRATOR_USER) {
-                   header('Location: '.URL.'espanol/administration');
+                   header('Location: '.URL.'es/administration');
                 }
                 elseif ($account->getAccountType()==Model::INSTRUCTOR_USER){
 
-                        require_once('espanol/views/views_admin/viewUsersAdmin.php');
+                        require_once('espanol/views/views_instructor/viewUsersAdmin.php');
+
                     }
 
                 else{
@@ -63,23 +65,20 @@ class ControllerAccount
                     if ($msg === 'Connected') {
                         //echo $msg;
 
-                        header('Location: ' . URL . 'espanol/account');
+                        header('Location: ' . URL . 'es/account');
                         exit();
                     } elseif ($msg === 'Connected as admin') {
 
-                        header('Location: ' . URL . 'espanol/instructor');
+                        header('Location: ' . URL . 'es/instructor');
                         exit();
                     } elseif ($msg === 'Administration') {
-                        header('Location: ' . URL . 'espanol/administration');
+                        header('Location: ' . URL . 'es/administration');
                     }
                     require_once('espanol/views/views_connection/viewConnect.php');
                 }
                 else{
                     throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, revenez demain");
                 }
-
-                $_SESSION['flash']="";
-                require_once('espanol/views/views_connection/viewConnect.php');
             }
 
         if (isset($_SESSION['id_user'])){

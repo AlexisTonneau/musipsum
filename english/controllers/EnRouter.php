@@ -28,8 +28,7 @@ class EnRouter
             //ALL CLASSES AUTO-LOAD
             spl_autoload_register(function ($class) {
                 require_once('english/models/' . $class . '.php');
-            }
-            );
+            });
             if (isset($_GET['link'])&&!is_null($_GET['link'])) {
                 //Ici l'URL est bien trouvée et définie
                 $url = explode('/',filter_var($_GET['link'],FILTER_SANITIZE_URL));
@@ -43,8 +42,8 @@ class EnRouter
                 $_SESSION['url'] = $url;
 
 
-                $controller = ucfirst(strtolower($url[0])); //Première lettre english majuscule et le reste english minuscule
-                $controllerClass = 'Controller' . $controller; //ControllerAdminaccount
+                $controller = ucfirst(strtolower($url[0])); //Première lettre en majuscule et le reste en minuscule
+                $controllerClass = 'Controller' . $controller; //ControllerInstructor
                 $controllerFile = 'english/controllers/' . $controllerClass . '.php';
                 if (file_exists($controllerFile)) {
                     require_once($controllerFile);

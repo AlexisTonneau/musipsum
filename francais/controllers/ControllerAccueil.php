@@ -17,23 +17,23 @@ class ControllerAccueil
         if(isset($_GET['ref'])){
             switch ($_GET['ref']){
                 case "about":
-                    require_once('francais/views/views_accueil/viewAPropos.php');
+                    require_once ('francais/views/views_accueil/viewAPropos.php');
                     break;
                 case "successstories":
-                    require_once('francais/views/views_accueil/viewSuccessStories.php');
+                    require_once ('francais/views/views_accueil/viewSuccessStories.php');
                     break;
                 case "faq":
-                    require_once ('views/views_accueil/viewFAQ.php');
+                    require_once ('francais/views/views_accueil/viewFAQ.php');
                     break;
                 case "cgu":
                     $page = "cgu";
                     $titre = "Conditions générales d'utilisation";
-                    require_once('views/views_accueil/viewLegal.php');
+                    require_once('francais/views/views_accueil/viewLegal.php');
                     break;
                 case "mentions-legales":
                     $page = "m-l";
                     $titre = "Mentions légales";
-                    require_once('views/views_accueil/viewLegal.php');
+                    require_once('francais/views/views_accueil/viewLegal.php');
                     break;
 
             }

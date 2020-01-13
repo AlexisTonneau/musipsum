@@ -76,7 +76,6 @@ require_once 'viewHeader.php';
         </div>
         <div class="box_mail">
             <form action="" method="post">
-<<<<<<< HEAD
                 <textarea type="text" class="contact_msg" name="Votre_message" placeholder="Votre message..."
                           style="border: 1px solid #66AFFD; color: #66AFFD; width: 95%; height: 75px; padding: 1%; margin-top: 2%";id="contact"></textarea>
                 <button type="submit" class="send">
@@ -84,12 +83,7 @@ require_once 'viewHeader.php';
                 </button>
 
 
-=======
-                <textarea type="text" class="contact_msg" name="Votre message" placeholder="Your message..." style="border: 1px solid #66AFFD; color: #66AFFD; height: 150px" id="contact"></textarea>
-            <?php
-           // Connection::sendMail();
-            ?>
->>>>>>>  Traduction anglais et espagnol
+
             </form>
 
         </div>

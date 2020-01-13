@@ -17,7 +17,7 @@
 </head>
 <body class="police">
 <?php
-require_once 'fr/views/views_accueil/viewHeader.php';
+require_once 'francais/views/views_accueil/viewHeader.php';
 ?>
 <div class="body">
 

@@ -38,7 +38,7 @@ class ControllerTest
 
                     }
                     else{
-                        header('Location :'.URL.'espanol/test');
+                        header('Location :'.URL.'es/test');
                     }
 
                     break;
@@ -58,7 +58,6 @@ class ControllerTest
         }
         else{
             require_once 'espanol/views/views_test/viewNotConnected.php';
-
 
         }
 

@@ -14,16 +14,14 @@ class ControllerInstructor
             if (isset($_GET['ref'])) {
                 switch ($_GET['ref']){   //TODO Modify buttons of the page @DEMARS
                     case 'newaccount':
-
                         require('espanol/views/views_instructor/viewCreateUser.php');
                         break;
                     case 'handlecaptor':
                         require_once('espanol/views/views_instructor/viewHandleCaptors.php');
-
                         break;
                     case 'disconnect':
                         session_destroy();
-                        header('Location: ' .URL);
+                        header('Location: ' .URL.'es');
                         exit();
                         break;
                     case 'modify-drivingschool':
@@ -34,28 +32,28 @@ class ControllerInstructor
                     case 'search':
                         if(isset($_POST['launch']) && ctype_digit($_POST['launch'])){
                             $_SESSION['id_user'] = (int)$_POST['launch'];
-                            header('Location: '.URL.'test');
+                            header('Location: '.URL.'es/test');
                         }
                         elseif (isset($_POST['modify'])){
                             require_once ('espanol/views/views_connection/viewModifyAccount.php');
                         }
                         else {
                             require_once('espanol/views/views_instructor/viewUsersResearch.php');
+
                         }
                         break;
                     default:
-                        header('Location: '.URL.'espanol/instructor');
+                        header('Location: '.URL.'es/instructor');
 
                         break;
                 }
             }
             else{
                 require('espanol/views/views_instructor/viewUsersAdmin.php');
-
             }
         }
         else{
-            header('Location: '.URL.'espanol');
+            header('Location: '.URL.'es');
         }
     }
 }

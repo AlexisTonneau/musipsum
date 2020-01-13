@@ -63,37 +63,37 @@ color: <?=$successstories?>;
 
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/welcome/header.css">
     <div class="title_bar" id="title_bar">
-        <a  href="<?=URL?>"> <img src="<?=URL?>images/logo_musipsum_noir.png" alt="logo" class="img logo_mus"></a>
+        <a  href="<?=URL?>es"> <img src="<?=URL?>images/logo_musipsum_noir.png" alt="logo" class="img logo_mus"></a>
         <div class="nav_bar" >
             <div class="titre_header">
-                <a id="titre_musipsum" href="<?=URL?>">MUSIPSUM</a>
+                <a id="titre_musipsum" href="<?=URL?>es">MUSIPSUM</a>
                 <div id="icones_header">
-                    <a href="<?=URL?>account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
-                    <a href="<?=URL?>accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
-                    <a href="<?=URL?>"><img src="<?=URL?>images/icone_loupe_bis.png" class="icone_header"></a>
+                    <a href="<?=URL?>es/account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
+                    <a href="<?=URL?>es/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
+                    <a href="<?=URL?>es"><img src="<?=URL?>images/icone_loupe_bis.png" class="icone_header"></a>
                 </div>
-                <div class="icones_langues">
-
-                     <form class="langues" action="<?=URL?>fr" method="post">
-                          <input type="hidden" name="lang"  value="fr">
-                          <input class="img_drapeau_france" type="image" src="<?=URL?>images/drapeau_france.png" alt="submit">
-                     </form>
+                <div class="flags">
+                    <form class="langues" action="<?=URL?>fr" method="post">
+                        <input type="hidden" name="lang"  value="fr">
+                        <input class="img_drapeau_france" type="image" src="<?=URL?>images/drapeau_france.png" alt="submit">
+                    </form>
                     <form class="langues" action="<?=URL?>en" method="post">
-                          <input type="hidden" name = "lang"  src="" alt="en" value="en">
-                          <input class="img_drapeau_anglais" type="image" src="<?=URL?>images/drapeau_anglais.jpg" alt="submit"> 
+                        <input type="hidden" name = "lang"  src="" alt="en" value="en">
+                        <input class="img_drapeau_anglais" type="image" src="<?=URL?>images/drapeau_anglais.jpg" alt="submit">
                     </form>
                     <form class="langues" action="<?=URL?>es" method="post">
-                          <input type="hidden" name="lang"  src="" alt="es" valeu="es">
-                          <input class="img_drapeau_espagnol" type="image" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit">
+                        <input type="hidden" name="lang"  src="" alt="es" value="es">
+                        <input class="img_drapeau_espagnol" type="image" src="<?=URL?>images/drapeau_espagnol.jpg" alt="submit">
                     </form>
                 </div>
             </div>
+            </div>
             <div class="choix">
-                <a class="txt_header" id="a_propos" href="<?=URL?>accueil/about" >A proposito</a>
-                <a class="txt_header" id="sucess_stories" href="<?=URL?>accueil/successstories" >Success Story</a>
-                <a class="txt_header" id="nous_contacter" href="<?=URL?>accueil#contact">Contactenos</a>
-                <a class="txt_header" id="start_test" href="<?=URL?>test">Comienzo </a>
-                <a class="txt_header" id="connexion" href="<?=URL?>account"><?php
+                <a class="txt_header" id="a_propos" href="<?=URL?>es/accueil/about" >A proposito</a>
+                <a class="txt_header" id="sucess_stories" href="<?=URL?>es/accueil/successstories" >Success Story</a>
+                <a class="txt_header" id="nous_contacter" href="<?=URL?>es/accueil#contact">Contactenos</a>
+                <a class="txt_header" id="start_test" href="<?=URL?>es/test">Comienzo </a>
+                <a class="txt_header" id="connexion" href="<?=URL?>es/account"><?php
                     if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
                         echo 'Mi cuenta';
                     }
