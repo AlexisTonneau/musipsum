@@ -6,8 +6,7 @@ window.onload = function () {
     req2.open("GET", "http://127.0.0.1/musipsum/fr/ajax/graph/"+id, false);
     req2.send(null);
     console.log(req2.responseText);
-    console.log('abc');
-    for (var i=0; i<req2.responseText.length;i++){
+        for (var i=0; i<req2.responseText.length;i++){
         if(req2.responseText[i] === "1"){
             createChartTemp(id);
             if(window.matchMedia("(min-width: 800px)").matches) {
@@ -41,8 +40,11 @@ window.onload = function () {
 
 function ajaxRequest(test_id,captor_type) {
     var req = new XMLHttpRequest();
+    //console.log(test_id+captor_type);
+
     req.open("GET", "http://127.0.0.1/musipsum/fr/ajax/graph/"+test_id+"/"+captor_type+"/ajax", false);
     req.send(null);
+
     console.log(req.responseText);
     return  JSON.parse(req.responseText);
 }

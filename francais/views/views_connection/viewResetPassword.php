@@ -4,9 +4,6 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<?php //TODO bugs with white pages on click
-require_once(connect.php)
-?>
 
 <head>
 	<link rel="stylesheet" type="text/css" href="<?=URL?>css/password/reset_password.css">
@@ -15,7 +12,7 @@ require_once(connect.php)
 <body>
   
 <?php
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('francais/views/views_accueil/viewHeader.php');
 ?>
 
 

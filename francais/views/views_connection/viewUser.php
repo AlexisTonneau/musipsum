@@ -59,15 +59,6 @@ require_once 'francais/views/views_accueil/viewHeader.php';
     </div>
 
 
-      <!--<div class="button2">
-        <button type="submit" class="button_submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-            Modifier
-          </button>
-        <button class="button_deconnexion" onclick="">Me déconnecter</button>
-    </div>
-*/-->
-
-
 <div>
     <form method="post" action="<?=URL?>fr/account/modify">
 

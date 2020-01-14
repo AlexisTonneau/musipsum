@@ -91,8 +91,8 @@ require_once 'english/views/views_accueil/viewHeader.php';
     </div>
 </div>
 
-<script type="text/javascript" src="<?=URL?>/js/select_box.js"></script>
-<script type="text/javascript" src="<?=URL?>/js/range_input.js"></script>
+<script type="text/javascript" src="<?=URL?>/scripts/select_box.js"></script>
+<script type="text/javascript" src="<?=URL?>/scripts/range_input.js"></script>
 
 </body>
 

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
-    <script type="text/javascript" src="/js/autocompletion.js"></script>
+    <script type="text/javascript" src="<?=URL?>scripts/autocompletion.js"></script>
     <title>Administration</title>
 
 </head>
 
 <body class="body">
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'francais/views/views_accueil/viewHeader.php';
 ?>
 
 <section class="middle_page">

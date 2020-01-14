@@ -4,13 +4,13 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?= URL ?>/css/admin/Recherche.css">
-    <link rel="script" href="<?=URL?>/js/validation.js">
+    <link rel="script" href="<?=URL?>/scripts/validation.js">
 
     <title>Recherche</title>
 
 </head>
-<script src="<?=URL?>/js/welcome.js"></script>
-<script src="<?=URL?>/js/validation.js"></script>
+<script src="<?=URL?>/scripts/welcome.js"></script>
+<script src="<?=URL?>/scripts/validation.js"></script>
 <p class="body">
 
 <?php

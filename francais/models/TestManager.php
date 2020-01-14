@@ -248,7 +248,7 @@ class TestManager extends Model
 
 
 }
-if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) && $_GET['quatre'] !==null && isset($_GET['cinq'])){
+if (isset($_GET['search'], $_GET['quatre']) && $_GET['search'] !== null && $_GET['quatre'] !== null){
     $captors = TestManager::getCaptorsFromTest(TestManager::searchById($_GET['search']));
     $boolean = false;
     foreach ($captors as $captor){
@@ -257,7 +257,7 @@ if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) &
         }
     }
     if (!$boolean){
-        echo null;
+        echo "null";
     }
     else{
         $array = TestManager::getDataFromTest($_GET['quatre'],$_GET['search']);
@@ -267,7 +267,10 @@ if (isset($_GET['search']) && $_GET['search']!==null && isset($_GET['quatre']) &
 }
 
 if (isset($_GET['search']) && !isset($_GET['quatre']) && is_numeric($_GET['search']) ){
+
     $captors = TestManager::getCaptorsFromTest(TestManager::searchById($_GET['search']));
+
+
     ?> <div hidden>
     <?php  echo (json_encode($captors));?>
 </div> <?php

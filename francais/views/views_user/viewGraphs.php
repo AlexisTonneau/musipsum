@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Mes stats</title>
     <link  rel="stylesheet" type="text/css" href="<?=URL?>css/user/graphics.css" >
-    <script type="text/javascript" src="<?=URL?>js/data_display.js"></script>
+    <script type="text/javascript" src="<?=URL?>scripts/data_display.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     ​
 </head>

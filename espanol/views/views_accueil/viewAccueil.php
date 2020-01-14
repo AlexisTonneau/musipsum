@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/footer.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/carrousel.css">
-    <script type="text/javascript" src="<?=URL?>/js/welcome.js"></script>
+    <script type="text/javascript" src="<?=URL?>/scripts/welcome.js"></script>
     <style type="text/css">
     </style>
 </head>
@@ -154,7 +154,7 @@ require_once 'viewHeader.php';
 
 </footer>
 
-<script type="text/javascript" src="<?=URL?>/js/carrousel.js"></script>
+<script type="text/javascript" src="<?=URL?>/scripts/carrousel.js"></script>
 
 </body>
 </html>

@@ -125,7 +125,8 @@ width: fit-content;
 align-items: end;
 position: relative;
 left: 85%;
-bottom: 73px
+bottom: 73px;
+    display: flex;
 }
 
 .flags{
@@ -138,14 +139,49 @@ bottom: 73px
 }
 
 
-.img_drapeau_france,.img_drapeau_anglais,.img_drapeau_espagnol{
+.img_drapeau_1,.img_drapeau_2,#current_language{
     height: 20px;
-    weight: 30px;
+    width: 30px;
+    margin-left: 6px;
 }
-.img_drapeau_anglais{
-    margin-right: 10px;
-    margin-left: 10px;
-}*/
+.img_drapeau_1{
+    margin-top: 8px;
+}
+
+.langues{
+   padding-top: 4px;
+}
+
+
+.dropdown .dropbtn {
+    display: flex;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+    background-color: #f9f9f9;
+    min-width: 44px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-left: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
 
 /*RESPONSIVE*/
 

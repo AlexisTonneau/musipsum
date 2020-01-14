@@ -11,7 +11,7 @@
 
 <body class="body">
 <?php
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('francais/views/views_accueil/viewHeader.php');
 ?>
 
 	<div id="password_block">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
-    <script type="text/javascript" src="/js/autocompletion.js"></script>
+    <script type="text/javascript" src="/scripts/autocompletion.js"></script>
     <title>Administration</title>
 
 </head>
