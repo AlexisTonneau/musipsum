@@ -39,6 +39,7 @@
 	font-family: 'gotham_book', serif;
 	width: 33%;
 	height: 304px;
+	float: right;
 	display: inline-block;
 	text-decoration-color: #66AFFD;
 	border-top: 1px solid #66AFFD;

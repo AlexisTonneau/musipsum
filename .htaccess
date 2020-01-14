@@ -3,13 +3,10 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^/?([a-zA-Z]+)/?$ index.php?link=$1 [QSA]
 
-RewriteRule ^/?([a-zA-Z]+)/([-a-zA-Z]+)/?$ index.php?link=$1&ref=$2 [QSA]
-RewriteRule ^/?([a-zA-Z]+)/([-a-zA-Z]+)/([a-zA-Z0-9]+)/?$ index.php?link=$1&ref=$2&search=$3 [QSA]
-RewriteRule ^/?([a-zA-Z]+)/([-a-zA-Z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$ index.php?link=$1&ref=$2&search=$3&quatre=$4 [QSA]
-RewriteRule ^/?([a-zA-Z]+)/([-a-zA-Z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)?$ index.php?link=$1&ref=$2&search=$3&quatre=$4&cinq=$5 [QSA]
-
-
-
-
+RewriteRule ^/?([a-zA-Z]+)/?$ index.php?lang=$1 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/?$ index.php?lang=$1&link=$2 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/([-a-zA-Z0-9]+)/?$ index.php?lang=$1&link=$2&ref=$3 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ index.php?lang=$1&link=$2&ref=$3&search=$4 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/([-a-zA-Z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ index.php?lang=$1&link=$2&ref=$3&search=$4&quatre=$5 [QSA]
+RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+)/([-a-zA-Z]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/?$ index.php?lang=$1&link=$2&ref=$3&search=$4&quatre=$5&cinq=$6 [QSA]
