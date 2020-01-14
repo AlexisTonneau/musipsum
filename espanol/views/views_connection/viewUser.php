@@ -22,23 +22,23 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
             </div>
             <div class="txt_id">
                 <div class="div_txt_id_1">
-                    <p class="txt_id_spe">Adresse mail : </p>
+                    <p class="txt_id_spe">Correo electrónico :</p>
                     <p class="txt_id_php"><?php echo $account->getMailAddress();?></p>
                 </div>
                 <div class="div_txt_id_1">
-                    <p class="txt_id_spe">Genre : </p>
+                    <p class="txt_id_spe">Género: </p>
                     <p class="txt_id_php">AF</p>
                 </div>
                 <div class="div_txt_id_1">
-                    <p class="txt_id_spe">Taille : </p>
+                    <p class="txt_id_spe">Tamaño : </p>
                     <p class="txt_id_php"> <?php echo $account->getHeight();?></p>
                 </div>
                 <div class="div_txt_id_1">
-                    <p class="txt_id_spe">Masse : </p>
+                    <p class="txt_id_spe">Misa: </p>
                     <p class="txt_id_php"><?php echo $account->getWeight();?></p>
                 </div>
                 <div class="div_txt_id_1">
-                    <p class="txt_id_spe">Né le : </p>
+                    <p class="txt_id_spe">Nacido el : </p>
                     <p class="txt_id_php">10/10/2010</p>
                 </div>
             </div>
@@ -47,20 +47,20 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
 
     <div class="button1">
 
-        <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>es/account/stat'">Consulter mes résultats</button>
+        <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>es/account/stat'">Ver mis resultados</button>
     </div>
     <div>
         <form method="post" action="<?=URL?>es/account/modify">
 
             <input type="hidden" name="modify" value="<?=$account->getId()?>">
 
-            <input type="submit" name="disconnect" value="Modifier mon profil">
+            <input type="submit" name="disconnect" value="Editar mi perfil">
 
         </form>
     </div>
     <div>
         <form method="post" action="<?=URL?>es/account/disconnect">
-            <input type="submit" name="disconnect" value="Me déconnecter">
+            <input type="submit" name="disconnect" value="Cerrar sesión">
         </form>
     </div>
 

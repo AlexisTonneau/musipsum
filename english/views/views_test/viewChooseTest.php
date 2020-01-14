@@ -12,14 +12,14 @@ require_once ('english/views/views_accueil/viewHeader.php');
     <link rel="stylesheet" type="text/css" href="<?= URL ?>/css/welcome/header.css">
     <style type="text/css">
     </style>
-    <title>Mon compte</title>
+    <title>My account</title>
 </head>
 
 <body>
 
 <form action="" method="post">
 <div class="type_account">
-    <label for="id_test" >Choisir le test</label>
+    <label for="id_test" >Choose the test</label>
     <div class="type_account_container">
         <select name="id_test" id="type_account">
             <?php

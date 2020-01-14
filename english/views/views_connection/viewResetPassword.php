@@ -15,7 +15,7 @@ require_once(connect.php)
 <body>
   
 <?php
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('english/views/views_accueil/viewHeader.php');
 ?>
 
 
@@ -27,12 +27,12 @@ require_once ('views/views_accueil/viewHeader.php');
       <img class="password_content" id="img_password" src="APP site/Site web/images/logo_musipsum_noir.png" style="width: 45px; height: auto;">
       
       
-      <p style="font-size: 50px" class="password_content">Retrouver votre mot de passe</p>
-      <p class="password_content" style="font-size: 30px">Saisissez votre adresse mail, afin de réinitialiser votre mot de passe</p>
+      <p style="font-size: 50px" class="password_content">Recover your password</p>
+      <p class="password_content" style="font-size: 30px">Enter your email address, in order to reset your password</p>
       
       
       <form action="/action_page.php">
-        <input type="email" name="email_password" placeholder="Votre e-mail..." size="30" required class="password_content" id="password_input">
+        <input type="email" name="email_password" placeholder="Your email..." size="30" required class="password_content" id="password_input">
         <button id="password_btn">Suivant</button>
       </form>
     
@@ -42,7 +42,7 @@ require_once ('views/views_accueil/viewHeader.php');
 
 
 <?php
-require_once ('views/views_accueil/viewFooter.php');
+require_once ('english/views/views_accueil/viewFooter.php');
 ?>
 
 </body>

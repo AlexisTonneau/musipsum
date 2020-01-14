@@ -77,14 +77,8 @@ require_once('english/views/views_accueil/viewHeader.php');
                         <?php  if(Model::getCurrentAccount()->getAccountType() == Model::ADMINISTRATOR_USER){     echo('                ?>
                         <option value="admin" >Compte Administrateur</option>
                         <?');}?>
-<<<<<<< HEAD:views/views_instructor/viewCreateUser.php
-                        <option value="user">Compte Client</option>
-
-
-=======
                         <option value="monitor">Monitor account</option>
                         <option value="user">Customer account</option>
->>>>>>>  Traduction anglais et espagnol:en/views/views_admin/viewCreateUser.php
                     </select>
                 </div>
             </div>

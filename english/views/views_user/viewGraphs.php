@@ -14,11 +14,11 @@
 require_once ('english/views/views_accueil/viewHeader.php');
 ?>
 <body>
-<h1 class="titre_test">Test du <?=$test_searched->getDate()?></h1>
+<h1 class="titre_test">Test of <?=$test_searched->getDate()?></h1>
 <p hidden id="test_id"><?=$_GET['search']?></p>
 <div class="titles">
-    <div id="temp" >Température</div>
-    <div id="freq" >Tension cardiaque</div>
+    <div id="temp" >Temperature</div>
+    <div id="freq" >Heart pressure</div>
 </div>
 <div class="charts_left">
 <div id="chartContainerTemp" class="temperature" style="height: 300px;  margin: 1%;"></div>

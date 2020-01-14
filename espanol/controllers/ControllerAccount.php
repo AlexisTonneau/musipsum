@@ -77,7 +77,7 @@ class ControllerAccount
                     require_once('espanol/views/views_connection/viewConnect.php');
                 }
                 else{
-                    throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, revenez demain");
+                    throw new Exception("Tienes demasiados intentos de conexión hoy, vuelve mañana");
                 }
             }
 

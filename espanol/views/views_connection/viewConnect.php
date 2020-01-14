@@ -20,7 +20,7 @@
 
 </head>
 <?php
-require_once ('francais/views/views_accueil/viewHeader.php');
+require_once ('espanol/views/views_accueil/viewHeader.php');
 
 ?>
 
@@ -37,24 +37,24 @@ require_once ('francais/views/views_accueil/viewHeader.php');
 
 
     <div class="Connexion">
-        Connexion
+        Conexión
     </div>
 
     <div class="status" hidden>
         abc
     </div>
 
-    <a class="mdp_oubli" href="<?=URL?>fr/password">
-        Mot de passe oublié ?
+    <a class="mdp_oubli" href="<?=URL?>es/password">
+        Contraseña olvidada ?
     </a>
 
     <form class="mail" action="" method="post" id="form_mail">
 
         <div>
-            <input type="text" name="mail" placeholder="Adresse mail" class="id_mail" id="id_mail">
+            <input type="text" name="mail" placeholder="Correo electrónico" class="id_mail" id="id_mail">
         </div>
         <div>
-            <input type="password" name="mdp" placeholder="Mot de passe" id="id_mdp" class="id_mdp">
+            <input type="password" name="mdp" placeholder="Contraseña" id="id_mdp" class="id_mdp">
         </div>
 
         <div>
@@ -78,5 +78,5 @@ require_once ('francais/views/views_accueil/viewHeader.php');
 </html>
 
 <?php
-require_once ('fr/views/views_accueil/viewFooter.php')
+require_once ('viewFooter.php')
 ?>

@@ -27,7 +27,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
     <div>
         <form  action="<?=URL?>en/administration/search" method="post" >
 
-            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user" autocomplete="off" id="bar">
+            <input type="text" name="search" placeholder="Find a user" class="id_user" autocomplete="off" id="bar">
             <div id="search"></div>
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
@@ -55,7 +55,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
         <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>-->
     <div class="btn_deconnexion">
-        <a class="centrer" href="<?=URL?>en/administration/disconnect">Se déconnecter</a>
+        <a class="centrer" href="<?=URL?>en/administration/disconnect">Sign out</a>
     </div>
 </section>
 

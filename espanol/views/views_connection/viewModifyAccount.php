@@ -9,7 +9,7 @@ require_once ('views/views_accueil/viewHeader.php');
 <head>
     ​
     <meta charset="UTF-8">
-    <title>Ouverture Compte</title>
+    <title>Apertura de cuenta</title>
     <!--<link type="text/css" rel="stylesheet" href="<?=URL?>css/admin/Connect.css">-->
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/account/modify.css">
     ​
@@ -34,10 +34,10 @@ require_once ('views/views_accueil/viewHeader.php');
                 </block>
                 ​
                 <block class="bloc_2">
-                    <p class="naissance">Date de naissance *
+                    <p class="naissance">Fecha de nacimiento *
                         <div class="c">
                     <p class="day">
-                        JJ
+                        DD
                         <input type="number" value="<?=$account->getNaissanceJour()?>" name="jour" class="id date id_jour" min="1" max="31" >
                         MM
                         <input type="number" value="<?=$account->getNaissanceMois()?>" name="mois" class="id date id_mois" min="1" max="12" >
@@ -50,16 +50,16 @@ require_once ('views/views_accueil/viewHeader.php');
             <div class="droite">
             ​
             <div class="IMC">
-                <p class="poids">Poids (kg)   <br/>
+                <p class="poids">Peso (kg)   <br/>
                     <input type="number" value="<?=$account->getWeight()?>" name="weight" class="id taille_masse id_kilo" step="0.1" > </p>
-                <p class="taille">Taille (cm)   <br/>
+                <p class="taille">Tamaño (cm)   <br/>
                     <input type="number" value="<?=$account->getHeight()?>" name="height" class="id taille_masse id_metre" > </p>
             </div>
             ​<?php
             if(Model::getCurrentAccount()->getAccountType()!=Model::REGULAR_USER) {
                 ?>
                 <div class="type_account">
-                    <label for="type_account">Choisir le type de compte *</label>
+                    <label for="type_account">Elige el tipo de cuenta *</label>
                     <div class="type_account_container">
                         <select name="account_type" id="type_account">
                             <?php if (Model::getCurrentAccount()->getAccountType() == Model::ADMINISTRATOR_USER) {
@@ -67,8 +67,8 @@ require_once ('views/views_accueil/viewHeader.php');
                         <option value="admin" >Compte Administrateur</option>
                         <?');
                             } ?>
-                            <option value="monitor">Compte Moniteur</option>
-                            <option value="user">Compte Client</option>
+                            <option value="monitor">Monitorear cuenta</option>
+                            <option value="user">Cuenta cliente</option>
                         </select>
                     </div>
                 </div>
@@ -79,9 +79,9 @@ require_once ('views/views_accueil/viewHeader.php');
             ​
             <div class="genre">
                 <!-- <form action="" method="post">-->
-                <label for="genre-male" name="genre" class="a gen male">Homme </label>
+                <label for="genre-male" name="genre" class="a gen male">Hombre </label>
                 <input id="genre-male" type="checkbox" class="id id_ent" name="gender" value="male">
-                <label for="genre-female" name="genre" class="gen female">Femme </label>
+                <label for="genre-female" name="genre" class="gen female">Mujer </label>
                 <input id="genre-female" type="checkbox" class="id id_ent" name="gender" value="female">
                 <!-- </form>-->
             </div>
@@ -107,7 +107,7 @@ require_once ('views/views_accueil/viewHeader.php');
 
     </fieldset>
 </form>
-​<?php require_once ('views/views_accueil/viewFooter.php');?>
+​<?php require_once ('espanol/views/views_accueil/viewFooter.php');?>
 </body>
 </html>
 

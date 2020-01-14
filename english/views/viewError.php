@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Erreur 404</title>
+    <title>Error 404</title>
 
 </head>
 <header>
@@ -13,7 +13,8 @@
 </header>
 <body class="body" >
 <h1 style="margin-left: 1.5%">
-    Erreur 404
+    Error 404
+
 
 </h1>
 <h2  style="margin-left: 1.5%">

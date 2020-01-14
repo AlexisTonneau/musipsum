@@ -10,14 +10,14 @@
 </head>
 <script>
     function checkForm() {
-        return  window.confirm('Cette opération est irréversible...')
+        return  window.confirm('This operation is irreversible ...')
 
     }
 </script>
 <p class="body">
 
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'english/views/views_accueil/viewHeader.php';
 
 if (Search::initializeSearch() !== null){
 foreach (Search::initializeSearch() as $account)
@@ -33,13 +33,13 @@ echo ' ' . $account->getName() . "\t\t\t\t";
     <form method="post" action="<?=URL?>en/adminaccount/search" onsubmit="return checkForm()" class="form">
         <input type="hidden" name="delete" value="<?=$account->getId()?>">
         <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
-                Supprimer
+                Remove
         </button>
     </form>
     <form method="post" action="<?=URL?>en/adminaccount/search" class="modify">
     <input type="hidden" name="modify" value="<?=$account->getId()?>">
     <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-        Modifier
+        Modify
     </button>
 </form>
 
@@ -52,7 +52,9 @@ echo ' ' . $account->getName() . "\t\t\t\t";
 else{
     ?>
 <h3>
-    Aucun utilisateur trouvé
+
+    No users found
+
 </h3>
 <?php
 }
