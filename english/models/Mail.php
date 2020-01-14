@@ -22,7 +22,7 @@ class Mail
           $to = 'contactmusipsum@gmail.com';
         $subject = 'Nous contacter de musipsum';
         if (isset($_POST['Votre_message']) && $_POST['Votre_message'] != 'Votre message...') {
-            echo "test";
+            //echo "test";
             $message = $_POST['Votre_message'];
             mail($to, $subject, $message);
         }
