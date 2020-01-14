@@ -78,5 +78,5 @@ require_once ('francais/views/views_accueil/viewHeader.php');
 </html>
 
 <?php
-require_once ('fr/views/views_accueil/viewFooter.php')
+require_once ('francais/views/views_accueil/viewFooter.php')
 ?>

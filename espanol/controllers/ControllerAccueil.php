@@ -23,6 +23,7 @@ class ControllerAccueil
                     require_once ('espanol/views/views_accueil/viewSuccessStories.php');
                     break;
                 case "faq":
+                    $arrays = Faq::getFaq();
                     require_once ('espanol/views/views_accueil/viewFAQ.php');
                     break;
                 case "cgu":
