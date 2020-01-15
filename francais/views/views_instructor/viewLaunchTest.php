@@ -28,11 +28,11 @@ require_once 'francais/views/views_accueil/viewHeader.php';
 ?>
 <div class="bouton_search">
     <div class="bouton_play">
-        <img src="<?=URL?>/images/bouton_play.png" href="<?=URL?>" class="bouton_play_img">
+        <img src="<?=URL?>/images/bouton_play.png" href="<?=URL?>fr" class="bouton_play_img">
     </div>
     <div class="recherche">
         <br />
-        <form action="<?=URL?>francais/instructor/search" method="post">
+        <form action="<?=URL?>fr/instructor/search" method="post">
         <input type="text" id="search" name="search" placeholder="Rechercher un utilisateur">
             <input   type="image" src="<?=URL?>/images/icone_loupe.png" class="icone_loupe" alt="submit" >
 

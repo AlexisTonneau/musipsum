@@ -51,7 +51,7 @@ class Search extends Model
 
             }
             elseif (isset($_POST['modify']) || isset($_POST['id'])){
-                require_once ('fr/views/views_connection/viewModifyAccount.php');
+                require_once ('francais/views/views_connection/viewModifyAccount.php');
                 return null;
             }
             else {

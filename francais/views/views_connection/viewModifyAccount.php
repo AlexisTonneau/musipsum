@@ -1,6 +1,6 @@
 <?php
 
-require_once ('fr/views/views_accueil/viewHeader.php');
+require_once ('francais/views/views_accueil/viewHeader.php');
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +107,7 @@ require_once ('fr/views/views_accueil/viewHeader.php');
 
     </fieldset>
 </form>
-​<?php require_once ('fr/views/views_accueil/viewFooter.php');?>
+​<?php require_once ('francais/views/views_accueil/viewFooter.php');?>
 </body>
 </html>
 

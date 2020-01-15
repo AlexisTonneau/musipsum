@@ -38,19 +38,19 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
 
     <div>
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>adminaccount/newaccount">Abrir una cuenta</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/instructor/newaccount">Abrir una cuenta</a></p>
         </btn>
     </div>
     <div>
         <btn class="btn btn_capteurs">
-            <p class="centrer"><a class="centrer_capteur" href="<?=URL?>adminaccount/handlecaptor">Gestionar</a></p>
+            <p class="centrer"><a class="centrer_capteur" href="<?=URL?>es/instructor/handlecaptor">Gestionar</a></p>
         </btn>
     </div>
     <div class="btn_modifier">
-        <a class="modifier" href="<?=URL?>adminaccount/modify-drivingschool">Editar autoescuela</a>
+        <a class="modifier" href="<?=URL?>es/instructor/modify-drivingschool">Editar autoescuela</a>
     </div>
     <div class="btn_deconnexion">
-            <a class="centrer" href="<?=URL?>adminaccount/disconnect">Desconectarse</a>
+            <a class="centrer" href="<?=URL?>es/instructor/disconnect">Desconectarse</a>
     </div>
 </div>
 

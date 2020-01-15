@@ -41,17 +41,17 @@ class Search extends Model
 
         if (!isset($_GET['search'])){
             if (isset($_POST['search'])) {
-                header('Location: '.URL.'instructor/search/'.htmlspecialchars($_POST['search']));
+                header('Location: '.URL.'en/instructor/search/'.htmlspecialchars($_POST['search']));
                 return null;
             }
 
             if(isset($_POST['delete'])) {
                 AccountManager::deleteAccount();
-                header('Location: '.URL.'account');
+                header('Location: '.URL.'en/account');
 
             }
             elseif (isset($_POST['modify']) || isset($_POST['id'])){
-                require_once ('views/views_connection/viewModifyAccount.php');
+                require_once ('english/views/views_connection/viewModifyAccount.php');
                 return null;
             }
             else {

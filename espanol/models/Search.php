@@ -39,17 +39,17 @@ class Search extends Model
     public static function initializeSearch(){
         if (!isset($_GET['search'])){
             if (isset($_POST['search'])) {
-                header('Location: '.URL.'adminaccount/search/'.$_POST['search']);
+                header('Location: '.URL.'es/instructor/search/'.$_POST['search']);
                 return null;
             }
 
             if(isset($_POST['delete'])) {
                 AccountManager::deleteAccount();
-                header('Location: '.URL.'account');
+                header('Location: '.URL.'es/account');
 
             }
             elseif (isset($_POST['modify']) || isset($_POST['id'])){
-                require_once ('views/views_connection/viewModifyAccount.php');
+                require_once ('espanol/views/views_connection/viewModifyAccount.php');
                 return null;
             }
             else {
