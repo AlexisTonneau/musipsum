@@ -14,7 +14,7 @@
 <p class="body">
 
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'francais/views/views_accueil/viewHeader.php';
 
 if (DrivingSchoolManager::listDS() !== null){
     foreach (DrivingSchoolManager::listDS() as $account)

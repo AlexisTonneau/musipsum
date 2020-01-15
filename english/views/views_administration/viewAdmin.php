@@ -38,16 +38,16 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
     <div class="all_buttons">
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/newaccount">Ouvrir un compte</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/newaccount">Opening an account</a></p>
         </btn>
         <btn class="btn btn_cgu">
             <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>en/administration/cgu">Modification CGU</a></p>
         </btn>
         <btn class="btn btn_autoecole">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/list-driving-school">Liste des auto-écoles</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/list-driving-school">List of driving schools</a></p>
         </btn>
         <btn class="btn btn_mentions_legales">
-            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>en/administration/mentions-legales">Modification Mention Légales</a></p>
+            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>en/administration/mentions-legales">Modification Legal Notice</a></p>
         </btn>
     </div>
 

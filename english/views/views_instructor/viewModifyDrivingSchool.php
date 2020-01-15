@@ -65,8 +65,4 @@ require_once('english/views/views_accueil/viewHeader.php');
 </form>
 </body>
 </html>
-<<<<<<< HEAD:fr/views/views_instructor/viewModifyDrivingSchool.php
-​<?php require_once ('fr/views/views_accueil/viewFooter.php');?>
-=======
 ​<?php require_once('english/views/views_accueil/viewFooter.php');?>
->>>>>>> Langues fonctionnelles, manque les URL:english/views/views_instructor/viewModifyDrivingSchool.php
