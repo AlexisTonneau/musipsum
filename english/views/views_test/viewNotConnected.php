@@ -6,7 +6,8 @@ require_once ('english/views/views_accueil/viewHeader.php')
 
 <h3>
 
-    Veuillez vous connecter pour pouvoir lancer un test !
+        Please login to start a test!
+
 
 </h3>
 <?php

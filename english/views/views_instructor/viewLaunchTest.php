@@ -34,7 +34,6 @@ require_once 'english/views/views_accueil/viewHeader.php';
         <br />
 
         <form action="<?=URL?>en/instructor/search" method="post">
-        <input type="text" id="search" name="search" placeholder="Rechercher un utilisateur">
         <input type="text" id="search" name="search" placeholder="Search user">
             <input   type="image" src="<?=URL?>images/icone_loupe.png" class="icone_loupe" alt="submit" >
 

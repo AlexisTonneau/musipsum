@@ -13,7 +13,8 @@
 </header>
 <body class="body">
 <h1>
-    Erreur 404
+    Error 404
+
 </h1>
 <h2>
     <?php echo $errorMessage;?>

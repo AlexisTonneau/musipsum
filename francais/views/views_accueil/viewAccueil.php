@@ -77,7 +77,7 @@ require_once 'viewHeader.php';
         <div class="box_mail">
             <form action="" method="post">
                 <textarea type="text" class="contact_msg" name="Votre_message" placeholder="Votre message..."
-                          style="border: 1px solid #66AFFD; color: #66AFFD; width: 95%; height: 75px; padding: 1%; margin-top: 2%";id="contact"></textarea>
+                          style="border: 1px solid #66AFFD; color: #66AFFD; width: 95%; height: 150px; padding: 1%; margin-top: 2%";id="contact"></textarea>
                 <button type="submit" class="send">
                     <img src="<?=URL?>/images/icone_envoi.png" class="icone_button_contact icone_envoi">
                 </button>
@@ -184,7 +184,7 @@ require_once 'viewHeader.php';
     .icone_envoi {
         position: absolute;
         left: -5%;
-        bottom: -8%;
+        top: 500%;
         pointer: cursor;
     }
 

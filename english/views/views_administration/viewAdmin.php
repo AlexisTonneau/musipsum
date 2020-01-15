@@ -27,7 +27,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
     <div>
         <form  action="<?=URL?>en/administration/search" method="post" >
 
-            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user" autocomplete="off" id="bar">
+            <input type="text" name="search" placeholder="Find a user" class="id_user" autocomplete="off" id="bar">
             <div id="search"></div>
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
@@ -38,16 +38,16 @@ require_once 'english/views/views_accueil/viewHeader.php';
 
     <div class="all_buttons">
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/newaccount">Ouvrir un compte</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/newaccount">Opening an account</a></p>
         </btn>
         <btn class="btn btn_cgu">
             <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>en/administration/cgu">Modification CGU</a></p>
         </btn>
         <btn class="btn btn_autoecole">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/list-driving-school">Liste des auto-écoles</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>en/administration/list-driving-school">List of driving schools</a></p>
         </btn>
         <btn class="btn btn_mentions_legales">
-            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>en/administration/mentions-legales">Modification Mention Légales</a></p>
+            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>en/administration/mentions-legales">Modification Legal Notice</a></p>
         </btn>
     </div>
 
@@ -55,7 +55,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
         <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>-->
     <div class="btn_deconnexion">
-        <a class="centrer" href="<?=URL?>en/administration/disconnect">Se déconnecter</a>
+        <a class="centrer" href="<?=URL?>en/administration/disconnect">Sign out</a>
     </div>
 </section>
 

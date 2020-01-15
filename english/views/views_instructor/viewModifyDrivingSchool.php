@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD:fr/views/views_instructor/viewModifyDrivingSchool.php
-require_once ('fr/views/views_accueil/viewHeader.php');
-=======
 require_once('english/views/views_accueil/viewHeader.php');
->>>>>>> Langues fonctionnelles, manque les URL:english/views/views_instructor/viewModifyDrivingSchool.php
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +65,4 @@ require_once('english/views/views_accueil/viewHeader.php');
 </form>
 </body>
 </html>
-<<<<<<< HEAD:fr/views/views_instructor/viewModifyDrivingSchool.php
-​<?php require_once ('fr/views/views_accueil/viewFooter.php');?>
-=======
 ​<?php require_once('english/views/views_accueil/viewFooter.php');?>
->>>>>>> Langues fonctionnelles, manque les URL:english/views/views_instructor/viewModifyDrivingSchool.php

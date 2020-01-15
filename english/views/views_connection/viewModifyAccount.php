@@ -1,6 +1,6 @@
 <?php
 
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('english/views/views_accueil/viewHeader.php');
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +34,14 @@ require_once ('views/views_accueil/viewHeader.php');
                 </block>
                 ​
                 <block class="bloc_2">
-                    <p class="naissance">Date de naissance *
+                    <p class="naissance">Birthday *
                         <div class="c">
                     <p class="day">
-                        JJ
+                        DD
                         <input type="number" value="<?=$account->getNaissanceJour()?>" name="jour" class="id date id_jour" min="1" max="31" >
                         MM
                         <input type="number" value="<?=$account->getNaissanceMois()?>" name="mois" class="id date id_mois" min="1" max="12" >
-                        AAAA
+                        YYYY
                         <input type="number" name="annee" value="<?=$account->getNaissanceAnnee()?>" class="id date id_annee" min="1960" max="2002" >
                     </P>
             </div>
@@ -59,7 +59,7 @@ require_once ('views/views_accueil/viewHeader.php');
             if(Model::getCurrentAccount()->getAccountType()!=Model::REGULAR_USER) {
                 ?>
                 <div class="type_account">
-                    <label for="type_account">Choisir le type de compte *</label>
+                    <label for="type_account">Choose the type of account *</label>
                     <div class="type_account_container">
                         <select name="account_type" id="type_account">
                             <?php if (Model::getCurrentAccount()->getAccountType() == Model::ADMINISTRATOR_USER) {
@@ -67,8 +67,8 @@ require_once ('views/views_accueil/viewHeader.php');
                         <option value="admin" >Compte Administrateur</option>
                         <?');
                             } ?>
-                            <option value="monitor">Compte Moniteur</option>
-                            <option value="user">Compte Client</option>
+                            <option value="monitor">Monitor Account</option>
+                            <option value="user">Customer account</option>
                         </select>
                     </div>
                 </div>
@@ -79,9 +79,9 @@ require_once ('views/views_accueil/viewHeader.php');
             ​
             <div class="genre">
                 <!-- <form action="" method="post">-->
-                <label for="genre-male" name="genre" class="a gen male">Homme </label>
+                <label for="genre-male" name="genre" class="a gen male">Men </label>
                 <input id="genre-male" type="checkbox" class="id id_ent" name="gender" value="male">
-                <label for="genre-female" name="genre" class="gen female">Femme </label>
+                <label for="genre-female" name="genre" class="gen female">Women </label>
                 <input id="genre-female" type="checkbox" class="id id_ent" name="gender" value="female">
                 <!-- </form>-->
             </div>
@@ -94,7 +94,7 @@ require_once ('views/views_accueil/viewHeader.php');
         <footer class="footer_open">
             <div>
                 <btn class="save">
-                    <input class="btn_save"  type="submit" value = "Enregistrer" >
+                    <input class="btn_save"  type="submit" value = "Save" >
                 </btn>
                 ​
                 <br/><br/>
@@ -107,7 +107,7 @@ require_once ('views/views_accueil/viewHeader.php');
 
     </fieldset>
 </form>
-​<?php require_once ('views/views_accueil/viewFooter.php');?>
+​<?php require_once ('english/views/views_accueil/viewFooter.php');?>
 </body>
 </html>
 

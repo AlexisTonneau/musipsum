@@ -5,6 +5,6 @@ require_once ('english/views/views_accueil/viewHeader.php');
 
 <link rel="stylesheet" href="<?=URL?>css/user/choose_test.css">
 
-<h3>En attente du démarrage d'un test par un moniteur...</h3>
+<h3>Waiting for the start of a test by a monitor ...</h3>
 <?php
 require_once ('english/views/views_accueil/viewFooter.php');

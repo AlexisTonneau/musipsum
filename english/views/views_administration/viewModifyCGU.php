@@ -17,7 +17,8 @@ require_once ('english/views/views_accueil/viewHeader.php');
 
 <h2 class="h2">
 
-    Modifier les CGU
+    Modify the T & Cs
+
 </h2>
 <div class="formulaire">
     <form class="cgu" method="post" action="">

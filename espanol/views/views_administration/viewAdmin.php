@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
     <script type="text/javascript" src="/scripts/autocompletion.js"></script>
-    <title>Administration</title>
+    <title>Administración</title>
 
 </head>
 
@@ -21,13 +21,13 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
     </div>
 
     <div class="autoecole">
-        Administration
+        Administración
     </div>
 
     <div>
         <form  action="<?=URL?>administration/search" method="post" >
 
-            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user" autocomplete="off" id="bar">
+            <input type="text" name="search" placeholder="Encuentra un usuario" class="id_user" autocomplete="off" id="bar">
             <div id="search"></div>
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
@@ -38,16 +38,16 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
 
     <div class="all_buttons">
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/newaccount">Ouvrir un compte</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/newaccount">Abrir una cuenta</a></p>
         </btn>
         <btn class="btn btn_cgu">
-            <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>es/administration/cgu">Modification CGU</a></p>
+            <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>es/administration/cgu">CGU de modificación</a></p>
         </btn>
         <btn class="btn btn_autoecole">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/list-driving-school">Liste des auto-écoles</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/list-driving-school">Listado de autoescuelas</a></p>
         </btn>
         <btn class="btn btn_mentions_legales">
-            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>es/administration/mentions-legales">Modification Mention Légales</a></p>
+            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>es/administration/mentions-legales">Modificación Aviso Legal</a></p>
         </btn>
     </div>
 
@@ -55,7 +55,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
         <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>-->
     <div class="btn_deconnexion">
-        <a class="centrer" href="<?=URL?>es/administration/disconnect">Se déconnecter</a>
+        <a class="centrer" href="<?=URL?>es/administration/disconnect">Desconectarse</a>
     </div>
 </section>
 

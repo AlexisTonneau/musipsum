@@ -16,11 +16,11 @@
 
 
 
-    <title>Connexion</title>
+    <title>Log in</title>
 
 </head>
 <?php
-require_once ('francais/views/views_accueil/viewHeader.php');
+require_once ('english/views/views_accueil/viewHeader.php');
 
 ?>
 
@@ -37,7 +37,8 @@ require_once ('francais/views/views_accueil/viewHeader.php');
 
 
     <div class="Connexion">
-        Connexion
+        Log in
+
     </div>
 
     <div class="status" hidden>
@@ -45,16 +46,16 @@ require_once ('francais/views/views_accueil/viewHeader.php');
     </div>
 
     <a class="mdp_oubli" href="<?=URL?>fr/password">
-        Mot de passe oublié ?
+        Forgot your password ?
     </a>
 
     <form class="mail" action="" method="post" id="form_mail">
 
         <div>
-            <input type="text" name="mail" placeholder="Adresse mail" class="id_mail" id="id_mail">
+            <input type="text" name="mail" placeholder="Mail address" class="id_mail" id="id_mail">
         </div>
         <div>
-            <input type="password" name="mdp" placeholder="Mot de passe" id="id_mdp" class="id_mdp">
+            <input type="password" name="mdp" placeholder="Password" id="id_mdp" class="id_mdp">
         </div>
 
         <div>
@@ -78,5 +79,5 @@ require_once ('francais/views/views_accueil/viewHeader.php');
 </html>
 
 <?php
-require_once ('fr/views/views_accueil/viewFooter.php')
+require_once ('english/views/views_accueil/viewFooter.php')
 ?>
