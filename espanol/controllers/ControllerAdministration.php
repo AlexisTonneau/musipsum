@@ -78,6 +78,9 @@ class ControllerAdministration
                     case 'mentions-legales':
                         Administration::checkData();
                         require_once ('espanol/views/views_administration/viewModifyML.php');
+                        break;
+                    case 'faq':
+
 
                 }
             }

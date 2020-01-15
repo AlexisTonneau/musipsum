@@ -12,10 +12,7 @@ class Mail
         if(!mail("vahmatmusipsum@gmail.com","Nous contacter",$message)){
             throw new Exception("Cannot send email");
         }
-
         return true;
-
-
     }
 
     public static function formToEmail () {

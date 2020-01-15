@@ -15,7 +15,7 @@ class ControllerAdministration
             //TODO Redirection selon les actions de l'admin
             if (!isset($_GET['ref']) || $_GET['ref']==null){
 
-                require_once('views/views_administration/viewAdmin.php');
+                require_once('english/views/views_administration/viewAdmin.php');
 
             }
             else{
@@ -23,7 +23,7 @@ class ControllerAdministration
                     //TODO  actions de l'admin
                     case 'disconnect':
                         session_destroy();
-                        header('Location: '.URL.'accueil');
+                        header('Location: '.URL.'en/accueil');
                         break;
                     case 'search':
                         require_once('english/views/views_administration/viewAdminResearch.php');
@@ -65,7 +65,7 @@ class ControllerAdministration
                     case 'modify-driving-school':
                         if (isset($_POST['modify']) && $_POST['modify']!==null) {
                             $ds = DrivingSchoolManager::getDrivingSchoolById($_POST['modify']);
-                            require_once('views/views_instructor/viewModifyDrivingSchool.php');
+                            require_once('english/views/views_instructor/viewModifyDrivingSchool.php');
                         }
                         else{
                             header('Location: '.URL.'en/account');

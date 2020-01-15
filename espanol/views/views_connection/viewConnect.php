@@ -8,7 +8,7 @@
 
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/connection.js"></script>
+    <script type="text/javascript" src="<?=URL?>scripts/connection.js"></script>
 
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/account/connect.css">
 
@@ -37,7 +37,9 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
 
 
     <div class="Connexion">
+
         Conexión
+
     </div>
 
     <div class="status" hidden>
@@ -45,7 +47,9 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
     </div>
 
     <a class="mdp_oubli" href="<?=URL?>es/password">
+
         Contraseña olvidada ?
+
     </a>
 
     <form class="mail" action="" method="post" id="form_mail">
@@ -78,5 +82,7 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
 </html>
 
 <?php
-require_once ('viewFooter.php')
-?>
+
+require_once ('espanol/views/views_accueil/viewFooter.php')
+
+
