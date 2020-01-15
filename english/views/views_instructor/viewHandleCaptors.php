@@ -79,15 +79,9 @@ require_once 'english/views/views_accueil/viewHeader.php';
         </div>
     </div>
 
-<<<<<<< HEAD:views/views_instructor/viewHandleCaptors.php
     <div class="gerer" id="gerer_cgu">
-        <div class="titre_modif_cgu">Modifier les CGU</div>
+        <div class="titre_modif_cgu">Modify the CGU</div>
         <textarea id="cgu_txt" type="text" name="" value="" style="width: 90%; height: 100%; border-color: #66AFFD"></textarea>
-=======
-    <div class="gerer gerer_cgu">
-        <div class="titre_modif_cgu">Modifie the CGU</div>
-        <input id="cgu_txt" type="text" name="" value="" style="width: 85%; height: 100%; border-color: #66AFFD">
->>>>>>>  Traduction anglais et espagnol:en/views/views_admin/viewHandleCaptors.php
     </div>
 </div>
 

@@ -26,7 +26,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
     </div>
 
     <div>
-        <form  action="<?=URL?>es/adminaccount/search" method="post" >
+        <form  action="<?=URL?>es/instructor/search" method="post" >
 
         <input type="text" name="search" placeholder="    Encuentra un usuario" class="id_user">
         <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">

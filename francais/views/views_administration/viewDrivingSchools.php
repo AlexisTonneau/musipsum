@@ -32,7 +32,7 @@ if (DrivingSchoolManager::listDS() !== null){
                 Supprimer
             </button>
         </form>
-        <form method="post" action="<?=URL?>administration/modify-driving-school" class="modify" >
+        <form method="post" action="<?=URL?>fr/administration/modify-driving-school" class="modify" >
             <input type="hidden" name="modify" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
                 Modifier

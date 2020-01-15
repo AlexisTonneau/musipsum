@@ -40,9 +40,12 @@ class Search extends Model
     public static function initializeSearch() {
 
         if (!isset($_GET['search'])){
-            if (isset($_POST['search'])) {
+            if (isset($_POST['search']) && preg_match('/([a-zA-Z0-9]+)/',$_POST['search'])) {
                 header('Location: '.URL.'fr/instructor/search/'.htmlspecialchars($_POST['search']));
                 return null;
+            }
+            else{
+                header('Location :'.URL.'fr/instructor');
             }
 
             if(isset($_POST['delete'])) {
@@ -61,7 +64,33 @@ class Search extends Model
         $post= htmlspecialchars($_GET['search']);
         return self::querySearch($post);
     }
+    public static function initializeSearchAdmin() {
 
+        if (!isset($_GET['search'])){
+            if (isset($_POST['search']) && preg_match('/([a-zA-Z0-9]+)/',$_POST['search'])) {
+                header('Location: '.URL.'fr/administration/search/'.htmlspecialchars($_POST['search']));
+                return null;
+            }
+            else{
+                header('Location :'.URL.'fr/administration');
+            }
+
+            if(isset($_POST['delete'])) {
+                AccountManager::deleteAccount();
+                header('Location: '.URL.'fr/account');
+
+            }
+            elseif (isset($_POST['modify']) || isset($_POST['id'])){
+                require_once ('francais/views/views_connection/viewModifyAccount.php');
+                return null;
+            }
+            else {
+                throw new Exception("You're lost...");
+            }
+        }
+        $post= htmlspecialchars($_GET['search']);
+        return self::querySearch($post);
+    }
 
 
 }

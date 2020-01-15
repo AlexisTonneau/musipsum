@@ -12,7 +12,7 @@ if ($url[0]==='test'){
     $successstories = "#FFC0CB";
     $connexion = "#FFC0CB";
 }
-else if ($url[0]==='account'||$url[0]==='adminaccount'){
+else if ($url[0]==='account'||$url[0]==='instructor'){
     $connexion = "#ff4d6a";
     $about = "#FFC0CB";
     $successstories = "#FFC0CB";

@@ -30,13 +30,13 @@ echo ' ' . $account->getName() . "\t\t\t\t";
 
 
 
-    <form method="post" action="<?=URL?>es/adminaccount/search" onsubmit="return checkForm()" class="form">
+    <form method="post" action="<?=URL?>es/instructor/search" onsubmit="return checkForm()" class="form">
         <input type="hidden" name="delete" value="<?=$account->getId()?>">
         <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
                 Supprimer
         </button>
     </form>
-    <form method="post" action="<?=URL?>es/adminaccount/search" class="modify">
+    <form method="post" action="<?=URL?>es/instructor/search" class="modify">
     <input type="hidden" name="modify" value="<?=$account->getId()?>">
     <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
         Modifier

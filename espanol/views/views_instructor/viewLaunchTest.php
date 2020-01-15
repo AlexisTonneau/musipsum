@@ -32,7 +32,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
     </div>
     <div class="recherche">
         <br />
-        <form action="<?=URL?>es/adminaccount/search" method="post">
+        <form action="<?=URL?>es/instructor/search" method="post">
         <input type="text" id="search" name="search" placeholder="Buscar un usuario">
             <input   type="image" src="<?=URL?>/images/icone_loupe.png" class="icone_loupe" alt="submit" >
 

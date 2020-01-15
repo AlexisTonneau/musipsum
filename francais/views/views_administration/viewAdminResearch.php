@@ -13,7 +13,7 @@
 <p class="body">
 
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'francais/views/views_accueil/viewHeader.php';
 
 if (Search::initializeSearch() !== null){
     foreach (Search::initializeSearch() as $account)
@@ -53,4 +53,4 @@ else{
 <?php
 }
 echo '</body>';
-//require_once ('views/views_accueil/viewFooter.php');
+//require_once ('francais/views/views_accueil/viewFooter.php');
