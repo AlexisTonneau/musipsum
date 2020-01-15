@@ -18,14 +18,7 @@ class Connection extends AccountManager
     {
         //self::setAllAccounts();
         self::$array_accounts = $this->getAllAccounts();
-
-
     }
-
-    /*public static function setAllAccounts()
-    {
-        return self::$array_accounts::Model->getAllAccounts();
-    }*/
 
     public function getArray(){
         return self::$array_accounts;
