@@ -59,11 +59,11 @@ class ControllerAccount
 
 
             else {
-                if (Connection::checkIP()) {
+               // if (Connection::checkIP()) {
                     $msg = Connection::connect();
-
+                    echo $msg;
                     if ($msg === 'Connected') {
-                        //echo $msg;
+
 
                         header('Location: ' . URL . 'fr/account');
                         exit();
@@ -75,10 +75,10 @@ class ControllerAccount
                         header('Location: ' . URL . 'fr/administration');
                     }
                     require_once('francais/views/views_connection/viewConnect.php');
-                }
+               /* }
                 else{
                     throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, revenez demain");
-                }
+                }*/
             }
 
         if (isset($_SESSION['id_user'])){

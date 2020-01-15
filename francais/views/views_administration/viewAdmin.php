@@ -26,12 +26,12 @@ require_once 'francais/views/views_accueil/viewHeader.php';
 
     <div>
         <form  action="<?=URL?>administration/search" method="post" >
-
+            <div class="ui-widget">
+                <label for = "automplete-1"></label>
             <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user" autocomplete="off" id="bar">
-            <div id="search"></div>
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
-
+    </div>
         </form>
 
     </div>

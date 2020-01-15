@@ -24,22 +24,14 @@ require_once 'viewHeader.php';
     <h1>
         Bienvenue dans la FAQ de Vahmat : Musipsum
     </h1>
-    <?php
-    foreach ($arrays as $array){
-        ?>
-        <section class="faq-section">
-            <input type="checkbox" id="q<?=$array[0]?>">
-            <label for="q<?=$array[0]?>"><?=$array[1]?></label>
-            <p><?=$array[2]?>
-            </p>
-        </section>
 
-    <?php
-    }
-    ?>
+    <section class="faq-section">
+        <input type="checkbox" id="q1">
+        <label for="q1">Qui sommes nous ?</label>
+        <p>Nous sommes la société Vahmat en association avec votre autoécole dans le but de vous proposer la solution Musipsum.
+        </p>
+    </section>
 
-
-<!--
     <section class="faq-section">
         <input type="checkbox" id="q2">
         <label for="q2">Qu'est Musipsum ?</label>
@@ -70,7 +62,6 @@ require_once 'viewHeader.php';
         <label for="q6">Comment puis-je vous contacter ?</label>
         <p>Vous pouvez nous contacter sur plusieurs réseaux sociaux tels que Facebook Twitter et Youtube, mais aussi par mail à l'adresse suivante : contactmusipsum@gmail.com</p>
     </section>
-    -->
 
 </div>
 

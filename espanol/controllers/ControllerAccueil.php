@@ -23,17 +23,16 @@ class ControllerAccueil
                     require_once ('espanol/views/views_accueil/viewSuccessStories.php');
                     break;
                 case "faq":
-                    $arrays = Faq::getFaq();
                     require_once ('espanol/views/views_accueil/viewFAQ.php');
                     break;
                 case "cgu":
                     $page = "cgu";
-                    $titre = "TdU";
+                    $titre = "CGU";
                     require_once('espanol/views/views_accueil/viewLegal.php');
                     break;
                 case "mentions-legales":
                     $page = "m-l";
-                    $titre = "Notas legales";
+                    $titre = "Notas legaless";
                     require_once('espanol/views/views_accueil/viewLegal.php');
                     break;
 
