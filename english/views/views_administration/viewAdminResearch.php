@@ -48,9 +48,10 @@ if (Search::initializeSearch() !== null){
 else{
 ?>
 <h3>
-    Aucun utilisateur trouvé
+    No users found
+
 </h3>
 <?php
 }
 echo '</body>';
-//require_once ('views/views_accueil/viewFooter.php');
+//require_once ('english/views/views_accueil/viewFooter.php');

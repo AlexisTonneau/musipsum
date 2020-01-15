@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD:fr/views/views_instructor/viewModifyDrivingSchool.php
-require_once ('fr/views/views_accueil/viewHeader.php');
-=======
 require_once('english/views/views_accueil/viewHeader.php');
->>>>>>> Langues fonctionnelles, manque les URL:english/views/views_instructor/viewModifyDrivingSchool.php
 ?>
 
 <!DOCTYPE html>

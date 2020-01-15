@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="<?= URL ?>/css/admin/Recherche.css">
     <link rel="script" href="<?=URL?>/scripts/validation.js">
 
-    <title>Recherche</title>
+    <title>Buscar</title>
 
 </head>
 <script src="<?=URL?>/scripts/welcome.js"></script>
@@ -48,7 +48,7 @@ if (DrivingSchoolManager::listDS() !== null){
 else{
 ?>
 <h3>
-    Aucun utilisateur trouvé
+    No se encontraron usuarios
 </h3>
 <?php
 }

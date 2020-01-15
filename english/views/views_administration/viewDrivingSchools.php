@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="<?= URL ?>/css/admin/Recherche.css">
     <link rel="script" href="<?=URL?>/scripts/validation.js">
 
-    <title>Recherche</title>
+    <title>Research</title>
 
 </head>
 <script src="<?=URL?>/scripts/welcome.js"></script>
@@ -29,13 +29,13 @@ if (DrivingSchoolManager::listDS() !== null){
         <form method="post" action="<?=URL?>en/administration/list-driving-school/delete" onsubmit="return checkForm()" class="form" >
             <input type="hidden" name="delete" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?> " >
-                Supprimer
+                Remove
             </button>
         </form>
         <form method="post" action="<?=URL?>en/administration/modify-driving-school" class="modify" >
             <input type="hidden" name="modify" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-                Modifier
+                Modify
             </button>
         </form>
 
@@ -48,7 +48,8 @@ if (DrivingSchoolManager::listDS() !== null){
 else{
 ?>
 <h3>
-    Aucun utilisateur trouvé
+No users found
+
 </h3>
 <?php
 }

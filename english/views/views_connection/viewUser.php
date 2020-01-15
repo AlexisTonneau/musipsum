@@ -18,23 +18,23 @@ require_once 'english/views/views_accueil/viewHeader.php';
         </div>
         <div class="txt_id">
             <div class="div_txt_id_1">
-                <p class="txt_id_spe">Adresse mail : </p>
+                <p class="txt_id_spe">Mail adress : </p>
                 <p class="txt_id_php"><?php echo $account->getMailAddress();?></p>
             </div>
             <div class="div_txt_id_1">
-                <p class="txt_id_spe">Genre : </p>
+                <p class="txt_id_spe">Sexe : </p>
                 <p class="txt_id_php">AF</p>
             </div>
             <div class="div_txt_id_1">
-                <p class="txt_id_spe">Taille : </p>
+                <p class="txt_id_spe">Size : </p>
                 <p class="txt_id_php"> <?php echo $account->getHeight();?></p>
             </div>
             <div class="div_txt_id_1">
-                <p class="txt_id_spe">Masse : </p>
+                <p class="txt_id_spe">Weight : </p>
                 <p class="txt_id_php"><?php echo $account->getWeight();?></p>
             </div>
             <div class="div_txt_id_1">
-                <p class="txt_id_spe">Né le : </p>
+                <p class="txt_id_spe">Born the : </p>
                 <p class="txt_id_php">10/10/2010</p>
             </div>
         </div>
@@ -42,7 +42,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
 </div>
 
   <div class="button1">
-      <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>en/account/stat'">Consulter mes résultats</button>
+      <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>en/account/stat'">  View my results</button>
     </div>
 
 
@@ -64,7 +64,7 @@ require_once 'english/views/views_accueil/viewHeader.php';
     <form method="post" action="<?=URL?>en/account/modify">
         <input type="hidden" name="modify" value="<?=$account->getId()?>">
         <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-            Modifier
+            Modify
         </button>
     </form>
 </div>

@@ -48,4 +48,4 @@ require_once 'viewHeader.php';
 </body>
 </html>
 <?php
-require_once ('viewFooter.php');
+require_once ('english/views/views_accueil/viewFooter.php');

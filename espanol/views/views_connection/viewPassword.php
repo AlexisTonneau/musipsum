@@ -19,8 +19,8 @@ require_once ('views/views_accueil/viewHeader.php');
   			
   			<img class="password_content" id="img_password" src="APP site/Site web/images/logo_musipsum_noir.png">
   			
-  			<p style="font-size: 50px" class="password_content">Retrouver votre mot de passe</p>
-  			<p class="password_content" style="font-size: 30px">Saisissez votre adresse mail, afin de réinitialiser votre mot de passe</p>
+  			<p style="font-size: 50px" class="password_content">Recupera tu contraseña</p>
+  			<p class="password_content" style="font-size: 30px">Ingrese su dirección de correo electrónico para restablecer su contraseña</p>
   			
 
   			<form action="/action_page.php">
@@ -33,6 +33,6 @@ require_once ('views/views_accueil/viewHeader.php');
   	</div>
 
 <?php
-require_once ('views/views_accueil/viewFooter.php');
+require_once ('espanol/views/views_accueil/viewFooter.php');
 ?>
 </body>

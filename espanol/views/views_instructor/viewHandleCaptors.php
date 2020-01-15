@@ -10,7 +10,7 @@
     <!--<link rel="stylesheet" type="text/css" href="css/capteurs/input_range_value.css">-->
     <style type="text/css">
     </style>
-    <title>Gérer les capteurs</title>
+    <title>Administrar sensores</title>
 </head>
 
 <body class="body">

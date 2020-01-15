@@ -55,7 +55,7 @@ require_once 'viewHeader.php';
         </div>
     </div>
 </div><?php
-require_once ('viewFooter.php');
+require_once ('english/views/views_accueil/viewFooter.php');
 ?>
 </body>
 </html>

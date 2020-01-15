@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
     <script type="text/javascript" src="/scripts/autocompletion.js"></script>
-    <title>Administration</title>
+    <title>Administración</title>
 
 </head>
 
@@ -21,7 +21,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
     </div>
 
     <div class="autoecole">
-        Administration
+        Administración
     </div>
 
     <div>

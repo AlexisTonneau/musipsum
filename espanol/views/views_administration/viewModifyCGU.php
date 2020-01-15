@@ -7,7 +7,7 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
 
     <meta charset="UTF-8">
 
-    <title>Administration</title>
+    <title>Administración</title>
 
     <link rel="stylesheet" href="<?=URL?>css/administration/input.css">
 
@@ -17,7 +17,8 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
 
 <h2 class="h2">
 
-    Modifier les CGU
+Modificar los términos y condiciones
+
 </h2>
 <div class="formulaire">
     <form class="cgu" method="post" action="">
