@@ -16,7 +16,7 @@ class Connection extends AccountManager
     public function __construct()
     {
         //self::setAllAccounts();
-        self::$array_accounts = $this->getAllAccounts();
+        self::$array_accounts = self::getAllAccounts();
 
 
     }

@@ -51,6 +51,8 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
         Contraseña olvidada ?
 
     </a>
+    <input class="lang" type="hidden" value="es" id="lang" >
+
 
     <form class="mail" action="" method="post" id="form_mail">
 
@@ -83,6 +85,6 @@ require_once ('espanol/views/views_accueil/viewHeader.php');
 
 <?php
 
-require_once ('espanol/views/views_accueil/viewFooter.php')
+require_once ('espanol/views/views_accueil/viewFooter.php');
 
 

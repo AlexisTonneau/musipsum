@@ -8,7 +8,7 @@
 
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="<?=URL?>js/connection.js"></script>
+    <script type="text/javascript" src="<?=URL?>scripts/connection.js"></script>
 
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/account/connect.css">
 
@@ -48,6 +48,7 @@ require_once ('english/views/views_accueil/viewHeader.php');
     <a class="mdp_oubli" href="<?=URL?>fr/password">
         Forgot your password ?
     </a>
+    <input class="lang" type="hidden" value="en" id="lang" >
 
     <form class="mail" action="" method="post" id="form_mail">
 

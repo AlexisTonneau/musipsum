@@ -24,6 +24,7 @@ class ControllerAjax
                     } else {
                         throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, essayez demain !");
                     }
+                    break;
                 case 'autocomplete':
                     if (!isset($_GET['search'])) {
                         if (AccountManager::getCurrentAccount()->getAccountType() === User::INSTRUCTOR_USER) {

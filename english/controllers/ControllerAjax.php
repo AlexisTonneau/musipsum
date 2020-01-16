@@ -15,7 +15,7 @@ class ControllerAjax
             switch ($_GET['ref']){
                 case 'graph':
                     if (isset($_GET['search']) ){
-                    require_once ('models/TestManager.php');
+                    require_once ('francais/models/TestManager.php');
                     }
                     break;
                 case 'connection':

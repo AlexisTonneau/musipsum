@@ -48,6 +48,8 @@ require_once ('francais/views/views_accueil/viewHeader.php');
         Mot de passe oublié ?
     </a>
 
+    <input class="lang" type="hidden" value="fr" id="lang" >
+
     <form class="mail" action="" method="post" id="form_mail">
 
         <div>
