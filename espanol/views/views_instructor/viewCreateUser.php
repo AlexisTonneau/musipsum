@@ -16,6 +16,7 @@ require_once('espanol/views/views_accueil/viewHeader.php');
     <meta charset="UTF-8">
     <title>Apertura de cuenta</title>
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/admin/Connect.css">
+    ​<script src="<?=URL?>scripts/copie.js"></script>
     ​
 </head>
 ​

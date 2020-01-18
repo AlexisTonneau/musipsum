@@ -15,8 +15,8 @@
 <?php
 require_once 'english/views/views_accueil/viewHeader.php';
 
-if (Search::initializeSearch() !== null){
-    foreach (Search::initializeSearch() as $account)
+if (Search::initializeSearchAdmin() !== null){
+    foreach (Search::initializeSearchAdmin() as $account)
     {
         ?><div class="account">
         <?php
@@ -25,25 +25,23 @@ if (Search::initializeSearch() !== null){
         ?>
 
 
-
         <form method="post" action="<?=URL?>en/administration/delete-account" onsubmit="return checkForm()" class="form">
             <input type="hidden" name="delete" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
-                Supprimer
+                Delete
             </button>
         </form>
         <form method="post" action="<?=URL?>en/administration/modify-account" class="modify">
             <input type="hidden" name="modify" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-                Modifier
+                Edit
             </button>
         </form>
 
-        <button class="link" ><?=AccountManager::accountTypeString($account)?></button>
 
         </div>
         <?php
-    }
+    }echo '</div>';
 }
 else{
 ?>

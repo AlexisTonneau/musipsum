@@ -14,6 +14,7 @@ class ControllerTest
         if (isset($_SESSION['user']) && $_SESSION['user']!==null){
             switch (unserialize($_SESSION['user'])->getAccountType()) {
 
+                case 2:
                 case 1:
                     if (!isset($_GET['ref'])) {   //TODO Make a page for choosing tests
                         if (!isset($_SESSION['id_user']) || $_SESSION['id_user']===null){

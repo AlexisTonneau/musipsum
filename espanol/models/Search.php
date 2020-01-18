@@ -6,13 +6,19 @@ class Search extends Model
     private $bdd;
     private $output;
 
-    public static function querySearch($text)
+    public static function querySearch($text,$bool)
     {
         $user = self::getCurrentAccount();
         $bdd = self::getBdd();
-        $i=0;
+        $i = 0;
+        if ($bool) {
 
-        $req = $bdd->prepare("SELECT * FROM user WHERE (name LIKE '%$text%' OR first_name LIKE '%$text%') AND id_autoecole = " . $user->getDrivingSchoolId());
+            $req = $bdd->prepare("SELECT * FROM user WHERE (name LIKE '%$text%' OR first_name LIKE '%$text%') AND id_autoecole = " . $user->getDrivingSchoolId());
+        }
+        else{
+            $req = $bdd->prepare("SELECT * FROM user WHERE name LIKE '%$text%' OR first_name LIKE '%$text%' ");
+
+        }
         if(!$req->execute()){
             throw new Exception("Cannot connect to database");
         }
@@ -36,11 +42,16 @@ class Search extends Model
         }
         return $var;
     }
-    public static function initializeSearch(){
+
+    public static function initializeSearch() {
+        switch (self::getCurrentAccount()->getAccountType()){}
         if (!isset($_GET['search'])){
-            if (isset($_POST['search'])) {
-                header('Location: '.URL.'es/instructor/search/'.$_POST['search']);
+            if (isset($_POST['search'])   ){                          //&& preg_match('#^([A-Z]|[a-z])[a-z]*(_)?[a-z]+$#',$_POST['search'])) {
+                header('Location: '.URL.'es/instructor/search/'.htmlspecialchars($_POST['search']));
                 return null;
+            }
+            else{
+                header('Location :'.URL.'es/instructor');
             }
 
             if(isset($_POST['delete'])) {
@@ -56,10 +67,37 @@ class Search extends Model
                 throw new Exception("You're lost...");
             }
         }
-        $post= $_GET['search'];
-        return self::querySearch($post);
+        $post= htmlspecialchars($_GET['search']);
+        return self::querySearch($post,true);
     }
+    public static function initializeSearchAdmin() {
+        //echo ("<script>console.log('admin')</script>");
 
+        if (!isset($_GET['search'])){
+            if (isset($_POST['search']) ) {
+                header('Location: '.URL.'es/administration/search/'.htmlspecialchars($_POST['search']));
+                return null;
+            }
+            else{
+                header('Location :'.URL.'es/administration');
+            }
+
+            if(isset($_POST['delete'])) {
+                AccountManager::deleteAccount();
+                header('Location: '.URL.'es/account');
+
+            }
+            elseif (isset($_POST['modify']) || isset($_POST['id'])){
+                require_once ('espanol/views/views_connection/viewModifyAccount.php');
+                return null;
+            }
+            else {
+                throw new Exception("You're lost...");
+            }
+        }
+        $post= htmlspecialchars($_GET['search']);
+        return self::querySearch($post,false);
+    }
 
 
 }

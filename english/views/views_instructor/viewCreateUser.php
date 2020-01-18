@@ -1,7 +1,7 @@
 <?php
 $msg = Register::check();
 if($msg === "checked"){
-    header('Location: '.URL.'account');
+    header('Location: '.URL.'en/account');
     exit();
 }
 
@@ -16,6 +16,8 @@ require_once('english/views/views_accueil/viewHeader.php');
     <meta charset="UTF-8">
     <title>Ouverture Compte</title>
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/admin/Connect.css">
+    ​<script src="<?=URL?>scripts/copie.js"></script>
+
     ​
 </head>
 ​
@@ -75,7 +77,7 @@ require_once('english/views/views_accueil/viewHeader.php');
                     <select name="account_type" id="type_account">
                         <option value="monitor">Compte Moniteur</option>
                         <?php  if(Model::getCurrentAccount()->getAccountType() == Model::ADMINISTRATOR_USER){     echo('                ?>
-                        <option value="admin" >Compte Administrateur</option>
+                        <option value="admin" >Admin account</option>
                         <?');}?>
                         <option value="monitor">Monitor account</option>
                         <option value="user">Customer account</option>

@@ -163,8 +163,13 @@
     width: 15%;
     height: 6%;
     font-size: 1.2em;
-    left: 80%;
     top: 90%;
+}
+#deco{
+    left: 80%;
+}
+#auto{
+    left: 60%;
 }
 .btn_modifier {
     position: absolute;
@@ -227,4 +232,16 @@
     color: dodgerblue;
     text-decoration: none;
 }
+/*
+.account{
+    visibility: hidden;
+}
+*/
 
+ul{
+    visibility: hidden;
+}
+
+.autocomplete{
+
+}

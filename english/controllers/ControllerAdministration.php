@@ -78,7 +78,21 @@ class ControllerAdministration
                     case 'mentions-legales':
                         Administration::checkData();
                         require_once ('english/views/views_administration/viewModifyML.php');
-
+                        break;
+                    case 'faq':
+                        if(!isset($_GET['search'])) {
+                            Faq::newFaq();
+                            $faq = Faq::getFaq();
+                            require_once('english/views/views_administration/viewModifyFAQ.php');
+                        }
+                        else{
+                            Faq::deleteFaq($_GET['search']);
+                            header('Location: '.URL.'en/administration/faq');
+                        }
+                        break;
+                    default:
+                        header('Location: '.URL.'en/administration');
+                        break;
                 }
             }
         }

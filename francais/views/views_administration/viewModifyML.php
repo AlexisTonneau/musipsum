@@ -1,5 +1,5 @@
 <?php
-require_once ('views/views_accueil/viewHeader.php');
+require_once ('francais/views/views_accueil/viewHeader.php');
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

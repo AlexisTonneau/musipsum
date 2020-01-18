@@ -3,6 +3,11 @@ function validateEmail(email) {
     return regExp.test(email);
 }
 
+function checkForm() {
+    return  window.confirm('Cette opération est irréversible...')
+
+}
+
 const connexionForm = document.getElementsByClassName("mail");
 const emailBox = document.getElementsByClassName("id_mail");
 

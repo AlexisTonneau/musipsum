@@ -17,7 +17,7 @@
 <p class="body">
 
 <?php
-require_once 'views/views_accueil/viewHeader.php';
+require_once 'espanol/views/views_accueil/viewHeader.php';
 
 if (Search::initializeSearch() !== null){
 foreach (Search::initializeSearch() as $account)
@@ -33,18 +33,21 @@ echo ' ' . $account->getName() . "\t\t\t\t";
     <form method="post" action="<?=URL?>es/instructor/search" onsubmit="return checkForm()" class="form">
         <input type="hidden" name="delete" value="<?=$account->getId()?>">
         <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
-                Supprimer
+                Suprimir
         </button>
     </form>
     <form method="post" action="<?=URL?>es/instructor/search" class="modify">
     <input type="hidden" name="modify" value="<?=$account->getId()?>">
     <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-        Modifier
+        Editir
     </button>
-</form>
-
-    <button class="link" href="#">Démarrer</button>
-
+    </form>
+    <div class="form-launch">
+        <form method="post" action="<?= URL ?>es/instructor/search">
+            <input type="hidden" name="launch" value="<?= $account->getId() ?>">
+            <button class="link" type="submit" value="<?= $account->getId() ?>">Iniciar</button>
+        </form>
+    </div>
     </div>
     <?php
 }

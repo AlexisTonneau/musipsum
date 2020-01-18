@@ -80,6 +80,19 @@ class ControllerAdministration
                         require_once ('espanol/views/views_administration/viewModifyML.php');
                         break;
                     case 'faq':
+                        if(!isset($_GET['search'])) {
+                            Faq::newFaq();
+                            $faq = Faq::getFaq();
+                            require_once('espanol/views/views_administration/viewModifyFAQ.php');
+                        }
+                        else{
+                            Faq::deleteFaq($_GET['search']);
+                            header('Location: '.URL.'es/administration/faq');
+                        }
+                        break;
+                    default:
+                        header('Location: '.URL.'es/administration');
+                        break;
 
 
                 }

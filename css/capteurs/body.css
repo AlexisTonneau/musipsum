@@ -125,6 +125,20 @@
 	border-radius: 20px/20px;
 	width: 250px;
 }
+.bouton_modifier{
+
+	margin-top: 1%;
+	margin-left: 40%;
+
+	border:none;
+	padding:6px 0 6px 0;
+	box-shadow:3px 3px 12px #999;
+	font:bold 13px Arial;
+	color:#555;
+	background:pink;
+	border-radius: 20px/20px;
+	width: 250px;
+}
 
 
 

@@ -1,36 +1,25 @@
 <?php
 
-echo Autocompletion::getSortedUser();
-
-class Autocompletion extends Model{
-
-
-public static function getSortedtUser(){
+class Autocompletion extends Model
+{
 
 
-  $users=self::getAllAccounts();
+    public static function getData()
+    {
+        $bdd = self::getBdd();
 
-  for($i=0;$i < $numberOfUsers ; i++){
-    $myArrayOfUserName[i]=$users->getName()." ".$users->getFirstName();
-  }
-  $numberOfUsers = count($myArrayOfUserName);
+            $requete = $bdd->prepare('SELECT * FROM user ');
+        $requete->execute();
+        $array = array();
 
-  $results=array();
-  $numberOfResults=count($results);
+        while($donnee = $requete->fetch())
+        {
+            $array[] = array($donnee['name'],$donnee['first_name']);
+        }
 
-  	//Parcourt tout le tableau $utilisateur 10 fpis
-  	for ($i = 0 ; $i < $numberOfUsers && $numberOfResults < 10 ; $i++) {
-  	    if (stripos(,) === 0) { // Si la valeur commence par les mêmes caractères que la recherche
+        echo json_encode($array);
 
-  	        array_push($results, $data[$i]); // On ajoute alors le résultat à la liste à retourner
-
-  	    }
-  	}
-
-  	echo implode('|', $results); // Et on affiche les résultats séparés par une barre verticale |
+    }
 
 }
 
-}
-
- ?>

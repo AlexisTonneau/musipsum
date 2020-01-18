@@ -13,10 +13,11 @@
 <p class="body">
 
 <?php
-require_once 'espanol/views/views_accueil/viewHeader.php';
-
-if (Search::initializeSearch() !== null){
-    foreach (Search::initializeSearch() as $account)
+require_once 'espanol/views/views_accueil/viewHeader.php';?>
+<div class="accounts">
+    <?php
+if (Search::initializeSearchAdmin() !== null){
+    foreach (Search::initializeSearchAdmin() as $account)
     {
         ?><div class="account">
         <?php
@@ -29,7 +30,7 @@ if (Search::initializeSearch() !== null){
         <form method="post" action="<?=URL?>es/administration/delete-account" onsubmit="return checkForm()" class="form">
             <input type="hidden" name="delete" value="<?=$account->getId()?>">
             <button type="submit" class="button-submit" id="delete" name="submit_param" value="<?=$account->getId()?>">
-                Remove
+                Suprimir
             </button>
         </form>
         <form method="post" action="<?=URL?>es/administration/modify-account" class="modify">
@@ -39,15 +40,14 @@ if (Search::initializeSearch() !== null){
             </button>
         </form>
 
-        <button class="link" ><?=AccountManager::accountTypeString($account)?></button>
 
         </div>
         <?php
+    }echo '</div>';
     }
-}
-else{
-?>
-<h3>
+    else{
+    ?>
+    <h3>
     No se encontraron usuarios
 </h3>
 <?php

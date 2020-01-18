@@ -16,7 +16,7 @@ require_once ('francais/views/views_accueil/viewHeader.php');
     <meta charset="UTF-8">
     <title>Ouverture Compte</title>
     <link type="text/css" rel="stylesheet" href="<?=URL?>css/admin/Connect.css">
-    ​<script src="../js/copie.js"></script>
+    ​<script src="<?=URL?>scripts/copie.js"></script>
 
     ​
 </head>

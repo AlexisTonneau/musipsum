@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?=URL?>/css/administration/Users.css">
     <link rel="stylesheet" type="text/css" href="<?= URL?>/css/welcome/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="<?=URL?>scripts/autocompletion.js"></script>
     <title>Administration</title>
 
@@ -25,14 +28,28 @@ require_once 'francais/views/views_accueil/viewHeader.php';
     </div>
 
     <div>
-        <form  action="<?=URL?>fr/administration/search" method="post" >
+        <form  action="<?=URL?>fr/administration/search" method="post" id="form-search" >
             <div class="ui-widget">
                 <label for = "automplete-1"></label>
-            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user" autocomplete="off" id="bar">
+            <input type="text" name="search" placeholder="Rechercher un utilisateur" class="id_user"  id="bar" onchange="regex()">
             <input type="image" class="img_loupe" src="<?=URL?>/images/loupe.png" alt="submit">
 
     </div>
         </form>
+        <div class="autocomplete">
+            <ul>
+                <?php
+                $i =0;
+                foreach (AccountManager::getAllAccounts() as $account){
+
+                ?>
+                <li class="account" id="account-<?=$i?>"><?=$account->getFirstName().' '.$account->getName()?></li>
+                <?php
+                    $i++;
+                }
+
+                ?>
+        </div>
 
     </div>
 
@@ -44,7 +61,7 @@ require_once 'francais/views/views_accueil/viewHeader.php';
             <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>fr/administration/cgu">Modification CGU</a></p>
         </btn>
         <btn class="btn btn_autoecole">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>fr/administration/list-driving-school">Liste des auto-écoles</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>fr/administration/faq">Modification FAQ</a></p>
         </btn>
         <btn class="btn btn_mentions_legales">
             <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>fr/administration/mentions-legales">Modification Mention Légales</a></p>
@@ -54,8 +71,11 @@ require_once 'francais/views/views_accueil/viewHeader.php';
     <!--<div class="btn_modifier">
         <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>-->
-    <div class="btn_deconnexion">
+    <div class="btn_deconnexion" id="deco">
         <a class="centrer" href="<?=URL?>fr/administration/disconnect">Se déconnecter</a>
+    </div>
+    <div class="btn_deconnexion" id="auto">
+        <a class="centrer" href="<?=URL?>fr/administration/list-driving-school">Liste des auto-écoles</a>
     </div>
 </section>
 

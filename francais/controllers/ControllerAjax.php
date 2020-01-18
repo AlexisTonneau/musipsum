@@ -26,16 +26,8 @@ class ControllerAjax
                     }
                     break;
                 case 'autocomplete':
-                    if (!isset($_GET['search'])) {
-                        if (AccountManager::getCurrentAccount()->getAccountType() === User::INSTRUCTOR_USER) {
-                            header('Location :' . URL . 'ajax/autocomplete/' . AccountManager::getCurrentAccount()->getDrivingSchoolId());
-                        } elseif (AccountManager::getCurrentAccount()->getAccountType() === User::ADMINISTRATOR_USER) {
-                            header('Location :' . URL . 'ajax/autocomplete/0');
-
-                        }
-                    }else{
-                        require_once ('francais/models/Autocompletion.php');
-                    }
+                    Autocompletion::getData();
+                       break;
 
 
             }

@@ -1,36 +1,27 @@
 <?php
 
-echo Autocompletion::getSortedUser();
-
-class Autocompletion extends Model{
-
-
-public static function getSortedtUser(){
+class Autocompletion extends Model
+{
 
 
-  $users=self::getAllAccounts();
+    public static function getData()
+    {
+        $bdd = self::getBdd();
 
-  for($i=0;$i < $numberOfUsers ; i++){
-    $myArrayOfUserName[i]=$users->getName()." ".$users->getFirstName();
-  }
-  $numberOfUsers = count($myArrayOfUserName);
+            $requete = $bdd->prepare('SELECT * FROM user '); // j'effectue ma requête SQL grâce au mot-clé LIKE
+        $i=0;
+        //$var = '';
+        $requete->execute();
+        $array = array(); // on créé le tableau
 
-  $results=array();
-  $numberOfResults=count($results);
+        while($donnee = $requete->fetch()) // on effectue une boucle pour obtenir les données
+        {
+            $array[] = array($donnee['name'],$donnee['first_name']); // et on ajoute celles-ci à notre tableau
+        }
 
-  	//Parcourt tout le tableau $utilisateur 10 fpis
-  	for ($i = 0 ; $i < $numberOfUsers && $numberOfResults < 10 ; $i++) {
-  	    if (stripos(,) === 0) { // Si la valeur commence par les mêmes caractères que la recherche
+        echo json_encode($array); // il n'y a plus qu'à convertir en JSON
 
-  	        array_push($results, $data[$i]); // On ajoute alors le résultat à la liste à retourner
-
-  	    }
-  	}
-
-  	echo implode('|', $results); // Et on affiche les résultats séparés par une barre verticale |
+    }
 
 }
 
-}
-
- ?>

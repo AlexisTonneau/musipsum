@@ -8,12 +8,9 @@
     <title>Recherche</title>
 
 </head>
-<script>
-    function checkForm() {
-        return  window.confirm('Cette opération est irréversible...')
 
-    }
-</script>
+​<script src="<?=URL?>scripts/validation.js"></script>
+
 <p class="body">
 
 <?php
@@ -41,10 +38,13 @@ echo ' ' . $account->getName() . "\t\t\t\t";
     <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
         Modifier
     </button>
-</form>
-
-    <button class="link" href="#">Démarrer</button>
-
+    </form>
+    <div class="form-launch">
+        <form method="post" action="<?= URL ?>fr/instructor/search">
+            <input type="hidden" name="launch" value="<?= $account->getId() ?>">
+            <button class="link" type="submit" value="<?= $account->getId() ?>">Démarrer</button>
+        </form>
+    </div>
     </div>
     <?php
 }

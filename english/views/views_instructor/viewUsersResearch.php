@@ -8,12 +8,8 @@
     <title>Recherche</title>
 
 </head>
-<script>
-    function checkForm() {
-        return  window.confirm('This operation is irreversible ...')
+​<script src="<?=URL?>scripts/validation.js"></script>
 
-    }
-</script>
 <p class="body">
 
 <?php

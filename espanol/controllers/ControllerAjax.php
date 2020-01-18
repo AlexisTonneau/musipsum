@@ -25,6 +25,10 @@ class ControllerAjax
                     else{
                         throw new Exception("Vous avez trop de tentatives de connexion aujourd'hui, essayez demain !");
                     }
+                    break;
+                case 'autocomplete':
+                    Autocompletion::getData();
+                    break;
             }
         }
     }

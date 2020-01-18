@@ -55,17 +55,19 @@ require_once 'english/views/views_accueil/viewHeader.php';
 */-->
 
 
+
 <div>
-    <form method="post" action="<?=URL?>en/account/disconnect">
-        <input type="submit" name="disconnect" value="Se déconnecter">
+    <form method="post" action="<?=URL?>en/account/modify">
+
+        <input type="hidden"  name="modify" value="<?=$account->getId()?>">
+
+        <input type="submit"  name="modify" value="Modify my profile">
+
     </form>
 </div>
 <div>
-    <form method="post" action="<?=URL?>en/account/modify">
-        <input type="hidden" name="modify" value="<?=$account->getId()?>">
-        <button type="submit" class="button-submit" id="modify" name="submit_param" value="<?=$account->getId()?>">
-            Modify
-        </button>
+    <form method="post" action="<?=URL?>en/account/disconnect">
+        <input type="submit" name="disconnect" value="Disconnect">
     </form>
 </div>
 

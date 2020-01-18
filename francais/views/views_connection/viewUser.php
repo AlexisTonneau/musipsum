@@ -62,9 +62,9 @@ require_once 'francais/views/views_accueil/viewHeader.php';
 <div>
     <form method="post" action="<?=URL?>fr/account/modify">
 
-        <input type="hidden" name="modify" value="<?=$account->getId()?>">
+        <input type="hidden"  name="modify" value="<?=$account->getId()?>">
 
-        <input type="submit" name="disconnect" value="Modifier mon profil">
+        <input type="submit"  name="modify" value="Modifier mon profil">
 
     </form>
 </div>

@@ -49,18 +49,19 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
 
         <button class="bouton_resultat"  onclick="window.location.href = '<?=URL?>es/account/stat'">Ver mis resultados</button>
     </div>
+
     <div>
         <form method="post" action="<?=URL?>es/account/modify">
 
-            <input type="hidden" name="modify" value="<?=$account->getId()?>">
+            <input type="hidden"  name="modify" value="<?=$account->getId()?>">
 
-            <input type="submit" name="disconnect" value="Editar mi perfil">
+            <input type="submit"  name="modify" value="Editir">
 
         </form>
     </div>
     <div>
         <form method="post" action="<?=URL?>es/account/disconnect">
-            <input type="submit" name="disconnect" value="Cerrar sesión">
+            <input type="submit" name="disconnect" value="Disconectar">
         </form>
     </div>
 
