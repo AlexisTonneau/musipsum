@@ -69,7 +69,7 @@ color: <?=$successstories?>;
                 <a id="titre_musipsum" href="<?=URL?>en">MUSIPSUM</a>
                 <div id="icones_header">
                     <a href="<?=URL?>en/account"><img src="<?=URL?>images/icone_utilisateur_bis.png" class="icone_header"></a>
-                    <a href="<?=URL?>en/accueil#contact"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
+                    <a href="<?=URL?>en/accueil#nous-contacter"><img src="<?=URL?>images/icone_lettre.png" class="icone_header"></a>
                     <div class="dropdown">
                         <button class="dropbtn"><img src="<?= URL ?>images/<?= $_GET['lang'] ?>-flag.jpg"
                                                      alt="Current language" id="current_language">
@@ -96,7 +96,7 @@ color: <?=$successstories?>;
             <div class="choix">
                 <a class="txt_header" id="a_propos" href="<?=URL?>en/accueil/about" >About</a>
                 <a class="txt_header" id="sucess_stories" href="<?=URL?>en/accueil/successstories" >Success Story</a>
-                <a class="txt_header" id="nous_contacter" href="<?=URL?>en/accueil#contact">Contact us</a>
+                <a class="txt_header" id="nous_contacter" href="<?=URL?>en/accueil#nous-contacter">Contact us</a>
                 <a class="txt_header" id="start_test" href="<?=URL?>en/test">Start </a>
                 <a class="txt_header" id="connexion" href="<?=URL?>en/account"><?php
                     if(isset($_SESSION['user']) && $_SESSION['user'] !== null){

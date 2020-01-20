@@ -72,7 +72,7 @@ if ($url[0] === 'test') {
                 <div id="icones_header">
                     <a href="<?= URL ?>fr/account"><img src="<?= URL ?>images/icone_utilisateur_bis.png"
                                                         class="icone_header"></a>
-                    <a href="<?= URL ?>fr/accueil#contact"><img src="<?= URL ?>images/icone_lettre.png"
+                    <a href="<?= URL ?>fr/accueil#nous-contacter"><img src="<?= URL ?>images/icone_lettre.png"
                                                                 class="icone_header"></a>
                     <!-- <a href="<?= URL ?>fr"><img src="<?= URL ?>images/icone_loupe_bis.png" class="icone_header"></a>-->
                     <div class="dropdown">
@@ -103,7 +103,7 @@ if ($url[0] === 'test') {
     <div class="choix">
         <a class="txt_header" id="a_propos" href="<?= URL ?>fr/accueil/about">À propos</a>
         <a class="txt_header" id="sucess_stories" href="<?= URL ?>fr/accueil/successstories">Success Story</a>
-        <a class="txt_header" id="nous_contacter" href="<?= URL ?>fr/accueil#contact">Nous contacter</a>
+        <a class="txt_header" id="nous_contacter" href="<?= URL ?>fr/accueil#nous-contacter">Nous contacter</a>
         <a class="txt_header" id="start_test" href="<?= URL ?>fr/test">Démarrer </a>
 
         <a class="txt_header" id="connexion" href="<?= URL ?>fr/account"><?php

@@ -64,7 +64,7 @@ require_once 'viewHeader.php';
 
 <footer class="footer welcome footer_welcome">
 
-    <div class="nous_contacter">
+    <div class="nous_contacter" id="nous-contacter">
         <div class="social_network">
             <img src="<?=URL?>/images/logo_facebook.png" class="img_contact img_contact_fb" alt="facebook">
             <img src="<?=URL?>/images/logo_twitter.png" class="img_contact img_contact_twi" alt="twitter">

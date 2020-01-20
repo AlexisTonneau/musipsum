@@ -24,7 +24,7 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
     </div>
 
     <div class="autoecole">
-        Administration
+        Administracion
     </div>
 
     <div>
@@ -55,16 +55,16 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
 
     <div class="all_buttons">
         <btn class="btn btn_compte">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/newaccount">Ouvrir un compte</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/newaccount">Abrir un cuenta</a></p>
         </btn>
         <btn class="btn btn_cgu">
-            <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>es/administration/cgu">Modification CGU</a></p>
+            <p class="centrer"><a class="centrer_compte" id="cgu_button" href="<?=URL?>es/administration/cgu">Cambiar CGU</a></p>
         </btn>
         <btn class="btn btn_autoecole">
-            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/faq">Modification FAQ</a></p>
+            <p class="centrer"><a class="centrer_compte" href="<?=URL?>es/administration/faq">Cambiar FAQ</a></p>
         </btn>
         <btn class="btn btn_mentions_legales">
-            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>es/administration/mentions-legales">Modification Mention Légales</a></p>
+            <p class="centrer"><a class="centrer_compte" id="ml" href="<?=URL?>es/administration/mentions-legales">Cambiar Mention Légales</a></p>
         </btn>
     </div>
 
@@ -72,10 +72,10 @@ require_once 'espanol/views/views_accueil/viewHeader.php';
         <a class="modifier" href="<?=URL?>instructor/modify-drivingschool">Modifier l'auto-école</a>
     </div>-->
     <div class="btn_deconnexion" id="deco">
-        <a class="centrer" href="<?=URL?>es/administration/disconnect">Se déconnecter</a>
+        <a class="centrer" href="<?=URL?>es/administration/disconnect">Desconectarse</a>
     </div>
     <div class="btn_deconnexion" id="auto">
-        <a class="centrer" href="<?=URL?>es/administration/list-driving-school">Liste des auto-écoles</a>
+        <a class="centrer" href="<?=URL?>es/administration/list-driving-school">Listado de autoescuelas</a>
     </div>
 </section>
 
